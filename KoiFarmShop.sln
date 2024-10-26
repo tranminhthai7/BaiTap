@@ -5,9 +5,9 @@ VisualStudioVersion = 17.11.35312.102
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KoiFarmShop.WebApplication", "KoiFarmShop.WebApplication\KoiFarmShop.WebApplication.csproj", "{A647CADA-87F0-4DED-8712-55FC1F93B61A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KoiFarmShop.Services", "premierleague.services\KoiFarmShop.Services.csproj", "{9FCA9234-9DEC-4DC6-AC9B-E86D6BA9E93F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KoiFarmShop.Services", "KoiFarmShop.services\KoiFarmShop.Services.csproj", "{9FCA9234-9DEC-4DC6-AC9B-E86D6BA9E93F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KoiFarmShop.Repositories", "PremierLeague.Repositories\KoiFarmShop.Repositories.csproj", "{A379A777-F605-4F86-96DA-CC080ED375FA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KoiFarmShop.Repositories", "KoiFarmShop.Repositories\KoiFarmShop.Repositories.csproj", "{A379A777-F605-4F86-96DA-CC080ED375FA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
