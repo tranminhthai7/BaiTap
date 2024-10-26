@@ -16,6 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\KoiFarmShop.Services\KoiFarmShop.Services.csproj" />
     <ProjectReference Include="..\premierleague.services\KoiFarmShop.Services.csproj" />
   </ItemGroup>
 
