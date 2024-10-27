@@ -17,6 +17,8 @@ public partial class BancaContext : DbContext
 
     public virtual DbSet<TbAbout> TbAbouts { get; set; }
 
+    public virtual DbSet<TbBlog> TbBlogs { get; set; }
+
     public virtual DbSet<TbConfig> TbConfigs { get; set; }
 
     public virtual DbSet<TbConsignment> TbConsignments { get; set; }
@@ -33,6 +35,8 @@ public partial class BancaContext : DbContext
 
     public virtual DbSet<TbKoi> TbKois { get; set; }
 
+    public virtual DbSet<TbLoyaltyPoint> TbLoyaltyPoints { get; set; }
+
     public virtual DbSet<TbMenu> TbMenus { get; set; }
 
     public virtual DbSet<TbOrder> TbOrders { get; set; }
@@ -44,6 +48,12 @@ public partial class BancaContext : DbContext
     public virtual DbSet<TbProductCategory> TbProductCategories { get; set; }
 
     public virtual DbSet<TbProductComment> TbProductComments { get; set; }
+
+    public virtual DbSet<TbPromotion> TbPromotions { get; set; }
+
+    public virtual DbSet<TbRating> TbRatings { get; set; }
+
+    public virtual DbSet<TbReport> TbReports { get; set; }
 
     public virtual DbSet<TbSlide> TbSlides { get; set; }
 
@@ -73,6 +83,17 @@ public partial class BancaContext : DbContext
             entity.Property(e => e.MetaKeywords).HasMaxLength(250);
             entity.Property(e => e.Name).HasMaxLength(50);
             entity.Property(e => e.UpdateDate).HasColumnType("datetime");
+        });
+
+        modelBuilder.Entity<TbBlog>(entity =>
+        {
+            entity.HasKey(e => e.BlogId).HasName("PK__TbBlog__54379E30436A86BD");
+
+            entity.ToTable("TbBlog");
+
+            entity.Property(e => e.Author).HasMaxLength(100);
+            entity.Property(e => e.PublishedDate).HasColumnType("datetime");
+            entity.Property(e => e.Title).HasMaxLength(100);
         });
 
         modelBuilder.Entity<TbConfig>(entity =>
@@ -194,6 +215,15 @@ public partial class BancaContext : DbContext
             entity.Property(e => e.Size).HasColumnType("decimal(5, 2)");
         });
 
+        modelBuilder.Entity<TbLoyaltyPoint>(entity =>
+        {
+            entity.HasKey(e => e.LoyaltyPointId).HasName("PK__TbLoyalt__A911B3F4FE5FBFA1");
+
+            entity.ToTable("TbLoyaltyPoint");
+
+            entity.Property(e => e.EarnedDate).HasColumnType("datetime");
+        });
+
         modelBuilder.Entity<TbMenu>(entity =>
         {
             entity.ToTable("tb_Menu");
@@ -300,6 +330,38 @@ public partial class BancaContext : DbContext
             entity.Property(e => e.Name).HasMaxLength(150);
             entity.Property(e => e.ProductId).HasColumnName("ProductID");
             entity.Property(e => e.UpdateDate).HasColumnType("datetime");
+        });
+
+        modelBuilder.Entity<TbPromotion>(entity =>
+        {
+            entity.HasKey(e => e.PromotionId).HasName("PK__TbPromot__52C42FCF5981C65E");
+
+            entity.ToTable("TbPromotion");
+
+            entity.Property(e => e.Description).HasMaxLength(255);
+            entity.Property(e => e.EndDate).HasColumnType("datetime");
+            entity.Property(e => e.PromotionName).HasMaxLength(100);
+            entity.Property(e => e.StartDate).HasColumnType("datetime");
+        });
+
+        modelBuilder.Entity<TbRating>(entity =>
+        {
+            entity.HasKey(e => e.RatingId).HasName("PK__TbRating__FCCDF87C668B4F29");
+
+            entity.ToTable("TbRating");
+
+            entity.Property(e => e.Feedback).HasMaxLength(255);
+            entity.Property(e => e.RatingDate).HasColumnType("datetime");
+        });
+
+        modelBuilder.Entity<TbReport>(entity =>
+        {
+            entity.HasKey(e => e.ReportId).HasName("PK__TbReport__D5BD4805CE34849F");
+
+            entity.ToTable("TbReport");
+
+            entity.Property(e => e.GeneratedDate).HasColumnType("datetime");
+            entity.Property(e => e.ReportName).HasMaxLength(100);
         });
 
         modelBuilder.Entity<TbSlide>(entity =>
