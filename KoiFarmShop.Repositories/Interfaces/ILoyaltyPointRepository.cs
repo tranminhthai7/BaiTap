@@ -9,7 +9,7 @@ namespace KoiFarmShop.Repositories.Interfaces
 {
     public interface ILoyaltyPointRepository
     {
-        Task<List<TbLoyaltyPoint>> GetLoyaltyPoints();
+        Task<List<LoyaltyPoint>> GetLoyaltyPoints();
         Task<bool> AddLoyaltyPoint(LoyaltyPoint loyaltyPoint);
         Task<bool> RemoveLoyaltyPointAsync(LoyaltyPoint loyaltyPoint);
         Task<bool> DeleteLoyaltyPointAsync(int loyaltyPointId);
