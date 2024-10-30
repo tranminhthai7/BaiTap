@@ -1,16 +1,17 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using KoiFarmShop.Repositories.Entities;
-
 namespace KoiFarmShop.Repositories.Interfaces
 {
     public interface IAboutRepository
     {
-        Task<List<TbAbout>> GetAboutsAsync();
-        Task<int> AddAboutAsync(TbAbout about);
-        Task<int> RemoveAboutAsync(int aboutId);
+        Task<List<About>> GetAboutsAsync();
+        Task<bool> AddAboutAsync(About about);
+        Task<bool> RemoveAboutAsync(About about);
         Task<bool> DeleteAboutAsync(int aboutId);
-        Task<int> UpdateAboutAsync(TbAbout about);
+        Task<bool> UpdateAboutAsync(About about);
     }
 }
