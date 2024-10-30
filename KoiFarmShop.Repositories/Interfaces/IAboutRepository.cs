@@ -8,10 +8,10 @@ namespace KoiFarmShop.Repositories.Interfaces
 {
     public interface IAboutRepository
     {
-        Task<List<About>> GetAboutsAsync();
-        Task<bool> AddAboutAsync(About about);
+        Task<List<About>> GetAbouts();
+        Task<bool> AddAbout(About about);
         Task<bool> RemoveAboutAsync(About about);
         Task<bool> DeleteAboutAsync(int aboutId);
-        Task<bool> UpdateAboutAsync(About about);
+        Task<bool> UpdateAbout(About about);
     }
 }
