@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using KoiFarmShop.Repositories.Entities;
 
@@ -7,10 +9,10 @@ namespace KoiFarmShop.Repositories.Interfaces
 {
     public interface IFeedbackRepository
     {
-        Task<List<TbFeedback>> GetFeedbacksAsync();
-        Task<int> AddFeedbackAsync(TbFeedback feedback);
-        Task<int> RemoveFeedbackAsync(int feedbackId);
+        Task<List<Feedback>> GetFeedbacks();
+        Task<bool> AddFeedback(Feedback feedback);
+        Task<bool> RemoveFeedbackAsync(Feedback feedback);
         Task<bool> DeleteFeedbackAsync(int feedbackId);
-        Task<int> UpdateFeedbackAsync(TbFeedback feedback);
+        Task<bool> UpdateFeedback(Feedback feedback);
     }
 }
