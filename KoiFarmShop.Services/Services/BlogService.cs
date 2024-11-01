@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using KoiFarmShop.Repositories.Entities;
 using KoiFarmShop.Repositories.Interfaces;
@@ -9,26 +11,16 @@ namespace KoiFarmShop.Services.Services
 {
     public class BlogService : IBlogService
     {
-        private readonly IBlogRepository _blogRepository;
+        private IBlogRepository _blogRepository;
 
         public BlogService(IBlogRepository blogRepository)
         {
             _blogRepository = blogRepository;
         }
 
-        public Task<List<TbBlog>> GetBlogsAsync()
+        public Task<bool> AddBlog(Blog blog)
         {
-            return _blogRepository.GetBlogsAsync();
-        }
-
-        public Task<int> AddBlogAsync(TbBlog blog)
-        {
-            return _blogRepository.AddBlogAsync(blog);
-        }
-
-        public Task<int> RemoveBlogAsync(int blogId)
-        {
-            return _blogRepository.RemoveBlogAsync(blogId);
+            return _blogRepository.AddBlog(blog);
         }
 
         public Task<bool> DeleteBlogAsync(int blogId)
@@ -36,9 +28,19 @@ namespace KoiFarmShop.Services.Services
             return _blogRepository.DeleteBlogAsync(blogId);
         }
 
-        public Task<int> UpdateBlogAsync(TbBlog blog)
+        public async Task<List<Blog>> GetBlogsAsync()
         {
-            return _blogRepository.UpdateBlogAsync(blog);
+            return await _blogRepository.GetBlogs();
+        }
+
+        public Task<bool> RemoveBlogAsync(Blog blog)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<bool> UpdateBlog(Blog blog)
+        {
+            return _blogRepository.UpdateBlog(blog);
         }
     }
 }

@@ -11,7 +11,7 @@ namespace KoiFarmShop.Services.Services
 {
     public class FeedbackService : IFeedbackService
     {
-        private readonly IFeedbackRepository _feedbackRepository;
+        private IFeedbackRepository _feedbackRepository;
 
         public FeedbackService(IFeedbackRepository feedbackRepository)
         {

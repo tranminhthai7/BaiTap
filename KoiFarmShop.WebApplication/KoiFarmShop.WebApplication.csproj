@@ -22,7 +22,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\KoiFarmShop.Repositories\KoiFarmShop.Repositories.csproj" />
     <ProjectReference Include="..\KoiFarmShop.Services\KoiFarmShop.Services.csproj" />
   </ItemGroup>
 

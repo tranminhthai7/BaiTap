@@ -11,7 +11,7 @@ namespace KoiFarmShop.Services.Services
 {
     public class FooterService : IFooterService
     {
-        private readonly IFooterRepository _footerRepository;
+        private IFooterRepository _footerRepository;
 
         public FooterService(IFooterRepository footerRepository)
         {

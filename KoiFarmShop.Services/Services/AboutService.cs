@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using KoiFarmShop.Repositories.Entities;
 using KoiFarmShop.Repositories.Interfaces;
@@ -9,26 +11,16 @@ namespace KoiFarmShop.Services.Services
 {
     public class AboutService : IAboutService
     {
-        private readonly IAboutRepository _aboutRepository;
+        private IAboutRepository _aboutRepository;
 
         public AboutService(IAboutRepository aboutRepository)
         {
             _aboutRepository = aboutRepository;
         }
 
-        public Task<List<TbAbout>> GetAboutsAsync()
+        public Task<bool> AddAbout(About about)
         {
-            return _aboutRepository.GetAboutsAsync();
-        }
-
-        public Task<int> AddAboutAsync(TbAbout about)
-        {
-            return _aboutRepository.AddAboutAsync(about);
-        }
-
-        public Task<int> RemoveAboutAsync(int aboutId)
-        {
-            return _aboutRepository.RemoveAboutAsync(aboutId);
+            return _aboutRepository.AddAbout(about);
         }
 
         public Task<bool> DeleteAboutAsync(int aboutId)
@@ -36,9 +28,19 @@ namespace KoiFarmShop.Services.Services
             return _aboutRepository.DeleteAboutAsync(aboutId);
         }
 
-        public Task<int> UpdateAboutAsync(TbAbout about)
+        public async Task<List<About>> GetAboutsAsync()
         {
-            return _aboutRepository.UpdateAboutAsync(about);
+            return await _aboutRepository.GetAbouts();
+        }
+
+        public Task<bool> RemoveAboutAsync(About about)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<bool> UpdateAbout(About about)
+        {
+            return _aboutRepository.UpdateAbout(about);
         }
     }
 }

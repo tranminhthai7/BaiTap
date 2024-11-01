@@ -11,7 +11,7 @@ namespace KoiFarmShop.Services.Services
 {
     public class ConsignmentService : IConsignmentService
     {
-        private readonly IConsignmentRepository _consignmentRepository;
+        private IConsignmentRepository _consignmentRepository;
 
         public ConsignmentService(IConsignmentRepository consignmentRepository)
         {

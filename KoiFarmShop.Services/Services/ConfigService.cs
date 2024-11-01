@@ -11,7 +11,7 @@ namespace KoiFarmShop.Services.Services
 {
     public class ConfigService : IConfigService
     {
-        private readonly IConfigRepository _configRepository;
+        private IConfigRepository _configRepository;
 
         public ConfigService(IConfigRepository configRepository)
         {

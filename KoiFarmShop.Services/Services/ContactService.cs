@@ -11,7 +11,7 @@ namespace KoiFarmShop.Services.Services
 {
     public class ContactService : IContactService
     {
-        private readonly IContactRepository _contactRepository;
+        private IContactRepository _contactRepository;
 
         public ContactService(IContactRepository contactRepository)
         {

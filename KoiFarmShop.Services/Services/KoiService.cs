@@ -11,7 +11,7 @@ namespace KoiFarmShop.Services.Services
 {
     public class KoiService : IKoiService
     {
-        private readonly IKoiRepository _koiRepository;
+        private IKoiRepository _koiRepository;
 
         public KoiService(IKoiRepository koiRepository)
         {

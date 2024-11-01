@@ -11,7 +11,7 @@ namespace KoiFarmShop.Services.Services
 {
     public class InvoiceDetailService : IInvoiceDetailService
     {
-        private readonly IInvoiceDetailRepository _invoiceDetailRepository;
+        private IInvoiceDetailRepository _invoiceDetailRepository;
 
         public InvoiceDetailService(IInvoiceDetailRepository invoiceDetailRepository)
         {
