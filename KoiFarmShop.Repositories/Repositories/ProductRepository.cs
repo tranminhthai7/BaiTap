@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using KoiFarmShop.Repositories.Entities;
@@ -9,93 +11,77 @@ namespace KoiFarmShop.Repositories.Repositories
 {
     public class ProductRepository : IProductRepository
     {
-        private readonly KoiFarmShopDbContext _dbContext;
+        private readonly KoiFarmShop2024DbContext _dbContext;
 
-        public ProductRepository(KoiFarmShopDbContext dbContext)
+        public ProductRepository(KoiFarmShop2024DbContext dbContext) 
         {
             _dbContext = dbContext;
         }
 
-        public async Task<List<TbProduct>> GetProductsAsync()
+        public Task<bool> AddProduct(Product product)
         {
             try
             {
-                return await _dbContext.TbProducts.ToListAsync();
+                _dbContext.Products.AddAsync(product);
+                _dbContext.SaveChanges();
+                return Task.FromResult(true);
             }
-            catch (Exception ex)
+            catch (Exception ex) 
             {
-                // Log exception (ex) here if needed
-                return new List<TbProduct>();
-            }
-        }
-
-        public async Task<int> AddProductAsync(TbProduct product)
-        {
-            try
-            {
-                await _dbContext.TbProducts.AddAsync(product);
-                await _dbContext.SaveChangesAsync();
-                return product.Id; // Assuming Id is the primary key and is auto-generated
-            }
-            catch (Exception ex)
-            {
-                // Log exception (ex) here if needed
-                return 0; // Return 0 to indicate failure
-            }
-        }
-
-        public async Task<int> RemoveProductAsync(int productId)
-        {
-            var product = await _dbContext.TbProducts.FindAsync(productId);
-            if (product == null)
-            {
-                return 0; // Return 0 to indicate that the record was not found
-            }
-
-            try
-            {
-                _dbContext.TbProducts.Remove(product);
-                return await _dbContext.SaveChangesAsync();
-            }
-            catch (Exception ex)
-            {
-                // Log exception (ex) here if needed
-                return 0; // Return 0 to indicate failure
+                throw new NotImplementedException(ex.ToString());
             }
         }
 
         public async Task<bool> DeleteProductAsync(int productId)
         {
-            var product = await _dbContext.TbProducts.FindAsync(productId);
-            if (product == null)
-            {
-                return false; // Return false to indicate that the record was not found
-            }
-
+            var objDel = await _dbContext.Products.Where(p => p.ProductId.Equals(productId)).FirstOrDefaultAsync();
             try
             {
-                _dbContext.TbProducts.Remove(product);
-                await _dbContext.SaveChangesAsync();
-                return true; // Return true to indicate success
+                if (objDel != null)
+                {
+                    _dbContext.Products.Remove(objDel);
+                    await _dbContext.SaveChangesAsync();
+                    return true;
+                }
+                return false;
             }
             catch (Exception ex)
             {
-                // Log exception (ex) here if needed
-                return false; // Return false to indicate failure
+                // Log the exception
+                return false;
             }
         }
 
-        public async Task<int> UpdateProductAsync(TbProduct product)
+        public async Task<List<Product>> GetProducts()
+        {
+            List<Product> products = null;
+            try
+            {
+                products = await _dbContext.Products.ToListAsync();
+            }
+            catch (Exception ex) 
+            {
+                products?.Add(new Product());
+            }
+            return products;
+        }
+
+        public Task<bool> RemoveProductAsync(Product product)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<bool> UpdateProduct(Product product)
         {
             try
             {
-                _dbContext.TbProducts.Update(product);
-                return await _dbContext.SaveChangesAsync();
+                _dbContext.Products.Update(product);
+                _dbContext.SaveChanges();
+                return Task.FromResult(true);
             }
             catch (Exception ex)
             {
-                // Log exception (ex) here if needed
-                return 0; // Return 0 to indicate failure
+                return Task.FromResult(false);
             }
         }
     }

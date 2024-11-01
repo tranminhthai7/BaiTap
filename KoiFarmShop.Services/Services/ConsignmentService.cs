@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using KoiFarmShop.Repositories.Entities;
 using KoiFarmShop.Repositories.Interfaces;
@@ -16,19 +18,9 @@ namespace KoiFarmShop.Services.Services
             _consignmentRepository = consignmentRepository;
         }
 
-        public Task<List<TbConsignment>> GetConsignmentsAsync()
+        public Task<bool> AddConsignment(Consignment consignment)
         {
-            return _consignmentRepository.GetConsignmentsAsync();
-        }
-
-        public Task<int> AddConsignmentAsync(TbConsignment consignment)
-        {
-            return _consignmentRepository.AddConsignmentAsync(consignment);
-        }
-
-        public Task<int> RemoveConsignmentAsync(int consignmentId)
-        {
-            return _consignmentRepository.RemoveConsignmentAsync(consignmentId);
+            return _consignmentRepository.AddConsignment(consignment);
         }
 
         public Task<bool> DeleteConsignmentAsync(int consignmentId)
@@ -36,9 +28,19 @@ namespace KoiFarmShop.Services.Services
             return _consignmentRepository.DeleteConsignmentAsync(consignmentId);
         }
 
-        public Task<int> UpdateConsignmentAsync(TbConsignment consignment)
+        public async Task<List<Consignment>> GetConsignmentsAsync()
         {
-            return _consignmentRepository.UpdateConsignmentAsync(consignment);
+            return await _consignmentRepository.GetConsignments();
+        }
+
+        public Task<bool> RemoveConsignmentAsync(Consignment consignment)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<bool> UpdateConsignment(Consignment consignment)
+        {
+            return _consignmentRepository.UpdateConsignment(consignment);
         }
     }
 }

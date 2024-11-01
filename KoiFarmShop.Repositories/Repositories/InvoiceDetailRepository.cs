@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using KoiFarmShop.Repositories.Entities;
@@ -9,93 +11,77 @@ namespace KoiFarmShop.Repositories.Repositories
 {
     public class InvoiceDetailRepository : IInvoiceDetailRepository
     {
-        private readonly KoiFarmShopDbContext _dbContext;
+        private readonly KoiFarmShop2024DbContext _dbContext;
 
-        public InvoiceDetailRepository(KoiFarmShopDbContext dbContext)
+        public InvoiceDetailRepository(KoiFarmShop2024DbContext dbContext) 
         {
             _dbContext = dbContext;
         }
 
-        public async Task<List<TbInvoiceDetail>> GetInvoiceDetailsAsync()
+        public Task<bool> AddInvoiceDetail(InvoiceDetail invoiceDetail)
         {
             try
             {
-                return await _dbContext.TbInvoiceDetails.ToListAsync();
+                _dbContext.InvoiceDetails.AddAsync(invoiceDetail);
+                _dbContext.SaveChanges();
+                return Task.FromResult(true);
             }
-            catch (Exception ex)
+            catch (Exception ex) 
             {
-                // Log exception (ex) here if needed
-                return new List<TbInvoiceDetail>();
-            }
-        }
-
-        public async Task<int> AddInvoiceDetailAsync(TbInvoiceDetail invoiceDetail)
-        {
-            try
-            {
-                await _dbContext.TbInvoiceDetails.AddAsync(invoiceDetail);
-                await _dbContext.SaveChangesAsync();
-                return invoiceDetail.Id; // Assuming Id is the primary key and is auto-generated
-            }
-            catch (Exception ex)
-            {
-                // Log exception (ex) here if needed
-                return 0; // Return 0 to indicate failure
-            }
-        }
-
-        public async Task<int> RemoveInvoiceDetailAsync(int invoiceDetailId)
-        {
-            var invoiceDetail = await _dbContext.TbInvoiceDetails.FindAsync(invoiceDetailId);
-            if (invoiceDetail == null)
-            {
-                return 0; // Return 0 to indicate that the record was not found
-            }
-
-            try
-            {
-                _dbContext.TbInvoiceDetails.Remove(invoiceDetail);
-                return await _dbContext.SaveChangesAsync();
-            }
-            catch (Exception ex)
-            {
-                // Log exception (ex) here if needed
-                return 0; // Return 0 to indicate failure
+                throw new NotImplementedException(ex.ToString());
             }
         }
 
         public async Task<bool> DeleteInvoiceDetailAsync(int invoiceDetailId)
         {
-            var invoiceDetail = await _dbContext.TbInvoiceDetails.FindAsync(invoiceDetailId);
-            if (invoiceDetail == null)
-            {
-                return false; // Return false to indicate that the record was not found
-            }
-
+            var objDel = await _dbContext.InvoiceDetails.Where(p => p.InvoiceId.Equals(invoiceDetailId)).FirstOrDefaultAsync();
             try
             {
-                _dbContext.TbInvoiceDetails.Remove(invoiceDetail);
-                await _dbContext.SaveChangesAsync();
-                return true; // Return true to indicate success
+                if (objDel != null)
+                {
+                    _dbContext.InvoiceDetails.Remove(objDel);
+                    await _dbContext.SaveChangesAsync();
+                    return true;
+                }
+                return false;
             }
             catch (Exception ex)
             {
-                // Log exception (ex) here if needed
-                return false; // Return false to indicate failure
+                // Log the exception
+                return false;
             }
         }
 
-        public async Task<int> UpdateInvoiceDetailAsync(TbInvoiceDetail invoiceDetail)
+        public async Task<List<InvoiceDetail>> GetInvoiceDetails()
+        {
+            List<InvoiceDetail> invoiceDetails = null;
+            try
+            {
+                invoiceDetails = await _dbContext.InvoiceDetails.ToListAsync();
+            }
+            catch (Exception ex) 
+            {
+                invoiceDetails?.Add(new InvoiceDetail());
+            }
+            return invoiceDetails;
+        }
+
+        public Task<bool> RemoveInvoiceDetailAsync(InvoiceDetail invoiceDetail)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<bool> UpdateInvoiceDetail(InvoiceDetail invoiceDetail)
         {
             try
             {
-                _dbContext.TbInvoiceDetails.Update(invoiceDetail);
-                return await _dbContext.SaveChangesAsync();
+                _dbContext.InvoiceDetails.Update(invoiceDetail);
+                _dbContext.SaveChanges();
+                return Task.FromResult(true);
             }
             catch (Exception ex)
             {
-                // Log exception (ex) here if needed
-                return 0; // Return 0 to indicate failure
+                return Task.FromResult(false);
             }
         }
     }

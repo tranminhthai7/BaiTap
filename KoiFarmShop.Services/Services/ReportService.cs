@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using KoiFarmShop.Repositories.Entities;
 using KoiFarmShop.Repositories.Interfaces;
@@ -16,19 +18,9 @@ namespace KoiFarmShop.Services.Services
             _reportRepository = reportRepository;
         }
 
-        public Task<List<TbReport>> GetReportsAsync()
+        public Task<bool> AddReport(Report report)
         {
-            return _reportRepository.GetReportsAsync();
-        }
-
-        public Task<int> AddReportAsync(TbReport report)
-        {
-            return _reportRepository.AddReportAsync(report);
-        }
-
-        public Task<int> RemoveReportAsync(int reportId)
-        {
-            return _reportRepository.RemoveReportAsync(reportId);
+            return _reportRepository.AddReport(report);
         }
 
         public Task<bool> DeleteReportAsync(int reportId)
@@ -36,9 +28,19 @@ namespace KoiFarmShop.Services.Services
             return _reportRepository.DeleteReportAsync(reportId);
         }
 
-        public Task<int> UpdateReportAsync(TbReport report)
+        public async Task<List<Report>> GetReportsAsync()
         {
-            return _reportRepository.UpdateReportAsync(report);
+            return await _reportRepository.GetReports();
+        }
+
+        public Task<bool> RemoveReportAsync(Report report)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<bool> UpdateReport(Report report)
+        {
+            return _reportRepository.UpdateReport(report);
         }
     }
 }

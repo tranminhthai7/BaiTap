@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using KoiFarmShop.Repositories.Entities;
 using KoiFarmShop.Repositories.Interfaces;
@@ -16,19 +18,9 @@ namespace KoiFarmShop.Services.Services
             _loyaltyPointRepository = loyaltyPointRepository;
         }
 
-        public Task<List<TbLoyaltyPoint>> GetLoyaltyPointsAsync()
+        public Task<bool> AddLoyaltyPoint(LoyaltyPoint loyaltyPoint)
         {
-            return _loyaltyPointRepository.GetLoyaltyPointsAsync();
-        }
-
-        public Task<int> AddLoyaltyPointAsync(TbLoyaltyPoint loyaltyPoint)
-        {
-            return _loyaltyPointRepository.AddLoyaltyPointAsync(loyaltyPoint);
-        }
-
-        public Task<int> RemoveLoyaltyPointAsync(int loyaltyPointId)
-        {
-            return _loyaltyPointRepository.RemoveLoyaltyPointAsync(loyaltyPointId);
+            return _loyaltyPointRepository.AddLoyaltyPoint(loyaltyPoint);
         }
 
         public Task<bool> DeleteLoyaltyPointAsync(int loyaltyPointId)
@@ -36,9 +28,19 @@ namespace KoiFarmShop.Services.Services
             return _loyaltyPointRepository.DeleteLoyaltyPointAsync(loyaltyPointId);
         }
 
-        public Task<int> UpdateLoyaltyPointAsync(TbLoyaltyPoint loyaltyPoint)
+        public async Task<List<LoyaltyPoint>> GetLoyaltyPointsAsync()
         {
-            return _loyaltyPointRepository.UpdateLoyaltyPointAsync(loyaltyPoint);
+            return await _loyaltyPointRepository.GetLoyaltyPoints();
+        }
+
+        public Task<bool> RemoveLoyaltyPointAsync(LoyaltyPoint loyaltyPoint)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<bool> UpdateLoyaltyPoint(LoyaltyPoint loyaltyPoint)
+        {
+            return _loyaltyPointRepository.UpdateLoyaltyPoint(loyaltyPoint);
         }
     }
 }

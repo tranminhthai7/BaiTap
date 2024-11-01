@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using KoiFarmShop.Repositories.Entities;
 
@@ -7,10 +9,10 @@ namespace KoiFarmShop.Services.Interfaces
 {
     public interface IReportService
     {
-        Task<List<TbReport>> GetReportsAsync();
-        Task<int> AddReportAsync(TbReport report);
-        Task<int> RemoveReportAsync(int reportId);
+        Task<List<Report>> GetReports();
+        Task<bool> AddReport(Report report);
+        Task<bool> RemoveReportAsync(Report report);
         Task<bool> DeleteReportAsync(int reportId);
-        Task<int> UpdateReportAsync(TbReport report);
+        Task<bool> UpdateReport(Report report);
     }
 }

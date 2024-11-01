@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using KoiFarmShop.Repositories.Entities;
@@ -9,93 +11,77 @@ namespace KoiFarmShop.Repositories.Repositories
 {
     public class RatingRepository : IRatingRepository
     {
-        private readonly KoiFarmShopDbContext _dbContext;
+        private readonly KoiFarmShop2024DbContext _dbContext;
 
-        public RatingRepository(KoiFarmShopDbContext dbContext)
+        public RatingRepository(KoiFarmShop2024DbContext dbContext) 
         {
             _dbContext = dbContext;
         }
 
-        public async Task<List<TbRating>> GetRatingsAsync()
+        public Task<bool> AddRating(Rating rating)
         {
             try
             {
-                return await _dbContext.TbRatings.ToListAsync();
+                _dbContext.Ratings.AddAsync(rating);
+                _dbContext.SaveChanges();
+                return Task.FromResult(true);
             }
-            catch (Exception ex)
+            catch (Exception ex) 
             {
-                // Log exception (ex) here if needed
-                return new List<TbRating>();
-            }
-        }
-
-        public async Task<int> AddRatingAsync(TbRating rating)
-        {
-            try
-            {
-                await _dbContext.TbRatings.AddAsync(rating);
-                await _dbContext.SaveChangesAsync();
-                return rating.Id; // Assuming Id is the primary key and is auto-generated
-            }
-            catch (Exception ex)
-            {
-                // Log exception (ex) here if needed
-                return 0; // Return 0 to indicate failure
-            }
-        }
-
-        public async Task<int> RemoveRatingAsync(int ratingId)
-        {
-            var rating = await _dbContext.TbRatings.FindAsync(ratingId);
-            if (rating == null)
-            {
-                return 0; // Return 0 to indicate that the record was not found
-            }
-
-            try
-            {
-                _dbContext.TbRatings.Remove(rating);
-                return await _dbContext.SaveChangesAsync();
-            }
-            catch (Exception ex)
-            {
-                // Log exception (ex) here if needed
-                return 0; // Return 0 to indicate failure
+                throw new NotImplementedException(ex.ToString());
             }
         }
 
         public async Task<bool> DeleteRatingAsync(int ratingId)
         {
-            var rating = await _dbContext.TbRatings.FindAsync(ratingId);
-            if (rating == null)
-            {
-                return false; // Return false to indicate that the record was not found
-            }
-
+            var objDel = await _dbContext.Ratings.Where(p => p.RatingId.Equals(ratingId)).FirstOrDefaultAsync();
             try
             {
-                _dbContext.TbRatings.Remove(rating);
-                await _dbContext.SaveChangesAsync();
-                return true; // Return true to indicate success
+                if (objDel != null)
+                {
+                    _dbContext.Ratings.Remove(objDel);
+                    await _dbContext.SaveChangesAsync();
+                    return true;
+                }
+                return false;
             }
             catch (Exception ex)
             {
-                // Log exception (ex) here if needed
-                return false; // Return false to indicate failure
+                // Log the exception
+                return false;
             }
         }
 
-        public async Task<int> UpdateRatingAsync(TbRating rating)
+        public async Task<List<Rating>> GetRatings()
+        {
+            List<Rating> ratings = null;
+            try
+            {
+                ratings = await _dbContext.Ratings.ToListAsync();
+            }
+            catch (Exception ex) 
+            {
+                ratings?.Add(new Rating());
+            }
+            return ratings;
+        }
+
+        public Task<bool> RemoveRatingAsync(Rating rating)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<bool> UpdateRating(Rating rating)
         {
             try
             {
-                _dbContext.TbRatings.Update(rating);
-                return await _dbContext.SaveChangesAsync();
+                _dbContext.Ratings.Update(rating);
+                _dbContext.SaveChanges();
+                return Task.FromResult(true);
             }
             catch (Exception ex)
             {
-                // Log exception (ex) here if needed
-                return 0; // Return 0 to indicate failure
+                return Task.FromResult(false);
             }
         }
     }

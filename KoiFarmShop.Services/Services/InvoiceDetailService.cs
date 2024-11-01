@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using KoiFarmShop.Repositories.Entities;
 using KoiFarmShop.Repositories.Interfaces;
@@ -16,19 +18,9 @@ namespace KoiFarmShop.Services.Services
             _invoiceDetailRepository = invoiceDetailRepository;
         }
 
-        public Task<List<TbInvoiceDetail>> GetInvoiceDetailsAsync()
+        public Task<bool> AddInvoiceDetail(InvoiceDetail invoiceDetail)
         {
-            return _invoiceDetailRepository.GetInvoiceDetailsAsync();
-        }
-
-        public Task<int> AddInvoiceDetailAsync(TbInvoiceDetail invoiceDetail)
-        {
-            return _invoiceDetailRepository.AddInvoiceDetailAsync(invoiceDetail);
-        }
-
-        public Task<int> RemoveInvoiceDetailAsync(int invoiceDetailId)
-        {
-            return _invoiceDetailRepository.RemoveInvoiceDetailAsync(invoiceDetailId);
+            return _invoiceDetailRepository.AddInvoiceDetail(invoiceDetail);
         }
 
         public Task<bool> DeleteInvoiceDetailAsync(int invoiceDetailId)
@@ -36,9 +28,19 @@ namespace KoiFarmShop.Services.Services
             return _invoiceDetailRepository.DeleteInvoiceDetailAsync(invoiceDetailId);
         }
 
-        public Task<int> UpdateInvoiceDetailAsync(TbInvoiceDetail invoiceDetail)
+        public async Task<List<InvoiceDetail>> GetInvoiceDetailsAsync()
         {
-            return _invoiceDetailRepository.UpdateInvoiceDetailAsync(invoiceDetail);
+            return await _invoiceDetailRepository.GetInvoiceDetails();
+        }
+
+        public Task<bool> RemoveInvoiceDetailAsync(InvoiceDetail invoiceDetail)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<bool> UpdateInvoiceDetail(InvoiceDetail invoiceDetail)
+        {
+            return _invoiceDetailRepository.UpdateInvoiceDetail(invoiceDetail);
         }
     }
 }

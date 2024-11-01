@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using KoiFarmShop.Repositories.Entities;
@@ -9,93 +10,77 @@ namespace KoiFarmShop.Repositories.Repositories
 {
     public class BlogRepository : IBlogRepository
     {
-        private readonly KoiFarmShopDbContext _dbContext;
+        private readonly KoiFarmShop2024DbContext _dbContext;
 
-        public BlogRepository(KoiFarmShopDbContext dbContext)
+        public BlogRepository(KoiFarmShop2024DbContext dbContext) 
         {
             _dbContext = dbContext;
         }
 
-        public async Task<List<TbBlog>> GetBlogsAsync()
+        public Task<bool> AddBlog(Blog blog)
         {
             try
             {
-                return await _dbContext.TbBlogs.ToListAsync();
+                _dbContext.Blogs.AddAsync(blog);
+                _dbContext.SaveChanges();
+                return Task.FromResult(true);
             }
-            catch (Exception ex)
+            catch (Exception ex) 
             {
-                // Log exception (ex) here if needed
-                return new List<TbBlog>();
-            }
-        }
-
-        public async Task<int> AddBlogAsync(TbBlog blog)
-        {
-            try
-            {
-                await _dbContext.TbBlogs.AddAsync(blog);
-                await _dbContext.SaveChangesAsync();
-                return blog.Id; // Assuming Id is the primary key and is auto-generated
-            }
-            catch (Exception ex)
-            {
-                // Log exception (ex) here if needed
-                return 0; // Return 0 to indicate failure
-            }
-        }
-
-        public async Task<int> RemoveBlogAsync(int blogId)
-        {
-            var blog = await _dbContext.TbBlogs.FindAsync(blogId);
-            if (blog == null)
-            {
-                return 0; // Return 0 to indicate that the record was not found
-            }
-
-            try
-            {
-                _dbContext.TbBlogs.Remove(blog);
-                return await _dbContext.SaveChangesAsync();
-            }
-            catch (Exception ex)
-            {
-                // Log exception (ex) here if needed
-                return 0; // Return 0 to indicate failure
+                throw new NotImplementedException(ex.ToString());
             }
         }
 
         public async Task<bool> DeleteBlogAsync(int blogId)
         {
-            var blog = await _dbContext.TbBlogs.FindAsync(blogId);
-            if (blog == null)
-            {
-                return false; // Return false to indicate that the record was not found
-            }
-
+            var objDel = await _dbContext.Blogs.Where(p => p.BlogId.Equals(blogId)).FirstOrDefaultAsync();
             try
             {
-                _dbContext.TbBlogs.Remove(blog);
-                await _dbContext.SaveChangesAsync();
-                return true; // Return true to indicate success
+                if (objDel != null)
+                {
+                    _dbContext.Blogs.Remove(objDel);
+                    await _dbContext.SaveChangesAsync();
+                    return true;
+                }
+                return false;
             }
             catch (Exception ex)
             {
-                // Log exception (ex) here if needed
-                return false; // Return false to indicate failure
+                // Log the exception
+                return false;
             }
         }
 
-        public async Task<int> UpdateBlogAsync(TbBlog blog)
+        public async Task<List<Blog>> GetBlogs()
+        {
+            List<Blog> blogs = null;
+            try
+            {
+                blogs = await _dbContext.Blogs.ToListAsync();
+            }
+            catch (Exception ex) 
+            {
+                blogs?.Add(new Blog());
+            }
+            return blogs;
+        }
+
+        public Task<bool> RemoveBlogAsync(Blog blog)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<bool> UpdateBlog(Blog blog)
         {
             try
             {
-                _dbContext.TbBlogs.Update(blog);
-                return await _dbContext.SaveChangesAsync();
+                _dbContext.Blogs.Update(blog);
+                _dbContext.SaveChanges();
+                return Task.FromResult(true);
             }
             catch (Exception ex)
             {
-                // Log exception (ex) here if needed
-                return 0; // Return 0 to indicate failure
+                return Task.FromResult(false);
             }
         }
     }

@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using KoiFarmShop.Repositories.Entities;
 using KoiFarmShop.Repositories.Interfaces;
@@ -16,19 +18,9 @@ namespace KoiFarmShop.Services.Services
             _ratingRepository = ratingRepository;
         }
 
-        public Task<List<TbRating>> GetRatingsAsync()
+        public Task<bool> AddRating(Rating rating)
         {
-            return _ratingRepository.GetRatingsAsync();
-        }
-
-        public Task<int> AddRatingAsync(TbRating rating)
-        {
-            return _ratingRepository.AddRatingAsync(rating);
-        }
-
-        public Task<int> RemoveRatingAsync(int ratingId)
-        {
-            return _ratingRepository.RemoveRatingAsync(ratingId);
+            return _ratingRepository.AddRating(rating);
         }
 
         public Task<bool> DeleteRatingAsync(int ratingId)
@@ -36,9 +28,19 @@ namespace KoiFarmShop.Services.Services
             return _ratingRepository.DeleteRatingAsync(ratingId);
         }
 
-        public Task<int> UpdateRatingAsync(TbRating rating)
+        public async Task<List<Rating>> GetRatingsAsync()
         {
-            return _ratingRepository.UpdateRatingAsync(rating);
+            return await _ratingRepository.GetRatings();
+        }
+
+        public Task<bool> RemoveRatingAsync(Rating rating)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<bool> UpdateRating(Rating rating)
+        {
+            return _ratingRepository.UpdateRating(rating);
         }
     }
 }

@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using KoiFarmShop.Repositories.Entities;
@@ -9,93 +11,77 @@ namespace KoiFarmShop.Repositories.Repositories
 {
     public class LoyaltyPointRepository : ILoyaltyPointRepository
     {
-        private readonly KoiFarmShopDbContext _dbContext;
+        private readonly KoiFarmShop2024DbContext _dbContext;
 
-        public LoyaltyPointRepository(KoiFarmShopDbContext dbContext)
+        public LoyaltyPointRepository(KoiFarmShop2024DbContext dbContext) 
         {
             _dbContext = dbContext;
         }
 
-        public async Task<List<TbLoyaltyPoint>> GetLoyaltyPointsAsync()
+        public Task<bool> AddLoyaltyPoint(LoyaltyPoint loyaltyPoint)
         {
             try
             {
-                return await _dbContext.TbLoyaltyPoints.ToListAsync();
+                _dbContext.LoyaltyPoints.AddAsync(loyaltyPoint);
+                _dbContext.SaveChanges();
+                return Task.FromResult(true);
             }
-            catch (Exception ex)
+            catch (Exception ex) 
             {
-                // Log exception (ex) here if needed
-                return new List<TbLoyaltyPoint>();
-            }
-        }
-
-        public async Task<int> AddLoyaltyPointAsync(TbLoyaltyPoint loyaltyPoint)
-        {
-            try
-            {
-                await _dbContext.TbLoyaltyPoints.AddAsync(loyaltyPoint);
-                await _dbContext.SaveChangesAsync();
-                return loyaltyPoint.Id; // Assuming Id is the primary key and is auto-generated
-            }
-            catch (Exception ex)
-            {
-                // Log exception (ex) here if needed
-                return 0; // Return 0 to indicate failure
-            }
-        }
-
-        public async Task<int> RemoveLoyaltyPointAsync(int loyaltyPointId)
-        {
-            var loyaltyPoint = await _dbContext.TbLoyaltyPoints.FindAsync(loyaltyPointId);
-            if (loyaltyPoint == null)
-            {
-                return 0; // Return 0 to indicate that the record was not found
-            }
-
-            try
-            {
-                _dbContext.TbLoyaltyPoints.Remove(loyaltyPoint);
-                return await _dbContext.SaveChangesAsync();
-            }
-            catch (Exception ex)
-            {
-                // Log exception (ex) here if needed
-                return 0; // Return 0 to indicate failure
+                throw new NotImplementedException(ex.ToString());
             }
         }
 
         public async Task<bool> DeleteLoyaltyPointAsync(int loyaltyPointId)
         {
-            var loyaltyPoint = await _dbContext.TbLoyaltyPoints.FindAsync(loyaltyPointId);
-            if (loyaltyPoint == null)
-            {
-                return false; // Return false to indicate that the record was not found
-            }
-
+            var objDel = await _dbContext.LoyaltyPoints.Where(p => p.LoyaltyPointId.Equals(loyaltyPointId)).FirstOrDefaultAsync();
             try
             {
-                _dbContext.TbLoyaltyPoints.Remove(loyaltyPoint);
-                await _dbContext.SaveChangesAsync();
-                return true; // Return true to indicate success
+                if (objDel != null)
+                {
+                    _dbContext.LoyaltyPoints.Remove(objDel);
+                    await _dbContext.SaveChangesAsync();
+                    return true;
+                }
+                return false;
             }
             catch (Exception ex)
             {
-                // Log exception (ex) here if needed
-                return false; // Return false to indicate failure
+                // Log the exception
+                return false;
             }
         }
 
-        public async Task<int> UpdateLoyaltyPointAsync(TbLoyaltyPoint loyaltyPoint)
+        public async Task<List<LoyaltyPoint>> GetLoyaltyPoints()
+        {
+            List<LoyaltyPoint> loyaltyPoints = null;
+            try
+            {
+                loyaltyPoints = await _dbContext.LoyaltyPoints.ToListAsync();
+            }
+            catch (Exception ex) 
+            {
+                loyaltyPoints?.Add(new LoyaltyPoint());
+            }
+            return loyaltyPoints;
+        }
+
+        public Task<bool> RemoveLoyaltyPointAsync(LoyaltyPoint loyaltyPoint)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<bool> UpdateLoyaltyPoint(LoyaltyPoint loyaltyPoint)
         {
             try
             {
-                _dbContext.TbLoyaltyPoints.Update(loyaltyPoint);
-                return await _dbContext.SaveChangesAsync();
+                _dbContext.LoyaltyPoints.Update(loyaltyPoint);
+                _dbContext.SaveChanges();
+                return Task.FromResult(true);
             }
             catch (Exception ex)
             {
-                // Log exception (ex) here if needed
-                return 0; // Return 0 to indicate failure
+                return Task.FromResult(false);
             }
         }
     }

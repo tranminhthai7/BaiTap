@@ -1,101 +1,97 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
+using KoiFarmShop.Repositories.Entities;
 using Microsoft.EntityFrameworkCore;
 using KoiFarmShop.Repositories.Entities;
 using KoiFarmShop.Repositories.Interfaces;
 
-namespace KoiFarmShop.Repositories.Repositories
+namespace YourNamespace.Repositories.Repositories
 {
     public class UserRepository : IUserRepository
     {
-        private readonly KoiFarmShopDbContext _dbContext;
+        private readonly KoiFarmShop2024DbContext _dbContext;
 
-        public UserRepository(KoiFarmShopDbContext dbContext)
+        public UserRepository(KoiFarmShop2024DbContext dbContext) 
         {
             _dbContext = dbContext;
         }
 
-        public async Task<List<TbUser>> GetUsersAsync()
+        public bool AddUser(User user)
         {
             try
             {
-                return await _dbContext.TbUsers.ToListAsync();
+                _dbContext.Users.AddAsync(user);
+                _dbContext.SaveChanges();
+                return true;
             }
-            catch (Exception ex)
+            catch(Exception ex) 
             {
-                // Log exception (ex) here if needed
-                return new List<TbUser>();
+                throw new NotImplementedException(ex.ToString());
             }
         }
 
-        public async Task<int> AddUserAsync(TbUser user)
+        public bool DelUser(int id)
         {
             try
             {
-                await _dbContext.TbUsers.AddAsync(user);
-                await _dbContext.SaveChangesAsync();
-                return user.Id; // Assuming Id is the primary key and is auto-generated
+                var objDel = _dbContext.Users.Where(u => u.Id.Equals(id)).FirstOrDefault();
+                if(objDel != null) 
+                {
+                    _dbContext.Users.Remove(objDel);
+                    _dbContext.SaveChanges();
+                    return true;
+                }
+                return false;
             }
-            catch (Exception ex)
+            catch(Exception ex) 
             {
-                // Log exception (ex) here if needed
-                return 0; // Return 0 to indicate failure
+                throw new NotImplementedException(ex.ToString());
             }
         }
 
-        public async Task<int> RemoveUserAsync(int userId)
+        public bool DelUser(User user)
         {
-            var user = await _dbContext.TbUsers.FindAsync(userId);
-            if (user == null)
-            {
-                return 0; // Return 0 to indicate that the record was not found
-            }
-
             try
             {
-                _dbContext.TbUsers.Remove(user);
-                return await _dbContext.SaveChangesAsync();
+                _dbContext.Users.Remove(user);
+                _dbContext.SaveChanges();
+                return true;
             }
-            catch (Exception ex)
+            catch(Exception ex) 
             {
-                // Log exception (ex) here if needed
-                return 0; // Return 0 to indicate failure
+                throw new NotImplementedException(ex.ToString());
             }
         }
 
-        public async Task<bool> DeleteUserAsync(int userId)
+        public Task<List<User>> GetAllUser()
         {
-            var user = await _dbContext.TbUsers.FindAsync(userId);
-            if (user == null)
-            {
-                return false; // Return false to indicate that the record was not found
-            }
-
-            try
-            {
-                _dbContext.TbUsers.Remove(user);
-                await _dbContext.SaveChangesAsync();
-                return true; // Return true to indicate success
-            }
-            catch (Exception ex)
-            {
-                // Log exception (ex) here if needed
-                return false; // Return false to indicate failure
-            }
+            throw new NotImplementedException();
         }
 
-        public async Task<int> UpdateUserAsync(TbUser user)
+        public async Task<List<User>> GetAllUsers()
+        {
+            return await _dbContext.Users.ToListAsync();
+        }
+
+        public async Task<User> GetUserById(int id)
+        {
+            return await _dbContext.Users.Where(u => u.Id.Equals(id)).FirstOrDefaultAsync();
+        }
+
+        public bool UpdUser(User user)
         {
             try
             {
-                _dbContext.TbUsers.Update(user);
-                return await _dbContext.SaveChangesAsync();
+                _dbContext.Users.Update(user);
+                _dbContext.SaveChanges();
+                return true;
             }
-            catch (Exception ex)
+            catch (Exception ex) 
             {
-                // Log exception (ex) here if needed
-                return 0; // Return 0 to indicate failure
+                return false;
             }
         }
     }

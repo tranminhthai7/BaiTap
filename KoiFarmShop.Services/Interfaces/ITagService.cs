@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using KoiFarmShop.Repositories.Entities;
 
@@ -7,10 +9,10 @@ namespace KoiFarmShop.Services.Interfaces
 {
     public interface ITagService
     {
-        Task<List<TbTag>> GetTagsAsync();
-        Task<int> AddTagAsync(TbTag tag);
-        Task<int> RemoveTagAsync(int tagId);
+        Task<List<Tag>> GetTags();
+        Task<bool> AddTag(Tag tag);
+        Task<bool> RemoveTagAsync(Tag tag);
         Task<bool> DeleteTagAsync(int tagId);
-        Task<int> UpdateTagAsync(TbTag tag);
+        Task<bool> UpdateTag(Tag tag);
     }
 }

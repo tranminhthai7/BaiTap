@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using KoiFarmShop.Repositories.Entities;
@@ -9,93 +11,77 @@ namespace KoiFarmShop.Repositories.Repositories
 {
     public class FeedbackRepository : IFeedbackRepository
     {
-        private readonly KoiFarmShopDbContext _dbContext;
+        private readonly KoiFarmShop2024DbContext _dbContext;
 
-        public FeedbackRepository(KoiFarmShopDbContext dbContext)
+        public FeedbackRepository(KoiFarmShop2024DbContext dbContext) 
         {
             _dbContext = dbContext;
         }
 
-        public async Task<List<TbFeedback>> GetFeedbacksAsync()
+        public Task<bool> AddFeedback(Feedback feedback)
         {
             try
             {
-                return await _dbContext.TbFeedbacks.ToListAsync();
+                _dbContext.Feedbacks.AddAsync(feedback);
+                _dbContext.SaveChanges();
+                return Task.FromResult(true);
             }
-            catch (Exception ex)
+            catch (Exception ex) 
             {
-                // Log exception (ex) here if needed
-                return new List<TbFeedback>();
-            }
-        }
-
-        public async Task<int> AddFeedbackAsync(TbFeedback feedback)
-        {
-            try
-            {
-                await _dbContext.TbFeedbacks.AddAsync(feedback);
-                await _dbContext.SaveChangesAsync();
-                return feedback.Id; // Assuming Id is the primary key and is auto-generated
-            }
-            catch (Exception ex)
-            {
-                // Log exception (ex) here if needed
-                return 0; // Return 0 to indicate failure
-            }
-        }
-
-        public async Task<int> RemoveFeedbackAsync(int feedbackId)
-        {
-            var feedback = await _dbContext.TbFeedbacks.FindAsync(feedbackId);
-            if (feedback == null)
-            {
-                return 0; // Return 0 to indicate that the record was not found
-            }
-
-            try
-            {
-                _dbContext.TbFeedbacks.Remove(feedback);
-                return await _dbContext.SaveChangesAsync();
-            }
-            catch (Exception ex)
-            {
-                // Log exception (ex) here if needed
-                return 0; // Return 0 to indicate failure
+                throw new NotImplementedException(ex.ToString());
             }
         }
 
         public async Task<bool> DeleteFeedbackAsync(int feedbackId)
         {
-            var feedback = await _dbContext.TbFeedbacks.FindAsync(feedbackId);
-            if (feedback == null)
-            {
-                return false; // Return false to indicate that the record was not found
-            }
-
+            var objDel = await _dbContext.Feedbacks.Where(p => p.Id.Equals(feedbackId)).FirstOrDefaultAsync();
             try
             {
-                _dbContext.TbFeedbacks.Remove(feedback);
-                await _dbContext.SaveChangesAsync();
-                return true; // Return true to indicate success
+                if (objDel != null)
+                {
+                    _dbContext.Feedbacks.Remove(objDel);
+                    await _dbContext.SaveChangesAsync();
+                    return true;
+                }
+                return false;
             }
             catch (Exception ex)
             {
-                // Log exception (ex) here if needed
-                return false; // Return false to indicate failure
+                // Log the exception
+                return false;
             }
         }
 
-        public async Task<int> UpdateFeedbackAsync(TbFeedback feedback)
+        public async Task<List<Feedback>> GetFeedbacks()
+        {
+            List<Feedback> feedbacks = null;
+            try
+            {
+                feedbacks = await _dbContext.Feedbacks.ToListAsync();
+            }
+            catch (Exception ex) 
+            {
+                feedbacks?.Add(new Feedback());
+            }
+            return feedbacks;
+        }
+
+        public Task<bool> RemoveFeedbackAsync(Feedback feedback)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<bool> UpdateFeedback(Feedback feedback)
         {
             try
             {
-                _dbContext.TbFeedbacks.Update(feedback);
-                return await _dbContext.SaveChangesAsync();
+                _dbContext.Feedbacks.Update(feedback);
+                _dbContext.SaveChanges();
+                return Task.FromResult(true);
             }
             catch (Exception ex)
             {
-                // Log exception (ex) here if needed
-                return 0; // Return 0 to indicate failure
+                return Task.FromResult(false);
             }
         }
     }

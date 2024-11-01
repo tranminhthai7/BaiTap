@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using KoiFarmShop.Repositories.Entities;
 using KoiFarmShop.Repositories.Interfaces;
@@ -16,19 +18,9 @@ namespace KoiFarmShop.Services.Services
             _promotionRepository = promotionRepository;
         }
 
-        public Task<List<TbPromotion>> GetPromotionsAsync()
+        public Task<bool> AddPromotion(Promotion promotion)
         {
-            return _promotionRepository.GetPromotionsAsync();
-        }
-
-        public Task<int> AddPromotionAsync(TbPromotion promotion)
-        {
-            return _promotionRepository.AddPromotionAsync(promotion);
-        }
-
-        public Task<int> RemovePromotionAsync(int promotionId)
-        {
-            return _promotionRepository.RemovePromotionAsync(promotionId);
+            return _promotionRepository.AddPromotion(promotion);
         }
 
         public Task<bool> DeletePromotionAsync(int promotionId)
@@ -36,9 +28,19 @@ namespace KoiFarmShop.Services.Services
             return _promotionRepository.DeletePromotionAsync(promotionId);
         }
 
-        public Task<int> UpdatePromotionAsync(TbPromotion promotion)
+        public async Task<List<Promotion>> GetPromotionsAsync()
         {
-            return _promotionRepository.UpdatePromotionAsync(promotion);
+            return await _promotionRepository.GetPromotions();
+        }
+
+        public Task<bool> RemovePromotionAsync(Promotion promotion)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<bool> UpdatePromotion(Promotion promotion)
+        {
+            return _promotionRepository.UpdatePromotion(promotion);
         }
     }
 }

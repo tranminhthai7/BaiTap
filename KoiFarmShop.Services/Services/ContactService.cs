@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using KoiFarmShop.Repositories.Entities;
 using KoiFarmShop.Repositories.Interfaces;
@@ -16,19 +18,9 @@ namespace KoiFarmShop.Services.Services
             _contactRepository = contactRepository;
         }
 
-        public Task<List<TbContact>> GetContactsAsync()
+        public Task<bool> AddContact(Contact contact)
         {
-            return _contactRepository.GetContactsAsync();
-        }
-
-        public Task<int> AddContactAsync(TbContact contact)
-        {
-            return _contactRepository.AddContactAsync(contact);
-        }
-
-        public Task<int> RemoveContactAsync(int contactId)
-        {
-            return _contactRepository.RemoveContactAsync(contactId);
+            return _contactRepository.AddContact(contact);
         }
 
         public Task<bool> DeleteContactAsync(int contactId)
@@ -36,9 +28,19 @@ namespace KoiFarmShop.Services.Services
             return _contactRepository.DeleteContactAsync(contactId);
         }
 
-        public Task<int> UpdateContactAsync(TbContact contact)
+        public async Task<List<Contact>> GetContactsAsync()
         {
-            return _contactRepository.UpdateContactAsync(contact);
+            return await _contactRepository.GetContacts();
+        }
+
+        public Task<bool> RemoveContactAsync(Contact contact)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<bool> UpdateContact(Contact contact)
+        {
+            return _contactRepository.UpdateContact(contact);
         }
     }
 }

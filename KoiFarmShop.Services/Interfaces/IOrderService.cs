@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using KoiFarmShop.Repositories.Entities;
 
@@ -7,10 +9,10 @@ namespace KoiFarmShop.Services.Interfaces
 {
     public interface IOrderService
     {
-        Task<List<TbOrder>> GetOrdersAsync();
-        Task<int> AddOrderAsync(TbOrder order);
-        Task<int> RemoveOrderAsync(int orderId);
+        Task<List<Order>> GetOrders();
+        Task<bool> AddOrder(Order order);
+        Task<bool> RemoveOrderAsync(Order order);
         Task<bool> DeleteOrderAsync(int orderId);
-        Task<int> UpdateOrderAsync(TbOrder order);
+        Task<bool> UpdateOrder(Order order);
     }
 }

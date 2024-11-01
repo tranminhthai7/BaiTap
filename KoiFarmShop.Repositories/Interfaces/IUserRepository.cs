@@ -1,16 +1,20 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using KoiFarmShop.Repositories.Entities;
-
 namespace KoiFarmShop.Repositories.Interfaces
 {
     public interface IUserRepository
     {
-        Task<List<TbUser>> GetUsersAsync();
-        Task<int> AddUserAsync(TbUser user);
-        Task<int> RemoveUserAsync(int userId);
-        Task<bool> DeleteUserAsync(int userId);
-        Task<int> UpdateUserAsync(TbUser user);
+        // lay danh sách acccount
+        Task<List<User>> GetAllUser();
+        Boolean DelUser(int Id);
+        Boolean DelUser(User account);
+        Boolean AddUser(User account);
+        Boolean UpdUser(User account);
+        Task<User> GetUserById(int Id);
     }
+
 }

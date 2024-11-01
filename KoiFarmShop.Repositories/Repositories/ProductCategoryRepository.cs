@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using KoiFarmShop.Repositories.Entities;
@@ -9,93 +11,77 @@ namespace KoiFarmShop.Repositories.Repositories
 {
     public class ProductCategoryRepository : IProductCategoryRepository
     {
-        private readonly KoiFarmShopDbContext _dbContext;
+        private readonly KoiFarmShop2024DbContext _dbContext;
 
-        public ProductCategoryRepository(KoiFarmShopDbContext dbContext)
+        public ProductCategoryRepository(KoiFarmShop2024DbContext dbContext) 
         {
             _dbContext = dbContext;
         }
 
-        public async Task<List<TbProductCategory>> GetProductCategoriesAsync()
+        public Task<bool> AddProductCategory(ProductCategory productCategory)
         {
             try
             {
-                return await _dbContext.TbProductCategories.ToListAsync();
+                _dbContext.ProductCategories.AddAsync(productCategory);
+                _dbContext.SaveChanges();
+                return Task.FromResult(true);
             }
-            catch (Exception ex)
+            catch (Exception ex) 
             {
-                // Log exception (ex) here if needed
-                return new List<TbProductCategory>();
-            }
-        }
-
-        public async Task<int> AddProductCategoryAsync(TbProductCategory productCategory)
-        {
-            try
-            {
-                await _dbContext.TbProductCategories.AddAsync(productCategory);
-                await _dbContext.SaveChangesAsync();
-                return productCategory.Id; // Assuming Id is the primary key and is auto-generated
-            }
-            catch (Exception ex)
-            {
-                // Log exception (ex) here if needed
-                return 0; // Return 0 to indicate failure
-            }
-        }
-
-        public async Task<int> RemoveProductCategoryAsync(int productCategoryId)
-        {
-            var productCategory = await _dbContext.TbProductCategories.FindAsync(productCategoryId);
-            if (productCategory == null)
-            {
-                return 0; // Return 0 to indicate that the record was not found
-            }
-
-            try
-            {
-                _dbContext.TbProductCategories.Remove(productCategory);
-                return await _dbContext.SaveChangesAsync();
-            }
-            catch (Exception ex)
-            {
-                // Log exception (ex) here if needed
-                return 0; // Return 0 to indicate failure
+                throw new NotImplementedException(ex.ToString());
             }
         }
 
         public async Task<bool> DeleteProductCategoryAsync(int productCategoryId)
         {
-            var productCategory = await _dbContext.TbProductCategories.FindAsync(productCategoryId);
-            if (productCategory == null)
-            {
-                return false; // Return false to indicate that the record was not found
-            }
-
+            var objDel = await _dbContext.ProductCategories.Where(p => p.CateId.Equals(productCategoryId)).FirstOrDefaultAsync();
             try
             {
-                _dbContext.TbProductCategories.Remove(productCategory);
-                await _dbContext.SaveChangesAsync();
-                return true; // Return true to indicate success
+                if (objDel != null)
+                {
+                    _dbContext.ProductCategories.Remove(objDel);
+                    await _dbContext.SaveChangesAsync();
+                    return true;
+                }
+                return false;
             }
             catch (Exception ex)
             {
-                // Log exception (ex) here if needed
-                return false; // Return false to indicate failure
+                // Log the exception
+                return false;
             }
         }
 
-        public async Task<int> UpdateProductCategoryAsync(TbProductCategory productCategory)
+        public async Task<List<ProductCategory>> GetProductCategories()
+        {
+            List<ProductCategory> productCategories = null;
+            try
+            {
+                productCategories = await _dbContext.ProductCategories.ToListAsync();
+            }
+            catch (Exception ex) 
+            {
+                productCategories?.Add(new ProductCategory());
+            }
+            return productCategories;
+        }
+
+        public Task<bool> RemoveProductCategoryAsync(ProductCategory productCategory)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<bool> UpdateProductCategory(ProductCategory productCategory)
         {
             try
             {
-                _dbContext.TbProductCategories.Update(productCategory);
-                return await _dbContext.SaveChangesAsync();
+                _dbContext.ProductCategories.Update(productCategory);
+                _dbContext.SaveChanges();
+                return Task.FromResult(true);
             }
             catch (Exception ex)
             {
-                // Log exception (ex) here if needed
-                return 0; // Return 0 to indicate failure
+                return Task.FromResult(false);
             }
         }
     }

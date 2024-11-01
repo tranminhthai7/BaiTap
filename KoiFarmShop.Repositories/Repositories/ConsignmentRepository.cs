@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using KoiFarmShop.Repositories.Entities;
@@ -10,62 +11,62 @@ namespace KoiFarmShop.Repositories.Repositories
 {
     public class ConsignmentRepository : IConsignmentRepository
     {
-        private readonly KoiFarmShopDbContext _dbContext;
+        private readonly KoiFarmShop2024DbContext _dbContext;
 
-        public ConsignmentRepository(KoiFarmShopDbContext dbContext)
+        public ConsignmentRepository(KoiFarmShop2024DbContext dbContext) 
         {
             _dbContext = dbContext;
         }
 
-        public async Task<int> AddConsignmentAsync(IConsignment consignment)
+        public Task<bool> AddConsignment(Consignment consignment)
         {
             try
             {
-                await _dbContext.Consignments.AddAsync(consignment);
-                return await _dbContext.SaveChangesAsync();
+                _dbContext.Consignments.AddAsync(consignment);
+                _dbContext.SaveChanges();
+                return Task.FromResult(true);
             }
-            catch (Exception ex)
+            catch (Exception ex) 
             {
-                // Log exception (ex) here if needed
-                return 0; // Return 0 to indicate failure
+                throw new NotImplementedException(ex.ToString());
             }
         }
 
-        public async Task<int> UpdateConsignmentAsync(IConsignment consignment)
+        public async Task<bool> DeleteConsignmentAsync(int consignmentId)
         {
+            var objDel = await _dbContext.Consignments.Where(p => p.ConsignmentId.Equals(consignmentId)).FirstOrDefaultAsync();
             try
             {
-                _dbContext.Consignments.Update(consignment);
-                return await _dbContext.SaveChangesAsync();
+                if (objDel != null)
+                {
+                    _dbContext.Consignments.Remove(objDel);
+                    await _dbContext.SaveChangesAsync();
+                    return true;
+                }
+                return false;
             }
             catch (Exception ex)
             {
-                // Log exception (ex) here if needed
-                return 0; // Return 0 to indicate failure
+                // Log the exception
+                return false;
             }
         }
 
-        public async Task<int> DeleteConsignmentAsync(int consignmentId)
+        public async Task<List<Consignment>> GetConsignments()
         {
-            var consignment = await _dbContext.Consignments.FindAsync(consignmentId);
-            if (consignment == null)
-            {
-                return 0; // Return 0 to indicate that the record was not found
-            }
-
+            List<Consignment> consignments = null;
             try
             {
-                _dbContext.Consignments.Remove(consignment);
-                return await _dbContext.SaveChangesAsync();
+                consignments = await _dbContext.Consignments.ToListAsync();
             }
-            catch (Exception ex)
+            catch (Exception ex) 
             {
-                // Log exception (ex) here if needed
-                return 0; // Return 0 to indicate failure
+                consignments?.Add(new Consignment());
             }
+            return consignments;
         }
 
-        public async Task<IEnumerable<IConsignment>> GetAllConsignmentsAsync()
+        public async Task<List<Consignment>> GetAllConsignments()
         {
             try
             {
@@ -73,8 +74,27 @@ namespace KoiFarmShop.Repositories.Repositories
             }
             catch (Exception ex)
             {
-                // Log exception (ex) here if needed
-                return new List<IConsignment>();
+                // Log the exception
+                return new List<Consignment>();
+            }
+        }
+
+        public Task<bool> RemoveConsignmentAsync(Consignment consignment)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<bool> UpdateConsignment(Consignment consignment)
+        {
+            try
+            {
+                _dbContext.Consignments.Update(consignment);
+                _dbContext.SaveChanges();
+                return Task.FromResult(true);
+            }
+            catch (Exception ex)
+            {
+                return Task.FromResult(false);
             }
         }
     }

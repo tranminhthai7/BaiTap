@@ -9,10 +9,10 @@ namespace KoiFarmShop.Repositories.Interfaces
 {
     public interface IMenuRepository
     {
-        Task<List<MenuItem>> GetMenuItems();
-        Task<bool> AddMenuItem(MenuItem menuItem);
-        Task<bool> RemoveMenuItemAsync(MenuItem menuItem);
+        Task<List<Menu>> GetMenuItems();
+        Task<bool> AddMenuItem(Menu menuItem);
+        Task<bool> RemoveMenuItemAsync(Menu menuItem);
         Task<bool> DeleteMenuItemAsync(int menuItemId);
-        Task<bool> UpdateMenuItem(MenuItem menuItem);
+        Task<bool> UpdateMenuItem(Menu menuItem);
     }
 }

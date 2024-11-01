@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using KoiFarmShop.Repositories.Entities;
@@ -9,93 +11,77 @@ namespace KoiFarmShop.Repositories.Repositories
 {
     public class OrderRepository : IOrderRepository
     {
-        private readonly KoiFarmShopDbContext _dbContext;
+        private readonly KoiFarmShop2024DbContext _dbContext;
 
-        public OrderRepository(KoiFarmShopDbContext dbContext)
+        public OrderRepository(KoiFarmShop2024DbContext dbContext) 
         {
             _dbContext = dbContext;
         }
 
-        public async Task<List<TbOrder>> GetOrdersAsync()
+        public Task<bool> AddOrder(Order order)
         {
             try
             {
-                return await _dbContext.TbOrders.ToListAsync();
+                _dbContext.Orders.AddAsync(order);
+                _dbContext.SaveChanges();
+                return Task.FromResult(true);
             }
-            catch (Exception ex)
+            catch (Exception ex) 
             {
-                // Log exception (ex) here if needed
-                return new List<TbOrder>();
-            }
-        }
-
-        public async Task<int> AddOrderAsync(TbOrder order)
-        {
-            try
-            {
-                await _dbContext.TbOrders.AddAsync(order);
-                await _dbContext.SaveChangesAsync();
-                return order.Id; // Assuming Id is the primary key and is auto-generated
-            }
-            catch (Exception ex)
-            {
-                // Log exception (ex) here if needed
-                return 0; // Return 0 to indicate failure
-            }
-        }
-
-        public async Task<int> RemoveOrderAsync(int orderId)
-        {
-            var order = await _dbContext.TbOrders.FindAsync(orderId);
-            if (order == null)
-            {
-                return 0; // Return 0 to indicate that the record was not found
-            }
-
-            try
-            {
-                _dbContext.TbOrders.Remove(order);
-                return await _dbContext.SaveChangesAsync();
-            }
-            catch (Exception ex)
-            {
-                // Log exception (ex) here if needed
-                return 0; // Return 0 to indicate failure
+                throw new NotImplementedException(ex.ToString());
             }
         }
 
         public async Task<bool> DeleteOrderAsync(int orderId)
         {
-            var order = await _dbContext.TbOrders.FindAsync(orderId);
-            if (order == null)
-            {
-                return false; // Return false to indicate that the record was not found
-            }
-
+            var objDel = await _dbContext.Orders.Where(p => p.OrderId.Equals(orderId)).FirstOrDefaultAsync();
             try
             {
-                _dbContext.TbOrders.Remove(order);
-                await _dbContext.SaveChangesAsync();
-                return true; // Return true to indicate success
+                if (objDel != null)
+                {
+                    _dbContext.Orders.Remove(objDel);
+                    await _dbContext.SaveChangesAsync();
+                    return true;
+                }
+                return false;
             }
             catch (Exception ex)
             {
-                // Log exception (ex) here if needed
-                return false; // Return false to indicate failure
+                // Log the exception
+                return false;
             }
         }
 
-        public async Task<int> UpdateOrderAsync(TbOrder order)
+        public async Task<List<Order>> GetOrders()
+        {
+            List<Order> orders = null;
+            try
+            {
+                orders = await _dbContext.Orders.ToListAsync();
+            }
+            catch (Exception ex) 
+            {
+                orders?.Add(new Order());
+            }
+            return orders;
+        }
+
+        public Task<bool> RemoveOrderAsync(Order order)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<bool> UpdateOrder(Order order)
         {
             try
             {
-                _dbContext.TbOrders.Update(order);
-                return await _dbContext.SaveChangesAsync();
+                _dbContext.Orders.Update(order);
+                _dbContext.SaveChanges();
+                return Task.FromResult(true);
             }
             catch (Exception ex)
             {
-                // Log exception (ex) here if needed
-                return 0; // Return 0 to indicate failure
+                return Task.FromResult(false);
             }
         }
     }

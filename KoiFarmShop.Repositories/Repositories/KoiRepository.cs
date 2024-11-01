@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using KoiFarmShop.Repositories.Entities;
@@ -9,93 +11,77 @@ namespace KoiFarmShop.Repositories.Repositories
 {
     public class KoiRepository : IKoiRepository
     {
-        private readonly KoiFarmShopDbContext _dbContext;
+        private readonly KoiFarmShop2024DbContext _dbContext;
 
-        public KoiRepository(KoiFarmShopDbContext dbContext)
+        public KoiRepository(KoiFarmShop2024DbContext dbContext) 
         {
             _dbContext = dbContext;
         }
 
-        public async Task<List<TbKoi>> GetKoisAsync()
+        public Task<bool> AddKoi(Koi koi)
         {
             try
             {
-                return await _dbContext.TbKois.ToListAsync();
+                _dbContext.Kois.AddAsync(koi);
+                _dbContext.SaveChanges();
+                return Task.FromResult(true);
             }
-            catch (Exception ex)
+            catch (Exception ex) 
             {
-                // Log exception (ex) here if needed
-                return new List<TbKoi>();
-            }
-        }
-
-        public async Task<int> AddKoiAsync(TbKoi koi)
-        {
-            try
-            {
-                await _dbContext.TbKois.AddAsync(koi);
-                await _dbContext.SaveChangesAsync();
-                return koi.Id; // Assuming Id is the primary key and is auto-generated
-            }
-            catch (Exception ex)
-            {
-                // Log exception (ex) here if needed
-                return 0; // Return 0 to indicate failure
-            }
-        }
-
-        public async Task<int> RemoveKoiAsync(int koiId)
-        {
-            var koi = await _dbContext.TbKois.FindAsync(koiId);
-            if (koi == null)
-            {
-                return 0; // Return 0 to indicate that the record was not found
-            }
-
-            try
-            {
-                _dbContext.TbKois.Remove(koi);
-                return await _dbContext.SaveChangesAsync();
-            }
-            catch (Exception ex)
-            {
-                // Log exception (ex) here if needed
-                return 0; // Return 0 to indicate failure
+                throw new NotImplementedException(ex.ToString());
             }
         }
 
         public async Task<bool> DeleteKoiAsync(int koiId)
         {
-            var koi = await _dbContext.TbKois.FindAsync(koiId);
-            if (koi == null)
-            {
-                return false; // Return false to indicate that the record was not found
-            }
-
+            var objDel = await _dbContext.Kois.Where(p => p.KoiId.Equals(koiId)).FirstOrDefaultAsync();
             try
             {
-                _dbContext.TbKois.Remove(koi);
-                await _dbContext.SaveChangesAsync();
-                return true; // Return true to indicate success
+                if (objDel != null)
+                {
+                    _dbContext.Kois.Remove(objDel);
+                    await _dbContext.SaveChangesAsync();
+                    return true;
+                }
+                return false;
             }
             catch (Exception ex)
             {
-                // Log exception (ex) here if needed
-                return false; // Return false to indicate failure
+                // Log the exception
+                return false;
             }
         }
 
-        public async Task<int> UpdateKoiAsync(TbKoi koi)
+        public async Task<List<Koi>> GetKois()
+        {
+            List<Koi> kois = null;
+            try
+            {
+                kois = await _dbContext.Kois.ToListAsync();
+            }
+            catch (Exception ex) 
+            {
+                kois?.Add(new Koi());
+            }
+            return kois;
+        }
+
+        public Task<bool> RemoveKoiAsync(Koi koi)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<bool> UpdateKoi(Koi koi)
         {
             try
             {
-                _dbContext.TbKois.Update(koi);
-                return await _dbContext.SaveChangesAsync();
+                _dbContext.Kois.Update(koi);
+                _dbContext.SaveChanges();
+                return Task.FromResult(true);
             }
             catch (Exception ex)
             {
-                // Log exception (ex) here if needed
-                return 0; // Return 0 to indicate failure
+                return Task.FromResult(false);
             }
         }
     }

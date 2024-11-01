@@ -1,44 +1,51 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
-using KoiFarmShop.Repositories.Entities;
-using KoiFarmShop.Repositories.Interfaces;
-using KoiFarmShop.Services.Interfaces;
+using KoiFarmShop.Repositories.Entities; 
+using KoiFarmShop.Services.Interfaces; 
+using KoiFarmShop.Repositories.Interfaces; 
 
 namespace KoiFarmShop.Services.Services
 {
     public class UserService : IUserService
     {
-        private readonly IUserRepository _userRepository;
+        private readonly IUserRepository _repository;
 
-        public UserService(IUserRepository userRepository)
+        public UserService(IUserRepository repository) 
         {
-            _userRepository = userRepository;
+            _repository = repository;
         }
 
-        public Task<List<TbUser>> GetUsersAsync()
+        public bool AddUser(User user)
         {
-            return _userRepository.GetUsersAsync();
+            return _repository.AddUser(user);
         }
 
-        public Task<int> AddUserAsync(TbUser user)
+        public bool DeleteUser(int id)
         {
-            return _userRepository.AddUserAsync(user);
+            return _repository.DeleteUser(id);
         }
 
-        public Task<int> RemoveUserAsync(int userId)
+        public bool DeleteUser(User user)
         {
-            return _userRepository.RemoveUserAsync(userId);
+            return _repository.DeleteUser(user);
         }
 
-        public Task<bool> DeleteUserAsync(int userId)
+        public Task<User> GetUserById(int id)
         {
-            return _userRepository.DeleteUserAsync(userId);
+            return _repository.GetUserById(id);
         }
 
-        public Task<int> UpdateUserAsync(TbUser user)
+        public Task<List<User>> GetAllUsers()
         {
-            return _userRepository.UpdateUserAsync(user);
+            return _repository.GetAllUsers();
+        }
+
+        public bool UpdateUser(User user)
+        {
+            return _repository.UpdateUser(user);
         }
     }
 }

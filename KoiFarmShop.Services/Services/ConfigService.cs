@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using KoiFarmShop.Repositories.Entities;
 using KoiFarmShop.Repositories.Interfaces;
@@ -16,19 +18,9 @@ namespace KoiFarmShop.Services.Services
             _configRepository = configRepository;
         }
 
-        public Task<List<TbConfig>> GetConfigsAsync()
+        public Task<bool> AddConfig(Config config)
         {
-            return _configRepository.GetConfigsAsync();
-        }
-
-        public Task<int> AddConfigAsync(TbConfig config)
-        {
-            return _configRepository.AddConfigAsync(config);
-        }
-
-        public Task<int> RemoveConfigAsync(int configId)
-        {
-            return _configRepository.RemoveConfigAsync(configId);
+            return _configRepository.AddConfig(config);
         }
 
         public Task<bool> DeleteConfigAsync(int configId)
@@ -36,9 +28,19 @@ namespace KoiFarmShop.Services.Services
             return _configRepository.DeleteConfigAsync(configId);
         }
 
-        public Task<int> UpdateConfigAsync(TbConfig config)
+        public async Task<List<Config>> GetConfigsAsync()
         {
-            return _configRepository.UpdateConfigAsync(config);
+            return await _configRepository.GetConfigs();
+        }
+
+        public Task<bool> RemoveConfigAsync(Config config)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<bool> UpdateConfig(Config config)
+        {
+            return _configRepository.UpdateConfig(config);
         }
     }
 }

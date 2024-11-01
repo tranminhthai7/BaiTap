@@ -8,7 +8,7 @@ using KoiFarmShop.Services.Services;
 var builder = WebApplication.CreateBuilder(args);
 
 // DI
-builder.Services.AddDbContext<BancaContext>(options =>
+builder.Services.AddDbContext<KoiFarmShop2024DbContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("DbContext"));
     // chọn SqlServer làm cơ sở dữ liệu

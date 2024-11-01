@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using KoiFarmShop.Repositories.Entities;
 using KoiFarmShop.Repositories.Interfaces;
@@ -16,19 +18,9 @@ namespace KoiFarmShop.Services.Services
             _tagRepository = tagRepository;
         }
 
-        public Task<List<TbTag>> GetTagsAsync()
+        public Task<bool> AddTag(Tag tag)
         {
-            return _tagRepository.GetTagsAsync();
-        }
-
-        public Task<int> AddTagAsync(TbTag tag)
-        {
-            return _tagRepository.AddTagAsync(tag);
-        }
-
-        public Task<int> RemoveTagAsync(int tagId)
-        {
-            return _tagRepository.RemoveTagAsync(tagId);
+            return _tagRepository.AddTag(tag);
         }
 
         public Task<bool> DeleteTagAsync(int tagId)
@@ -36,9 +28,19 @@ namespace KoiFarmShop.Services.Services
             return _tagRepository.DeleteTagAsync(tagId);
         }
 
-        public Task<int> UpdateTagAsync(TbTag tag)
+        public async Task<List<Tag>> GetTagsAsync()
         {
-            return _tagRepository.UpdateTagAsync(tag);
+            return await _tagRepository.GetTags();
+        }
+
+        public Task<bool> RemoveTagAsync(Tag tag)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<bool> UpdateTag(Tag tag)
+        {
+            return _tagRepository.UpdateTag(tag);
         }
     }
 }

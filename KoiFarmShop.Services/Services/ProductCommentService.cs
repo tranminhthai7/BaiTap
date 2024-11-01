@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using KoiFarmShop.Repositories.Entities;
 using KoiFarmShop.Repositories.Interfaces;
@@ -16,19 +18,9 @@ namespace KoiFarmShop.Services.Services
             _productCommentRepository = productCommentRepository;
         }
 
-        public Task<List<TbProductComment>> GetProductCommentsAsync()
+        public Task<bool> AddProductComment(ProductComment productComment)
         {
-            return _productCommentRepository.GetProductCommentsAsync();
-        }
-
-        public Task<int> AddProductCommentAsync(TbProductComment productComment)
-        {
-            return _productCommentRepository.AddProductCommentAsync(productComment);
-        }
-
-        public Task<int> RemoveProductCommentAsync(int productCommentId)
-        {
-            return _productCommentRepository.RemoveProductCommentAsync(productCommentId);
+            return _productCommentRepository.AddProductComment(productComment);
         }
 
         public Task<bool> DeleteProductCommentAsync(int productCommentId)
@@ -36,9 +28,19 @@ namespace KoiFarmShop.Services.Services
             return _productCommentRepository.DeleteProductCommentAsync(productCommentId);
         }
 
-        public Task<int> UpdateProductCommentAsync(TbProductComment productComment)
+        public async Task<List<ProductComment>> GetProductCommentsAsync()
         {
-            return _productCommentRepository.UpdateProductCommentAsync(productComment);
+            return await _productCommentRepository.GetProductComments();
+        }
+
+        public Task<bool> RemoveProductCommentAsync(ProductComment productComment)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<bool> UpdateProductComment(ProductComment productComment)
+        {
+            return _productCommentRepository.UpdateProductComment(productComment);
         }
     }
 }

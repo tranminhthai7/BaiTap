@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using KoiFarmShop.Repositories.Entities;
 using KoiFarmShop.Repositories.Interfaces;
@@ -16,19 +18,9 @@ namespace KoiFarmShop.Services.Services
             _koiRepository = koiRepository;
         }
 
-        public Task<List<TbKoi>> GetKoisAsync()
+        public Task<bool> AddKoi(Koi koi)
         {
-            return _koiRepository.GetKoisAsync();
-        }
-
-        public Task<int> AddKoiAsync(TbKoi koi)
-        {
-            return _koiRepository.AddKoiAsync(koi);
-        }
-
-        public Task<int> RemoveKoiAsync(int koiId)
-        {
-            return _koiRepository.RemoveKoiAsync(koiId);
+            return _koiRepository.AddKoi(koi);
         }
 
         public Task<bool> DeleteKoiAsync(int koiId)
@@ -36,9 +28,19 @@ namespace KoiFarmShop.Services.Services
             return _koiRepository.DeleteKoiAsync(koiId);
         }
 
-        public Task<int> UpdateKoiAsync(TbKoi koi)
+        public async Task<List<Koi>> GetKoisAsync()
         {
-            return _koiRepository.UpdateKoiAsync(koi);
+            return await _koiRepository.GetKois();
+        }
+
+        public Task<bool> RemoveKoiAsync(Koi koi)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<bool> UpdateKoi(Koi koi)
+        {
+            return _koiRepository.UpdateKoi(koi);
         }
     }
 }

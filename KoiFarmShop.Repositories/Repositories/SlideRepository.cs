@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using KoiFarmShop.Repositories.Entities;
@@ -9,93 +11,77 @@ namespace KoiFarmShop.Repositories.Repositories
 {
     public class SlideRepository : ISlideRepository
     {
-        private readonly KoiFarmShopDbContext _dbContext;
+        private readonly KoiFarmShop2024DbContext _dbContext;
 
-        public SlideRepository(KoiFarmShopDbContext dbContext)
+        public SlideRepository(KoiFarmShop2024DbContext dbContext) 
         {
             _dbContext = dbContext;
         }
 
-        public async Task<List<TbSlide>> GetSlidesAsync()
+        public Task<bool> AddSlide(Slide slide)
         {
             try
             {
-                return await _dbContext.TbSlides.ToListAsync();
+                _dbContext.Slides.AddAsync(slide);
+                _dbContext.SaveChanges();
+                return Task.FromResult(true);
             }
-            catch (Exception ex)
+            catch (Exception ex) 
             {
-                // Log exception (ex) here if needed
-                return new List<TbSlide>();
-            }
-        }
-
-        public async Task<int> AddSlideAsync(TbSlide slide)
-        {
-            try
-            {
-                await _dbContext.TbSlides.AddAsync(slide);
-                await _dbContext.SaveChangesAsync();
-                return slide.Id; // Assuming Id is the primary key and is auto-generated
-            }
-            catch (Exception ex)
-            {
-                // Log exception (ex) here if needed
-                return 0; // Return 0 to indicate failure
-            }
-        }
-
-        public async Task<int> RemoveSlideAsync(int slideId)
-        {
-            var slide = await _dbContext.TbSlides.FindAsync(slideId);
-            if (slide == null)
-            {
-                return 0; // Return 0 to indicate that the record was not found
-            }
-
-            try
-            {
-                _dbContext.TbSlides.Remove(slide);
-                return await _dbContext.SaveChangesAsync();
-            }
-            catch (Exception ex)
-            {
-                // Log exception (ex) here if needed
-                return 0; // Return 0 to indicate failure
+                throw new NotImplementedException(ex.ToString());
             }
         }
 
         public async Task<bool> DeleteSlideAsync(int slideId)
         {
-            var slide = await _dbContext.TbSlides.FindAsync(slideId);
-            if (slide == null)
-            {
-                return false; // Return false to indicate that the record was not found
-            }
-
+            var objDel = await _dbContext.Slides.Where(p => p.Id.Equals(slideId)).FirstOrDefaultAsync();
             try
             {
-                _dbContext.TbSlides.Remove(slide);
-                await _dbContext.SaveChangesAsync();
-                return true; // Return true to indicate success
+                if (objDel != null)
+                {
+                    _dbContext.Slides.Remove(objDel);
+                    await _dbContext.SaveChangesAsync();
+                    return true;
+                }
+                return false;
             }
             catch (Exception ex)
             {
-                // Log exception (ex) here if needed
-                return false; // Return false to indicate failure
+                // Log the exception
+                return false;
             }
         }
 
-        public async Task<int> UpdateSlideAsync(TbSlide slide)
+        public async Task<List<Slide>> GetSlides()
+        {
+            List<Slide> slides = null;
+            try
+            {
+                slides = await _dbContext.Slides.ToListAsync();
+            }
+            catch (Exception ex) 
+            {
+                slides?.Add(new Slide());
+            }
+            return slides;
+        }
+
+        public Task<bool> RemoveSlideAsync(Slide slide)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<bool> UpdateSlide(Slide slide)
         {
             try
             {
-                _dbContext.TbSlides.Update(slide);
-                return await _dbContext.SaveChangesAsync();
+                _dbContext.Slides.Update(slide);
+                _dbContext.SaveChanges();
+                return Task.FromResult(true);
             }
             catch (Exception ex)
             {
-                // Log exception (ex) here if needed
-                return 0; // Return 0 to indicate failure
+                return Task.FromResult(false);
             }
         }
     }

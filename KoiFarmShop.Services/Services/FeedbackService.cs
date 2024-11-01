@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using KoiFarmShop.Repositories.Entities;
 using KoiFarmShop.Repositories.Interfaces;
@@ -16,19 +18,9 @@ namespace KoiFarmShop.Services.Services
             _feedbackRepository = feedbackRepository;
         }
 
-        public Task<List<TbFeedback>> GetFeedbacksAsync()
+        public Task<bool> AddFeedback(Feedback feedback)
         {
-            return _feedbackRepository.GetFeedbacksAsync();
-        }
-
-        public Task<int> AddFeedbackAsync(TbFeedback feedback)
-        {
-            return _feedbackRepository.AddFeedbackAsync(feedback);
-        }
-
-        public Task<int> RemoveFeedbackAsync(int feedbackId)
-        {
-            return _feedbackRepository.RemoveFeedbackAsync(feedbackId);
+            return _feedbackRepository.AddFeedback(feedback);
         }
 
         public Task<bool> DeleteFeedbackAsync(int feedbackId)
@@ -36,9 +28,19 @@ namespace KoiFarmShop.Services.Services
             return _feedbackRepository.DeleteFeedbackAsync(feedbackId);
         }
 
-        public Task<int> UpdateFeedbackAsync(TbFeedback feedback)
+        public async Task<List<Feedback>> GetFeedbacksAsync()
         {
-            return _feedbackRepository.UpdateFeedbackAsync(feedback);
+            return await _feedbackRepository.GetFeedbacks();
+        }
+
+        public Task<bool> RemoveFeedbackAsync(Feedback feedback)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<bool> UpdateFeedback(Feedback feedback)
+        {
+            return _feedbackRepository.UpdateFeedback(feedback);
         }
     }
 }

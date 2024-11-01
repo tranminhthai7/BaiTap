@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using KoiFarmShop.Repositories.Entities;
 using KoiFarmShop.Repositories.Interfaces;
@@ -16,19 +18,9 @@ namespace KoiFarmShop.Services.Services
             _productCategoryRepository = productCategoryRepository;
         }
 
-        public Task<List<TbProductCategory>> GetProductCategoriesAsync()
+        public Task<bool> AddProductCategory(ProductCategory productCategory)
         {
-            return _productCategoryRepository.GetProductCategoriesAsync();
-        }
-
-        public Task<int> AddProductCategoryAsync(TbProductCategory productCategory)
-        {
-            return _productCategoryRepository.AddProductCategoryAsync(productCategory);
-        }
-
-        public Task<int> RemoveProductCategoryAsync(int productCategoryId)
-        {
-            return _productCategoryRepository.RemoveProductCategoryAsync(productCategoryId);
+            return _productCategoryRepository.AddProductCategory(productCategory);
         }
 
         public Task<bool> DeleteProductCategoryAsync(int productCategoryId)
@@ -36,9 +28,19 @@ namespace KoiFarmShop.Services.Services
             return _productCategoryRepository.DeleteProductCategoryAsync(productCategoryId);
         }
 
-        public Task<int> UpdateProductCategoryAsync(TbProductCategory productCategory)
+        public async Task<List<ProductCategory>> GetProductCategoriesAsync()
         {
-            return _productCategoryRepository.UpdateProductCategoryAsync(productCategory);
+            return await _productCategoryRepository.GetProductCategories();
+        }
+
+        public Task<bool> RemoveProductCategoryAsync(ProductCategory productCategory)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<bool> UpdateProductCategory(ProductCategory productCategory)
+        {
+            return _productCategoryRepository.UpdateProductCategory(productCategory);
         }
     }
 }

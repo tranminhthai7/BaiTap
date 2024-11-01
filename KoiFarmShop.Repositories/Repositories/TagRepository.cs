@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using KoiFarmShop.Repositories.Entities;
@@ -9,93 +11,77 @@ namespace KoiFarmShop.Repositories.Repositories
 {
     public class TagRepository : ITagRepository
     {
-        private readonly KoiFarmShopDbContext _dbContext;
+        private readonly KoiFarmShop2024DbContext _dbContext;
 
-        public TagRepository(KoiFarmShopDbContext dbContext)
+        public TagRepository(KoiFarmShop2024DbContext dbContext) 
         {
             _dbContext = dbContext;
         }
 
-        public async Task<List<TbTag>> GetTagsAsync()
+        public Task<bool> AddTag(Tag tag)
         {
             try
             {
-                return await _dbContext.TbTags.ToListAsync();
+                _dbContext.Tags.AddAsync(tag);
+                _dbContext.SaveChanges();
+                return Task.FromResult(true);
             }
-            catch (Exception ex)
+            catch (Exception ex) 
             {
-                // Log exception (ex) here if needed
-                return new List<TbTag>();
-            }
-        }
-
-        public async Task<int> AddTagAsync(TbTag tag)
-        {
-            try
-            {
-                await _dbContext.TbTags.AddAsync(tag);
-                await _dbContext.SaveChangesAsync();
-                return tag.Id; // Assuming Id is the primary key and is auto-generated
-            }
-            catch (Exception ex)
-            {
-                // Log exception (ex) here if needed
-                return 0; // Return 0 to indicate failure
-            }
-        }
-
-        public async Task<int> RemoveTagAsync(int tagId)
-        {
-            var tag = await _dbContext.TbTags.FindAsync(tagId);
-            if (tag == null)
-            {
-                return 0; // Return 0 to indicate that the record was not found
-            }
-
-            try
-            {
-                _dbContext.TbTags.Remove(tag);
-                return await _dbContext.SaveChangesAsync();
-            }
-            catch (Exception ex)
-            {
-                // Log exception (ex) here if needed
-                return 0; // Return 0 to indicate failure
+                throw new NotImplementedException(ex.ToString());
             }
         }
 
         public async Task<bool> DeleteTagAsync(int tagId)
         {
-            var tag = await _dbContext.TbTags.FindAsync(tagId);
-            if (tag == null)
-            {
-                return false; // Return false to indicate that the record was not found
-            }
-
+            var objDel = await _dbContext.Tags.Where(p => p.Id.Equals(tagId)).FirstOrDefaultAsync();
             try
             {
-                _dbContext.TbTags.Remove(tag);
-                await _dbContext.SaveChangesAsync();
-                return true; // Return true to indicate success
+                if (objDel != null)
+                {
+                    _dbContext.Tags.Remove(objDel);
+                    await _dbContext.SaveChangesAsync();
+                    return true;
+                }
+                return false;
             }
             catch (Exception ex)
             {
-                // Log exception (ex) here if needed
-                return false; // Return false to indicate failure
+                // Log the exception
+                return false;
             }
         }
 
-        public async Task<int> UpdateTagAsync(TbTag tag)
+        public async Task<List<Tag>> GetTags()
+        {
+            List<Tag> tags = null;
+            try
+            {
+                tags = await _dbContext.Tags.ToListAsync();
+            }
+            catch (Exception ex) 
+            {
+                tags?.Add(new Tag());
+            }
+            return tags;
+        }
+
+        public Task<bool> RemoveTagAsync(Tag tag)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<bool> UpdateTag(Tag tag)
         {
             try
             {
-                _dbContext.TbTags.Update(tag);
-                return await _dbContext.SaveChangesAsync();
+                _dbContext.Tags.Update(tag);
+                _dbContext.SaveChanges();
+                return Task.FromResult(true);
             }
             catch (Exception ex)
             {
-                // Log exception (ex) here if needed
-                return 0; // Return 0 to indicate failure
+                return Task.FromResult(false);
             }
         }
     }

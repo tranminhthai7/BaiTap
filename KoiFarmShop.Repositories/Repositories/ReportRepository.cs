@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using KoiFarmShop.Repositories.Entities;
@@ -9,93 +11,77 @@ namespace KoiFarmShop.Repositories.Repositories
 {
     public class ReportRepository : IReportRepository
     {
-        private readonly KoiFarmShopDbContext _dbContext;
+        private readonly KoiFarmShop2024DbContext _dbContext;
 
-        public ReportRepository(KoiFarmShopDbContext dbContext)
+        public ReportRepository(KoiFarmShop2024DbContext dbContext) 
         {
             _dbContext = dbContext;
         }
 
-        public async Task<List<TbReport>> GetReportsAsync()
+        public Task<bool> AddReport(Report report)
         {
             try
             {
-                return await _dbContext.TbReports.ToListAsync();
+                _dbContext.Reports.AddAsync(report);
+                _dbContext.SaveChanges();
+                return Task.FromResult(true);
             }
-            catch (Exception ex)
+            catch (Exception ex) 
             {
-                // Log exception (ex) here if needed
-                return new List<TbReport>();
-            }
-        }
-
-        public async Task<int> AddReportAsync(TbReport report)
-        {
-            try
-            {
-                await _dbContext.TbReports.AddAsync(report);
-                await _dbContext.SaveChangesAsync();
-                return report.Id; // Assuming Id is the primary key and is auto-generated
-            }
-            catch (Exception ex)
-            {
-                // Log exception (ex) here if needed
-                return 0; // Return 0 to indicate failure
-            }
-        }
-
-        public async Task<int> RemoveReportAsync(int reportId)
-        {
-            var report = await _dbContext.TbReports.FindAsync(reportId);
-            if (report == null)
-            {
-                return 0; // Return 0 to indicate that the record was not found
-            }
-
-            try
-            {
-                _dbContext.TbReports.Remove(report);
-                return await _dbContext.SaveChangesAsync();
-            }
-            catch (Exception ex)
-            {
-                // Log exception (ex) here if needed
-                return 0; // Return 0 to indicate failure
+                throw new NotImplementedException(ex.ToString());
             }
         }
 
         public async Task<bool> DeleteReportAsync(int reportId)
         {
-            var report = await _dbContext.TbReports.FindAsync(reportId);
-            if (report == null)
-            {
-                return false; // Return false to indicate that the record was not found
-            }
-
+            var objDel = await _dbContext.Reports.Where(p => p.ReportId.Equals(reportId)).FirstOrDefaultAsync();
             try
             {
-                _dbContext.TbReports.Remove(report);
-                await _dbContext.SaveChangesAsync();
-                return true; // Return true to indicate success
+                if (objDel != null)
+                {
+                    _dbContext.Reports.Remove(objDel);
+                    await _dbContext.SaveChangesAsync();
+                    return true;
+                }
+                return false;
             }
             catch (Exception ex)
             {
-                // Log exception (ex) here if needed
-                return false; // Return false to indicate failure
+                // Log the exception
+                return false;
             }
         }
 
-        public async Task<int> UpdateReportAsync(TbReport report)
+        public async Task<List<Report>> GetReports()
+        {
+            List<Report> reports = null;
+            try
+            {
+                reports = await _dbContext.Reports.ToListAsync();
+            }
+            catch (Exception ex) 
+            {
+                reports?.Add(new Report());
+            }
+            return reports;
+        }
+
+        public Task<bool> RemoveReportAsync(Report report)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<bool> UpdateReport(Report report)
         {
             try
             {
-                _dbContext.TbReports.Update(report);
-                return await _dbContext.SaveChangesAsync();
+                _dbContext.Reports.Update(report);
+                _dbContext.SaveChanges();
+                return Task.FromResult(true);
             }
             catch (Exception ex)
             {
-                // Log exception (ex) here if needed
-                return 0; // Return 0 to indicate failure
+                return Task.FromResult(false);
             }
         }
     }

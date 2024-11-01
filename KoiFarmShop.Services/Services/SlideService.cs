@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using KoiFarmShop.Repositories.Entities;
 using KoiFarmShop.Repositories.Interfaces;
@@ -16,19 +18,9 @@ namespace KoiFarmShop.Services.Services
             _slideRepository = slideRepository;
         }
 
-        public Task<List<TbSlide>> GetSlidesAsync()
+        public Task<bool> AddSlide(Slide slide)
         {
-            return _slideRepository.GetSlidesAsync();
-        }
-
-        public Task<int> AddSlideAsync(TbSlide slide)
-        {
-            return _slideRepository.AddSlideAsync(slide);
-        }
-
-        public Task<int> RemoveSlideAsync(int slideId)
-        {
-            return _slideRepository.RemoveSlideAsync(slideId);
+            return _slideRepository.AddSlide(slide);
         }
 
         public Task<bool> DeleteSlideAsync(int slideId)
@@ -36,9 +28,19 @@ namespace KoiFarmShop.Services.Services
             return _slideRepository.DeleteSlideAsync(slideId);
         }
 
-        public Task<int> UpdateSlideAsync(TbSlide slide)
+        public async Task<List<Slide>> GetSlidesAsync()
         {
-            return _slideRepository.UpdateSlideAsync(slide);
+            return await _slideRepository.GetSlides();
+        }
+
+        public Task<bool> RemoveSlideAsync(Slide slide)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<bool> UpdateSlide(Slide slide)
+        {
+            return _slideRepository.UpdateSlide(slide);
         }
     }
 }

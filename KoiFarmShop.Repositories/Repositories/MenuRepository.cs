@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using KoiFarmShop.Repositories.Entities;
@@ -9,94 +11,103 @@ namespace KoiFarmShop.Repositories.Repositories
 {
     public class MenuRepository : IMenuRepository
     {
-        private readonly KoiFarmShopDbContext _dbContext;
+        private readonly KoiFarmShop2024DbContext _dbContext;
 
-        public MenuRepository(KoiFarmShopDbContext dbContext)
+        public MenuRepository(KoiFarmShop2024DbContext dbContext) 
         {
             _dbContext = dbContext;
         }
 
-        public async Task<List<TbMenu>> GetMenusAsync()
+        public Task<bool> AddMenu(Menu menu)
         {
             try
             {
-                return await _dbContext.TbMenus.ToListAsync();
+                _dbContext.Menus.AddAsync(menu);
+                _dbContext.SaveChanges();
+                return Task.FromResult(true);
             }
-            catch (Exception ex)
+            catch (Exception ex) 
             {
-                // Log exception (ex) here if needed
-                return new List<TbMenu>();
+                throw new NotImplementedException(ex.ToString());
             }
         }
 
-        public async Task<int> AddMenuAsync(TbMenu menu)
+        public Task<bool> AddMenuItem(Menu menuItem)
         {
-            try
-            {
-                await _dbContext.TbMenus.AddAsync(menu);
-                await _dbContext.SaveChangesAsync();
-                return menu.Id; // Assuming Id is the primary key and is auto-generated
-            }
-            catch (Exception ex)
-            {
-                // Log exception (ex) here if needed
-                return 0; // Return 0 to indicate failure
-            }
-        }
-
-        public async Task<int> RemoveMenuAsync(int menuId)
-        {
-            var menu = await _dbContext.TbMenus.FindAsync(menuId);
-            if (menu == null)
-            {
-                return 0; // Return 0 to indicate that the record was not found
-            }
-
-            try
-            {
-                _dbContext.TbMenus.Remove(menu);
-                return await _dbContext.SaveChangesAsync();
-            }
-            catch (Exception ex)
-            {
-                // Log exception (ex) here if needed
-                return 0; // Return 0 to indicate failure
-            }
+            throw new NotImplementedException();
         }
 
         public async Task<bool> DeleteMenuAsync(int menuId)
         {
-            var menu = await _dbContext.TbMenus.FindAsync(menuId);
-            if (menu == null)
-            {
-                return false; // Return false to indicate that the record was not found
-            }
-
+            var objDel = await _dbContext.Menus.Where(p => p.Id.Equals(menuId)).FirstOrDefaultAsync();
             try
             {
-                _dbContext.TbMenus.Remove(menu);
-                await _dbContext.SaveChangesAsync();
-                return true; // Return true to indicate success
+                if (objDel != null)
+                {
+                    _dbContext.Menus.Remove(objDel);
+                    await _dbContext.SaveChangesAsync();
+                    return true;
+                }
+                return false;
             }
             catch (Exception ex)
             {
-                // Log exception (ex) here if needed
-                return false; // Return false to indicate failure
+                // Log the exception
+                return false;
             }
         }
 
-        public async Task<int> UpdateMenuAsync(TbMenu menu)
+        public Task<bool> DeleteMenuItemAsync(int menuItemId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<List<Menu>> GetMenuItems()
+        {
+            throw new NotImplementedException();
+        }
+
+        public async Task<List<Menu>> GetMenus()
+        {
+            List<Menu> menus = null;
+            try
+            {
+                menus = await _dbContext.Menus.ToListAsync();
+            }
+            catch (Exception ex) 
+            {
+                menus?.Add(new Menu());
+            }
+            return menus;
+        }
+
+        public Task<bool> RemoveMenuAsync(Menu menu)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<bool> RemoveMenuItemAsync(Menu menuItem)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<bool> UpdateMenu(Menu menu)
         {
             try
             {
-                _dbContext.TbMenus.Update(menu);
-                return await _dbContext.SaveChangesAsync();
+                _dbContext.Menus.Update(menu);
+                _dbContext.SaveChanges();
+                return Task.FromResult(true);
             }
             catch (Exception ex)
             {
-                // Log exception (ex) here if needed
-                return 0; // Return 0 to indicate failure
+                return Task.FromResult(false);
             }
+        }
+
+        public Task<bool> UpdateMenuItem(Menu menuItem)
+        {
+            throw new NotImplementedException();
         }
     }
 }

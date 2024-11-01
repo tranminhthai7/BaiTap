@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using KoiFarmShop.Repositories.Entities;
 using KoiFarmShop.Repositories.Interfaces;
@@ -16,19 +18,9 @@ namespace KoiFarmShop.Services.Services
             _orderDetailRepository = orderDetailRepository;
         }
 
-        public Task<List<TbOrderDetail>> GetOrderDetailsAsync()
+        public Task<bool> AddOrderDetail(OrderDetail orderDetail)
         {
-            return _orderDetailRepository.GetOrderDetailsAsync();
-        }
-
-        public Task<int> AddOrderDetailAsync(TbOrderDetail orderDetail)
-        {
-            return _orderDetailRepository.AddOrderDetailAsync(orderDetail);
-        }
-
-        public Task<int> RemoveOrderDetailAsync(int orderDetailId)
-        {
-            return _orderDetailRepository.RemoveOrderDetailAsync(orderDetailId);
+            return _orderDetailRepository.AddOrderDetail(orderDetail);
         }
 
         public Task<bool> DeleteOrderDetailAsync(int orderDetailId)
@@ -36,9 +28,19 @@ namespace KoiFarmShop.Services.Services
             return _orderDetailRepository.DeleteOrderDetailAsync(orderDetailId);
         }
 
-        public Task<int> UpdateOrderDetailAsync(TbOrderDetail orderDetail)
+        public async Task<List<OrderDetail>> GetOrderDetailsAsync()
         {
-            return _orderDetailRepository.UpdateOrderDetailAsync(orderDetail);
+            return await _orderDetailRepository.GetOrderDetails();
+        }
+
+        public Task<bool> RemoveOrderDetailAsync(OrderDetail orderDetail)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<bool> UpdateOrderDetail(OrderDetail orderDetail)
+        {
+            return _orderDetailRepository.UpdateOrderDetail(orderDetail);
         }
     }
 }

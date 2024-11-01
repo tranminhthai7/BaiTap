@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using KoiFarmShop.Repositories.Entities;
 
@@ -7,10 +9,10 @@ namespace KoiFarmShop.Repositories.Interfaces
 {
     public interface IRatingRepository
     {
-        Task<List<TbRating>> GetRatingsAsync();
-        Task<int> AddRatingAsync(TbRating rating);
-        Task<int> RemoveRatingAsync(int ratingId);
+        Task<List<Rating>> GetRatings();
+        Task<bool> AddRating(Rating rating);
+        Task<bool> RemoveRatingAsync(Rating rating);
         Task<bool> DeleteRatingAsync(int ratingId);
-        Task<int> UpdateRatingAsync(TbRating rating);
+        Task<bool> UpdateRating(Rating rating);
     }
 }

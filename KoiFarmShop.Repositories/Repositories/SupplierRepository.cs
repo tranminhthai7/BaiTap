@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using KoiFarmShop.Repositories.Entities;
@@ -9,93 +11,77 @@ namespace KoiFarmShop.Repositories.Repositories
 {
     public class SupplierRepository : ISupplierRepository
     {
-        private readonly KoiFarmShopDbContext _dbContext;
+        private readonly KoiFarmShop2024DbContext _dbContext;
 
-        public SupplierRepository(KoiFarmShopDbContext dbContext)
+        public SupplierRepository(KoiFarmShop2024DbContext dbContext) 
         {
             _dbContext = dbContext;
         }
 
-        public async Task<List<TbSupplier>> GetSuppliersAsync()
+        public Task<bool> AddSupplier(Supplier supplier)
         {
             try
             {
-                return await _dbContext.TbSuppliers.ToListAsync();
+                _dbContext.Suppliers.AddAsync(supplier);
+                _dbContext.SaveChanges();
+                return Task.FromResult(true);
             }
-            catch (Exception ex)
+            catch (Exception ex) 
             {
-                // Log exception (ex) here if needed
-                return new List<TbSupplier>();
-            }
-        }
-
-        public async Task<int> AddSupplierAsync(TbSupplier supplier)
-        {
-            try
-            {
-                await _dbContext.TbSuppliers.AddAsync(supplier);
-                await _dbContext.SaveChangesAsync();
-                return supplier.Id; // Assuming Id is the primary key and is auto-generated
-            }
-            catch (Exception ex)
-            {
-                // Log exception (ex) here if needed
-                return 0; // Return 0 to indicate failure
-            }
-        }
-
-        public async Task<int> RemoveSupplierAsync(int supplierId)
-        {
-            var supplier = await _dbContext.TbSuppliers.FindAsync(supplierId);
-            if (supplier == null)
-            {
-                return 0; // Return 0 to indicate that the record was not found
-            }
-
-            try
-            {
-                _dbContext.TbSuppliers.Remove(supplier);
-                return await _dbContext.SaveChangesAsync();
-            }
-            catch (Exception ex)
-            {
-                // Log exception (ex) here if needed
-                return 0; // Return 0 to indicate failure
+                throw new NotImplementedException(ex.ToString());
             }
         }
 
         public async Task<bool> DeleteSupplierAsync(int supplierId)
         {
-            var supplier = await _dbContext.TbSuppliers.FindAsync(supplierId);
-            if (supplier == null)
-            {
-                return false; // Return false to indicate that the record was not found
-            }
-
+            var objDel = await _dbContext.Suppliers.Where(p => p.Id.Equals(supplierId)).FirstOrDefaultAsync();
             try
             {
-                _dbContext.TbSuppliers.Remove(supplier);
-                await _dbContext.SaveChangesAsync();
-                return true; // Return true to indicate success
+                if (objDel != null)
+                {
+                    _dbContext.Suppliers.Remove(objDel);
+                    await _dbContext.SaveChangesAsync();
+                    return true;
+                }
+                return false;
             }
             catch (Exception ex)
             {
-                // Log exception (ex) here if needed
-                return false; // Return false to indicate failure
+                // Log the exception
+                return false;
             }
         }
 
-        public async Task<int> UpdateSupplierAsync(TbSupplier supplier)
+        public async Task<List<Supplier>> GetSuppliers()
+        {
+            List<Supplier> suppliers = null;
+            try
+            {
+                suppliers = await _dbContext.Suppliers.ToListAsync();
+            }
+            catch (Exception ex) 
+            {
+                suppliers?.Add(new Supplier());
+            }
+            return suppliers;
+        }
+
+        public Task<bool> RemoveSupplierAsync(Supplier supplier)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<bool> UpdateSupplier(Supplier supplier)
         {
             try
             {
-                _dbContext.TbSuppliers.Update(supplier);
-                return await _dbContext.SaveChangesAsync();
+                _dbContext.Suppliers.Update(supplier);
+                _dbContext.SaveChanges();
+                return Task.FromResult(true);
             }
             catch (Exception ex)
             {
-                // Log exception (ex) here if needed
-                return 0; // Return 0 to indicate failure
+                return Task.FromResult(false);
             }
         }
     }

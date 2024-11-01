@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using KoiFarmShop.Repositories.Entities;
 
@@ -7,10 +9,10 @@ namespace KoiFarmShop.Services.Interfaces
 {
     public interface IMenuService
     {
-        Task<List<TbMenu>> GetMenusAsync();
-        Task<int> AddMenuAsync(TbMenu menu);
-        Task<int> RemoveMenuAsync(int menuId);
-        Task<bool> DeleteMenuAsync(int menuId);
-        Task<int> UpdateMenuAsync(TbMenu menu);
+        Task<List<Menu>> GetMenuItems();
+        Task<bool> AddMenuItem(Menu menuItem);
+        Task<bool> RemoveMenuItemAsync(Menu menuItem);
+        Task<bool> DeleteMenuItemAsync(int menuItemId);
+        Task<bool> UpdateMenuItem(Menu menuItem);
     }
 }

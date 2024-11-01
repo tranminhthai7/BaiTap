@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using KoiFarmShop.Repositories.Entities;
@@ -9,93 +11,77 @@ namespace KoiFarmShop.Repositories.Repositories
 {
     public class ContactRepository : IContactRepository
     {
-        private readonly KoiFarmShopDbContext _dbContext;
+        private readonly KoiFarmShop2024DbContext _dbContext;
 
-        public ContactRepository(KoiFarmShopDbContext dbContext)
+        public ContactRepository(KoiFarmShop2024DbContext dbContext) 
         {
             _dbContext = dbContext;
         }
 
-        public async Task<List<TbContact>> GetContactsAsync()
+        public Task<bool> AddContact(Contact contact)
         {
             try
             {
-                return await _dbContext.TbContacts.ToListAsync();
+                _dbContext.Contacts.AddAsync(contact);
+                _dbContext.SaveChanges();
+                return Task.FromResult(true);
             }
-            catch (Exception ex)
+            catch (Exception ex) 
             {
-                // Log exception (ex) here if needed
-                return new List<TbContact>();
-            }
-        }
-
-        public async Task<int> AddContactAsync(TbContact contact)
-        {
-            try
-            {
-                await _dbContext.TbContacts.AddAsync(contact);
-                await _dbContext.SaveChangesAsync();
-                return contact.Id; // Assuming Id is the primary key and is auto-generated
-            }
-            catch (Exception ex)
-            {
-                // Log exception (ex) here if needed
-                return 0; // Return 0 to indicate failure
-            }
-        }
-
-        public async Task<int> RemoveContactAsync(int contactId)
-        {
-            var contact = await _dbContext.TbContacts.FindAsync(contactId);
-            if (contact == null)
-            {
-                return 0; // Return 0 to indicate that the record was not found
-            }
-
-            try
-            {
-                _dbContext.TbContacts.Remove(contact);
-                return await _dbContext.SaveChangesAsync();
-            }
-            catch (Exception ex)
-            {
-                // Log exception (ex) here if needed
-                return 0; // Return 0 to indicate failure
+                throw new NotImplementedException(ex.ToString());
             }
         }
 
         public async Task<bool> DeleteContactAsync(int contactId)
         {
-            var contact = await _dbContext.TbContacts.FindAsync(contactId);
-            if (contact == null)
-            {
-                return false; // Return false to indicate that the record was not found
-            }
-
+            var objDel = await _dbContext.Contacts.Where(p => p.Id.Equals(contactId)).FirstOrDefaultAsync();
             try
             {
-                _dbContext.TbContacts.Remove(contact);
-                await _dbContext.SaveChangesAsync();
-                return true; // Return true to indicate success
+                if (objDel != null)
+                {
+                    _dbContext.Contacts.Remove(objDel);
+                    await _dbContext.SaveChangesAsync();
+                    return true;
+                }
+                return false;
             }
             catch (Exception ex)
             {
-                // Log exception (ex) here if needed
-                return false; // Return false to indicate failure
+                // Log the exception
+                return false;
             }
         }
 
-        public async Task<int> UpdateContactAsync(TbContact contact)
+        public async Task<List<Contact>> GetContacts()
+        {
+            List<Contact> contacts = null;
+            try
+            {
+                contacts = await _dbContext.Contacts.ToListAsync();
+            }
+            catch (Exception ex) 
+            {
+                contacts?.Add(new Contact());
+            }
+            return contacts;
+        }
+
+        public Task<bool> RemoveContactAsync(Contact contact)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<bool> UpdateContact(Contact contact)
         {
             try
             {
-                _dbContext.TbContacts.Update(contact);
-                return await _dbContext.SaveChangesAsync();
+                _dbContext.Contacts.Update(contact);
+                _dbContext.SaveChanges();
+                return Task.FromResult(true);
             }
             catch (Exception ex)
             {
-                // Log exception (ex) here if needed
-                return 0; // Return 0 to indicate failure
+                return Task.FromResult(false);
             }
         }
     }

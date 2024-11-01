@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using KoiFarmShop.Repositories.Entities;
@@ -9,35 +10,78 @@ namespace KoiFarmShop.Repositories.Repositories
 {
     public class ConfigRepository : IConfigRepository
     {
-        private readonly KoiFarmShopDbContext _dbContext;
+        private readonly KoiFarmShop2024DbContext _dbContext;
 
-        public ConfigRepository(KoiFarmShopDbContext dbContext)
+        public ConfigRepository(KoiFarmShop2024DbContext dbContext) 
         {
             _dbContext = dbContext;
         }
 
-        public async Task<List<TbConfig>> GetConfigsAsync()
+        public Task<bool> AddConfig(Config config)
         {
             try
             {
-                return await _dbContext.TbConfigs.ToListAsync();
+                _dbContext.Configs.AddAsync(config);
+                _dbContext.SaveChanges();
+                return Task.FromResult(true);
             }
-            catch (Exception ex)
+            catch (Exception ex) 
             {
-                // Log exception (ex) here if needed
-                return new List<TbConfig>();
+                throw new NotImplementedException(ex.ToString());
             }
         }
 
-        public async Task<int> AddConfigAsync(TbConfig config)
+        public async Task<bool> DeleteConfigAsync(int configId)
         {
+            var objDel = await _dbContext.Configs.Where(p => p.Id.Equals(configId)).FirstOrDefaultAsync();
             try
             {
-                await _dbContext.TbConfigs.AddAsync(config);
-                await _dbContext.SaveChangesAsync();
-                return config.Id; // Assuming Id is the primary key and is auto-generated
+                if (objDel != null)
+                {
+                    _dbContext.Configs.Remove(objDel);
+                    await _dbContext.SaveChangesAsync();
+                    return true;
+                }
+                return false;
             }
             catch (Exception ex)
             {
-                // Log exception (ex) here if needed
-                return 0; //
+                // Log lại lỗi
+                return false;
+            }
+        }
+
+        public async Task<List<Config>> GetConfigs()
+        {
+            List<Config> configs = null;
+            try
+            {
+                configs = await _dbContext.Configs.ToListAsync();
+            }
+            catch (Exception ex) 
+            {
+                configs?.Add(new Config());
+            }
+            return configs;
+        }
+
+        public Task<bool> RemoveConfigAsync(Config config)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<bool> UpdateConfig(Config config)
+        {
+            try
+            {
+                _dbContext.Configs.Update(config);
+                _dbContext.SaveChanges();
+                return Task.FromResult(true);
+            }
+            catch (Exception ex)
+            {
+                return Task.FromResult(false);
+            }
+        }
+    }
+}

@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using KoiFarmShop.Repositories.Entities;
@@ -9,93 +11,77 @@ namespace KoiFarmShop.Repositories.Repositories
 {
     public class AboutRepository : IAboutRepository
     {
-        private readonly KoiFarmShopDbContext _dbContext;
+        private readonly KoiFarmShop2024DbContext _dbContext;
 
-        public AboutRepository(KoiFarmShopDbContext dbContext)
+        public AboutRepository(KoiFarmShop2024DbContext dbContext) 
         {
             _dbContext = dbContext;
         }
 
-        public async Task<List<TbAbout>> GetAboutsAsync()
+        public Task<bool> AddAbout(About about)
         {
             try
             {
-                return await _dbContext.TbAbouts.ToListAsync();
+                _dbContext.Abouts.AddAsync(about);
+                _dbContext.SaveChanges();
+                return Task.FromResult(true);
             }
-            catch (Exception ex)
+            catch (Exception ex) 
             {
-                // Log exception (ex) here if needed
-                return new List<TbAbout>();
-            }
-        }
-
-        public async Task<int> AddAboutAsync(TbAbout about)
-        {
-            try
-            {
-                await _dbContext.TbAbouts.AddAsync(about);
-                await _dbContext.SaveChangesAsync();
-                return about.Id; // Assuming Id is the primary key and is auto-generated
-            }
-            catch (Exception ex)
-            {
-                // Log exception (ex) here if needed
-                return 0; // Return 0 to indicate failure
-            }
-        }
-
-        public async Task<int> RemoveAboutAsync(int aboutId)
-        {
-            var about = await _dbContext.TbAbouts.FindAsync(aboutId);
-            if (about == null)
-            {
-                return 0; // Return 0 to indicate that the record was not found
-            }
-
-            try
-            {
-                _dbContext.TbAbouts.Remove(about);
-                return await _dbContext.SaveChangesAsync();
-            }
-            catch (Exception ex)
-            {
-                // Log exception (ex) here if needed
-                return 0; // Return 0 to indicate failure
+                throw new NotImplementedException(ex.ToString());
             }
         }
 
         public async Task<bool> DeleteAboutAsync(int aboutId)
         {
-            var about = await _dbContext.TbAbouts.FindAsync(aboutId);
-            if (about == null)
-            {
-                return false; // Return false to indicate that the record was not found
-            }
-
+            var objDel = await _dbContext.Abouts.Where(p => p.Id.Equals(aboutId)).FirstOrDefaultAsync();
             try
             {
-                _dbContext.TbAbouts.Remove(about);
-                await _dbContext.SaveChangesAsync();
-                return true; // Return true to indicate success
+                if (objDel != null)
+                {
+                    _dbContext.Abouts.Remove(objDel);
+                    await _dbContext.SaveChangesAsync();
+                    return true;
+                }
+                return false;
             }
             catch (Exception ex)
             {
-                // Log exception (ex) here if needed
-                return false; // Return false to indicate failure
+                // Log the exception
+                return false;
             }
         }
 
-        public async Task<int> UpdateAboutAsync(TbAbout about)
+        public async Task<List<About>> GetAbouts()
+        {
+            List<About> abouts = null;
+            try
+            {
+                abouts = await _dbContext.Abouts.ToListAsync();
+            }
+            catch (Exception ex) 
+            {
+                abouts?.Add(new About());
+            }
+            return abouts;
+        }
+
+        public Task<bool> RemoveAboutAsync(About about)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<bool> UpdateAbout(About about)
         {
             try
             {
-                _dbContext.TbAbouts.Update(about);
-                return await _dbContext.SaveChangesAsync();
+                _dbContext.Abouts.Update(about);
+                _dbContext.SaveChanges();
+                return Task.FromResult(true);
             }
             catch (Exception ex)
             {
-                // Log exception (ex) here if needed
-                return 0; // Return 0 to indicate failure
+                return Task.FromResult(false);
             }
         }
     }

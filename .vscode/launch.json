@@ -1,0 +1,27 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        
+        {
+            "name": "KoiFarmShop.WebApplication",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/KoiFarmShop.WebApplication/bin/Debug/net8.0/KoiFarmShop.WebApplication.dll", // Update this path
+            "args": [],
+            "cwd": "${workspaceFolder}/KoiFarmShop.WebApplication",
+            "stopAtEntry": false,
+            "serverReadyAction": {
+                "action": "openExternally",
+                "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
+            },
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            },
+            "sourceFileMap": {
+                "/Views": "${workspaceFolder}/Views"
+            },
+            "justMyCode": true
+        }
+    ]
+}
