@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
@@ -7,10 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\KoiFarmShop.Repositories\KoiFarmShop.Repositories.csproj" />
-    <ProjectReference Include="..\PremierLeague.Repositories\KoiFarmShop.Repositories.csproj" />
-  </ItemGroup>
 
+    
+    <ProjectReference Include="..\KoiFarmShop.Repositories\KoiFarmShop.Repositories.csproj" />
+
+    
   <ItemGroup>
     <Folder Include="NewFolder\" />
   </ItemGroup>
