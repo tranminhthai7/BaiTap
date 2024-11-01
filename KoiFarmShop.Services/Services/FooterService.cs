@@ -1,20 +1,19 @@
+using KoiFarmShop.Repositories.Entities;
+using KoiFarmShop.Repositories.Interfaces;
+using KoiFarmShop.Services.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using KoiFarmShop.Repositories.Entities;
-using KoiFarmShop.Repositories.Interfaces;
-using KoiFarmShop.Services.Interfaces;
 
 namespace KoiFarmShop.Services.Services
 {
     public class FooterService : IFooterService
     {
-        private IFooterRepository _footerRepository;
+        private readonly IFooterRepository _footerRepository;
 
-        public FooterService(IFooterRepository footerRepository)
-        {
+        public FooterService(IFooterRepository footerRepository) {
             _footerRepository = footerRepository;
         }
 
@@ -28,19 +27,19 @@ namespace KoiFarmShop.Services.Services
             return _footerRepository.DeleteFooterAsync(footerId);
         }
 
-        public async Task<List<Footer>> GetFootersAsync()
+        public async Task<List<Footer>> GetFooters()
         {
             return await _footerRepository.GetFooters();
-        }
-
-        public Task<bool> RemoveFooterAsync(Footer footer)
-        {
-            throw new NotImplementedException();
         }
 
         public Task<bool> UpdateFooter(Footer footer)
         {
             return _footerRepository.UpdateFooter(footer);
+        }
+
+        public Task<bool> RemoveFooterAsync(Footer footer)
+        {
+            throw new NotImplementedException();
         }
     }
 }

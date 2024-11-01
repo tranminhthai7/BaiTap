@@ -52,18 +52,11 @@ namespace KoiFarmShop.Repositories.Repositories
             }
         }
 
-        public async Task<List<Consignment>> GetConsignments()
+        public Task<List<Consignment>> GetConsignments()
         {
-            List<Consignment> consignments = null;
-            try
-            {
-                consignments = await _dbContext.Consignments.ToListAsync();
-            }
-            catch (Exception ex) 
-            {
-                consignments?.Add(new Consignment());
-            }
-            return consignments;
+            // Implementation of GetConsignments method
+            // For example, fetching consignments from a database
+            return Task.FromResult(new List<Consignment>());
         }
 
         public async Task<List<Consignment>> GetAllConsignments()

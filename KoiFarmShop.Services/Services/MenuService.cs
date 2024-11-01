@@ -1,11 +1,11 @@
+using KoiFarmShop.Repositories.Entities;
+using KoiFarmShop.Repositories.Interfaces;
+using KoiFarmShop.Services.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using KoiFarmShop.Repositories.Entities;
-using KoiFarmShop.Repositories.Interfaces;
-using KoiFarmShop.Services.Interfaces;
 
 namespace KoiFarmShop.Services.Services
 {
@@ -13,8 +13,7 @@ namespace KoiFarmShop.Services.Services
     {
         private readonly IMenuRepository _menuRepository;
 
-        public MenuService(IMenuRepository menuRepository)
-        {
+        public MenuService(IMenuRepository menuRepository) {
             _menuRepository = menuRepository;
         }
 
@@ -28,19 +27,19 @@ namespace KoiFarmShop.Services.Services
             return _menuRepository.DeleteMenuAsync(menuId);
         }
 
-        public async Task<List<Menu>> GetMenusAsync()
+        public async Task<List<Menu>> GetMenus()
         {
             return await _menuRepository.GetMenus();
-        }
-
-        public Task<bool> RemoveMenuAsync(Menu menu)
-        {
-            throw new NotImplementedException();
         }
 
         public Task<bool> UpdateMenu(Menu menu)
         {
             return _menuRepository.UpdateMenu(menu);
+        }
+
+        public Task<bool> RemoveMenuAsync(Menu menu)
+        {
+            throw new NotImplementedException();
         }
     }
 }

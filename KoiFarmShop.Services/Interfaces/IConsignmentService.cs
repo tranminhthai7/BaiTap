@@ -9,7 +9,7 @@ namespace KoiFarmShop.Services.Interfaces
 {
     public interface IConsignmentService
     {
-        Task<List<Consignment>> GetAllConsignments();
+        Task<List<Consignment>> GetConsignments();
         Task<bool> AddConsignment(Consignment consignment);
         Task<bool> RemoveConsignmentAsync(Consignment consignment);
         Task<bool> DeleteConsignmentAsync(int consignmentId);

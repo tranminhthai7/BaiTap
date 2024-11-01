@@ -7,7 +7,7 @@ using KoiFarmShop.Repositories.Entities;
 
 namespace KoiFarmShop.Services.Interfaces
 {
-    public interface ISlidesService
+    public interface ISlideService
     {
         Task<List<Slide>> GetSlides();
         Task<bool> AddSlide(Slide slide);

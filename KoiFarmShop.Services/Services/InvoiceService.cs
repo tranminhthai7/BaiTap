@@ -1,20 +1,19 @@
+using KoiFarmShop.Repositories.Entities;
+using KoiFarmShop.Repositories.Interfaces;
+using KoiFarmShop.Services.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using KoiFarmShop.Repositories.Entities;
-using KoiFarmShop.Repositories.Interfaces;
-using KoiFarmShop.Services.Interfaces;
 
 namespace KoiFarmShop.Services.Services
 {
     public class InvoiceService : IInvoiceService
     {
-        private IInvoiceRepository _invoiceRepository;
+        private readonly IInvoiceRepository _invoiceRepository;
 
-        public InvoiceService(IInvoiceRepository invoiceRepository)
-        {
+        public InvoiceService(IInvoiceRepository invoiceRepository) {
             _invoiceRepository = invoiceRepository;
         }
 
@@ -28,19 +27,19 @@ namespace KoiFarmShop.Services.Services
             return _invoiceRepository.DeleteInvoiceAsync(invoiceId);
         }
 
-        public async Task<List<Invoice>> GetInvoicesAsync()
+        public async Task<List<Invoice>> GetInvoices()
         {
             return await _invoiceRepository.GetInvoices();
-        }
-
-        public Task<bool> RemoveInvoiceAsync(Invoice invoice)
-        {
-            throw new NotImplementedException();
         }
 
         public Task<bool> UpdateInvoice(Invoice invoice)
         {
             return _invoiceRepository.UpdateInvoice(invoice);
+        }
+
+        public Task<bool> RemoveInvoiceAsync(Invoice invoice)
+        {
+            throw new NotImplementedException();
         }
     }
 }

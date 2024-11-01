@@ -9,7 +9,7 @@ namespace KoiFarmShop.Repositories.Interfaces
     public interface IUserRepository
     {
         // lay danh sách acccount
-        Task<List<User>> GetAllUser();
+        Task<List<User>> GetUsers();
         Boolean DelUser(int Id);
         Boolean DelUser(User account);
         Boolean AddUser(User account);

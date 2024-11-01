@@ -1,17 +1,17 @@
+using KoiFarmShop.Repositories.Entities;
+using KoiFarmShop.Repositories.Interfaces;
+using KoiFarmShop.Services.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using KoiFarmShop.Repositories.Entities;
-using KoiFarmShop.Repositories.Interfaces;
-using KoiFarmShop.Services.Interfaces;
 
 namespace KoiFarmShop.Services.Services
 {
     public class ConsignmentService : IConsignmentService
     {
-        private IConsignmentRepository _consignmentRepository;
+        private readonly IConsignmentRepository _consignmentRepository;
 
         public ConsignmentService(IConsignmentRepository consignmentRepository)
         {
@@ -28,19 +28,19 @@ namespace KoiFarmShop.Services.Services
             return _consignmentRepository.DeleteConsignmentAsync(consignmentId);
         }
 
-        public async Task<List<Consignment>> GetConsignmentsAsync()
+        public async Task<List<Consignment>> GetConsignments()
         {
             return await _consignmentRepository.GetConsignments();
-        }
-
-        public Task<bool> RemoveConsignmentAsync(Consignment consignment)
-        {
-            throw new NotImplementedException();
         }
 
         public Task<bool> UpdateConsignment(Consignment consignment)
         {
             return _consignmentRepository.UpdateConsignment(consignment);
+        }
+
+        public Task<bool> RemoveConsignmentAsync(Consignment consignment)
+        {
+            return _consignmentRepository.RemoveConsignmentAsync(consignment);
         }
     }
 }

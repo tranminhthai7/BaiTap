@@ -1,11 +1,11 @@
+using KoiFarmShop.Repositories.Entities;
+using KoiFarmShop.Repositories.Interfaces;
+using KoiFarmShop.Services.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using KoiFarmShop.Repositories.Entities;
-using KoiFarmShop.Repositories.Interfaces;
-using KoiFarmShop.Services.Interfaces;
 
 namespace KoiFarmShop.Services.Services
 {
@@ -13,8 +13,7 @@ namespace KoiFarmShop.Services.Services
     {
         private readonly IProductCategoryRepository _productCategoryRepository;
 
-        public ProductCategoryService(IProductCategoryRepository productCategoryRepository)
-        {
+        public ProductCategoryService(IProductCategoryRepository productCategoryRepository) {
             _productCategoryRepository = productCategoryRepository;
         }
 
@@ -28,19 +27,19 @@ namespace KoiFarmShop.Services.Services
             return _productCategoryRepository.DeleteProductCategoryAsync(productCategoryId);
         }
 
-        public async Task<List<ProductCategory>> GetProductCategoriesAsync()
+        public async Task<List<ProductCategory>> GetProductCategories()
         {
             return await _productCategoryRepository.GetProductCategories();
-        }
-
-        public Task<bool> RemoveProductCategoryAsync(ProductCategory productCategory)
-        {
-            throw new NotImplementedException();
         }
 
         public Task<bool> UpdateProductCategory(ProductCategory productCategory)
         {
             return _productCategoryRepository.UpdateProductCategory(productCategory);
+        }
+
+        public Task<bool> RemoveProductCategoryAsync(ProductCategory productCategory)
+        {
+            throw new NotImplementedException();
         }
     }
 }

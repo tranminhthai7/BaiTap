@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using KoiFarmShop.Repositories.Entities; 
-using KoiFarmShop.Services.Interfaces; 
-using KoiFarmShop.Repositories.Interfaces; 
+using KoiFarmShop.Repositories.Entities; // Ensure this is the correct namespace for User
+using KoiFarmShop.Services.Interfaces; // Ensure this is the correct namespace for IUserService
+using KoiFarmShop.Repositories.Interfaces; // Ensure this is the correct namespace for IUserRepository
 
 namespace KoiFarmShop.Services.Services
 {
@@ -18,34 +18,34 @@ namespace KoiFarmShop.Services.Services
             _repository = repository;
         }
 
-        public bool AddUser(User user)
+        public bool AddUser(User user) // Ensure you have the User type
         {
             return _repository.AddUser(user);
         }
 
-        public bool DeleteUser(int id)
+        public bool DelUser(int Id)
         {
-            return _repository.DeleteUser(id);
+            return _repository.DelUser(Id);
         }
 
-        public bool DeleteUser(User user)
+        public bool DelUser(User user)
         {
-            return _repository.DeleteUser(user);
+            return _repository.DelUser(user);
         }
 
-        public Task<User> GetUserById(int id)
+        public Task<User> GetUserById(int Id)
         {
-            return _repository.GetUserById(id);
+            return _repository.GetUserById(Id);
         }
 
-        public Task<List<User>> GetAllUsers()
+        public Task<List<User>> GetUsers() // Change method name to match repository interface
         {
-            return _repository.GetAllUsers();
+            return _repository.GetUsers();
         }
 
-        public bool UpdateUser(User user)
+        public bool UpdUser(User user)
         {
-            return _repository.UpdateUser(user);
+            return _repository.UpdUser(user);
         }
     }
 }

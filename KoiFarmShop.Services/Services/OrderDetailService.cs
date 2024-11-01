@@ -1,11 +1,11 @@
+using KoiFarmShop.Repositories.Entities;
+using KoiFarmShop.Repositories.Interfaces;
+using KoiFarmShop.Services.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using KoiFarmShop.Repositories.Entities;
-using KoiFarmShop.Repositories.Interfaces;
-using KoiFarmShop.Services.Interfaces;
 
 namespace KoiFarmShop.Services.Services
 {
@@ -13,8 +13,7 @@ namespace KoiFarmShop.Services.Services
     {
         private readonly IOrderDetailRepository _orderDetailRepository;
 
-        public OrderDetailService(IOrderDetailRepository orderDetailRepository)
-        {
+        public OrderDetailService(IOrderDetailRepository orderDetailRepository) {
             _orderDetailRepository = orderDetailRepository;
         }
 
@@ -28,19 +27,19 @@ namespace KoiFarmShop.Services.Services
             return _orderDetailRepository.DeleteOrderDetailAsync(orderDetailId);
         }
 
-        public async Task<List<OrderDetail>> GetOrderDetailsAsync()
+        public async Task<List<OrderDetail>> GetOrderDetails()
         {
             return await _orderDetailRepository.GetOrderDetails();
-        }
-
-        public Task<bool> RemoveOrderDetailAsync(OrderDetail orderDetail)
-        {
-            throw new NotImplementedException();
         }
 
         public Task<bool> UpdateOrderDetail(OrderDetail orderDetail)
         {
             return _orderDetailRepository.UpdateOrderDetail(orderDetail);
+        }
+
+        public Task<bool> RemoveOrderDetailAsync(OrderDetail orderDetail)
+        {
+            throw new NotImplementedException();
         }
     }
 }

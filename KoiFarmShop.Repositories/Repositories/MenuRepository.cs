@@ -32,11 +32,7 @@ namespace KoiFarmShop.Repositories.Repositories
             }
         }
 
-        public Task<bool> AddMenuItem(Menu menuItem)
-        {
-            throw new NotImplementedException();
-        }
-
+      
         public async Task<bool> DeleteMenuAsync(int menuId)
         {
             var objDel = await _dbContext.Menus.Where(p => p.Id.Equals(menuId)).FirstOrDefaultAsync();
@@ -56,17 +52,7 @@ namespace KoiFarmShop.Repositories.Repositories
                 return false;
             }
         }
-
-        public Task<bool> DeleteMenuItemAsync(int menuItemId)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<List<Menu>> GetMenuItems()
-        {
-            throw new NotImplementedException();
-        }
-
+        
         public async Task<List<Menu>> GetMenus()
         {
             List<Menu> menus = null;
@@ -86,10 +72,6 @@ namespace KoiFarmShop.Repositories.Repositories
             throw new NotImplementedException();
         }
 
-        public Task<bool> RemoveMenuItemAsync(Menu menuItem)
-        {
-            throw new NotImplementedException();
-        }
 
         public Task<bool> UpdateMenu(Menu menu)
         {
@@ -105,9 +87,5 @@ namespace KoiFarmShop.Repositories.Repositories
             }
         }
 
-        public Task<bool> UpdateMenuItem(Menu menuItem)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

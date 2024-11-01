@@ -1,11 +1,11 @@
+using KoiFarmShop.Repositories.Entities;
+using KoiFarmShop.Repositories.Interfaces;
+using KoiFarmShop.Services.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using KoiFarmShop.Repositories.Entities;
-using KoiFarmShop.Repositories.Interfaces;
-using KoiFarmShop.Services.Interfaces;
 
 namespace KoiFarmShop.Services.Services
 {
@@ -13,8 +13,7 @@ namespace KoiFarmShop.Services.Services
     {
         private readonly ILoyaltyPointRepository _loyaltyPointRepository;
 
-        public LoyaltyPointService(ILoyaltyPointRepository loyaltyPointRepository)
-        {
+        public LoyaltyPointService(ILoyaltyPointRepository loyaltyPointRepository) {
             _loyaltyPointRepository = loyaltyPointRepository;
         }
 
@@ -28,19 +27,19 @@ namespace KoiFarmShop.Services.Services
             return _loyaltyPointRepository.DeleteLoyaltyPointAsync(loyaltyPointId);
         }
 
-        public async Task<List<LoyaltyPoint>> GetLoyaltyPointsAsync()
+        public async Task<List<LoyaltyPoint>> GetLoyaltyPoints()
         {
             return await _loyaltyPointRepository.GetLoyaltyPoints();
-        }
-
-        public Task<bool> RemoveLoyaltyPointAsync(LoyaltyPoint loyaltyPoint)
-        {
-            throw new NotImplementedException();
         }
 
         public Task<bool> UpdateLoyaltyPoint(LoyaltyPoint loyaltyPoint)
         {
             return _loyaltyPointRepository.UpdateLoyaltyPoint(loyaltyPoint);
+        }
+
+        public Task<bool> RemoveLoyaltyPointAsync(LoyaltyPoint loyaltyPoint)
+        {
+            throw new NotImplementedException();
         }
     }
 }

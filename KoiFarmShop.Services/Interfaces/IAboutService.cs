@@ -8,7 +8,7 @@ namespace KoiFarmShop.Services.Interfaces
 {
     public interface IAboutService
     {
-        Task<List<About>> GetAbouts();
+        Task<List<About>> GetAboutsAsync();
         Task<bool> AddAbout(About about);
         Task<bool> RemoveAboutAsync(About about);
         Task<bool> DeleteAboutAsync(int aboutId);

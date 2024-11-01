@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using KoiFarmShop.Repositories.Entities;
 using KoiFarmShop.Repositories.Interfaces;
 
-namespace YourNamespace.Repositories.Repositories
+namespace KoiFarmShop.Repositories.Repositories
 {
     public class UserRepository : IUserRepository
     {
@@ -66,12 +66,12 @@ namespace YourNamespace.Repositories.Repositories
             }
         }
 
-        public Task<List<User>> GetAllUser()
+        public Task<List<User>> GetUser()
         {
             throw new NotImplementedException();
         }
 
-        public async Task<List<User>> GetAllUsers()
+        public async Task<List<User>> GetUsers()
         {
             return await _dbContext.Users.ToListAsync();
         }
