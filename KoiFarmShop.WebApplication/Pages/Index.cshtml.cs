@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace PremierLeague.WebApplication.Pages
+namespace KoiFarmShop.WebApplication.Pages
 {
     public class IndexModel : PageModel
     {
