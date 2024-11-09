@@ -403,6 +403,8 @@ $('.show-all-col .less-all-col').click(function(e){
 	$('.show-all-col .view-all-col').toggleClass('d-none');
 });
 
+var theme = theme || {};
+
 theme.alert = (function() {
 	var $alert = $('#js-global-alert'),
 		$title = $('#js-global-alert .alert-heading'),

@@ -49,6 +49,9 @@ builder.Services.AddScoped<IKoiService, KoiService>();
 builder.Services.AddScoped<ILoyaltyPointRepository, LoyaltyPointRepository>();
 builder.Services.AddScoped<ILoyaltyPointService, LoyaltyPointService>();
 
+builder.Services.AddScoped<IManagerService, ManagerService>();
+builder.Services.AddScoped<IManagerRepository, ManagerRepository>();
+
 builder.Services.AddScoped<IMenuRepository, MenuRepository>();
 builder.Services.AddScoped<IMenuService, MenuService>();
 
@@ -87,6 +90,9 @@ builder.Services.AddScoped<ITagService, TagService>();
 
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IUserService, UserService>();
+
+
+
 
 // Add services to the container.
 builder.Services.AddRazorPages();

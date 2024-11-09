@@ -37,6 +37,8 @@ public partial class KoiFarmShop2024DbContext : DbContext
 
     public virtual DbSet<LoyaltyPoint> LoyaltyPoints { get; set; }
 
+    public virtual DbSet<Manager> Managers { get; set; }
+
     public virtual DbSet<Menu> Menus { get; set; }
 
     public virtual DbSet<Order> Orders { get; set; }
@@ -231,6 +233,20 @@ public partial class KoiFarmShop2024DbContext : DbContext
 
             entity.Property(e => e.EarnedDate).HasColumnType("datetime");
         });
+
+        modelBuilder.Entity<Manager>(entity =>
+    {
+        entity.HasKey(e => e.ManagerID).HasName("PK_Manager");
+
+        entity.ToTable("Manager");
+
+        entity.Property(e => e.ManagerID).HasColumnName("ManagerID");
+        entity.Property(e => e.ManagerName).HasMaxLength(100);
+        entity.Property(e => e.Email).HasMaxLength(100);
+        entity.Property(e => e.Phone).HasMaxLength(20);
+        entity.Property(e => e.CreatedAt).HasColumnType("datetime");
+        entity.Property(e => e.UpdatedAt).HasColumnType("datetime");
+    });
 
         modelBuilder.Entity<Menu>(entity =>
         {

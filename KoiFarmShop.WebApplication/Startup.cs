@@ -53,6 +53,8 @@ namespace KoiFarmShop.WebApplication
             services.AddScoped<IAboutRepository, AboutRepository>();
             services.AddScoped<IAboutService, AboutService>();
 
+        
+
             services.AddScoped<IBlogRepository, BlogRepository>();
             services.AddScoped<IBlogService, BlogService>();
 
@@ -82,8 +84,11 @@ namespace KoiFarmShop.WebApplication
             services.AddScoped<ILoyaltyPointRepository, LoyaltyPointRepository>();
             services.AddScoped<ILoyaltyPointService, LoyaltyPointService>();
 
-            services.AddScoped<IMenuRepository, MenuRepository>();
+            services.AddScoped<IManagerService, ManagerService>();
+            services.AddScoped<IManagerRepository, ManagerRepository>();
+
             services.AddScoped<IMenuService, MenuService>();
+            services.AddScoped<IMenuRepository, MenuRepository>();
 
             services.AddScoped<IOrderRepository, OrderRepository>();
             services.AddScoped<IOrderService, OrderService>();
