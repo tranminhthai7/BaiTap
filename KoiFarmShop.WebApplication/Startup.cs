@@ -34,7 +34,7 @@ namespace KoiFarmShop.WebApplication
             services.AddRazorPages();
 
             services.AddDbContext<KoiFarmShop2024DbContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+                options.UseSqlServer(Configuration.GetConnectionString("KoiFarmShopDb")));
 
             services.AddIdentity<User, IdentityRole>()
                 .AddEntityFrameworkStores<KoiFarmShop2024DbContext>()

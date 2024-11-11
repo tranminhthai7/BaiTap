@@ -10,7 +10,7 @@ var builder = WebApplication.CreateBuilder(args);
 // DI
 builder.Services.AddDbContext<KoiFarmShop2024DbContext>(options =>
 {
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DbContext"));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("KoiFarmShopDb"));
     // chọn SqlServer làm cơ sở dữ liệu
     // lấy chuỗi kết nối từ file cấu hình
 });
