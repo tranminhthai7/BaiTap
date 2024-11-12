@@ -1,0 +1,2030 @@
+﻿@page
+@model KoiFarmShop.WebApplication.Pages.Instruct.huong_dan_chuyen_khoan
+@{
+	Layout = "_Layout";
+	ViewData["Title"] = "Instruct";
+}
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="theme-color" content="#8d251c" />
+	<link rel="canonical" href="https://sudes-nest.mysapo.net/chinh-sach-mua-hang" />
+	<meta name='revisit-after' content='2 days' />
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="robots" content="noodp,index,follow" />
+
+	<title>Hướng dẫn mua hàng	</title>
+	<meta name="keywords" content="Hướng dẫn chuyển khoản	, Koi Farm Shop, sudes-nest.mysapo.net" />
+
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Chính">
+	<meta property="og:image" content="https://img.upanh.tv/2024/11/08/logo.png">
+	<meta property="og:image:secure_url" content="https://img.upanh.tv/2024/11/08/logo.png">
+
+
+	<meta property="og:url" content="https://sudes-nest.mysapo.net/chinh-sach-mua-hang">
+	<meta property="og:site_name" content="Koi Farm Shop"> 
+	<link rel="icon" href="https://img.upanh.tv/2024/11/02/icon1.png" type="image/x-icon" />
+	<link rel="preload" as="script" href="~/js/jquery.js" />
+	<script src="~/js/jquery.js" type="text/javascript"></script>
+	<link rel="preload" as="script" href="~/js/swiper.js" />
+	<script src="~/js/swiper.js" type="text/javascript"></script>
+	<link rel="preload" as="script" href="~/js/lazy.js" />
+	<script src="~/js/lazy.js" type="text/javascript"></script>
+
+
+
+
+	<link rel="preload" as='image' media="screen and (max-width: 480px)" href="./img/slider1.jpg">
+
+
+
+
+
+	<link rel="preload" as='image' media="screen and (max-width: 480px)" href="./img/slider2.jpg">
+
+
+
+
+
+	<link rel="preload" as='image' media="screen and (max-width: 480px)" href="./img/slider3.jpg">
+
+
+
+
+
+
+
+	<link rel="preload" as='image' href="//bizweb.dktcdn.net/100/506/650/themes/944598/assets/header_pattent.png?1728460505311">
+
+
+	<link rel="preload" as='image' href="//bizweb.dktcdn.net/100/506/650/themes/944598/assets/footer_pattent.png?1728460505311">
+
+
+	<link rel="preload" as='style' type="text/css" href="~/css/fonts.scss.css">
+	<link rel="preload" as='style' type="text/css" href="~/css/main.scss.css">
+
+	<link rel="preload" as='style' type="text/css" href="~/css/bootstrap-4-3-min.css">
+	<link rel="preload" as='style' type="text/css" href="~/css/quickviews_popup_cart.scss.css">
+	<style>
+		:root {
+			--mainColor: #053024;
+			--subColor: #fdc97d;
+			--textColor: #333333;
+			--hover: #d0a73c;
+			--price: #d31100;
+		}
+	</style>
+	<link href="~/css/fonts.scss.css" rel="stylesheet" type="text/css" media="all" />
+	<link rel="stylesheet" href="~/css/bootstrap-4-3-min.css">
+	<link href="~/css/main.scss.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="~/css/breadcrumb_style.scss.css" rel="stylesheet" type="text/css" media="all" />
+
+
+	<link href="~/css/style_page.scss.css" rel="stylesheet" type="text/css" media="all" />
+
+
+
+
+
+
+
+
+	<link href="~/css/quickviews_popup_cart.scss.css" rel="stylesheet" type="text/css" media="all" />
+	<script>
+		var Bizweb = Bizweb || {};
+		Bizweb.store = 'sudes-nest.mysapo.net';
+		Bizweb.id = 506650;
+		Bizweb.theme = { "id": 944598, "name": "Koi Farm Shop", "role": "main" };
+		Bizweb.template = 'page';
+		if (!Bizweb.fbEventId) Bizweb.fbEventId = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+			var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+			return v.toString(16);
+		});
+	</script>
+	<script>
+		(function () {
+			function asyncLoad() {
+				var urls = [];
+				for (var i = 0; i < urls.length; i++) {
+					var s = document.createElement('script');
+					s.type = 'text/javascript';
+					s.async = true;
+					s.src = urls[i];
+					var x = document.getElementsByTagName('script')[0];
+					x.parentNode.insertBefore(s, x);
+				}
+			};
+			window.attachEvent ? window.attachEvent('onload', asyncLoad) : window.addEventListener('load', asyncLoad, false);
+		})();
+	</script>
+
+
+	<script>
+		window.BizwebAnalytics = window.BizwebAnalytics || {};
+		window.BizwebAnalytics.meta = window.BizwebAnalytics.meta || {};
+		window.BizwebAnalytics.meta.currency = 'VND';
+		window.BizwebAnalytics.tracking_url = '/s';
+
+		var meta = {};
+
+
+		for (var attr in meta) {
+			window.BizwebAnalytics.meta[attr] = meta[attr];
+		}
+	</script>
+
+
+	<script src="~/js/stats.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			awe_lazyloadImage();
+
+			/*Header promotion*/
+
+			var index = 0,
+				stop = false,
+				num = document.querySelectorAll('.js-promo > li').length,
+				liEls = document.querySelectorAll('.js-promo > li');
+
+			function shippingflipInX() {
+				if (stop) return false;
+				if (index > (num - 2)) {
+					liEls.forEach(function (el) {
+						el.classList.add('see-none');
+						el.classList.remove('animated', 'flipInX', 'see-block');
+					});
+					index = 0;
+					liEls[0].classList.add('animated', 'flipInX', 'see-block');
+					liEls[0].classList.remove('see-none');
+					return;
+				}
+
+				liEls.forEach(function (el) {
+					el.classList.add('see-none');
+					el.classList.remove('animated', 'flipInX', 'see-block');
+				});
+				liEls[index + 1].classList.remove('see-none');
+				liEls[index + 1].classList.add('animated', 'flipInX', 'see-block');
+				index++;
+			}
+
+			var hdtimer = setInterval(function () {
+				shippingflipInX();
+			}, 5000);
+
+			document.querySelector('.js-promo').addEventListener('mouseenter', function () {
+				stop = true;
+			});
+
+			document.querySelector('.js-promo').addEventListener('mouseleave', function () {
+				stop = false;
+			});
+
+
+			function getItemSearch(name, smartjson) {
+				return fetch(`https://${window.location.hostname}/search?q=${name}&view=${smartjson}&type=product`)
+					.then(res => res.json())
+					.catch(err => console.error(err));
+			}
+
+			var searchRecent = document.querySelector('.search-suggest .search-recent');
+			var searchRecentList = localStorage.getItem('search_recent_list');
+			var recentList = searchRecentList ? JSON.parse(searchRecentList) : [];
+
+			if (recentList.length > 0) {
+				searchRecent.classList.remove('d-none');
+				var searchList = searchRecent.querySelector('.search-list');
+				recentList.forEach(function (item) {
+					var link = document.createElement('a');
+					link.href = `/search?query=${encodeURIComponent(item)}&type=product`;
+					link.textContent = item;
+					link.title = `Tìm kiếm ${item}`;
+					link.classList.add('search-item');
+
+					var closeSpan = document.createElement('span');
+					closeSpan.textContent = 'Đóng';
+					closeSpan.title = 'Đóng';
+					closeSpan.classList.add('close');
+
+					closeSpan.addEventListener('click', function (e) {
+						e.preventDefault();
+						e.stopPropagation();
+						var index = recentList.indexOf(item);
+						if (index !== -1) {
+							recentList.splice(index, 1);
+							localStorage.setItem('search_recent_list', JSON.stringify(recentList));
+							searchList.removeChild(link);
+							if (recentList.length == 0) {
+								searchRecent.classList.toggle('d-none');
+							}
+						}
+					});
+
+					link.appendChild(closeSpan);
+					searchList.appendChild(link);
+				});
+			}
+
+			var searchInput = document.querySelectorAll('.header_tim_kiem input[type="text"], .search-mobile input[type="text"]');
+			searchInput.forEach(function (input) {
+				input.addEventListener('keyup', function (e) {
+					let term = this.value.trim();
+					let data = '';
+					var resultbox = '';
+					if (term.length > 1) {
+						searchRecent.classList.add('d-none');
+
+						async function goawaySearch() {
+							data = await getItemSearch(term, 'smartjson');
+							setTimeout(function () {
+								var sizeData = Object.keys(data).length;
+								if (sizeData > 0) {
+									Object.keys(data).forEach(function (key) {
+										if (data[key].compare_price !== 0) {
+											resultbox += `<a class="product-smart" href="${data[key].url}" title="${data[key].name}"><div class="image_thumb"><img width="58" height="58" class="lazyload loaded" src="${data[key].image}" data-src="${data[key].image}" alt="${data[key].name}" data-was-processed="true"></div><div class="product-info"><h3 class="product-name"><span>${data[key].name}</span></h3><div class="price-box"><span class="price">${data[key].price}</span><span class="compare-price">${data[key].compare_price}</span></div></div></a>`;
+										} else {
+											resultbox += `<a class="product-smart" href="${data[key].url}" title="${data[key].name}"><div class="image_thumb"><img width="58" height="58" class="lazyload loaded" src="${data[key].image}" data-src="${data[key].image}" alt="${data[key].name}" data-was-processed="true"></div><div class="product-info"><h3 class="product-name"><span>${data[key].name}</span></h3><div class="price-box"><span class="price">${data[key].price}</span></div></div></a>`;
+										}
+									});
+									resultbox += `<a href="/search?query=${term}&type=product" class="see-all-search" title="Xem tất cả">Xem tất cả kết quả »</a>`;
+									document.querySelector('.list-search').innerHTML = resultbox;
+								} else {
+									document.querySelector('.list-search').innerHTML = '<div class="not-pro">Không có thấy kết quả tìm kiếm</div>';
+								}
+							}, 200);
+						}
+
+						goawaySearch();
+					} else {
+						if (recentList.length > 0) {
+							searchRecent.classList.remove('d-none');
+						}
+						document.querySelector('.list-search').innerHTML = '';
+					}
+				});
+			});
+
+		});
+		function awe_lazyloadImage() {
+			var ll = new LazyLoad({
+				elements_selector: ".lazyload",
+				load_delay: 100,
+				threshold: 0
+			});
+		} window.awe_lazyloadImage = awe_lazyloadImage;
+
+
+	</script>
+</head>
+<body>
+	<div class="opacity_menu"></div>
+	<script>
+		const header = document.querySelector('header.header');
+		let headerHeight = header.offsetHeight;
+		let resizeWindow = window.innerWidth;
+		let offsetStickyHeader = header.offsetHeight;
+		let offsetStickyDown = 0;
+		let resizeTimer;
+
+		const tabLinks = document.querySelectorAll('.tab-link');
+		const tabContents = document.querySelectorAll('.tab-content-mb');
+
+		const handleResize = () => {
+			if (resizeTimer) clearTimeout(resizeTimer);
+
+			resizeTimer = setTimeout(() => {
+				const newWidth = window.innerWidth;
+
+				if (resizeWindow !== newWidth) {
+					header.classList.remove('hSticky');
+					header.style.minHeight = '';
+
+					headerHeight = header.offsetHeight;
+					header.style.minHeight = `${headerHeight}px`;
+
+					resizeWindow = newWidth;
+				}
+			}, 200);
+		};
+
+		const handleScroll = () => {
+			const scrollTop = window.scrollY;
+
+			if (scrollTop > offsetStickyHeader && scrollTop > offsetStickyDown) {
+				header.classList.add('hSticky');
+			}
+
+			if (scrollTop <= offsetStickyDown && scrollTop <= offsetStickyHeader) {
+				header.classList.remove('hSticky');
+			}
+
+			offsetStickyDown = scrollTop;
+		};
+
+		const handleTabClick = (tabLink) => {
+			const tabId = tabLink.dataset.tab;
+
+			tabLinks.forEach((link) => link.classList.remove('active'));
+			tabLink.classList.add('active');
+
+			tabContents.forEach((tabContent) => tabContent.classList.remove('active'));
+			document.getElementById(tabId).classList.add('active');
+		};
+
+		const initializeTabs = () => {
+			if (window.innerWidth <= 991) {
+				const tabMenu1 = document.getElementById('tab-menu-1');
+				const tabLinkMenu1 = document.querySelector('.tab-link[data-tab="tab-menu-1"]');
+
+				tabMenu1.classList.add('active');
+				tabLinkMenu1.classList.add('active');
+
+				tabLinks.forEach((tabLink) => {
+					tabLink.addEventListener('click', () => handleTabClick(tabLink));
+				});
+			}
+		};
+
+		window.addEventListener('resize', handleResize);
+		window.addEventListener('scroll', handleScroll);
+
+		tabLinks.forEach((tabLink) => {
+			tabLink.addEventListener('click', () => handleTabClick(tabLink));
+		});
+
+		document.addEventListener('DOMContentLoaded', initializeTabs);
+	</script>
+	<div class="bodywrap">
+		<section class="bread-crumb">
+			<div class="container">
+				<ul class="breadcrumb">
+				</ul>
+			</div>
+		</section>
+		<section class="page">
+			<div class="container">
+				<div class="pg_page bg-shadow margin-bottom-20">
+					<div class="row">
+						<div class="col-12">
+
+							<div class="content-page rte">
+
+								<p><b>Hướng dẫn chuyển khoản&nbsp;</b></p>
+
+								<p>
+									1. Khách hàng thanh toán trực tiếp tại cửa hàng
+
+								<p>+ Nhận ưu đãi</p>
+
+								<p>
+									+ Nhận quà tặng kèm
+								</p>
+
+								<p>
+									+ Checkin tại cửa hàng
+
+								</p>
+
+								<p>2. Khách hàng thanh toán online</p>
+
+								<p>
+									+ Chuyển khoản trước khi nhận hàng
+								</p>
+								<p>
+									+ Quà tặng kèm bất kỳ
+
+								</p>
+								<p>
+									Khách hàng có nhu cầu khiếu nại, đổi trả sản phẩm do lỗi của Koi Farm SHop có thể liên hệ qua Hotline 0876578996  để được hỗ trợ sớm nhất.
+
+								</p>
+								<p>
+									Tư vấn viên sẽ hướng dẫn khách hàng các bước cần thiết để tiến hành trả thanh toán.
+
+								</p>
+								<p>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<div id="js-global-alert" class="alert alert-success" role="alert">
+			<button type="button" class="close"><span aria-hidden="true"><span aria-hidden="true">&times;</span></span></button>
+			<h5 class="alert-heading"></h5>
+			<p class="alert-content"></p>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</div>
+
+	<link rel="preload" as="style" href="~/css/ajaxcart.scss.css" type="text/css">
+	<link href="~/css/ajaxcart.scss.css" rel="stylesheet" type="text/css" media="all" />
+	<div class="backdrop__body-backdrop___1rvky"></div>
+	<script type="text/javascript">
+		//api bizweb
+		window.Bizweb || (window.Bizweb = {}), Bizweb.mediaDomainName = "//bizweb.dktcdn.net/", Bizweb.each = function (a, b) { for (var c = 0; c < a.length; c++)b(a[c], c) }, Bizweb.getClass = function (a) { return Object.prototype.toString.call(a).slice(8, -1) }, Bizweb.map = function (a, b) { for (var c = [], d = 0; d < a.length; d++)c.push(b(a[d], d)); return c }, Bizweb.arrayContains = function (a, b) { for (var c = 0; c < a.length; c++)if (a[c] == b) return !0; return !1 }, Bizweb.distinct = function (a) { for (var b = [], c = 0; c < a.length; c++)Bizweb.arrayContains(b, a[c]) || b.push(a[c]); return b }, Bizweb.getUrlParameter = function (a) { var b = RegExp("[?&]" + a + "=([^&]*)").exec(window.location.search); return b && decodeURIComponent(b[1].replace(/\+/g, " ")) }, Bizweb.uniq = function (a) { for (var b = [], c = 0; c < a.length; c++)Bizweb.arrayIncludes(b, a[c]) || b.push(a[c]); return b }, Bizweb.arrayIncludes = function (a, b) { for (var c = 0; c < a.length; c++)if (a[c] == b) return !0; return !1 }, Bizweb.Product = function () { function a(a) { if ("undefined" != typeof a) for (property in a) this[property] = a[property] } return a.prototype.optionNames = function () { return "Array" == Bizweb.getClass(this.options) ? this.options : [] }, a.prototype.optionValues = function (a) { if ("undefined" == typeof this.variants) return null; var b = Bizweb.map(this.variants, function (b) { var c = "option" + (a + 1); return "undefined" == typeof b[c] ? null : b[c] }); return null == b[0] ? null : Bizweb.distinct(b) }, a.prototype.getVariant = function (a) { var b = null; return a.length != this.options.length ? null : (Bizweb.each(this.variants, function (c) { for (var d = !0, e = 0; e < a.length; e++) { var f = "option" + (e + 1); c[f] != a[e] && (d = !1) } if (d) return void (b = c) }), b) }, a.prototype.getVariantById = function (a) { for (var b = 0; b < this.variants.length; b++) { var c = this.variants[b]; if (c.id == a) return c } return null }, a.name = "Product", a }(), Bizweb.money_format = " VND", Bizweb.formatMoney = function (a, b) { function f(a, b, c, d) { if ("undefined" == typeof b && (b = 2), "undefined" == typeof c && (c = "."), "undefined" == typeof d && (d = ","), "undefined" == typeof a || null == a) return 0; a = a.toFixed(b); var e = a.split("."), f = e[0].replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1" + c), g = e[1] ? d + e[1] : ""; return f + g } "string" == typeof a && (a = a.replace(/\./g, ""), a = a.replace(/\,/g, "")); var c = "", d = /\{\{\s*(\w+)\s*\}\}/, e = b || this.money_format; switch (e.match(d)[1]) { case "amount": c = f(a, 2); break; case "amount_no_decimals": c = f(a, 0); break; case "amount_with_comma_separator": c = f(a, 2, ".", ","); break; case "amount_no_decimals_with_comma_separator": c = f(a, 0, ".", ",") }return e.replace(d, c) }, Bizweb.OptionSelectors = function () { function a(a, b) { return this.selectorDivClass = "selector-wrapper", this.selectorClass = "single-option-selector", this.variantIdFieldIdSuffix = "-variant-id", this.variantIdField = null, this.selectors = [], this.domIdPrefix = a, this.product = new Bizweb.Product(b.product), "undefined" != typeof b.onVariantSelected ? this.onVariantSelected = b.onVariantSelected : this.onVariantSelected = function () { }, this.replaceSelector(a), this.initDropdown(), !0 } return a.prototype.replaceSelector = function (a) { var b = document.getElementById(a), c = b.parentNode; Bizweb.each(this.buildSelectors(), function (a) { c.insertBefore(a, b) }), b.style.display = "none", this.variantIdField = b }, a.prototype.buildSelectors = function () { for (var a = 0; a < this.product.optionNames().length; a++) { var b = new Bizweb.SingleOptionSelector(this, a, this.product.optionNames()[a], this.product.optionValues(a)); b.element.disabled = !1, this.selectors.push(b) } var c = this.selectorDivClass, d = this.product.optionNames(), e = Bizweb.map(this.selectors, function (a) { var b = document.createElement("div"); if (b.setAttribute("class", c), d.length > 1) { var e = document.createElement("label"); e.htmlFor = a.element.id, e.innerHTML = a.name, b.appendChild(e) } return b.appendChild(a.element), b }); return e }, a.prototype.initDropdown = function () { var a = { initialLoad: !0 }, b = this.selectVariantFromDropdown(a); if (!b) { var c = this; setTimeout(function () { c.selectVariantFromParams(a) || c.selectors[0].element.onchange(a) }) } }, a.prototype.selectVariantFromDropdown = function (a) { var b = document.getElementById(this.domIdPrefix).querySelector("[selected]"); return !!b && this.selectVariant(b.value, a) }, a.prototype.selectVariantFromParams = function (a) { var b = Bizweb.getUrlParameter("variantid"); return null == b && (b = Bizweb.getUrlParameter("variantId")), this.selectVariant(b, a) }, a.prototype.selectVariant = function (a, b) { var c = this.product.getVariantById(a); if (null == c) return !1; for (var d = 0; d < this.selectors.length; d++) { var e = this.selectors[d].element, f = e.getAttribute("data-option"), g = c[f]; null != g && this.optionExistInSelect(e, g) && (e.value = g) } return "undefined" != typeof jQuery ? jQuery(this.selectors[0].element).trigger("change", b) : this.selectors[0].element.onchange(b), !0 }, a.prototype.optionExistInSelect = function (a, b) { for (var c = 0; c < a.options.length; c++)if (a.options[c].value == b) return !0 }, a.prototype.updateSelectors = function (a, b) { var c = this.selectedValues(), d = this.product.getVariant(c); d ? (this.variantIdField.disabled = !1, this.variantIdField.value = d.id) : this.variantIdField.disabled = !0, this.onVariantSelected(d, this, b), null != this.historyState && this.historyState.onVariantChange(d, this, b) }, a.prototype.selectedValues = function () { for (var a = [], b = 0; b < this.selectors.length; b++) { var c = this.selectors[b].element.value; a.push(c) } return a }, a.name = "OptionSelectors", a }(), Bizweb.SingleOptionSelector = function (a, b, c, d) { this.multiSelector = a, this.values = d, this.index = b, this.name = c, this.element = document.createElement("select"); for (var e = 0; e < d.length; e++) { var f = document.createElement("option"); f.value = d[e], f.innerHTML = d[e], this.element.appendChild(f) } return this.element.setAttribute("class", this.multiSelector.selectorClass), this.element.setAttribute("data-option", "option" + (b + 1)), this.element.id = a.domIdPrefix + "-option-" + b, this.element.onchange = function (c, d) { d = d || {}, a.updateSelectors(b, d) }, !0 }, Bizweb.Image = { preload: function (a, b) { for (var c = 0; c < a.length; c++) { var d = a[c]; this.loadImage(this.getSizedImageUrl(d, b)) } }, loadImage: function (a) { (new Image).src = a }, switchImage: function (a, b, c) { if (a && b) { var d = this.imageSize(b.src), e = this.getSizedImageUrl(a.src, d); c ? c(e, a, b) : b.src = e } }, imageSize: function (a) { var b = a.match(/thumb\/(1024x1024|2048x2048|pico|icon|thumb|small|compact|medium|large|grande)\//); return null != b ? b[1] : null }, getSizedImageUrl: function (a, b) { if (null == b) return a; if ("master" == b) return this.removeProtocol(a); var c = a.match(/\.(jpg|jpeg|gif|png|bmp|bitmap|tiff|tif)(\?v=\d+)?$/i); if (null != c) { var d = Bizweb.mediaDomainName + "thumb/" + b + "/"; return this.removeProtocol(a).replace(Bizweb.mediaDomainName, d).split("?")[0] } return null }, removeProtocol: function (a) { return a.replace(/http(s)?:/, "") } };
+		function floatToString(t, r) { var e = t.toFixed(r).toString(); return e.match(/^\.\d+/) ? "0" + e : e } function attributeToString(t) { return "string" != typeof t && (t += "", "undefined" === t && (t = "")), jQuery.trim(t) } "undefined" == typeof Bizweb && (Bizweb = {}); Bizweb.mediaDomainName = "//bizweb.dktcdn.net/"; Bizweb.money_format = "$", Bizweb.onError = function (XMLHttpRequest, textStatus) { var data = eval("(" + XMLHttpRequest.responseText + ")"); alert(data.message ? data.message + "(" + data.status + "): " + data.description : "Error : " + Bizweb.fullMessagesFromErrors(data).join("; ") + ".") }, Bizweb.fullMessagesFromErrors = function (t) { var r = []; return jQuery.each(t, function (t, e) { jQuery.each(e, function (e, o) { r.push(t + " " + o) }) }), r }, Bizweb.onCartUpdate = function (t) { alert("There are now " + t.item_count + " items in the cart.") }, Bizweb.onCartShippingRatesUpdate = function (t, r) { var e = ""; r.zip && (e += r.zip + ", "), r.province && (e += r.province + ", "), e += r.country, alert("There are " + t.length + " shipping rates available for " + e + ", starting at " + Bizweb.formatMoney(t[0].price) + ".") }, Bizweb.onItemAdded = function (t) { /*alert(t.title + " was added to your shopping cart.")*/ }, Bizweb.onProduct = function (t) { alert("Received everything we ever wanted to know about " + t.title) }, Bizweb.formatMoney = function (amount, moneyFormat) { function getDefault(value, defaultValue) { if (typeof value == "undefined") return defaultValue; return value; } function formatMoney(amount, decimal, thousandSeperate, decimalSeperate) { decimal = getDefault(decimal, 2); thousandSeperate = getDefault(thousandSeperate, ","); decimalSeperate = getDefault(decimalSeperate, "."); if (isNaN(amount) || null == amount) return 0; amount = amount.toFixed(decimal); var amountParts = amount.split("."); var integer = amountParts[0].replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1" + thousandSeperate); var decimal = amountParts[1] ? decimalSeperate + amountParts[1] : ""; return integer + decimal; } if (typeof amount == "string") { amount = amount.replace(".", ""); amount = amount.replace(",", ""); } var result = ""; var moneyRegex = /\{\{\s*(\w+)\s*\}\}/; moneyFormat = moneyFormat || this.money_format; switch (moneyFormat.match(moneyRegex)[1]) { case "amount": result = formatMoney(amount, 2); break; case "amount_no_decimals": result = formatMoney(amount, 0); break; case "amount_with_comma_separator": result = formatMoney(amount, 2, ".", ","); break; case "amount_no_decimals_with_comma_separator": result = formatMoney(amount, 0, ".", ",") } return moneyFormat.replace(moneyRegex, result) }, Bizweb.resizeImage = function (t, r) { try { if ("original" == r) return t; var thumbDomain = Bizweb.mediaDomainName + "thumb/" + r + "/"; return t.replace(Bizweb.mediaDomainName, thumbDomain).split('?')[0]; } catch (o) { return t } }, Bizweb.addItem = function (t, r, e) { var r = r || 1, o = { type: "POST", url: "/cart/add.js", data: "quantity=" + r + "&VariantId=" + t, dataType: "json", success: function (t) { "function" == typeof e ? e(t) : Bizweb.onItemAdded(t) }, error: function (t, r) { Bizweb.onError(t, r) } }; jQuery.ajax(o) }, Bizweb.addItemFromForm = function (t, r) { var e = { type: "POST", url: "/cart/add.js", data: jQuery("#" + t).serialize(), dataType: "json", success: function (t) { "function" == typeof r ? r(t) : Bizweb.onItemAdded(t) }, error: function (t, r) { Bizweb.onError(t, r) } }; jQuery.ajax(e) }, Bizweb.getCart = function (t) { jQuery.getJSON("/cart.js", function (r) { "function" == typeof t ? t(r) : Bizweb.onCartUpdate(r) }) }, Bizweb.pollForCartShippingRatesForDestination = function (t, r, e) { e = e || Bizweb.onError; var o = function () { jQuery.ajax("/cart/async_shipping_rates", { dataType: "json", success: function (e, n, a) { 200 === a.status ? "function" == typeof r ? r(e.shipping_rates, t) : Bizweb.onCartShippingRatesUpdate(e.shipping_rates, t) : setTimeout(o, 500) }, error: e }) }; return o }, Bizweb.getCartShippingRatesForDestination = function (t, r, e) { e = e || Bizweb.onError; var o = { type: "POST", url: "/cart/prepare_shipping_rates", data: Bizweb.param({ shipping_address: t }), success: Bizweb.pollForCartShippingRatesForDestination(t, r, e), error: e }; jQuery.ajax(o) }, Bizweb.getProduct = function (t, r) { jQuery.getJSON("/products/" + t + ".js", function (t) { "function" == typeof r ? r(t) : Bizweb.onProduct(t) }) }, Bizweb.changeItem = function (t, r, e) { var o = { type: "POST", url: "/cart/change.js", data: "quantity=" + r + "&variantId=" + t, dataType: "json", success: function (t) { "function" == typeof e ? e(t) : Bizweb.onCartUpdate(t) }, error: function (t, r) { Bizweb.onError(t, r) } }; jQuery.ajax(o) }, Bizweb.removeItem = function (t, r) { var e = { type: "POST", url: "/cart/change.js", data: "quantity=0&variantId=" + t, dataType: "json", success: function (t) { "function" == typeof r ? r(t) : Bizweb.onCartUpdate(t) }, error: function (t, r) { Bizweb.onError(t, r) } }; jQuery.ajax(e) }, Bizweb.clear = function (t) { var r = { type: "POST", url: "/cart/clear.js", data: "", dataType: "json", success: function (r) { "function" == typeof t ? t(r) : Bizweb.onCartUpdate(r) }, error: function (t, r) { Bizweb.onError(t, r) } }; jQuery.ajax(r) }, Bizweb.updateCartFromForm = function (t, r) { var e = { type: "POST", url: "/cart/update.js", data: jQuery("#" + t).serialize(), dataType: "json", success: function (t) { "function" == typeof r ? r(t) : Bizweb.onCartUpdate(t) }, error: function (t, r) { Bizweb.onError(t, r) } }; jQuery.ajax(e) }, Bizweb.updateCartAttributes = function (t, r) { var e = ""; jQuery.isArray(t) ? jQuery.each(t, function (t, r) { var o = attributeToString(r.key); "" !== o && (e += "attributes[" + o + "]=" + attributeToString(r.value) + "&") }) : "object" == typeof t && null !== t && jQuery.each(t, function (t, r) { e += "attributes[" + attributeToString(t) + "]=" + attributeToString(r) + "&" }); var o = { type: "POST", url: "/cart/update.js", data: e, dataType: "json", success: function (t) { "function" == typeof r ? r(t) : Bizweb.onCartUpdate(t) }, error: function (t, r) { Bizweb.onError(t, r) } }; jQuery.ajax(o) }, Bizweb.updateCartNote = function (t, r) { var e = { type: "POST", url: "/cart/update.js", data: "note=" + attributeToString(t), dataType: "json", success: function (t) { "function" == typeof r ? r(t) : Bizweb.onCartUpdate(t) }, error: function (t, r) { Bizweb.onError(t, r) } }; jQuery.ajax(e) }, jQuery.fn.jquery >= "1.4" ? Bizweb.param = jQuery.param : (Bizweb.param = function (t) { var r = [], e = function (t, e) { e = jQuery.isFunction(e) ? e() : e, r[r.length] = encodeURIComponent(t) + "=" + encodeURIComponent(e) }; if (jQuery.isArray(t) || t.jquery) jQuery.each(t, function () { e(this.name, this.value) }); else for (var o in t) Bizweb.buildParams(o, t[o], e); return r.join("&").replace(/%20/g, "+") }, Bizweb.buildParams = function (t, r, e) { jQuery.isArray(r) && r.length ? jQuery.each(r, function (r, o) { rbracket.test(t) ? e(t, o) : Bizweb.buildParams(t + "[" + ("object" == typeof o || jQuery.isArray(o) ? r : "") + "]", o, e) }) : null != r && "object" == typeof r ? Bizweb.isEmptyObject(r) ? e(t, "") : jQuery.each(r, function (r, o) { Bizweb.buildParams(t + "[" + r + "]", o, e) }) : e(t, r) }, Bizweb.isEmptyObject = function (t) { for (var r in t) return !1; return !0 });
+		// Handlebars v4.7.7
+		(function (t, e) {
+			"object" == typeof exports && "object" == typeof module ? module.exports = e() : "function" == typeof define && define.amd ? define([], e) : "object" == typeof exports ? exports.Handlebars = e() : t.Handlebars = e();
+		})(this, function () {
+			return function (t) {
+				var e = {};
+
+				function r(s) {
+					if (e[s]) return e[s].exports;
+
+					// Kiểm tra xem t[s] có được định nghĩa trước khi gọi không
+					if (!t[s]) {
+						throw new Error('Module ' + s + ' không được định nghĩa');
+					}
+
+					var n = e[s] = { exports: {}, id: s, loaded: false };
+
+					try {
+						// Kiểm tra t[s] trước khi gọi phương thức call
+						if (typeof t[s] === 'function') {
+							t[s].call(n.exports, n, n.exports, r);
+						} else {
+							console.error('Module ' + s + ' không phải là một function');
+							throw new Error('Module ' + s + ' không phải là một function');
+						}
+					} catch (error) {
+						console.error('Lỗi khi tải module ' + s, error);
+						throw error; // Ném lại lỗi sau khi đã ghi lại
+					}
+
+					n.loaded = true;
+					return n.exports;
+				}
+
+
+				return r.m = t, r.c = e, r.p = "", r(0);
+			}([function (t, e, r) {
+				"use strict";
+				var s = r(1).default;
+				e.__esModule = !0;
+				var n = s(r(2)), i = s(r(45)), o = r(46), a = r(51), c = s(r(52)), l = s(r(49)), u = s(r(44)), p = n.default.create;
+
+				function h() {
+					var t = p();
+					return t.compile = function (e, r) { return a.compile(e, r, t) },
+						t.precompile = function (e, r) { return a.precompile(e, r, t) },
+						t.AST = i.default, t.Compiler = a.Compiler,
+						t.JavaScriptCompiler = c.default,
+						t.Parser = o.parser,
+						t.parse = o.parse,
+						t.parseWithoutProcessing = o.parseWithoutProcessing,
+						t;
+				}
+				var f = h();
+				f.create = h, u.default(f),
+					f.Visitor = l.default,
+					f.default = f, e.default = f,
+					t.exports = e.default;
+			}])
+		});
+		/*============================================================================
+
+		Ajaxcartfy - thuongdq
+		==============================================================================*/
+		window.theme = window.theme || {};
+		var wW = $(window).width();
+		var timeout;
+
+		$('.img_hover_cart').click(function () {
+			$('.cart-sidebar, .backdrop__body-backdrop___1rvky').addClass('active');
+		});
+
+		$(document).on('click', '.backdrop__body-backdrop___1rvky, .cart_btn-close', function () {
+			$('.backdrop__body-backdrop___1rvky, .cart-sidebar, #popup-cart-desktop, .popup-cart-mobile').removeClass('active');
+			return false;
+		})
+
+
+
+		Bizweb.addItemFromForm = function (form, callback, errorCallback) {
+			var params = {
+				type: 'POST',
+				url: '/cart/add.js',
+				data: jQuery(form).serialize(),
+				dataType: 'json',
+				success: function (line_item) {
+					if ((typeof callback) === 'function') {
+						callback(line_item, form);
+						$('.popup-cart-mobile, .backdrop__body-backdrop___1rvky').addClass('active');
+						AddCartMobile(line_item);
+					}
+					/*
+			  else {
+				Bizweb.onItemAdded(line_item, form);
+				$('#popup-cart-desktops, .cart-sidebar, .backdrop__body-backdrop___1rvky').addClass('active');
+			  }
+			  */
+				},
+				error: function (XMLHttpRequest, textStatus) {
+					if ((typeof errorCallback) === 'function') {
+						errorCallback(XMLHttpRequest, textStatus);
+					}
+					else {
+						Bizweb.onError(XMLHttpRequest, textStatus);
+					}
+				}
+			};
+			jQuery.ajax(params);
+		};
+
+		/*========================
+		Popup cart mobile
+		=========================*/
+		function AddCartMobile(line_item) {
+			//console.log(line_item);
+			$('.bodycart-mobile').html('');
+			var imagepop = Bizweb.resizeImage(line_item.image, 'compact');
+			if (imagepop == "null" || imagepop == '' || imagepop == null) {
+				imagepop = 'https://bizweb.dktcdn.net/thumb/compact/assets/themes_support/noimage.gif';
+			}
+			var variant_title = line_item.variant_title;
+			if (variant_title === 'Default Title')
+				variant_title = '';
+			var carttem = ''
+				+ '<div class="thumb-1x1">'
+				+ '<img src="' + imagepop + '" alt="' + line_item.title + '">'
+				+ '</div>'
+				+ '<div class="body_content">'
+				+ '<h4 class="product-title"><a href="' + line_item.url + '" title="' + line_item.title + '">' + line_item.title + '</a></h4>'
+				+ '<span class="variant">' + variant_title + '</span>'
+				+ '<div class="product-new-price">'
+				+ '<b>' + Bizweb.formatMoney(line_item.price, "{{amount_no_decimals_with_comma_separator}}₫") + '</b>'
+				+ '</div>'
+				+ '</div>';
+			$('.bodycart-mobile').append(carttem);
+		}
+
+		/*============================================================================
+		  Override POST to cart/change.js. Returns cart JSON.
+			- Use product's line in the cart instead of ID so custom
+			  product properties are supported.
+		==============================================================================*/
+		Bizweb.changeItem = function (line, quantity, callback) {
+			var params = {
+				type: 'POST',
+				url: '/cart/change.js',
+				data: 'quantity=' + quantity + '&line=' + line,
+				dataType: 'json',
+				success: function (cart) {
+					if ((typeof callback) === 'function') {
+						callback(cart);
+					}
+					else {
+						Bizweb.onCartUpdate(cart);
+					}
+				},
+				error: function (XMLHttpRequest, textStatus) {
+					Bizweb.onError(XMLHttpRequest, textStatus);
+				}
+			};
+			jQuery.ajax(params);
+		};
+
+		/*============================================================================
+		  GET cart.js returns the cart in JSON.
+		==============================================================================*/
+		Bizweb.getCart = function (callback) {
+			jQuery.getJSON('/cart.js', function (cart, textStatus) {
+				if ((typeof callback) === 'function') {
+					callback(cart);
+				}
+				else {
+					Bizweb.onCartUpdate(cart);
+				}
+			});
+		};
+
+		/*============================================================================
+		  Ajax Bizweb Add To Cart
+		==============================================================================*/
+		var ajaxCart = (function (module, $) {
+
+			'use strict';
+
+			// Public functions
+			var init, loadCart;
+
+			// Private general variables
+			var settings, isUpdating, $body;
+
+			// Private plugin variables
+			var $formContainer, $errorsContainer, $addToCart, $cartCountSelector, $nameItemAdd, $cartCostSelector, $cartContainer, $cartContainerMobile, $cartContainerPage, $cartPopup, $cartContainerHeader, $cartContainerSidebar, $countItem, $cartFooterPage;
+
+			// Private functions
+			var updateCountPrice, formOverride, itemAddedCallback, itemAddedNoti, itemErrorCallback, cartUpdateCallback, buildCart, cartCallback, adjustCart, adjustCartCallback, qtySelectors, validateQty;
+
+			/*============================================================================
+			Initialise the plugin and define global options
+		  ==============================================================================*/
+			init = function (options) {
+
+				// Default settings
+				settings = {
+					formSelector: '[data-cart-form]',
+					errorSelector: '.product-single__errors',
+					cartContainer: '.CartSideContainer, .CartPageContainer, .CartHeaderContainer, .cartPopupContainer, .CartMobileContainer',
+					cartContainerSidebar: '.CartSideContainer',
+					cartContainerPage: '.CartPageContainer',
+					cartContainerMobile: '.CartMobileContainer',
+					cartContainerHeader: '.CartHeaderContainer',
+					cartContainerPopup: '.cartPopupContainer',
+					addToCartSelector: '.add_to_cart',
+					countItem: '.count_item_pr',
+					cartCountSelector: '.count_item_pr',
+					nameItemAdd: '.cart-popup-name',
+					cartFooterPage: '.col-cart-right .ajaxcart__footer .summary-total',
+					cartCostSelector: null,
+					moneyFormat: '${{amount_no_decimals_with_comma_separator}}₫',
+					disableAjaxCart: false,
+					enableQtySelectors: true
+				};
+
+				// Override defaults with arguments
+				$.extend(settings, options);
+
+				// Select DOM elements
+				$formContainer = $(settings.formSelector);
+				$errorsContainer = $(settings.errorSelector);
+				$cartContainer = $(settings.cartContainer);
+				$cartContainerSidebar = $(settings.cartContainerSidebar);
+				$cartContainerPage = $(settings.cartContainerPage);
+				$cartContainerMobile = $(settings.cartContainerMobile);
+				$cartContainerHeader = $(settings.cartContainerHeader);
+				$cartPopup = $(settings.cartContainerPopup);
+				$addToCart = $formContainer.find(settings.addToCartSelector);
+				$nameItemAdd = $(settings.nameItemAdd);
+				$cartCountSelector = $(settings.cartCountSelector);
+				$cartCostSelector = $(settings.cartCostSelector);
+				$countItem = $(settings.countItem);
+				$cartFooterPage = $(settings.cartFooterPage);
+
+				// General Selectors
+				$body = $('body');
+
+				// Track cart activity status
+				isUpdating = false;
+
+				// Setup ajax quantity selectors on the any template if enableQtySelectors is true
+				if (settings.enableQtySelectors) {
+					qtySelectors();
+				}
+
+				// Take over the add to cart form submit action if ajax enabled
+				if (!settings.disableAjaxCart && $addToCart.length) {
+					formOverride();
+				}
+
+				// Run this function in case we're using the quantity selector outside of the cart
+				adjustCart();
+			};
+
+			loadCart = function () {
+				Bizweb.getCart(cartUpdateCallback);
+			};
+
+			updateCountPrice = function (cart) {
+				if ($cartCountSelector) {
+					$cartCountSelector.html(cart.item_count).removeClass('hidden-count');
+
+					if (cart.item_count === 0) {
+						$cartCountSelector.addClass('hidden-count');
+					}
+				}
+
+				if ($cartCostSelector) {
+					$cartCostSelector.html(Bizweb.formatMoney(cart.total_price, settings.moneyFormat));
+				}
+			};
+
+			formOverride = function () {
+				$formContainer.on('submit', function (evt) {
+					evt.preventDefault();
+					$addToCart.removeClass('is-added').addClass('is-adding');
+					$('.qty-error').remove();
+					Bizweb.addItemFromForm(evt.target, itemAddedCallback, itemErrorCallback);
+				});
+			};
+
+			itemAddedCallback = function (product) {
+				$addToCart.removeClass('is-adding').addClass('is-added');
+				Bizweb.getCart(cartUpdateCallback);
+				$nameItemAdd.html(product.title).attr('href', product.url, 'title', product.title);
+			};
+
+			itemErrorCallback = function (XMLHttpRequest, textStatus) {
+				var data = eval('(' + XMLHttpRequest.responseText + ')');
+				$addToCart.removeClass('is-adding is-added');
+
+				$cartContainer.trigger('ajaxCart.updatedQty');
+
+				if (!!data.message) {
+					if (data.status == 422) {
+						$errorsContainer.html('<div class="errors qty-error">' + data.description + '</div>')
+					}
+				}
+			};
+
+			cartUpdateCallback = function (cart) {
+				// Update quantity and price
+				updateCountPrice(cart);
+				buildCart(cart);
+
+			};
+
+			buildCart = function (cart) {
+				// Start with a fresh cart div
+				var itemListScrollTop = $('.CartHeaderContainer .ajaxcart__inner').scrollTop(),
+					itemPopupScrollTop = $('.cartPopupContainer .ajaxcart__inner').scrollTop(),
+					itemSideCartScrollTop = $('.CartSideContainer .ajaxcart__inner').scrollTop();
+				$cartContainer.empty();
+
+				// Show empty cart
+				if (cart.item_count === 0) {
+					$cartContainer
+						.append('<div class="cart--empty-message"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 201.387 201.387" style="enable-background:new 0 0 201.387 201.387;" xml:space="preserve"> <g> <g> <path d="M129.413,24.885C127.389,10.699,115.041,0,100.692,0C91.464,0,82.7,4.453,77.251,11.916    c-1.113,1.522-0.78,3.657,0.742,4.77c1.517,1.109,3.657,0.78,4.768-0.744c4.171-5.707,10.873-9.115,17.93-9.115    c10.974,0,20.415,8.178,21.963,19.021c0.244,1.703,1.705,2.932,3.376,2.932c0.159,0,0.323-0.012,0.486-0.034    C128.382,28.479,129.679,26.75,129.413,24.885z"/> </g> </g> <g> <g> <path d="M178.712,63.096l-10.24-17.067c-0.616-1.029-1.727-1.657-2.927-1.657h-9.813c-1.884,0-3.413,1.529-3.413,3.413    s1.529,3.413,3.413,3.413h7.881l6.144,10.24H31.626l6.144-10.24h3.615c1.884,0,3.413-1.529,3.413-3.413s-1.529-3.413-3.413-3.413    h-5.547c-1.2,0-2.311,0.628-2.927,1.657l-10.24,17.067c-0.633,1.056-0.648,2.369-0.043,3.439s1.739,1.732,2.97,1.732h150.187    c1.231,0,2.364-0.662,2.97-1.732S179.345,64.15,178.712,63.096z"/> </g> </g> <g> <g> <path d="M161.698,31.623c-0.478-0.771-1.241-1.318-2.123-1.524l-46.531-10.883c-0.881-0.207-1.809-0.053-2.579,0.423    c-0.768,0.478-1.316,1.241-1.522,2.123l-3.509,15c-0.43,1.835,0.71,3.671,2.546,4.099c1.835,0.43,3.673-0.71,4.101-2.546    l2.732-11.675l39.883,9.329l-6.267,26.795c-0.43,1.835,0.71,3.671,2.546,4.099c0.263,0.061,0.524,0.09,0.782,0.09    c1.55,0,2.953-1.062,3.318-2.635l7.045-30.118C162.328,33.319,162.176,32.391,161.698,31.623z"/> </g> </g> <g> <g> <path d="M102.497,39.692l-3.11-26.305c-0.106-0.899-0.565-1.72-1.277-2.28c-0.712-0.56-1.611-0.816-2.514-0.71l-57.09,6.748    c-1.871,0.222-3.209,1.918-2.988,3.791l5.185,43.873c0.206,1.737,1.679,3.014,3.386,3.014c0.133,0,0.27-0.009,0.406-0.024    c1.87-0.222,3.208-1.918,2.988-3.791l-4.785-40.486l50.311-5.946l2.708,22.915c0.222,1.872,1.91,3.202,3.791,2.99    C101.379,43.261,102.717,41.564,102.497,39.692z"/> </g> </g> <g> <g> <path d="M129.492,63.556l-6.775-28.174c-0.212-0.879-0.765-1.64-1.536-2.113c-0.771-0.469-1.696-0.616-2.581-0.406L63.613,46.087    c-1.833,0.44-2.961,2.284-2.521,4.117l3.386,14.082c0.44,1.835,2.284,2.964,4.116,2.521c1.833-0.44,2.961-2.284,2.521-4.117    l-2.589-10.764l48.35-11.626l5.977,24.854c0.375,1.565,1.775,2.615,3.316,2.615c0.265,0,0.533-0.031,0.802-0.096    C128.804,67.232,129.932,65.389,129.492,63.556z"/> </g> </g> <g> <g> <path d="M179.197,64.679c-0.094-1.814-1.592-3.238-3.41-3.238H25.6c-1.818,0-3.316,1.423-3.41,3.238l-6.827,133.12    c-0.048,0.934,0.29,1.848,0.934,2.526c0.645,0.677,1.539,1.062,2.475,1.062h163.84c0.935,0,1.83-0.384,2.478-1.062    c0.643-0.678,0.981-1.591,0.934-2.526L179.197,64.679z M22.364,194.56l6.477-126.293h143.701l6.477,126.293H22.364z"/> </g> </g> <g> <g> <path d="M126.292,75.093c-5.647,0-10.24,4.593-10.24,10.24c0,5.647,4.593,10.24,10.24,10.24c5.647,0,10.24-4.593,10.24-10.24    C136.532,79.686,131.939,75.093,126.292,75.093z M126.292,88.747c-1.883,0-3.413-1.531-3.413-3.413s1.531-3.413,3.413-3.413    c1.882,0,3.413,1.531,3.413,3.413S128.174,88.747,126.292,88.747z"/> </g> </g> <g> <g> <path d="M75.092,75.093c-5.647,0-10.24,4.593-10.24,10.24c0,5.647,4.593,10.24,10.24,10.24c5.647,0,10.24-4.593,10.24-10.24    C85.332,79.686,80.739,75.093,75.092,75.093z M75.092,88.747c-1.882,0-3.413-1.531-3.413-3.413s1.531-3.413,3.413-3.413    s3.413,1.531,3.413,3.413S76.974,88.747,75.092,88.747z"/> </g> </g> <g> <g> <path d="M126.292,85.333h-0.263c-1.884,0-3.413,1.529-3.413,3.413c0,0.466,0.092,0.911,0.263,1.316v17.457    c0,12.233-9.953,22.187-22.187,22.187s-22.187-9.953-22.187-22.187V88.747c0-1.884-1.529-3.413-3.413-3.413    s-3.413,1.529-3.413,3.413v18.773c0,15.998,13.015,29.013,29.013,29.013s29.013-13.015,29.013-29.013V88.747    C129.705,86.863,128.176,85.333,126.292,85.333z"/> </g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> </svg><p>Giỏ hàng của bạn đang trống</p></div>');
+					$countItem.html('0');
+					$('.main-cart-page').addClass('is-empty');
+					$('.cartbar-mobile').attr('data-count-pr', '0');
+					cartCallback(cart);
+					return;
+				}
+
+				// Handlebars.js cart layout
+				var wW = $(window).width(),
+					items = [],
+					item = {},
+					data = {},
+					sourceSideCart = $("#SideCartTemplate").html(), // lấy template sidebar cart
+					sourceCartTemp = $("#CartTemplate").html(), // lấy template page cart
+					sourceCartMobileTemp = $("#CartMobileTemplate").html(), // lấy template page cart mobile
+					sourceCartHeaderTemp = $("#CartHeaderTemplate").html(), // lấy template header cart
+					sourceCartPopTemp = $("#CartPopupTemplate").html(), // lấy template popup cart
+					sourceFooteCartTemp = $("#FooterCartTemplate").html(),
+					templateSideCart = Handlebars.compile(sourceSideCart), // biên dịch
+					templateCartPage = Handlebars.compile(sourceCartTemp), // biên dịch
+					templateCartPop = Handlebars.compile(sourceCartPopTemp), // biên dịch
+					templateCartMobile = Handlebars.compile(sourceCartMobileTemp),
+					templateCartFooter = Handlebars.compile(sourceFooteCartTemp),
+					templateCartHeader = Handlebars.compile(sourceCartHeaderTemp); // biên dịch
+
+				// Add each item to our handlebars.js data
+				$.each(cart.items, function (index, cartItem) {
+
+					// lấy ảnh check xem có ảnh không
+					var prodImg = Bizweb.resizeImage(cartItem.image, 'compact');
+					if (prodImg == "null" || prodImg == '' || prodImg == null) {
+						prodImg = 'https://bizweb.dktcdn.net/thumb/compact/assets/themes_support/noimage.gif';
+					}
+
+					// lấy properties cart
+					if (cartItem.properties !== null) {
+						$.each(cartItem.properties, function (key, value) {
+							if (key.charAt(0) === '_' || !value) {
+								delete cartItem.properties[key];
+							}
+						});
+					}
+
+					var unitPrice = null;
+					if (cartItem.unit_price_measurement) {
+						unitPrice = {
+							addRefererenceValue:
+								cartItem.unit_price_measurement.reference_value !== 1,
+							price: Bizweb.formatMoney(
+								cartItem.unit_price, settings.moneyFormat
+							),
+							reference_value: cartItem.unit_price_measurement.reference_value,
+							reference_unit: cartItem.unit_price_measurement.reference_unit
+						};
+					}
+					// Create item's data object and add to 'items' array
+					// check variant title có không
+					var variant_title = cartItem.variant_title;
+					if (variant_title === 'Default Title')
+						variant_title = '';
+					// gán giá trị cho từng key của template
+					//console.log(cartItem);
+					item = {
+						key: cartItem.key,
+						line: index + 1, // Bizweb uses a 1+ index in the API
+						url: cartItem.url,
+						key: cartItem.key,
+						img: prodImg,
+						name: cartItem.title,
+						variation: variant_title,
+						sellingPlanAllocation: cartItem.selling_plan_allocation,
+						properties: cartItem.properties,
+						itemAdd: cartItem.quantity + 1,
+						itemMinus: cartItem.quantity - 1,
+						itemQty: cartItem.quantity,
+						price: Bizweb.formatMoney(cartItem.price, settings.moneyFormat),
+						vendor: cartItem.vendor,
+						unitPrice: unitPrice,
+						linePrice: Bizweb.formatMoney(cartItem.line_price, settings.moneyFormat),
+						originalLinePrice: Bizweb.formatMoney(cartItem.original_line_price, settings.moneyFormat)
+					};
+
+					items.push(item);
+				});
+
+				// Gather all cart data and add to DOM
+				// Xuất items, ghi chú, tổng giá
+				data = {
+					items: items,
+					note: cart.note,
+					totalPrice: Bizweb.formatMoney(cart.total_price, settings.moneyFormat)
+				}
+				$cartFooterPage.html(templateCartFooter(data));
+				if (wW < 1199) {
+					$cartContainerMobile.append(templateCartMobile(data));  // chèn line item vào template cart mobile
+				}
+				if (wW > 992) {
+					$cartContainerHeader.append(templateCartHeader(data));  // chèn line item vào template cart header
+				}
+				if (wW > 1200) {
+					$cartContainerPage.append(templateCartPage(data));  // chèn line item vào template cart page
+					$cartPopup.append(templateCartPop(data));  // chèn line item vào template cart header
+				}
+				$('.main-cart-page').removeClass('is-empty');
+				$cartContainerSidebar.append(templateSideCart(data)); // chèn line item vào template cart sidebar
+				$countItem.html(cart.item_count);  // Đếm số lượng sp đang có trong giỏ hàng
+				$('.cartbar-mobile').attr('data-count-pr', cart.item_count);
+
+				$('.CartHeaderContainer .ajaxcart__inner').scrollTop(itemListScrollTop);
+				$('.cartPopupContainer .ajaxcart__inner').scrollTop(itemPopupScrollTop);
+				$('.CartSideContainer .ajaxcart__inner').scrollTop(itemSideCartScrollTop);
+				cartCallback(cart);
+			};
+			cartCallback = function (cart) {
+				$cartContainer.trigger('ajaxCart', cart);
+			};
+
+			adjustCart = function () {
+				// Delegate all events because elements reload with the cart
+
+				// Thêm giảm số lượng
+				$cartContainer.on('click', '.items-count', function () {
+					if (isUpdating) return;
+
+
+					var $el = $(this),
+						line = $el.data('line'),
+						$qtySelector = $el.siblings('.number-sidebar'),
+						qty = parseInt($qtySelector.val().replace(/\D/g, ''));
+
+					var qty = validateQty(qty);
+
+					// Add or subtract from the current quantity
+					if ($el.hasClass('ajaxcart__qty--plus')) {
+						qty += 1;
+					} else {
+						qty -= 1;
+						if (qty <= 0) qty = 0;
+					}
+
+					// If it has a data-line, update the cart.
+					// Otherwise, just update the input's number
+					if (line) {
+						updateQuantity(line, qty);
+					} else {
+						$qtySelector.val(qty);
+					}
+				});
+
+				// Update quantity based on input on change
+				$cartContainer.on('change', '.number-sidebar', function () {
+					if (isUpdating) return;
+
+					var $el = $(this),
+						line = $el.data('line'),
+						qty = parseInt($el.val().replace(/\D/g, ''));
+
+					var qty = validateQty(qty);
+
+					// If it has a data-line, update the cart
+					if (line) {
+						updateQuantity(line, qty);
+					}
+				});
+
+				$cartContainer.on('click', '.remove-item-cart', function (evt) {
+					var $el = $(this),
+						line = $el.data('line'),
+						qty = 0;
+					if (line) {
+						updateQuantity(line, qty);
+					}
+				});
+
+				$cartContainer.on('focus', '.number-sidebar', function (evt) {
+					var $el = $(evt.target);
+					$el[0].setSelectionRange(0, $el[0].value.length);
+				});
+
+				// Prevent cart from being submitted while quantities are changing
+				$cartContainer.on('submit', 'form.ajaxcart', function (evt) {
+					if (isUpdating) {
+						evt.preventDefault();
+					}
+				});
+
+				// Highlight the text when focused
+				$cartContainer.on('focus', '.items-count', function () {
+					var $el = $(this);
+					setTimeout(function () {
+						$el.select();
+					}, 50);
+				});
+
+				function updateQuantity(line, qty) {
+					isUpdating = true;
+
+					// Add activity classes when changing cart quantities
+					var $product = $('.ajaxcart__product[data-line="' + line + '"]').addClass('is-loading');
+
+					if (qty === 0) {
+						$product.parent().addClass('is-removed');
+					}
+
+					// Slight delay to make sure removed animation is done
+					setTimeout(function () {
+						Bizweb.changeItem(line, qty, adjustCartCallback);
+					}, 10);
+
+					$cartContainer.trigger('ajaxCart.updatingQty');
+				}
+
+				// Save note anytime it's changed
+				$cartContainer.on('change', 'textarea[name="note"]', function () {
+					var newNote = $(this).val();
+
+					// Update the cart note in case they don't click update/checkout
+					Bizweb.updateCartNote(newNote, function (cart) { });
+				});
+			};
+
+			adjustCartCallback = function (cart) {
+				// Update quantity and price
+				updateCountPrice(cart);
+
+				// Reprint cart on short timeout so you don't see the content being removed
+				setTimeout(function () {
+					isUpdating = false;
+
+					Bizweb.getCart(buildCart);
+				}, 150)
+			};
+
+			qtySelectors = function () {
+				// Change number inputs to JS ones, similar to ajax cart but without API integration.
+				// Make sure to add the existing name and id to the new input element
+				var numInputs = $('input[type="number"][data-ajax-qty]');
+
+				// Qty selector has a minimum of 1 on the product page
+				// and 0 in the cart (determined on qty click)
+				var qtyMin = 0;
+
+				if (numInputs.length) {
+					numInputs.each(function () {
+						var $el = $(this),
+							currentQty = $el.val(),
+							inputName = $el.attr('name'),
+							inputId = $el.attr('id');
+
+						var itemAdd = currentQty + 1,
+							itemMinus = currentQty - 1,
+							itemQty = currentQty;
+
+						var source = $("#JsQty").html(),
+							template = Handlebars.compile(source),
+							data = {
+								key: $el.data('id'),
+								itemQty: itemQty,
+								itemAdd: itemAdd,
+								itemMinus: itemMinus,
+								inputName: inputName,
+								inputId: inputId
+							};
+
+						// Append new quantity selector then remove original
+						$el.after(template(data)).remove();
+					});
+
+					// Setup listeners to add/subtract from the input
+					$('.js-qty__adjust').on('click', function () {
+						var $el = $(this),
+							id = $el.data('id'),
+							$qtySelector = $el.siblings('.js-qty__num'),
+							qty = parseInt($qtySelector.val().replace(/\D/g, ''));
+
+						var qty = validateQty(qty);
+						qtyMin = $body.hasClass('template-product') ? 1 : qtyMin;
+
+						// Add or subtract from the current quantity
+						if ($el.hasClass('js-qty__adjust--plus')) {
+							qty += 1;
+						} else {
+							qty -= 1;
+							if (qty <= qtyMin) qty = qtyMin;
+						}
+
+						// Update the input's number
+						$qtySelector.val(qty);
+					});
+				}
+			};
+
+			validateQty = function (qty) {
+				if ((parseFloat(qty) == parseInt(qty)) && !isNaN(qty)) {
+					// We have a valid number!
+				} else {
+					// Not a number. Default to 1.
+					qty = 1;
+				}
+				return qty;
+			};
+
+			module = {
+				init: init,
+				load: loadCart
+			};
+
+			return module;
+
+		}(ajaxCart || {}, jQuery));
+
+
+		$(window).on('load', function () {
+			ajaxCart.init({
+				moneyFormat: '{{amount_no_decimals_with_comma_separator}}₫'
+			});
+			ajaxCart.load();
+		});
+
+
+	</script>
+	<script id="SideCartTemplate" type="text/template">
+
+		<form action="/cart" method="post" novalidate class="cart ajaxcart">
+			<div class="ajaxcart__inner ajaxcart__inner--has-fixed-footer cart_body items">
+				{{#items}}
+				<div class="ajaxcart__row">
+					<div class="ajaxcart__product cart_product" data-line="{{line}}">
+						<a href="{{url}}" class="ajaxcart__product-image cart_image" title="{{name}}"><img width="80" height="80" src="{{img}}" alt="{{name}}"></a>
+						<div class="grid__item cart_info">
+							<div class="ajaxcart__product-name-wrapper cart_name">
+								<a href="{{url}}" class="ajaxcart__product-name h4" title="{{name}}">{{name}}</a>
+								{{#if variation}}
+								<span class="ajaxcart__product-meta variant-title">{{variation}}</span>
+								{{/if}}
+							</div>
+							<div class="grid">
+								<div class="grid__item one-half cart_select cart_item_name">
+									<label class="cart_quantity">Số lượng</label>
+									<div class="ajaxcart__qty input-group-btn">
+										<button type="button" class="ajaxcart__qty-adjust ajaxcart__qty--minus items-count" data-id="{{key}}" data-qty="{{itemMinus}}" data-line="{{line}}" aria-label="-">
+											-
+										</button>
+										<input type="text" name="updates[]" class="ajaxcart__qty-num number-sidebar" maxlength="3" value="{{itemQty}}" min="0" data-id="{{key}}" data-line="{{line}}" aria-label="quantity" pattern="[0-9]*">
+										<button type="button" class="ajaxcart__qty-adjust ajaxcart__qty--plus items-count" data-id="{{key}}" data-line="{{line}}" data-qty="{{itemAdd}}" aria-label="+">
+											+
+										</button>
+									</div>
+								</div>
+								<div class="grid__item one-half text-right cart_prices">
+									<span class="cart-price">{{price}}</span>
+									<a title="Xóa" class="cart__btn-remove remove-item-cart ajaxifyCart--remove" href="javascript:;" data-line="{{line}}">Xóa</a>
+								</div>
+							</div>
+							{{#if discountsApplied}}
+							<div class="grid grid--table">
+								<div class="grid__item text-right">
+									<ul class="order-discount order-discount--list order-discount--title order-discount--cart order-discount--cart-title" aria-label="Giảm giá">
+										{{#each discounts}}
+										<li class="order-discount__item">
+											<span class="icon icon-saletag" aria-hidden="true"></span>{{ this.discount_application.title }} (-{{{ this.formattedAmount }}})
+										</li>
+										{{/each}}
+									</ul>
+								</div>
+							</div>
+							{{/if}}
+						</div>
+					</div>
+				</div>
+				{{/items}}
+
+
+			</div>
+			<div class="ajaxcart__footer ajaxcart__footer--fixed cart-footer">
+				<div class="ajaxcart__subtotal">
+					{{#if cartDiscountsApplied}}
+					<div class="grid grid--table ajaxcart__discounts">
+						{{#each cartDiscounts}}
+						<div class="grid__item two-thirds">
+							<span class="order-discount order-discount--title order-discount--cart-title">
+								<span class="icon icon-saletag" aria-hidden="true"></span><span class="visually-hidden">%:</span>{{ this.title }}
+							</span>
+						</div>
+						<div class="grid__item one-third text-right">
+							<span class="order-discount">-{{{ this.formattedAmount }}}</span>
+						</div>
+						{{/each}}
+					</div>
+					{{/if}}
+					<div class="cart__subtotal">
+						<div class="cart__col-6">Tổng tiền:</div>
+						<div class="text-right cart__totle"><span class="total-price">{{{totalPrice}}}</span></div>
+					</div>
+				</div>
+				<div class="cart__btn-proceed-checkout-dt">
+					<button onclick="location.href='/checkout'" type="button" class="button btn btn-primary cart__btn-proceed-checkout" id="btn-proceed-checkout" title="Thanh toán">Thanh toán</button>
+				</div>
+			</div>
+		</form>
+
+
+	</script>
+
+	<script id="CartTemplate" type="text/template">
+
+		<form action="/cart" method="post" novalidate class="cart ajaxcart cartpage">
+			<div class="cart-header-info">
+				<div>Thông tin sản phẩm</div>
+				<div>Đơn giá</div>
+				<div>Số lượng</div>
+				<div>Thành tiền</div>
+			</div>
+			<div class="ajaxcart__inner ajaxcart__inner--has-fixed-footer cart_body items">
+				{{#items}}
+				<div class="ajaxcart__row">
+					<div class="ajaxcart__product cart_product" data-line="{{line}}">
+						<a href="{{url}}" class="ajaxcart__product-image cart_image" title="{{name}}">
+							<img src="{{img}}" alt="{{name}}">
+						</a>
+						<div class="grid__item cart_info">
+							<div class="ajaxcart__product-name-wrapper cart_name">
+								<a href="{{url}}" class="ajaxcart__product-name h4 line-clamp line-clamp-2-new" title="{{name}}">{{name}}</a>
+								{{#if variation}}
+								<span class="ajaxcart__product-meta variant-title">{{variation}}</span>
+								{{/if}}
+								<a title="Xóa" class="cart__btn-remove remove-item-cart ajaxifyCart--remove" href="javascript:;" data-line="{{line}}">Xóa</a>
+							</div>
+							<div class="grid">
+								<div class="grid__item one-half text-right cart_prices">
+									<span class="cart-price">{{price}}</span>
+								</div>
+							</div>
+							<div class="grid">
+								<div class="grid__item one-half cart_select">
+									<div class="ajaxcart__qty input-group-btn">
+										<button type="button" class="ajaxcart__qty-adjust ajaxcart__qty--minus items-count" data-id="{{key}}" data-qty="{{itemMinus}}" data-line="{{line}}" aria-label="-"> - </button>
+										<input type="text" name="updates[]" class="ajaxcart__qty-num number-sidebar" maxlength="3" value="{{itemQty}}" min="0" data-id="{{key}}" data-line="{{line}}" aria-label="quantity" pattern="[0-9]*">
+										<button type="button" class="ajaxcart__qty-adjust ajaxcart__qty--plus items-count" data-id="{{key}}" data-line="{{line}}" data-qty="{{itemAdd}}" aria-label="+"> + </button>
+									</div>
+								</div>
+							</div>
+							<div class="grid justify-right">
+								<div class="grid__item one-half text-right cart_prices">
+									<span class="cart-price">{{linePrice}}</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				{{/items}}
+			</div>
+		</form>
+
+	</script>
+	<script id="CartHeaderTemplate" type="text/template">
+
+		<form action="/cart" method="post" novalidate class="cart ajaxcart cartheader">
+			<div class="title_cart_hea" onclick="window.location.href='/cart'">Giỏ hàng</div>
+			<div class="ajaxcart__inner ajaxcart__inner--has-fixed-footer cart_body items">
+				{{#items}}
+				<div class="ajaxcart__row">
+					<div class="ajaxcart__product cart_product" data-line="{{line}}">
+						<a href="{{url}}" class="ajaxcart__product-image cart_image" title="{{name}}"><img width="80" height="80" src="{{img}}" alt="{{name}}"></a>
+						<div class="grid__item cart_info">
+							<div class="ajaxcart__product-name-wrapper cart_name">
+								<a href="{{url}}" class="ajaxcart__product-name h4 line-clamp line-clamp-2-new" title="{{name}}">{{name}}</a>
+								{{#if variation}}
+								<span class="ajaxcart__product-meta variant-title">{{variation}}</span>
+								{{/if}}
+								<a title="Xóa" class="cart__btn-remove remove-item-cart ajaxifyCart--remove" href="javascript:;" data-line="{{line}}"></a>
+
+							</div>
+							<div class="grid">
+								<div class="grid__item one-half cart_select cart_item_name">
+									<div class="ajaxcart__qty input-group-btn">
+										<button type="button" class="ajaxcart__qty-adjust ajaxcart__qty--minus items-count" data-id="{{key}}" data-qty="{{itemMinus}}" data-line="{{line}}" aria-label="-">
+											-
+										</button>
+										<input type="text" name="updates[]" class="ajaxcart__qty-num number-sidebar" maxlength="3" value="{{itemQty}}" min="0" data-id="{{key}}" data-line="{{line}}" aria-label="quantity" pattern="[0-9]*">
+										<button type="button" class="ajaxcart__qty-adjust ajaxcart__qty--plus items-count" data-id="{{key}}" data-line="{{line}}" data-qty="{{itemAdd}}" aria-label="+">
+											+
+										</button>
+									</div>
+								</div>
+								<div class="grid__item one-half text-right cart_prices">
+									<span class="cart-price">{{price}}</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				{{/items}}
+			</div>
+			<div class="ajaxcart__footer ajaxcart__footer--fixed cart-footer">
+				<div class="ajaxcart__subtotal">
+					<div class="cart__subtotal">
+						<div class="cart__col-6">Tổng tiền:</div>
+						<div class="text-right cart__totle"><span class="total-price">{{{totalPrice}}}</span></div>
+					</div>
+				</div>
+				<div class="cart__btn-proceed-checkout-dt ">
+					<button onclick="location.href='/checkout'" type="button" class="button btn btn-primary cart__btn-proceed-checkout" id="btn-proceed-checkout" title="Thanh toán">Thanh toán</button>
+				</div>
+			</div>
+		</form>
+
+
+	</script>
+
+	<script id="CartPopupTemplate" type="text/template">
+
+		<form action="/cart" method="post" novalidate class="cart ajaxcart cartpopup">
+			<div class="cart-header-info">
+				<div>Thông tin sản phẩm</div><div>Đơn giá</div><div>Số lượng</div><div>Thành tiền</div>
+			</div>
+			<div class="ajaxcart__inner ajaxcart__inner--has-fixed-footer cart_body items">
+				{{#items}}
+				<div class="ajaxcart__row">
+					<div class="ajaxcart__product cart_product" data-line="{{line}}">
+						<a href="{{url}}" class="ajaxcart__product-image cart_image" title="{{name}}"><img width="80" height="80" src="{{img}}" alt="{{name}}"></a>
+						<div class="grid__item cart_info">
+							<div class="ajaxcart__product-name-wrapper cart_name">
+								<a href="{{url}}" class="ajaxcart__product-name h4 line-clamp line-clamp-2-new" title="{{name}}">{{name}}</a>
+								{{#if variation}}
+								<span class="ajaxcart__product-meta variant-title">{{variation}}</span>
+								{{/if}}
+								<a title="Xóa" class="cart__btn-remove remove-item-cart ajaxifyCart--remove" href="javascript:;" data-line="{{line}}">Xóa</a>
+
+							</div>
+							<div class="grid">
+								<div class="grid__item one-half text-right cart_prices">
+									<span class="cart-price">{{price}}</span>
+								</div>
+							</div>
+							<div class="grid">
+								<div class="grid__item one-half cart_select">
+									<div class="ajaxcart__qty input-group-btn">
+										<button type="button" class="ajaxcart__qty-adjust ajaxcart__qty--minus items-count" data-id="{{key}}" data-qty="{{itemMinus}}" data-line="{{line}}" aria-label="-">
+											-
+										</button>
+										<input type="text" name="updates[]" class="ajaxcart__qty-num number-sidebar" maxlength="3" value="{{itemQty}}" min="0" data-id="{{key}}" data-line="{{line}}" aria-label="quantity" pattern="[0-9]*">
+										<button type="button" class="ajaxcart__qty-adjust ajaxcart__qty--plus items-count" data-id="{{key}}" data-line="{{line}}" data-qty="{{itemAdd}}" aria-label="+">
+											+
+										</button>
+									</div>
+								</div>
+							</div>
+							<div class="grid">
+								<div class="grid__item one-half text-right cart_prices">
+									<span class="cart-price">{{linePrice}}</span>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				{{/items}}
+			</div>
+			<div class="ajaxcart__footer ajaxcart__footer--fixed cart-footer">
+				<div class="row">
+					<div class="col-lg-4 col-12 offset-md-8 offset-lg-8 offset-xl-8">
+						<div class="ajaxcart__subtotal">
+							<div class="cart__subtotal">
+								<div class="cart__col-6">Tổng tiền:</div>
+								<div class="text-right cart__totle"><span class="total-price">{{{totalPrice}}}</span></div>
+							</div>
+						</div>
+						<div class="cart__btn-proceed-checkout-dt">
+							<button onclick="location.href='/checkout'" type="button" class="button btn btn-primary cart__btn-proceed-checkout" id="btn-proceed-checkout" title="Thanh toán">Thanh toán</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+
+
+	</script>
+
+	<script id="CartMobileTemplate" type="text/template">
+
+		<form action="/cart" method="post" novalidate class="cart ajaxcart cart-mobile">
+			<div class="ajaxcart__inner ajaxcart__inner--has-fixed-footer cart_body">
+				{{#items}}
+				<div class="ajaxcart__row">
+					<div class="ajaxcart__product cart_product" data-line="{{line}}">
+						<a href="{{url}}" class="ajaxcart__product-image cart_image" title="{{name}}">
+							<img width="80" height="80" src="{{img}}" alt="{{name}}">
+						</a>
+						<div class="grid__item cart_info">
+							<div class="ajaxcart__product-name-wrapper cart_name">
+								<a href="{{url}}" class="ajaxcart__product-name h4 line-clamp line-clamp-2-new" title="{{name}}">{{name}}</a>
+								{{#if variation}}
+								<span class="ajaxcart__product-meta variant-title">{{variation}}</span>
+								{{/if}}
+							</div>
+							<div class="grid">
+								<div class="grid__item one-half cart_select cart_item_name">
+									<div class="ajaxcart__qty input-group-btn">
+										<button type="button" class="ajaxcart__qty-adjust ajaxcart__qty--minus items-count" data-id="{{key}}" data-qty="{{itemMinus}}" data-line="{{line}}" aria-label="-"> - </button>
+										<input type="text" name="updates[]" class="ajaxcart__qty-num number-sidebar" maxlength="3" value="{{itemQty}}" min="0" data-id="{{key}}" data-line="{{line}}" aria-label="quantity" pattern="[0-9]*">
+										<button type="button" class="ajaxcart__qty-adjust ajaxcart__qty--plus items-count" data-id="{{key}}" data-line="{{line}}" data-qty="{{itemAdd}}" aria-label="+"> + </button>
+									</div>
+								</div>
+								<div class="grid__item one-half text-right cart_prices">
+									<span class="cart-price">{{price}}</span>
+									<a title="Xóa" class="cart__btn-remove remove-item-cart ajaxifyCart--remove" href="javascript:;" data-line="{{line}}">Xóa</a>
+								</div>
+							</div>
+							{{#if discountsApplied}}
+							<div class="grid grid--table">
+								<div class="grid__item text-right">
+									<ul class="order-discount order-discount--list order-discount--title order-discount--cart order-discount--cart-title" aria-label="Giảm giá">
+										{{#each discounts}}
+										<li class="order-discount__item">
+											<span class="icon icon-saletag" aria-hidden="true"></span>{{ this.discount_application.title }} (-{{{ this.formattedAmount }}})
+										</li>
+										{{/each}}
+									</ul>
+								</div>
+							</div>
+							{{/if}}
+						</div>
+					</div>
+				</div>
+				{{/items}}
+			</div>
+		</form>
+
+
+	</script>
+
+	<script id="FooterCartTemplate" type="text/template">
+
+		<div class="content-items">
+			<div class="item-content-left">Tổng tiền</div>
+			<div class="item-content-right"><span class="total-price">{{{totalPrice}}}</span></div>
+		</div>
+
+	</script>
+
+	<script id="JsQty" type="text/template">
+
+		<div class="js-qty">
+			<button type="button" class="js-qty__adjust js-qty__adjust--minus items-count" data-id="{{key}}" data-qty="{{itemMinus}}" aria-label="-">
+				-
+			</button>
+			<input type="text" class="js-qty__num number-sidebar" maxlength="3" value="{{itemQty}}" min="1" data-id="{{key}}" aria-label="quantity" pattern="[0-9]*" name="{{inputName}}" id="{{inputId}}">
+			<button type="button" class="js-qty__adjust js-qty__adjust--plus items-count" data-id="{{key}}" data-qty="{{itemAdd}}" aria-label="+">
+				+
+			</button>
+		</div>
+
+	</script>
+	<div id="popup-cart-desktop" class="popup-cart">
+		<div class="header-popcart">
+			<div class="top-cart-header">
+				<span>
+					<svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="check-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-check-circle fa-w-16"><path fill="currentColor" d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 464c-118.664 0-216-96.055-216-216 0-118.663 96.055-216 216-216 118.664 0 216 96.055 216 216 0 118.663-96.055 216-216 216zm141.63-274.961L217.15 376.071c-4.705 4.667-12.303 4.637-16.97-.068l-85.878-86.572c-4.667-4.705-4.637-12.303.068-16.97l8.52-8.451c4.705-4.667 12.303-4.637 16.97.068l68.976 69.533 163.441-162.13c4.705-4.667 12.303-4.637 16.97.068l8.451 8.52c4.668 4.705 4.637 12.303-.068 16.97z" class=""></path></svg>
+					Bạn đã thêm [<a class="cart-popup-name" href="#"></a>] vào giỏ hàng
+				</span>
+			</div>
+			<a class="noti-cart-count" href="~/cart.html" title="Giỏ hàng">
+				Giỏ hàng của bạn hiện có <span class="count_item_pr"></span> sản phẩm
+			</a>
+			<a title="Đóng" class="cart_btn-close" href="javascript:;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="512" height="512" x="0" y="0" viewBox="0 0 365.696 365.696" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path xmlns="http://www.w3.org/2000/svg" d="m243.1875 182.859375 113.132812-113.132813c12.5-12.5 12.5-32.765624 0-45.246093l-15.082031-15.082031c-12.503906-12.503907-32.769531-12.503907-45.25 0l-113.128906 113.128906-113.132813-113.152344c-12.5-12.5-32.765624-12.5-45.246093 0l-15.105469 15.082031c-12.5 12.503907-12.5 32.769531 0 45.25l113.152344 113.152344-113.128906 113.128906c-12.503907 12.503907-12.503907 32.769531 0 45.25l15.082031 15.082031c12.5 12.5 32.765625 12.5 45.246093 0l113.132813-113.132812 113.128906 113.132812c12.503907 12.5 32.769531 12.5 45.25 0l15.082031-15.082031c12.5-12.503906 12.5-32.769531 0-45.25zm0 0" fill="#ffffff" data-original="#000000" style="" class="" /></g></svg></a>
+		</div>
+		<div class="cartPopupContainer">
+		</div>
+	</div>
+
+
+
+	<div id="popup-cart-mobile" class="popup-cart-mobile">
+		<div class="header-popcart">
+			<div class="top-cart-header">
+				<span>
+					<svg xmlns="http://www.w3.org/2000/svg" height="682.66669pt" viewBox="-21 -21 682.66669 682.66669" width="682.66669pt"><path d="m322.820312 387.933594 279.949219-307.273438 36.957031 33.671875-314.339843 345.023438-171.363281-162.902344 34.453124-36.238281zm297.492188-178.867188-38.988281 42.929688c5.660156 21.734375 8.675781 44.523437 8.675781 68.003906 0 148.875-121.125 270-270 270s-270-121.125-270-270 121.125-270 270-270c68.96875 0 131.96875 26.007812 179.746094 68.710938l33.707031-37.113282c-58.761719-52.738281-133.886719-81.597656-213.453125-81.597656-85.472656 0-165.835938 33.285156-226.273438 93.726562-60.441406 60.4375-93.726562 140.800782-93.726562 226.273438s33.285156 165.835938 93.726562 226.273438c60.4375 60.441406 140.800782 93.726562 226.273438 93.726562s165.835938-33.285156 226.273438-93.726562c60.441406-60.4375 93.726562-140.800782 93.726562-226.273438 0-38.46875-6.761719-75.890625-19.6875-110.933594zm0 0" /></svg>
+					Mua hàng thành công
+				</span>
+			</div>
+			<div class="media-content bodycart-mobile">
+			</div>
+			<a class="noti-cart-count" href="~/cart.html" title="Giỏ hàng"> Giỏ hàng của bạn hiện có <span class="count_item_pr"></span> sản phẩm </a>
+			<a title="Đóng" class="cart_btn-close iconclose" href="javascript:;">
+				<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512.001 512.001" style="enable-background:new 0 0 512.001 512.001;" xml:space="preserve"> <g> <g> <path d="M284.286,256.002L506.143,34.144c7.811-7.811,7.811-20.475,0-28.285c-7.811-7.81-20.475-7.811-28.285,0L256,227.717    L34.143,5.859c-7.811-7.811-20.475-7.811-28.285,0c-7.81,7.811-7.811,20.475,0,28.285l221.857,221.857L5.858,477.859    c-7.811,7.811-7.811,20.475,0,28.285c3.905,3.905,9.024,5.857,14.143,5.857c5.119,0,10.237-1.952,14.143-5.857L256,284.287    l221.857,221.857c3.905,3.905,9.024,5.857,14.143,5.857s10.237-1.952,14.143-5.857c7.811-7.811,7.811-20.475,0-28.285    L284.286,256.002z" /> </g> </g> </svg>
+			</a>
+			<div class="bottom-action">
+				<div class="cart_btn-close btn btn-extent">
+					Tiếp tục mua hàng
+				</div>
+				<a href="~/checkout.html" class="checkout btn btn-primary" title="Thanh toán ngay">
+					Thanh toán ngay
+				</a>
+			</div>
+		</div>
+	</div>
+	<link rel="preload" as="script" href="~/js/main.js" />
+	<script src="~/js/main.js" type="text/javascript"></script>
+	<div id="modal-banner" class="modal-banner" style="display:none;" data-delay="5000">
+		<div class="modalbanner-overlay fancybox-overlay fancybox-overlay-fixed"></div>
+		<div class="modal-banner-promo">
+			<div class="modal-body">
+
+				<form>
+					<a href="~/collections.html" title="Chương trình khuyến mãi" class="banner-promotion" data-section="banner_popup">
+						<script type="text/x-custom-template" data-template="banner_popup">
+														
+								<img
+									width="400"
+									height="240"
+									src="/img/_popup_banner.jpg"
+								alt="Chương trình khuyến mãi"
+									loading="lazy"
+									class="duration-300"
+								/>
+							
+							
+
+						</script>
+					</a>
+					<div class="check-close">
+						<input type="checkbox" id="check-close-banner" name="vehicle1" value="Bike">
+						<label for="check-close-banner">Không hiển thị hôm nay</label>
+					</div>
+					<a title="Đóng" class="modalbanner-close close-window" href="javascript:;">
+						<svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="times" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-times fa-w-10"><path fill="currentColor" d="M207.6 256l107.72-107.72c6.23-6.23 6.23-16.34 0-22.58l-25.03-25.03c-6.23-6.23-16.34-6.23-22.58 0L160 208.4 52.28 100.68c-6.23-6.23-16.34-6.23-22.58 0L4.68 125.7c-6.23 6.23-6.23 16.34 0 22.58L112.4 256 4.68 363.72c-6.23 6.23-6.23 16.34 0 22.58l25.03 25.03c6.23 6.23 16.34 6.23 22.58 0L160 303.6l107.72 107.72c6.23 6.23 16.34 6.23 22.58 0l25.03-25.03c6.23-6.23 6.23-16.34 0-22.58L207.6 256z" class=""></path></svg>
+					</a>
+				</form>
+
+			</div>
+		</div>
+	</div>
+
+	<script>
+		$(document).ready(function ($) {
+			var modalPopup = $('.modal-banner');
+			var close = $('.modalbanner-close');
+			var checkBox = $('#check-close-banner');
+			var banner = $('#modal-banner .banner-promotion');
+
+			function hidePopup() {
+				modalPopup.hide();
+			}
+
+			function isPopupClosed() {
+				// Kiểm tra xem cookie hoặc localStorage có thông tin ngày giống với ngày hiện tại hay không
+				var storedDate = localStorage.getItem('popupClosedDate');
+				if (storedDate) {
+					var currentDate = new Date().toLocaleDateString("en-US", { timeZone: "Asia/Ho_Chi_Minh" });
+					return storedDate === currentDate;
+				}
+				return false;
+			}
+
+			$(document).on('click', '#modal-banner .modalbanner-overlay, .fancybox-overlay', function (e) {
+				hidePopup();
+				if (checkBox.prop('checked')) {
+					// Lưu ngày hiện tại vào localStorage
+					var currentDate = new Date().toLocaleDateString("en-US", { timeZone: "Asia/Ho_Chi_Minh" });
+					localStorage.setItem('popupClosedDate', currentDate);
+				}
+			});
+
+			close.click(function () {
+				hidePopup();
+				if (checkBox.prop('checked')) {
+					// Lưu ngày hiện tại vào localStorage
+					var currentDate = new Date().toLocaleDateString("en-US", { timeZone: "Asia/Ho_Chi_Minh" });
+					localStorage.setItem('popupClosedDate', currentDate);
+				}
+			});
+
+			banner.click(function () {
+				// Lưu ngày hiện tại vào localStorage
+				var currentDate = new Date().toLocaleDateString("en-US", { timeZone: "Asia/Ho_Chi_Minh" });
+				localStorage.setItem('popupClosedDate', currentDate);
+			});
+
+			if (!isPopupClosed()) {
+				var delayTime = $('#modal-banner').data('delay') || 3000;
+				setTimeout(function () {
+					var section = $('#modal-banner .banner-promotion');
+					var template = $('script[data-template="banner_popup"]').html();
+					if (template) {
+						$('.banner-promotion[data-section="banner_popup"]').html(template);
+						var banner = $('#modal-banner .banner-promotion');
+						banner.click(function () {
+							// Lưu ngày hiện tại vào localStorage
+							var currentDate = new Date().toLocaleDateString("en-US", { timeZone: "Asia/Ho_Chi_Minh" });
+							localStorage.setItem('popupClosedDate', currentDate);
+						});
+					}
+					modalPopup.show();
+				}, delayTime);
+			}
+		});
+	</script>
+
+	<div id="list-favorite" class="d-none">
+		<div class="list-favorite-right container" data-type="wishlist">
+			<div class="list-favorite-main">
+				<div class="list-favorite-list row">
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		var favoriSudes = {};
+		favoriSudes.General = {
+			init: function () {
+				favoriSudes.Wishlist.init();
+			},
+		}
+		favoriSudes.Wishlist = {
+			init: function () {
+				this.setWishlistProductLoop();
+				favoriSudes.Wishlist.wishlistProduct();
+			},
+			setWishlistProductLoop: function () {
+				$('body').on('click', '.remove-wishlist', function (e) {
+					favoriSudes.Wishlist.removeWishlist($(this).attr('data-wish'));
+					theme.alert.new('Xóa khỏi danh sách yêu thích', 'Sản phẩm của bạn đã xóa khỏi sách yêu thích thành công.', 3000, 'alert-primary');
+				})
+				$('body').on('click', '.setWishlist', function (e) {
+					e.preventDefault();
+					if ($(this).hasClass('active')) {
+						favoriSudes.Wishlist.removeWishlist($(this).attr('data-wish'));
+						theme.alert.new('Xóa khỏi danh sách yêu thích', 'Sản phẩm của bạn đã xóa khỏi sách yêu thích thành công.', 3000, 'alert-primary');
+					} else {
+						theme.alert.new('Thêm vào danh sách yêu thích', 'Sản phẩm của bạn đã thêm vào danh sách yêu thích thành công.', 3000, 'alert-success');
+						var phand = [];
+						var handle = $(this).attr('data-wish');
+						if (document.cookie.indexOf('sudes_wishlist_products') !== -1) {
+							var las = Cookies.getJSON('sudes_wishlist_products');
+							if ($.inArray(handle, las) === -1) {
+								phand = [handle];
+								for (var i = 0; i < las.length; i++) {
+									phand.push(las[i]);
+									if (phand.length > 100) {
+										break;
+									}
+								}
+								Cookies.set('sudes_wishlist_products', phand, {
+									expires: 15,
+									sameSite: 'None',
+									secure: true
+								});
+							}
+						} else {
+							phand = [handle];
+							Cookies.set('sudes_wishlist_products', phand, {
+								expires: 15,
+								sameSite: 'None',
+								secure: true
+							});
+						}
+						favoriSudes.Wishlist.wishlistProduct();
+					}
+				})
+			},
+			wishlistProduct: function () {
+				if ($('#list-favorite .list-favorite-right[data-type="wishlist"] .list-favorite-list').length > 0) {
+					if (document.cookie.indexOf('sudes_wishlist_products') !== -1) {
+						$('#list-favorite .list-favorite-right[data-type="wishlist"] .list-favorite-list').html('')
+						var last_wishlist_pro_array = Cookies.getJSON('sudes_wishlist_products');
+						favoriSudes.Wishlist.activityWishlist();
+						var recentview_promises = [];
+						for (var i = 0; i < 100; i++) {
+							if (typeof last_wishlist_pro_array[i] == 'string') {
+								var promise = new Promise(function (resolve, reject) {
+									$.ajax({
+										url: '/products/' + last_wishlist_pro_array[i] + '?view=favorite',
+										async: false,
+										success: function (product) {
+											resolve({
+												error: false,
+												data: product
+											});
+										},
+										error: function (err) {
+											if (err.status === 404) {
+												try {
+													var u = ((this.url.split('?'))[0]).replace('/products/', '');
+													resolve({
+														error: true,
+														handle: u
+													});
+												} catch (e) {
+													resolve({
+														error: false,
+														data: ''
+													})
+												}
+											} else {
+												resolve({
+													error: false,
+													data: ''
+												});
+											}
+											favoriSudes.Wishlist.removeWishlist(last_wishlist_pro_array[i])
+										}
+									})
+								});
+								recentview_promises.push(promise);
+							}
+						}
+						Promise.all(recentview_promises).then(function (values) {
+							if (values.length > 0) {
+								var x = [];
+								setTimeout(function () {
+									$('.js-wishlist-count').html(values.length)
+								}, 500)
+								$.each(values, function (i, v) {
+									if (v.error) {
+										x.push(v.handle);
+									} else {
+
+										awe_lazyloadImage();
+									}
+								});
+								if (x.length > 0) {
+									var new_last_viewed_pro_array = [];
+									$.each(last_wishlist_pro_array, function (i, v) {
+										if ($.inArray(v, x) === -1) {
+											new_last_viewed_pro_array.push(v);
+										}
+									})
+									if (new_last_viewed_pro_array.length > 0) {
+										Cookies.set('last_viewed_products', new_last_viewed_pro_array, {
+											expires: 180,
+											sameSite: 'None',
+											secure: true
+										});
+									}
+								}
+							} else {
+								$('.js-wishlist-count').html('0')
+								$('#list-favorite .list-favorite-right[data-type="wishlist"] .list-favorite-list').append('<div class="list-favorite-main-top-error col-lg-12 col-md-12 col-sm-12 col-12"><div class="alert alert-warning">Bạn chưa có sản phẩm yêu thích nào!</div></div>')
+							}
+						});
+					} else {
+						$('#list-favorite .list-favorite-right[data-type="wishlist"] .list-favorite-list').append('<div class="list-favorite-main-top-error col-lg-12 col-md-12 col-sm-12 col-12"><div class="alert alert-warning">Bạn chưa có sản phẩm yêu thích nào! </div></div>')
+					}
+				} else {
+					$('#list-favorite .list-favorite-right[data-type="wishlist"] .list-favorite-list').append('<div class="list-favorite-right-main-top-error col-lg-12 col-md-12 col-sm-12 col-12"><div class="alert alert-warning">Bạn chưa có sản phẩm yêu thích nào! </div></div>')
+				}
+			},
+			activityWishlist: function () {
+				var last_wishlist_pro_array = Cookies.getJSON('sudes_wishlist_products');
+				$.each(last_wishlist_pro_array, function (i, v) {
+					$('.setWishlist[data-wish="' + v + '"]').html('<img class="img-unlike" width="25" height="25" src="https://bizweb.dktcdn.net/100/506/650/files/heartadd-1.png?v=1704084436307" alt="Bỏ yêu thích">Bỏ yêu thích</div>').addClass('active').attr('title', 'Bỏ yêu thích');
+				})
+			},
+			removeWishlist: function (handle) {
+				var phand = [];
+
+				$('a[data-wish="' + handle + '"]').html('<img width="25" height="25" src="https://bizweb.dktcdn.net/100/451/884/themes/857425/assets/heart.png?1650269474235" alt="Thêm vào yêu thích">Thêm vào yêu thích</div>').removeClass('active').attr('title', 'Thêm vào yêu thích');
+				if (document.cookie.indexOf('sudes_wishlist_products') !== -1) {
+					var las = Cookies.getJSON('sudes_wishlist_products');
+					var flagIndex = $.inArray(handle, las);
+					las.splice(flagIndex, 1)
+					Cookies.set('sudes_wishlist_products', las, {
+						expires: 15,
+						sameSite: 'None',
+						secure: true
+					});
+				} else {
+					phand = [handle];
+					Cookies.set('sudes_wishlist_products', phand, {
+						expires: 15,
+						sameSite: 'None',
+						secure: true
+					});
+				}
+				favoriSudes.Wishlist.wishlistProduct(3, 5);
+			}
+		}
+		favoriSudes.Wishlist.init();
+	</script>
+
+	<div class="main-widget">
+		<div class="def-content unsee element">
+			<div class="def-header">
+				Liên hệ với chúng tôi
+				<div class="close-icon" title="Đóng">
+					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+						<path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+					</svg>
+				</div>
+			</div>
+			<div class="item phone">
+				<a href="tel:0876578996">
+					<span class="img">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M493.4 24.6l-104-24c-11.3-2.6-22.9 3.3-27.5 13.9l-48 112c-4.2 9.8-1.4 21.3 6.9 28l60.6 49.6c-36 76.7-98.9 140.5-177.2 177.2l-49.6-60.6c-6.8-8.3-18.2-11.1-28-6.9l-112 48C3.9 366.5-2 378.1.6 389.4l24 104C27.1 504.2 36.7 512 48 512c256.1 0 464-207.5 464-464 0-11.2-7.7-20.9-18.6-23.4z"></path></svg>
+					</span>
+					<div class="detail">
+						<b class="arcu-item-title">
+							Hotline:
+						</b>
+						<span class="arcu-item-subtitle">
+							0876578996
+						</span>
+					</div>
+				</a>
+			</div>
+
+			<div class="item zalo">
+				<a target="_blank" href="https://zalo.me/0876578996">
+					<span class="img">
+						<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 614.501 613.667" xml:space="preserve"><path fill="currentColor" d="M464.721,301.399c-13.984-0.014-23.707,11.478-23.944,28.312c-0.251,17.771,9.168,29.208,24.037,29.202   c14.287-0.007,23.799-11.095,24.01-27.995C489.028,313.536,479.127,301.399,464.721,301.399z"></path><path fill="currentColor" d="M291.83,301.392c-14.473-0.316-24.578,11.603-24.604,29.024c-0.02,16.959,9.294,28.259,23.496,28.502   c15.072,0.251,24.592-10.87,24.539-28.707C315.214,313.318,305.769,301.696,291.83,301.392z"></path><path fill="currentColor" d="M310.518,3.158C143.102,3.158,7.375,138.884,7.375,306.3s135.727,303.142,303.143,303.142   c167.415,0,303.143-135.727,303.143-303.142S477.933,3.158,310.518,3.158z M217.858,391.083   c-33.364,0.818-66.828,1.353-100.133-0.343c-21.326-1.095-27.652-18.647-14.248-36.583c21.55-28.826,43.886-57.065,65.792-85.621   c2.546-3.305,6.214-5.996,7.15-12.705c-16.609,0-32.784,0.04-48.958-0.013c-19.195-0.066-28.278-5.805-28.14-17.652   c0.132-11.768,9.175-17.329,28.397-17.348c25.159-0.026,50.324-0.06,75.476,0.026c9.637,0.033,19.604,0.105,25.304,9.789   c6.22,10.561,0.284,19.512-5.646,27.454c-21.26,28.497-43.015,56.624-64.559,84.902c-2.599,3.41-5.119,6.88-9.453,12.725   c23.424,0,44.123-0.053,64.816,0.026c8.674,0.026,16.662,1.873,19.941,11.267C237.892,379.329,231.368,390.752,217.858,391.083z    M350.854,330.211c0,13.417-0.093,26.841,0.039,40.265c0.073,7.599-2.599,13.647-9.512,17.084   c-7.296,3.642-14.71,3.028-20.304-2.968c-3.997-4.281-6.214-3.213-10.488-0.422c-17.955,11.728-39.908,9.96-56.597-3.866   c-29.928-24.789-30.026-74.803-0.211-99.776c16.194-13.562,39.592-15.462,56.709-4.143c3.951,2.619,6.201,4.815,10.396-0.053   c5.39-6.267,13.055-6.761,20.271-3.357c7.454,3.509,9.935,10.165,9.776,18.265C350.67,304.222,350.86,317.217,350.854,330.211z    M395.617,369.579c-0.118,12.837-6.398,19.783-17.196,19.908c-10.779,0.132-17.593-6.966-17.646-19.512   c-0.179-43.352-0.185-86.696,0.007-130.041c0.059-12.256,7.302-19.921,17.896-19.222c11.425,0.752,16.992,7.448,16.992,18.833   c0,22.104,0,44.216,0,66.327C395.677,327.105,395.828,348.345,395.617,369.579z M463.981,391.868   c-34.399-0.336-59.037-26.444-58.786-62.289c0.251-35.66,25.304-60.713,60.383-60.396c34.631,0.304,59.374,26.306,58.998,61.986   C524.207,366.492,498.534,392.205,463.981,391.868z"></path></svg>
+					</span>
+					<div class="detail">
+						<b class="arcu-item-title">
+							Zalo chat:
+						</b>
+						<span class="arcu-item-subtitle">
+							Tài khoản Zalo: 0876578996
+						</span>
+					</div>
+				</a>
+			</div>
+
+
+			<div class="item mess">
+				<a target="_blank" href="https://m.me/463293720202704">
+					<span class="img">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-messenger" viewBox="0 0 16 16">
+							<path d="M0 7.76C0 3.301 3.493 0 8 0s8 3.301 8 7.76-3.493 7.76-8 7.76c-.81 0-1.586-.107-2.316-.307a.639.639 0 0 0-.427.03l-1.588.702a.64.64 0 0 1-.898-.566l-.044-1.423a.639.639 0 0 0-.215-.456C.956 12.108 0 10.092 0 7.76zm5.546-1.459-2.35 3.728c-.225.358.214.761.551.506l2.525-1.916a.48.48 0 0 1 .578-.002l1.869 1.402a1.2 1.2 0 0 0 1.735-.32l2.35-3.728c.226-.358-.214-.761-.551-.506L9.728 7.381a.48.48 0 0 1-.578.002L7.281 5.98a1.2 1.2 0 0 0-1.735.32z" />
+						</svg>
+					</span>
+					<div class="detail">
+						<b class="arcu-item-title">
+							Messenger:
+						</b>
+						<span class="arcu-item-subtitle">
+							m.me/koifarmshop
+						</span>
+					</div>
+				</a>
+			</div>
+
+
+			<div class="item map">
+				<a target="_blank" href="~/he-thong-cua-hang.html">
+					<span class="img">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pin-map" viewBox="0 0 16 16">
+							<path fill-rule="evenodd" d="M3.1 11.2a.5.5 0 0 1 .4-.2H6a.5.5 0 0 1 0 1H3.75L1.5 15h13l-2.25-3H10a.5.5 0 0 1 0-1h2.5a.5.5 0 0 1 .4.2l3 4a.5.5 0 0 1-.4.8H.5a.5.5 0 0 1-.4-.8l3-4z" />
+							<path fill-rule="evenodd" d="M8 1a3 3 0 1 0 0 6 3 3 0 0 0 0-6zM4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999z" />
+						</svg>
+					</span>
+					<div class="detail">
+						<b class="arcu-item-title">
+							Hệ thống cửa hàng:
+						</b>
+						<span class="arcu-item-subtitle">
+							Xem địa chỉ cửa hàng
+						</span>
+					</div>
+				</a>
+			</div>
+
+		</div>
+		<div class="out-circle">
+			<div class="pregan element"></div>
+			<div class="pregan element"></div>
+			<div class="main-icon">
+				<svg width="20" height="20" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="translate(-825 -308)"><g><path transform="translate(825 308)" fill="#FFFFFF" d="M 19 4L 17 4L 17 13L 4 13L 4 15C 4 15.55 4.45 16 5 16L 16 16L 20 20L 20 5C 20 4.45 19.55 4 19 4ZM 15 10L 15 1C 15 0.45 14.55 0 14 0L 1 0C 0.45 0 0 0.45 0 1L 0 15L 4 11L 14 11C 14.55 11 15 10.55 15 10Z"></path></g></g></svg>
+				<p>
+					Liên hệ
+				</p>
+			</div>
+			<div class="ser-icon unsee element">
+				<div class="process">
+					<span class="img phone item">
+						<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 512 512"><path fill="currentColor" d="M493.4 24.6l-104-24c-11.3-2.6-22.9 3.3-27.5 13.9l-48 112c-4.2 9.8-1.4 21.3 6.9 28l60.6 49.6c-36 76.7-98.9 140.5-177.2 177.2l-49.6-60.6c-6.8-8.3-18.2-11.1-28-6.9l-112 48C3.9 366.5-2 378.1.6 389.4l24 104C27.1 504.2 36.7 512 48 512c256.1 0 464-207.5 464-464 0-11.2-7.7-20.9-18.6-23.4z"></path></svg>
+					</span>
+
+					<span class="img zalo item">
+						<svg width="25" height="25" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 614.501 613.667" xml:space="preserve"><path fill="currentColor" d="M464.721,301.399c-13.984-0.014-23.707,11.478-23.944,28.312c-0.251,17.771,9.168,29.208,24.037,29.202   c14.287-0.007,23.799-11.095,24.01-27.995C489.028,313.536,479.127,301.399,464.721,301.399z"></path><path fill="currentColor" d="M291.83,301.392c-14.473-0.316-24.578,11.603-24.604,29.024c-0.02,16.959,9.294,28.259,23.496,28.502   c15.072,0.251,24.592-10.87,24.539-28.707C315.214,313.318,305.769,301.696,291.83,301.392z"></path><path fill="currentColor" d="M310.518,3.158C143.102,3.158,7.375,138.884,7.375,306.3s135.727,303.142,303.143,303.142   c167.415,0,303.143-135.727,303.143-303.142S477.933,3.158,310.518,3.158z M217.858,391.083   c-33.364,0.818-66.828,1.353-100.133-0.343c-21.326-1.095-27.652-18.647-14.248-36.583c21.55-28.826,43.886-57.065,65.792-85.621   c2.546-3.305,6.214-5.996,7.15-12.705c-16.609,0-32.784,0.04-48.958-0.013c-19.195-0.066-28.278-5.805-28.14-17.652   c0.132-11.768,9.175-17.329,28.397-17.348c25.159-0.026,50.324-0.06,75.476,0.026c9.637,0.033,19.604,0.105,25.304,9.789   c6.22,10.561,0.284,19.512-5.646,27.454c-21.26,28.497-43.015,56.624-64.559,84.902c-2.599,3.41-5.119,6.88-9.453,12.725   c23.424,0,44.123-0.053,64.816,0.026c8.674,0.026,16.662,1.873,19.941,11.267C237.892,379.329,231.368,390.752,217.858,391.083z    M350.854,330.211c0,13.417-0.093,26.841,0.039,40.265c0.073,7.599-2.599,13.647-9.512,17.084   c-7.296,3.642-14.71,3.028-20.304-2.968c-3.997-4.281-6.214-3.213-10.488-0.422c-17.955,11.728-39.908,9.96-56.597-3.866   c-29.928-24.789-30.026-74.803-0.211-99.776c16.194-13.562,39.592-15.462,56.709-4.143c3.951,2.619,6.201,4.815,10.396-0.053   c5.39-6.267,13.055-6.761,20.271-3.357c7.454,3.509,9.935,10.165,9.776,18.265C350.67,304.222,350.86,317.217,350.854,330.211z    M395.617,369.579c-0.118,12.837-6.398,19.783-17.196,19.908c-10.779,0.132-17.593-6.966-17.646-19.512   c-0.179-43.352-0.185-86.696,0.007-130.041c0.059-12.256,7.302-19.921,17.896-19.222c11.425,0.752,16.992,7.448,16.992,18.833   c0,22.104,0,44.216,0,66.327C395.677,327.105,395.828,348.345,395.617,369.579z M463.981,391.868   c-34.399-0.336-59.037-26.444-58.786-62.289c0.251-35.66,25.304-60.713,60.383-60.396c34.631,0.304,59.374,26.306,58.998,61.986   C524.207,366.492,498.534,392.205,463.981,391.868z"></path></svg>
+					</span>
+
+
+					<span class="img mess item">
+						<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-messenger" viewBox="0 0 16 16">
+							<path d="M0 7.76C0 3.301 3.493 0 8 0s8 3.301 8 7.76-3.493 7.76-8 7.76c-.81 0-1.586-.107-2.316-.307a.639.639 0 0 0-.427.03l-1.588.702a.64.64 0 0 1-.898-.566l-.044-1.423a.639.639 0 0 0-.215-.456C.956 12.108 0 10.092 0 7.76zm5.546-1.459-2.35 3.728c-.225.358.214.761.551.506l2.525-1.916a.48.48 0 0 1 .578-.002l1.869 1.402a1.2 1.2 0 0 0 1.735-.32l2.35-3.728c.226-.358-.214-.761-.551-.506L9.728 7.381a.48.48 0 0 1-.578.002L7.281 5.98a1.2 1.2 0 0 0-1.735.32z" />
+						</svg>
+					</span>
+
+
+					<span class="img map item">
+						<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-pin-map" viewBox="0 0 16 16">
+							<path fill-rule="evenodd" d="M3.1 11.2a.5.5 0 0 1 .4-.2H6a.5.5 0 0 1 0 1H3.75L1.5 15h13l-2.25-3H10a.5.5 0 0 1 0-1h2.5a.5.5 0 0 1 .4.2l3 4a.5.5 0 0 1-.4.8H.5a.5.5 0 0 1-.4-.8l3-4z" />
+							<path fill-rule="evenodd" d="M8 1a3 3 0 1 0 0 6 3 3 0 0 0 0-6zM4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999z" />
+						</svg>
+					</span>
+
+				</div>
+			</div>
+			<div class="close-icon unsee element">
+				<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+					<path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+				</svg>
+			</div>
+		</div>
+	</div>
+	<script>
+		$(function () {
+			var i = 1;
+			var n = $('.ser-icon .process .item').length;
+			var len = $('.ser-icon .process').width() / n;
+			var pos = new WebKitCSSMatrix($('.ser-icon .process').css('transform'));
+			$('.ser-icon').removeClass('unsee');
+			function nextFrame() {
+				if (i < n) {
+					i++;
+					var pos2 = new WebKitCSSMatrix($('.ser-icon .process').css('transform'));
+					$('.ser-icon .process').css('transform', 'translateX(' + (pos2.m41 - len) + 'px)');
+					setTimeout(nextFrame, 800);
+				} else {
+					$('.ser-icon').addClass('unsee');
+					i = 1;
+					$('.ser-icon .process').css('transform', 'translateX(' + (pos.m41) + 'px)');
+					setTimeout(beginFrame, 2000);
+				}
+			};
+			function beginFrame() {
+				$('.ser-icon').removeClass('unsee');
+				setTimeout(nextFrame, 900);
+			};
+			setTimeout(beginFrame, 2000);
+			$('.close-icon').click(function (event) {
+				$('.element').toggleClass('unsee');
+			});
+		});
+	</script>
+	<div id="popupCartModal" class="modal fade" role="dialog">
+	</div>
+
+
+	<div class="popup-sapo">
+		<div class="icon">
+			<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+				<path d="M224 0c-17.7 0-32 14.3-32 32V51.2C119 66 64 130.6 64 208v18.8c0 47-17.3 92.4-48.5 127.6l-7.4 8.3c-8.4 9.4-10.4 22.9-5.3 34.4S19.4 416 32 416H416c12.6 0 24-7.4 29.2-18.9s3.1-25-5.3-34.4l-7.4-8.3C401.3 319.2 384 273.9 384 226.8V208c0-77.4-55-142-128-156.8V32c0-17.7-14.3-32-32-32zm45.3 493.3c12-12 18.7-28.3 18.7-45.3H224 160c0 17 6.7 33.3 18.7 45.3s28.3 18.7 45.3 18.7s33.3-6.7 45.3-18.7z" />
+			</svg>
+		</div>
+		<div class="content">
+			<div class="title">Tích hợp sẵn các ứng dụng</div>
+			<ul>
+				<li>
+					<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+						<path d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z" />
+					</svg>
+					<a href="https://apps.sapo.vn/danh-gia-san-pham-v2" target="_blank" title="Đánh giá sản phẩm">Đánh giá sản phẩm</a>
+				</li>
+				<li>
+					<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+						<path d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z" />
+					</svg>
+					<a href="https://apps.sapo.vn/mua-x-tang-y-v2" target="_blank" title="Mua X tặng Y">Mua X tặng Y</a>
+				</li>
+
+				<li>
+					<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+						<path d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z" />
+					</svg>
+					<a href="https://apps.sapo.vn/quan-ly-affiliate-v2" target="_blank" title="Ứng dụng Affiliate">Ứng dụng Affiliate</a>
+				</li>
+
+				<li>
+					<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+						<path d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z" />
+					</svg>
+					<a href="https://apps.sapo.vn/ae-da-ngon-ngu" target="_blank" title="Đa ngôn ngữ">Đa ngôn ngữ</a>
+				</li>
+
+				<li>
+					<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+						<path d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z" />
+					</svg>
+					<a href="#" target="_blank" title="Livechat Facebook">Livechat Facebook</a>
+				</li>
+
+
+			</ul>
+			<div class="ghichu">
+				Lưu ý với các ứng dụng trả phí bạn cần cài đặt và mua ứng dụng này trên App store để sử dụng ngay
+			</div>
+			<a title="Đóng" class="close-popup-sapo">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512.001 512.001">
+					<path d="M284.286,256.002L506.143,34.144c7.811-7.811,7.811-20.475,0-28.285c-7.811-7.81-20.475-7.811-28.285,0L256,227.717    L34.143,5.859c-7.811-7.811-20.475-7.811-28.285,0c-7.81,7.811-7.811,20.475,0,28.285l221.857,221.857L5.858,477.859    c-7.811,7.811-7.811,20.475,0,28.285c3.905,3.905,9.024,5.857,14.143,5.857c5.119,0,10.237-1.952,14.143-5.857L256,284.287    l221.857,221.857c3.905,3.905,9.024,5.857,14.143,5.857s10.237-1.952,14.143-5.857c7.811-7.811,7.811-20.475,0-28.285    L284.286,256.002z" />
+				</svg>
+			</a>
+		</div>
+	</div>
+
+	<script>
+		$('.popup-sapo .icon').click(function () {
+			$(".popup-sapo").toggleClass("active");
+		});
+		$('.close-popup-sapo').click(function () {
+			$(".popup-sapo").toggleClass("active");
+		});
+	</script>
+
+
+	<div class="popup-ngonngu">
+		<div class="icon">
+			<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-globe2" viewBox="0 0 16 16">
+				<path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855-.143.268-.276.56-.395.872.705.157 1.472.257 2.282.287V1.077zM4.249 3.539c.142-.384.304-.744.481-1.078a6.7 6.7 0 0 1 .597-.933A7.01 7.01 0 0 0 3.051 3.05c.362.184.763.349 1.198.49zM3.509 7.5c.036-1.07.188-2.087.436-3.008a9.124 9.124 0 0 1-1.565-.667A6.964 6.964 0 0 0 1.018 7.5h2.49zm1.4-2.741a12.344 12.344 0 0 0-.4 2.741H7.5V5.091c-.91-.03-1.783-.145-2.591-.332zM8.5 5.09V7.5h2.99a12.342 12.342 0 0 0-.399-2.741c-.808.187-1.681.301-2.591.332zM4.51 8.5c.035.987.176 1.914.399 2.741A13.612 13.612 0 0 1 7.5 10.91V8.5H4.51zm3.99 0v2.409c.91.03 1.783.145 2.591.332.223-.827.364-1.754.4-2.741H8.5zm-3.282 3.696c.12.312.252.604.395.872.552 1.035 1.218 1.65 1.887 1.855V11.91c-.81.03-1.577.13-2.282.287zm.11 2.276a6.696 6.696 0 0 1-.598-.933 8.853 8.853 0 0 1-.481-1.079 8.38 8.38 0 0 0-1.198.49 7.01 7.01 0 0 0 2.276 1.522zm-1.383-2.964A13.36 13.36 0 0 1 3.508 8.5h-2.49a6.963 6.963 0 0 0 1.362 3.675c.47-.258.995-.482 1.565-.667zm6.728 2.964a7.009 7.009 0 0 0 2.275-1.521 8.376 8.376 0 0 0-1.197-.49 8.853 8.853 0 0 1-.481 1.078 6.688 6.688 0 0 1-.597.933zM8.5 11.909v3.014c.67-.204 1.335-.82 1.887-1.855.143-.268.276-.56.395-.872A12.63 12.63 0 0 0 8.5 11.91zm3.555-.401c.57.185 1.095.409 1.565.667A6.963 6.963 0 0 0 14.982 8.5h-2.49a13.36 13.36 0 0 1-.437 3.008zM14.982 7.5a6.963 6.963 0 0 0-1.362-3.675c-.47.258-.995.482-1.565.667.248.92.4 1.938.437 3.008h2.49zM11.27 2.461c.177.334.339.694.482 1.078a8.368 8.368 0 0 0 1.196-.49 7.01 7.01 0 0 0-2.275-1.52c.218.283.418.597.597.932zm-.488 1.343a7.765 7.765 0 0 0-.395-.872C9.835 1.897 9.17 1.282 8.5 1.077V4.09c.81-.03 1.577-.13 2.282-.287z" />
+			</svg>
+		</div>
+		<ul class="language">
+			<li>
+				<a href="#">
+					<img width="16" height="16" src="~/img/vn.png" alt="Tiếng Việt">
+					<span>Tiếng Việt</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<img width="16" height="16" src="~/img/en.png" alt="Tiếng Anh">
+					<span>English</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+
+
+
+</body>
+</html>
