@@ -1,15 +1,76 @@
-Folder PATH listing for volume DATA1
-Volume serial number is D4F9-A2FD
+Folder PATH listing for volume New Volume
+Volume serial number is D84D-7F11
 D:.
 |   .gitattributes
 |   .gitignore
+|   collections.html
+|   Index.cshtml
 |   KoiFarmShop.sln
 |   login.html
 |   output.doc
 |   register.html
+|   _Layout.cshtml
+|   _Layout.cshtml.css
 |   
 +---.github
 |   \---workflows
++---.vs
+|   |   ProjectSettings.json
+|   |   slnx.sqlite
+|   |   VSWorkspaceState.json
+|   |   
+|   +---BaiTap
+|   |   +---CopilotIndices
+|   |   |   \---0.2.1657.32929
+|   |   |           CodeChunks.db
+|   |   |           SemanticSymbols.db
+|   |   |           SemanticSymbols.db-shm
+|   |   |           SemanticSymbols.db-wal
+|   |   |           
+|   |   +---FileContentIndex
+|   |   |       a2190bde-3fd8-4470-b447-186fc8a48301.vsidx
+|   |   |       
+|   |   \---v17
+|   |           DocumentLayout.json
+|   |           workspaceFileList.bin
+|   |           
+|   +---KoiFarmShop
+|   |   +---config
+|   |   |       applicationhost.config
+|   |   |       
+|   |   +---copilot-chat
+|   |   |   \---ef35fd02
+|   |   |       \---sessions
+|   |   +---CopilotIndices
+|   |   |   \---0.2.1657.32929
+|   |   |           CodeChunks.db
+|   |   |           CodeChunks.db-shm
+|   |   |           CodeChunks.db-wal
+|   |   |           SemanticSymbols.db
+|   |   |           SemanticSymbols.db-shm
+|   |   |           SemanticSymbols.db-wal
+|   |   |           
+|   |   +---DesignTimeBuild
+|   |   |       .dtbcache.v2
+|   |   |       
+|   |   +---FileContentIndex
+|   |   |       02aee119-ac37-45f8-a5c5-9cec87b2f82c.vsidx
+|   |   |       02d6fa9f-fcf5-41c3-9aed-44de019bbb8a.vsidx
+|   |   |       52fce487-31bb-4d6d-8ec4-2118f0a3f907.vsidx
+|   |   |       7353f497-203e-4050-900c-587c3ae716d2.vsidx
+|   |   |       a849d01f-41ec-4f68-bec6-c980d791271a.vsidx
+|   |   |       
+|   |   \---v17
+|   |           .futdcache.v2
+|   |           DocumentLayout.backup.json
+|   |           DocumentLayout.json
+|   |           fileList.bin
+|   |           
+|   \---ProjectEvaluation
+|           koifarmshop.metadata.v9.bin
+|           koifarmshop.projects.v9.bin
+|           koifarmshop.strings.v9.bin
+|           
 +---.vscode
 |       launch.json
 |       
@@ -17,13 +78,15 @@ D:.
 |   |   KoiFarmShop.Repositories.csproj
 |   |   
 |   +---bin
-|   |   \---Debug
+|   |   +---Debug
+|   |   |   \---net8.0
+|   |   |           KoiFarmShop.Repositories.deps.json
+|   |   |           KoiFarmShop.Repositories.dll
+|   |   |           KoiFarmShop.Repositories.pdb
+|   |   |           KoiFarmShop.Repositories.runtimeconfig.json
+|   |   |           
+|   |   \---Release
 |   |       \---net8.0
-|   |               KoiFarmShop.Repositories.deps.json
-|   |               KoiFarmShop.Repositories.dll
-|   |               KoiFarmShop.Repositories.pdb
-|   |               KoiFarmShop.Repositories.runtimeconfig.json
-|   |               
 |   +---Entities
 |   |       About.cs
 |   |       Blog.cs
@@ -37,6 +100,7 @@ D:.
 |   |       Koi.cs
 |   |       KoiFarmShop2024DbContext.cs
 |   |       LoyaltyPoint.cs
+|   |       Manager.cs
 |   |       Menu.cs
 |   |       Order.cs
 |   |       OrderDetail.cs
@@ -63,6 +127,7 @@ D:.
 |   |       IInvoiceRepository.cs
 |   |       IKoiRepository.cs
 |   |       ILoyaltyPointRepository.cs
+|   |       IManagerRepository.cs
 |   |       IMenuRepository.cs
 |   |       IOrderDetailRepository.cs
 |   |       IOrderRepository.cs
@@ -78,36 +143,47 @@ D:.
 |   |       IUserRepository.cs
 |   |       
 |   +---obj
-|   |   |   KoiFarmShop.Repositories.csproj.EntityFrameworkCore.targets
 |   |   |   KoiFarmShop.Repositories.csproj.nuget.dgspec.json
 |   |   |   KoiFarmShop.Repositories.csproj.nuget.g.props
 |   |   |   KoiFarmShop.Repositories.csproj.nuget.g.targets
 |   |   |   project.assets.json
 |   |   |   project.nuget.cache
 |   |   |   
-|   |   \---Debug
+|   |   +---Debug
+|   |   |   \---net8.0
+|   |   |       |   .NETCoreApp,Version=v8.0.AssemblyAttributes.cs
+|   |   |       |   KoiFarmShop.Repositories.AssemblyInfo.cs
+|   |   |       |   KoiFarmShop.Repositories.AssemblyInfoInputs.cache
+|   |   |       |   KoiFarmShop.Repositories.assets.cache
+|   |   |       |   KoiFarmShop.Repositories.csproj.AssemblyReference.cache
+|   |   |       |   KoiFarmShop.Repositories.csproj.BuildWithSkipAnalyzers
+|   |   |       |   KoiFarmShop.Repositories.csproj.CoreCompileInputs.cache
+|   |   |       |   KoiFarmShop.Repositories.csproj.FileListAbsolute.txt
+|   |   |       |   KoiFarmShop.Repositories.dll
+|   |   |       |   KoiFarmShop.Repositories.GeneratedMSBuildEditorConfig.editorconfig
+|   |   |       |   KoiFarmShop.Repositories.genruntimeconfig.cache
+|   |   |       |   KoiFarmShop.Repositories.GlobalUsings.g.cs
+|   |   |       |   KoiFarmShop.Repositories.pdb
+|   |   |       |   KoiFarmShop.Repositories.sourcelink.json
+|   |   |       |   
+|   |   |       +---ref
+|   |   |       |       KoiFarmShop.Repositories.dll
+|   |   |       |       
+|   |   |       \---refint
+|   |   |               KoiFarmShop.Repositories.dll
+|   |   |               
+|   |   \---Release
 |   |       \---net8.0
 |   |           |   .NETCoreApp,Version=v8.0.AssemblyAttributes.cs
 |   |           |   KoiFarmShop.Repositories.AssemblyInfo.cs
 |   |           |   KoiFarmShop.Repositories.AssemblyInfoInputs.cache
 |   |           |   KoiFarmShop.Repositories.assets.cache
 |   |           |   KoiFarmShop.Repositories.csproj.AssemblyReference.cache
-|   |           |   KoiFarmShop.Repositories.csproj.BuildWithSkipAnalyzers
-|   |           |   KoiFarmShop.Repositories.csproj.CoreCompileInputs.cache
-|   |           |   KoiFarmShop.Repositories.csproj.FileListAbsolute.txt
-|   |           |   KoiFarmShop.Repositories.dll
 |   |           |   KoiFarmShop.Repositories.GeneratedMSBuildEditorConfig.editorconfig
-|   |           |   KoiFarmShop.Repositories.genruntimeconfig.cache
 |   |           |   KoiFarmShop.Repositories.GlobalUsings.g.cs
-|   |           |   KoiFarmShop.Repositories.pdb
-|   |           |   KoiFarmShop.Repositories.sourcelink.json
 |   |           |   
 |   |           +---ref
-|   |           |       KoiFarmShop.Repositories.dll
-|   |           |       
 |   |           \---refint
-|   |                   KoiFarmShop.Repositories.dll
-|   |                   
 |   \---Repositories
 |           AboutRepository.cs
 |           BlogRepository.cs
@@ -120,6 +196,7 @@ D:.
 |           InvoiceRepository.cs
 |           KoiRepository.cs
 |           LoyaltyPointRepository.cs
+|           ManagerRepository.cs
 |           MenuRepository.cs
 |           OrderDetailRepository.cs
 |           OrderRepository.cs
@@ -138,14 +215,16 @@ D:.
 |   |   KoiFarmShop.Services.csproj
 |   |   
 |   +---bin
-|   |   \---Debug
+|   |   +---Debug
+|   |   |   \---net8.0
+|   |   |           KoiFarmShop.Repositories.dll
+|   |   |           KoiFarmShop.Repositories.pdb
+|   |   |           KoiFarmShop.Services.deps.json
+|   |   |           KoiFarmShop.Services.dll
+|   |   |           KoiFarmShop.Services.pdb
+|   |   |           
+|   |   \---Release
 |   |       \---net8.0
-|   |               KoiFarmShop.Repositories.dll
-|   |               KoiFarmShop.Repositories.pdb
-|   |               KoiFarmShop.Services.deps.json
-|   |               KoiFarmShop.Services.dll
-|   |               KoiFarmShop.Services.pdb
-|   |               
 |   +---Interfaces
 |   |       IAboutService.cs
 |   |       IBlogService.cs
@@ -158,6 +237,7 @@ D:.
 |   |       IInvoiceService.cs
 |   |       IKoiService.cs
 |   |       ILoyaltyPointService.cs
+|   |       IManagerService.cs
 |   |       IMenuService.cs
 |   |       IOrderDetailService.cs
 |   |       IOrderService.cs
@@ -179,28 +259,41 @@ D:.
 |   |   |   project.assets.json
 |   |   |   project.nuget.cache
 |   |   |   
-|   |   \---Debug
+|   |   +---Debug
+|   |   |   \---net8.0
+|   |   |       |   .NETCoreApp,Version=v8.0.AssemblyAttributes.cs
+|   |   |       |   KoiFarmS.6B21DD88.Up2Date
+|   |   |       |   KoiFarmShop.Services.AssemblyInfo.cs
+|   |   |       |   KoiFarmShop.Services.AssemblyInfoInputs.cache
+|   |   |       |   KoiFarmShop.Services.assets.cache
+|   |   |       |   KoiFarmShop.Services.csproj.AssemblyReference.cache
+|   |   |       |   KoiFarmShop.Services.csproj.BuildWithSkipAnalyzers
+|   |   |       |   KoiFarmShop.Services.csproj.CoreCompileInputs.cache
+|   |   |       |   KoiFarmShop.Services.csproj.FileListAbsolute.txt
+|   |   |       |   KoiFarmShop.Services.dll
+|   |   |       |   KoiFarmShop.Services.GeneratedMSBuildEditorConfig.editorconfig
+|   |   |       |   KoiFarmShop.Services.GlobalUsings.g.cs
+|   |   |       |   KoiFarmShop.Services.pdb
+|   |   |       |   KoiFarmShop.Services.sourcelink.json
+|   |   |       |   
+|   |   |       +---ref
+|   |   |       |       KoiFarmShop.Services.dll
+|   |   |       |       
+|   |   |       \---refint
+|   |   |               KoiFarmShop.Services.dll
+|   |   |               
+|   |   \---Release
 |   |       \---net8.0
 |   |           |   .NETCoreApp,Version=v8.0.AssemblyAttributes.cs
-|   |           |   KoiFarmS.6B21DD88.Up2Date
 |   |           |   KoiFarmShop.Services.AssemblyInfo.cs
 |   |           |   KoiFarmShop.Services.AssemblyInfoInputs.cache
 |   |           |   KoiFarmShop.Services.assets.cache
 |   |           |   KoiFarmShop.Services.csproj.AssemblyReference.cache
-|   |           |   KoiFarmShop.Services.csproj.CoreCompileInputs.cache
-|   |           |   KoiFarmShop.Services.csproj.FileListAbsolute.txt
-|   |           |   KoiFarmShop.Services.dll
 |   |           |   KoiFarmShop.Services.GeneratedMSBuildEditorConfig.editorconfig
 |   |           |   KoiFarmShop.Services.GlobalUsings.g.cs
-|   |           |   KoiFarmShop.Services.pdb
-|   |           |   KoiFarmShop.Services.sourcelink.json
 |   |           |   
 |   |           +---ref
-|   |           |       KoiFarmShop.Services.dll
-|   |           |       
 |   |           \---refint
-|   |                   KoiFarmShop.Services.dll
-|   |                   
 |   \---Services
 |           AboutService.cs
 |           BlogService.cs
@@ -213,6 +306,7 @@ D:.
 |           InvoiceService.cs
 |           KoiService.cs
 |           LoyaltyPointService.cs
+|           ManagerService.cs
 |           MenuService.cs
 |           OrderDetailService.cs
 |           OrderService.cs
@@ -234,7 +328,6 @@ D:.
     |   KoiFarmShop.WebApplication.csproj.user
     |   PaginatedList.cs
     |   Program.cs
-    |   Startup.cs
     |   
     +---bin
     |   \---Debug
@@ -326,7 +419,10 @@ D:.
     |                           Microsoft.Data.SqlClient.SNI.dll
     |                           
     +---Models
+    |       Accounts.cs
+    |       Contact.cshtml.cs
     |       ErrorViewModel.cs
+    |       RegisterModel.cs
     |       
     +---obj
     |   |   KoiFarmShop.WebApplication.csproj.nuget.dgspec.json
@@ -395,6 +491,35 @@ D:.
     |   |   _ViewImports.cshtml
     |   |   _ViewStart.cshtml
     |   |   
+    |   +---Accounts
+    |   |       Index.cshtml
+    |   |       Login.cshtml
+    |   |       Login.cshtml.cs
+    |   |       Logout.cshtml
+    |   |       Logout.cshtml.cs
+    |   |       Register.cshtml
+    |   |       Register.cshtml.cs
+    |   |       
+    |   +---Blogs
+    |   |       ca-Koi-co-de-nuoi-khong.cshtml
+    |   |       ca-Koi-co-de-nuoi-khong.cshtml.cs
+    |   |       cac-benh-ca-Koi.cshtml
+    |   |       cac-benh-ca-Koi.cshtml.cs
+    |   |       cac-trai-ca-Koi-Nhat-Ban.cshtml
+    |   |       cac-trai-ca-Koi-Nhat-Ban.cshtml.cs
+    |   |       cach-nuoi-ca-Koi-ngoai-troi.cshtml
+    |   |       cach-nuoi-ca-Koi-ngoai-troi.cshtml.cs
+    |   |       dac-diem-giup-nhan-biet-mot-koi-khoe-manh.cshtml
+    |   |       dac-diem-giup-nhan-biet-mot-koi-khoe-manh.cshtml.cs
+    |   |       dac-diem-va-nguon-goc-cua-ca-Koi.cshtml
+    |   |       dac-diem-va-nguon-goc-cua-ca-Koi.cshtml.cs
+    |   |       ki-thuat-nuoi-ca-Koi.cshtml
+    |   |       ki-thuat-nuoi-ca-Koi.cshtml.cs
+    |   |       quy-trinh-ve-sinh-ho-ca-Koi.cshtml
+    |   |       quy-trinh-ve-sinh-ho-ca-Koi.cshtml.cs
+    |   |       y-nghia-cua-viec-nuoi-ca-Koi.cshtml
+    |   |       y-nghia-cua-viec-nuoi-ca-Koi.cshtml.cs
+    |   |       
     |   +---Consignment
     |   |       ConfirmConsignment.cshtml
     |   |       ConfirmConsignment.cshtml.cs
@@ -404,6 +529,11 @@ D:.
     |   |       RequestConsignment.cshtml.cs
     |   |       SellConsignment.cshtml
     |   |       SellConsignment.cshtml.cs
+    |   |       
+    |   +---Contact
+    |   |       he-thong-cua-hang.cshtml
+    |   |       he-thong-cua-hang.cshtml.cs
+    |   |       lien-he.cshtml
     |   |       
     |   +---Customer
     |   |       Create.cshtml
@@ -437,6 +567,22 @@ D:.
     |   |       Index.cshtml
     |   |       Index.cshtml.cs
     |   |       
+    |   +---Instruct
+    |   |       huong-dan-chuyen-khoan.cshtml
+    |   |       huong-dan-chuyen-khoan.cshtml.cs
+    |   |       huong-dan-doi-tra.cshtml
+    |   |       huong-dan-doi-tra.cshtml.cs
+    |   |       huong-dan-mua-hang.cshtml
+    |   |       huong-dan-mua-hang.cshtml.cs
+    |   |       huong-dan-thanh-toan.cshtml
+    |   |       huong-dan-thanh-toan.cshtml.cs
+    |   |       quy-dinh-bao-hanh.cshtml
+    |   |       quy-dinh-bao-hanh.cshtml.cs
+    |   |       
+    |   +---Introduce
+    |   |       gioi-thieu.cshtml
+    |   |       gioi-thieu.cshtml.cs
+    |   |       
     |   +---Koi
     |   |       Buy.cshtml
     |   |       Buy.cshtml.cs
@@ -449,6 +595,15 @@ D:.
     |   |       Search.cshtml
     |   |       Search.cshtml.cs
     |   |       
+    |   +---Manager
+    |   |       Index.cshtml
+    |   |       
+    |   +---News
+    |   |       kien-thuc.cshtml
+    |   |       kien-thuc.cshtml.cs
+    |   |       kinh-nghiem.cshtml
+    |   |       kinh-nghiem.cshtml.cs
+    |   |       
     |   +---Order
     |   |       Create.cshtml
     |   |       Create.cshtml.cs
@@ -460,6 +615,20 @@ D:.
     |   |       Index.cshtml.cs
     |   |       Update.cshtml
     |   |       Update.cshtml.cs
+    |   |       
+    |   +---Policy
+    |   |       cam-ket-cua-hang.cshtml
+    |   |       cam-ket-cua-hang.cshtml.cs
+    |   |       chinh-sach-bao-mat.cshtml
+    |   |       chinh-sach-bao-mat.cshtml.cs
+    |   |       chinh-sach-mua-hang.cshtml
+    |   |       chinh-sach-mua-hang.cshtml.cs
+    |   |       chinh-sach-thanh-toan.cshtml
+    |   |       chinh-sach-thanh-toan.cshtml.cs
+    |   |       chinh-sach-thanh-vien.cshtml
+    |   |       chinh-sach-thanh-vien.cshtml.cs
+    |   |       chinh-sach-van-chuyen.cshtml
+    |   |       chinh-sach-van-chuyen.cshtml.cs
     |   |       
     |   +---Promotion
     |   |       Create.cshtml
@@ -506,7 +675,6 @@ D:.
         |   gioi-thieu.html
         |   he-thong-cua-hang.html
         |   he-thong-loc-ho-ca-koi.html
-        |   header-index.html
         |   index.html
         |   kien-thuc.html
         |   kinh-nghiem.html
@@ -537,16 +705,34 @@ D:.
         |       
         +---img
         |       baby-1-1-7810cf8f839c472daf02f0926273c645-master.jpg
+        |       benh-ca-Koi-nam-mang.jpg
+        |       benh-ca-Koi-troc-vay.jpg
+        |       benh-ca-Koi-trung-mo-neo.jpg
         |       btn_promotion_icon.png
+        |       ca-koi-khoe-manh.jpg
+        |       cac-benh-koi.jpg
+        |       cac-loai-ca-Koi.jpg
+        |       cac-trai-ca-Koi-Nhat-Ban.jpg
         |       cao-hac-sam-dong-trung-ha-thao-achimmadang-3-13a34059dbc54e9aa14a3800b0a707b2-grande.jpg
         |       choi-loc-xanh.png
+        |       dac-diem-nguon-goc.jpg
+        |       de-nuoi.jpg
         |       den-uv.png
         |       dia-sui-oxy.png
         |       en.png
+        |       giup-nhan-biet-koi.jpg
         |       gom-loc.png
         |       heart.png
+        |       ho-ca-koi-phong-thuy.jpg
         |       hut.png
         |       icon1.png
+        |       icon_cakoi.png
+        |       icon_cám_cá_koi.png
+        |       icon_koi_dang_bán.png
+        |       icon_kí_g?i.png
+        |       icon_loc_h?.png
+        |       icon_ph?_ki?n_h?.png
+        |       icon_d?u_giá.png
         |       img_4banner_1.jpg
         |       img_4banner_2.jpg
         |       img_4banner_3.jpg
@@ -563,9 +749,13 @@ D:.
         |       index-cate-icon-6.png
         |       index-cate-icon-7.png
         |       index-cate-icon-8.png
+        |       ki-thuat-nuoi-koi.jpg
         |       logo.png
         |       may-bom.png
         |       may-sui-oxy-resun-lp.png
+        |       my-koi.jpg
+        |       nuoi-koi-dung-cach.jpg
+        |       nuoi-ngoai-troi.jpg
         |       popup_banner.jpg
         |       section_about_product_1.png
         |       ser_1.png
@@ -577,8 +767,12 @@ D:.
         |       slider_1.jpg
         |       slider_2.jpg
         |       slider_3.jpg
+        |       thiet-bi-kiem-tra.jpg
+        |       trai-koi.jpg
+        |       ve-sinh-ho-ca-Koi.jpg
         |       vn.png
         |       vot-bat-ca.png
+        |       y-nghia-ca-koi.jpg
         |       
         +---js
         |       col.js

@@ -15,6 +15,9 @@ namespace KoiFarmShop.Repositories.Interfaces
         Boolean AddUser(User account);
         Boolean UpdUser(User account);
         Task<User> GetUserById(int Id);
+
+        Task<User?> GetUserByEmailAsync(string email);
+        Task<User> RegisterUserAsync(User user);
     }
 
 }

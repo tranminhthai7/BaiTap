@@ -67,7 +67,7 @@ public partial class KoiFarmShop2024DbContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Data Source=DESKTOP-3AFG7FJ\\SQLEXPRESS01;Initial Catalog=KoiFarmShop2024Db;Integrated Security=True;MultipleActiveResultSets=True;TrustServerCertificate=True");
+        => optionsBuilder.UseSqlServer("Data Source=localhost\\SQLEXPRESS;Initial Catalog=KoiFarmShop2024Db;Integrated Security=True;MultipleActiveResultSets=True;TrustServerCertificate=True");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -85,6 +85,7 @@ public partial class KoiFarmShop2024DbContext : DbContext
             entity.Property(e => e.Detail).HasColumnType("ntext");
             entity.Property(e => e.MetaDescriptioins).HasMaxLength(250);
             entity.Property(e => e.MetaKeywords).HasMaxLength(250);
+
             entity.Property(e => e.Name).HasMaxLength(50);
             entity.Property(e => e.UpdateDate).HasColumnType("datetime");
         });

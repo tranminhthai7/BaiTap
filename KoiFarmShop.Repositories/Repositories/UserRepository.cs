@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using KoiFarmShop.Repositories.Entities;
 using Microsoft.EntityFrameworkCore;
-using KoiFarmShop.Repositories.Entities;
 using KoiFarmShop.Repositories.Interfaces;
 
 namespace KoiFarmShop.Repositories.Repositories
@@ -14,11 +13,22 @@ namespace KoiFarmShop.Repositories.Repositories
     {
         private readonly KoiFarmShop2024DbContext _dbContext;
 
-        public UserRepository(KoiFarmShop2024DbContext dbContext) 
+        public UserRepository(KoiFarmShop2024DbContext dbContext)
         {
             _dbContext = dbContext;
         }
+        public async Task<User?> GetUserByEmailAsync(string email)
+        {
+            return await _dbContext.Users
+                .FirstOrDefaultAsync(u => u.Email == email);
+        }
 
+        public async Task<User> RegisterUserAsync(User user)
+        {
+            _dbContext.Users.Add(user);
+            await _dbContext.SaveChangesAsync();
+            return user;
+        }
         public bool AddUser(User user)
         {
             try
@@ -27,7 +37,7 @@ namespace KoiFarmShop.Repositories.Repositories
                 _dbContext.SaveChanges();
                 return true;
             }
-            catch(Exception ex) 
+            catch (Exception ex)
             {
                 throw new NotImplementedException(ex.ToString());
             }
@@ -38,7 +48,7 @@ namespace KoiFarmShop.Repositories.Repositories
             try
             {
                 var objDel = _dbContext.Users.Where(u => u.Id.Equals(id)).FirstOrDefault();
-                if(objDel != null) 
+                if (objDel != null)
                 {
                     _dbContext.Users.Remove(objDel);
                     _dbContext.SaveChanges();
@@ -46,7 +56,7 @@ namespace KoiFarmShop.Repositories.Repositories
                 }
                 return false;
             }
-            catch(Exception ex) 
+            catch (Exception ex)
             {
                 throw new NotImplementedException(ex.ToString());
             }
@@ -60,7 +70,7 @@ namespace KoiFarmShop.Repositories.Repositories
                 _dbContext.SaveChanges();
                 return true;
             }
-            catch(Exception ex) 
+            catch (Exception ex)
             {
                 throw new NotImplementedException(ex.ToString());
             }
@@ -89,7 +99,7 @@ namespace KoiFarmShop.Repositories.Repositories
                 _dbContext.SaveChanges();
                 return true;
             }
-            catch (Exception ex) 
+            catch (Exception ex)
             {
                 return false;
             }

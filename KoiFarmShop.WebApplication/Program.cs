@@ -4,9 +4,16 @@ using KoiFarmShop.Repositories.Repositories;
 using KoiFarmShop.Repositories.Interfaces;
 using KoiFarmShop.Services.Interfaces;
 using KoiFarmShop.Services.Services;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
 var builder = WebApplication.CreateBuilder(args);
-
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+    .AddCookie(options =>
+    {
+        options.LoginPath = "/Accounts/Login"; // Đường dẫn trang đăng nhập khi chưa đăng nhập
+        options.ExpireTimeSpan = TimeSpan.FromMinutes(30); // Thời gian hết hạn của cookie
+        options.SlidingExpiration = true; // Cookie sẽ được gia hạn nếu người dùng còn hoạt động
+    });
 // DI
 builder.Services.AddDbContext<KoiFarmShop2024DbContext>(options =>
 {
@@ -111,6 +118,7 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+app.UseAuthentication();
 
 app.UseAuthorization();
 
