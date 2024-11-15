@@ -1,8 +1,8 @@
 ﻿@page
 @model KoiFarmShop.WebApplication.Pages.Payment.CartModel
 @{
-	 Layout = "_Layout";
-    ViewData["Title"] = "Payment";
+	Layout = "_Layout";
+	ViewData["Title"] = "Payment";
 }
 
 <!DOCTYPE html>
@@ -10,7 +10,7 @@
 <head>
 	<meta charset="UTF-8" />
 	<meta name="theme-color" content="#8d251c" />
-	<link rel="canonical" href="https://localhost:7197/Payment/Cart" />
+	<link rel="canonical" href="https://sudes-nest.mysapo.net/cart" />
 	<meta name='revisit-after' content='2 days' />
 	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<meta name="robots" content="follow, noindex">
@@ -23,7 +23,7 @@
 
 
 	<meta property="og:description" content="">
-	<meta property="og:url" content="https://localhost:7197/Order/Cart">
+	<meta property="og:url" content="https://sudes-nest.mysapo.net/cart">
 	<meta property="og:site_name" content="Koi Farm Shop">
 	<link rel="preload" as="script" href="~/js/jquery.js" />
 	<script src="~/js/jquery.js" type="text/javascript"></script>
@@ -90,10 +90,13 @@
 
 
 
-
-
-
 	<link href="~/css/cartpage.scss.css" rel="stylesheet" type="text/css" media="all" />
+
+
+
+	<link href="~/css/style_page.scss.css" rel="stylesheet" type="text/css" media="all" />
+
+
 
 	<link href="~/css/quickviews_popup_cart.scss.css" rel="stylesheet" type="text/css" media="all" />
 
@@ -139,6 +142,10 @@
 
 
 	<script src="~/js/stats.min.js"></script>
+
+
+
+
 
 
 
@@ -393,6 +400,32 @@
 
 
 
+		<section class="main-cart-page main-container col1-layout is-empty">
+			<div class="main container cartpcstyle">
+				<div class="wrap_background_aside margin-bottom-40">
+					<div class="row">
+						<div class="col-xl-8 col-lg-7 col-12 col-cart-left">
+							<div class="bg-shadow margin-bottom-20">
+								<div class="header-cart">
+									<div class="title-block-page">
+										<h1 class="title_cart">
+											<span>Giỏ hàng của bạn</span>
+										</h1>
+									</div>
+								</div>
+								<div class="cart-page d-xl-block d-none">
+									<div class="drawer__inner">
+										<div class="CartPageContainer"><div class="cart--empty-message"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 201.387 201.387" style="enable-background:new 0 0 201.387 201.387;" xml:space="preserve"> <g> <g> <path d="M129.413,24.885C127.389,10.699,115.041,0,100.692,0C91.464,0,82.7,4.453,77.251,11.916    c-1.113,1.522-0.78,3.657,0.742,4.77c1.517,1.109,3.657,0.78,4.768-0.744c4.171-5.707,10.873-9.115,17.93-9.115    c10.974,0,20.415,8.178,21.963,19.021c0.244,1.703,1.705,2.932,3.376,2.932c0.159,0,0.323-0.012,0.486-0.034    C128.382,28.479,129.679,26.75,129.413,24.885z"></path> </g> </g> <g> <g> <path d="M178.712,63.096l-10.24-17.067c-0.616-1.029-1.727-1.657-2.927-1.657h-9.813c-1.884,0-3.413,1.529-3.413,3.413    s1.529,3.413,3.413,3.413h7.881l6.144,10.24H31.626l6.144-10.24h3.615c1.884,0,3.413-1.529,3.413-3.413s-1.529-3.413-3.413-3.413    h-5.547c-1.2,0-2.311,0.628-2.927,1.657l-10.24,17.067c-0.633,1.056-0.648,2.369-0.043,3.439s1.739,1.732,2.97,1.732h150.187    c1.231,0,2.364-0.662,2.97-1.732S179.345,64.15,178.712,63.096z"></path> </g> </g> <g> <g> <path d="M161.698,31.623c-0.478-0.771-1.241-1.318-2.123-1.524l-46.531-10.883c-0.881-0.207-1.809-0.053-2.579,0.423    c-0.768,0.478-1.316,1.241-1.522,2.123l-3.509,15c-0.43,1.835,0.71,3.671,2.546,4.099c1.835,0.43,3.673-0.71,4.101-2.546    l2.732-11.675l39.883,9.329l-6.267,26.795c-0.43,1.835,0.71,3.671,2.546,4.099c0.263,0.061,0.524,0.09,0.782,0.09    c1.55,0,2.953-1.062,3.318-2.635l7.045-30.118C162.328,33.319,162.176,32.391,161.698,31.623z"></path> </g> </g> <g> <g> <path d="M102.497,39.692l-3.11-26.305c-0.106-0.899-0.565-1.72-1.277-2.28c-0.712-0.56-1.611-0.816-2.514-0.71l-57.09,6.748    c-1.871,0.222-3.209,1.918-2.988,3.791l5.185,43.873c0.206,1.737,1.679,3.014,3.386,3.014c0.133,0,0.27-0.009,0.406-0.024    c1.87-0.222,3.208-1.918,2.988-3.791l-4.785-40.486l50.311-5.946l2.708,22.915c0.222,1.872,1.91,3.202,3.791,2.99    C101.379,43.261,102.717,41.564,102.497,39.692z"></path> </g> </g> <g> <g> <path d="M129.492,63.556l-6.775-28.174c-0.212-0.879-0.765-1.64-1.536-2.113c-0.771-0.469-1.696-0.616-2.581-0.406L63.613,46.087    c-1.833,0.44-2.961,2.284-2.521,4.117l3.386,14.082c0.44,1.835,2.284,2.964,4.116,2.521c1.833-0.44,2.961-2.284,2.521-4.117    l-2.589-10.764l48.35-11.626l5.977,24.854c0.375,1.565,1.775,2.615,3.316,2.615c0.265,0,0.533-0.031,0.802-0.096    C128.804,67.232,129.932,65.389,129.492,63.556z"></path> </g> </g> <g> <g> <path d="M179.197,64.679c-0.094-1.814-1.592-3.238-3.41-3.238H25.6c-1.818,0-3.316,1.423-3.41,3.238l-6.827,133.12    c-0.048,0.934,0.29,1.848,0.934,2.526c0.645,0.677,1.539,1.062,2.475,1.062h163.84c0.935,0,1.83-0.384,2.478-1.062    c0.643-0.678,0.981-1.591,0.934-2.526L179.197,64.679z M22.364,194.56l6.477-126.293h143.701l6.477,126.293H22.364z"></path> </g> </g> <g> <g> <path d="M126.292,75.093c-5.647,0-10.24,4.593-10.24,10.24c0,5.647,4.593,10.24,10.24,10.24c5.647,0,10.24-4.593,10.24-10.24    C136.532,79.686,131.939,75.093,126.292,75.093z M126.292,88.747c-1.883,0-3.413-1.531-3.413-3.413s1.531-3.413,3.413-3.413    c1.882,0,3.413,1.531,3.413,3.413S128.174,88.747,126.292,88.747z"></path> </g> </g> <g> <g> <path d="M75.092,75.093c-5.647,0-10.24,4.593-10.24,10.24c0,5.647,4.593,10.24,10.24,10.24c5.647,0,10.24-4.593,10.24-10.24    C85.332,79.686,80.739,75.093,75.092,75.093z M75.092,88.747c-1.882,0-3.413-1.531-3.413-3.413s1.531-3.413,3.413-3.413    s3.413,1.531,3.413,3.413S76.974,88.747,75.092,88.747z"></path> </g> </g> <g> <g> <path d="M126.292,85.333h-0.263c-1.884,0-3.413,1.529-3.413,3.413c0,0.466,0.092,0.911,0.263,1.316v17.457    c0,12.233-9.953,22.187-22.187,22.187s-22.187-9.953-22.187-22.187V88.747c0-1.884-1.529-3.413-3.413-3.413    s-3.413,1.529-3.413,3.413v18.773c0,15.998,13.015,29.013,29.013,29.013s29.013-13.015,29.013-29.013V88.747    C129.705,86.863,128.176,85.333,126.292,85.333z"></path> </g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> </svg><p>Giỏ hàng của bạn đang trống</p></div></div>
+									</div>
+								</div>
+								<div class="cart-mobile-page d-block d-xl-none">
+									<div class="CartMobileContainer"><div class="cart--empty-message"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 201.387 201.387" style="enable-background:new 0 0 201.387 201.387;" xml:space="preserve"> <g> <g> <path d="M129.413,24.885C127.389,10.699,115.041,0,100.692,0C91.464,0,82.7,4.453,77.251,11.916    c-1.113,1.522-0.78,3.657,0.742,4.77c1.517,1.109,3.657,0.78,4.768-0.744c4.171-5.707,10.873-9.115,17.93-9.115    c10.974,0,20.415,8.178,21.963,19.021c0.244,1.703,1.705,2.932,3.376,2.932c0.159,0,0.323-0.012,0.486-0.034    C128.382,28.479,129.679,26.75,129.413,24.885z"></path> </g> </g> <g> <g> <path d="M178.712,63.096l-10.24-17.067c-0.616-1.029-1.727-1.657-2.927-1.657h-9.813c-1.884,0-3.413,1.529-3.413,3.413    s1.529,3.413,3.413,3.413h7.881l6.144,10.24H31.626l6.144-10.24h3.615c1.884,0,3.413-1.529,3.413-3.413s-1.529-3.413-3.413-3.413    h-5.547c-1.2,0-2.311,0.628-2.927,1.657l-10.24,17.067c-0.633,1.056-0.648,2.369-0.043,3.439s1.739,1.732,2.97,1.732h150.187    c1.231,0,2.364-0.662,2.97-1.732S179.345,64.15,178.712,63.096z"></path> </g> </g> <g> <g> <path d="M161.698,31.623c-0.478-0.771-1.241-1.318-2.123-1.524l-46.531-10.883c-0.881-0.207-1.809-0.053-2.579,0.423    c-0.768,0.478-1.316,1.241-1.522,2.123l-3.509,15c-0.43,1.835,0.71,3.671,2.546,4.099c1.835,0.43,3.673-0.71,4.101-2.546    l2.732-11.675l39.883,9.329l-6.267,26.795c-0.43,1.835,0.71,3.671,2.546,4.099c0.263,0.061,0.524,0.09,0.782,0.09    c1.55,0,2.953-1.062,3.318-2.635l7.045-30.118C162.328,33.319,162.176,32.391,161.698,31.623z"></path> </g> </g> <g> <g> <path d="M102.497,39.692l-3.11-26.305c-0.106-0.899-0.565-1.72-1.277-2.28c-0.712-0.56-1.611-0.816-2.514-0.71l-57.09,6.748    c-1.871,0.222-3.209,1.918-2.988,3.791l5.185,43.873c0.206,1.737,1.679,3.014,3.386,3.014c0.133,0,0.27-0.009,0.406-0.024    c1.87-0.222,3.208-1.918,2.988-3.791l-4.785-40.486l50.311-5.946l2.708,22.915c0.222,1.872,1.91,3.202,3.791,2.99    C101.379,43.261,102.717,41.564,102.497,39.692z"></path> </g> </g> <g> <g> <path d="M129.492,63.556l-6.775-28.174c-0.212-0.879-0.765-1.64-1.536-2.113c-0.771-0.469-1.696-0.616-2.581-0.406L63.613,46.087    c-1.833,0.44-2.961,2.284-2.521,4.117l3.386,14.082c0.44,1.835,2.284,2.964,4.116,2.521c1.833-0.44,2.961-2.284,2.521-4.117    l-2.589-10.764l48.35-11.626l5.977,24.854c0.375,1.565,1.775,2.615,3.316,2.615c0.265,0,0.533-0.031,0.802-0.096    C128.804,67.232,129.932,65.389,129.492,63.556z"></path> </g> </g> <g> <g> <path d="M179.197,64.679c-0.094-1.814-1.592-3.238-3.41-3.238H25.6c-1.818,0-3.316,1.423-3.41,3.238l-6.827,133.12    c-0.048,0.934,0.29,1.848,0.934,2.526c0.645,0.677,1.539,1.062,2.475,1.062h163.84c0.935,0,1.83-0.384,2.478-1.062    c0.643-0.678,0.981-1.591,0.934-2.526L179.197,64.679z M22.364,194.56l6.477-126.293h143.701l6.477,126.293H22.364z"></path> </g> </g> <g> <g> <path d="M126.292,75.093c-5.647,0-10.24,4.593-10.24,10.24c0,5.647,4.593,10.24,10.24,10.24c5.647,0,10.24-4.593,10.24-10.24    C136.532,79.686,131.939,75.093,126.292,75.093z M126.292,88.747c-1.883,0-3.413-1.531-3.413-3.413s1.531-3.413,3.413-3.413    c1.882,0,3.413,1.531,3.413,3.413S128.174,88.747,126.292,88.747z"></path> </g> </g> <g> <g> <path d="M75.092,75.093c-5.647,0-10.24,4.593-10.24,10.24c0,5.647,4.593,10.24,10.24,10.24c5.647,0,10.24-4.593,10.24-10.24    C85.332,79.686,80.739,75.093,75.092,75.093z M75.092,88.747c-1.882,0-3.413-1.531-3.413-3.413s1.531-3.413,3.413-3.413    s3.413,1.531,3.413,3.413S76.974,88.747,75.092,88.747z"></path> </g> </g> <g> <g> <path d="M126.292,85.333h-0.263c-1.884,0-3.413,1.529-3.413,3.413c0,0.466,0.092,0.911,0.263,1.316v17.457    c0,12.233-9.953,22.187-22.187,22.187s-22.187-9.953-22.187-22.187V88.747c0-1.884-1.529-3.413-3.413-3.413    s-3.413,1.529-3.413,3.413v18.773c0,15.998,13.015,29.013,29.013,29.013s29.013-13.015,29.013-29.013V88.747    C129.705,86.863,128.176,85.333,126.292,85.333z"></path> </g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> </svg><p>Giỏ hàng của bạn đang trống</p></div></div>
+								</div>
+							</div>
+
+						</div>
+
+		</section>
 		<section class="main-cart-page main-container col1-layout">
 			<div class="main container cartpcstyle">
 				<div class="wrap_background_aside margin-bottom-40">
@@ -409,12 +442,55 @@
 								<div class="cart-page d-xl-block d-none">
 									<div class="drawer__inner">
 										<div class="CartPageContainer">
+
+											<form action="/cart" method="post" novalidate="" class="cart ajaxcart cartpage">
+												<div class="cart-header-info">
+													<div>Thông tin sản phẩm</div>
+													<div>Đơn giá</div>
+													<div>Số lượng</div>
+													<div>Thành tiền</div>
+												</div>
+												<div class="ajaxcart__inner ajaxcart__inner--has-fixed-footer cart_body items">
+													<div class="ajaxcart__row">
+														<div class="ajaxcart__product cart_product" data-line="1">
+															<a href="/copy-of-to-yen-tinh-che-cho-be-baby-loai-3" class="ajaxcart__product-image cart_image" title="Tổ Yến Tinh Chế cho bé BaBy (loại 3)">
+																<img src="https://bizweb.dktcdn.net/thumb/compact/100/506/650/products/bb2-50gr-0-nap-494df53fb54c4233b0ba3c0a8ab3dfbe-97fc1701b8a14297ac03ee1e64edf1b2-master-d488b4d7-4784-48b2-a54a-c7d6343654fa.jpg" alt="Tổ Yến Tinh Chế cho bé BaBy (loại 3)">
+															</a>
+															<div class="grid__item cart_info">
+																<div class="ajaxcart__product-name-wrapper cart_name">
+																	<a href="/copy-of-to-yen-tinh-che-cho-be-baby-loai-3" class="ajaxcart__product-name h4 line-clamp line-clamp-2-new" title="Tổ Yến Tinh Chế cho bé BaBy (loại 3)">Tổ Yến Tinh Chế cho bé BaBy (loại 3)</a>
+																	<a title="Xóa" class="cart__btn-remove remove-item-cart ajaxifyCart--remove" href="javascript:;" data-line="1">Xóa</a>
+																</div>
+																<div class="grid">
+																	<div class="grid__item one-half text-right cart_prices">
+																		<span class="cart-price">2.900.000₫</span>
+																	</div>
+																</div>
+																<div class="grid">
+																	<div class="grid__item one-half cart_select">
+																		<div class="ajaxcart__qty input-group-btn">
+																			<button type="button" class="ajaxcart__qty-adjust ajaxcart__qty--minus items-count" data-id="" data-qty="0" data-line="1" aria-label="-"> - </button>
+																			<input type="text" name="updates[]" class="ajaxcart__qty-num number-sidebar" maxlength="3" value="1" min="0" data-id="" data-line="1" aria-label="quantity" pattern="[0-9]*">
+																			<button type="button" class="ajaxcart__qty-adjust ajaxcart__qty--plus items-count" data-id="" data-line="1" data-qty="2" aria-label="+"> + </button>
+																		</div>
+																	</div>
+																</div>
+																<div class="grid justify-right">
+																	<div class="grid__item one-half text-right cart_prices">
+																		<span class="cart-price">2.900.000₫</span>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</form>
+
 										</div>
 									</div>
 								</div>
 								<div class="cart-mobile-page d-block d-xl-none">
-									<div class="CartMobileContainer">
-									</div>
+									<div class="CartMobileContainer"></div>
 								</div>
 							</div>
 
@@ -430,23 +506,38 @@
 									</h2>
 
 
-									<div class="swiper_suggest swiper-container">
-										<div class="swiper-wrapper">
+									<div class="swiper_suggest swiper-container swiper-container-initialized swiper-container-horizontal swiper-container-pointer-events">
+										<div class="swiper-wrapper" style="transform: translate3d(0px, 0px, 0px);">
 
-											<div class="swiper-slide">
+											<div class="swiper-slide swiper-slide-active" style="width: 259.333px; margin-right: 10px;">
 												<div class="item_product_main">
 
-													<form action="/cart/add" method="post" class="variants product-action item-product-main duration-300" data-cart-form data-id="product-actions-34775949" enctype="multipart/form-data">
+													<form action="/cart/add" method="post" class="variants product-action item-product-main duration-300" data-cart-form="" data-id="product-actions-34775949" enctype="multipart/form-data">
 														<span class="flash-sale">
 															-
 															6%
 														</span>
 
+														<div class="tag-promo" title="Quà tặng">
+															<img src="//bizweb.dktcdn.net/100/506/650/themes/944598/assets/tag_pro_icon.svg?1728460505311" data-src="//bizweb.dktcdn.net/100/506/650/themes/944598/assets/tag_pro_icon.svg?1728460505311" alt="Quà tặng" class="lazyload loaded" data-was-processed="true">
+															<div class="promotion-content">
+																<div class="line-clamp-5-new" title="
 
+  - Tặng 1 túi giấy xách đi kèm - 1 Hộp đường phèn
+
+">
+
+																	<p>
+																		<span style="letter-spacing: -0.2px;">- Tặng 1 túi giấy xách đi kèm <br>- 1 Hộp đường phèn </span>
+																	</p>
+
+																</div>
+															</div>
+														</div>
 
 														<div class="product-thumbnail">
 															<a class="image_thumb scale_hover" href="/copy-of-to-yen-tinh-che-cho-be-baby-loai-3" title="Tổ Yến Tinh Chế cho bé BaBy (loại 3)">
-																<img class="lazyload duration-300" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="//bizweb.dktcdn.net/thumb/large/100/506/650/products/bb2-50gr-0-nap-494df53fb54c4233b0ba3c0a8ab3dfbe-97fc1701b8a14297ac03ee1e64edf1b2-master-d488b4d7-4784-48b2-a54a-c7d6343654fa.jpg?v=1709574876467" alt="Tổ Yến Tinh Chế cho bé BaBy (loại 3)">
+																<img class="lazyload duration-300 loaded" src="//bizweb.dktcdn.net/thumb/large/100/506/650/products/bb2-50gr-0-nap-494df53fb54c4233b0ba3c0a8ab3dfbe-97fc1701b8a14297ac03ee1e64edf1b2-master-d488b4d7-4784-48b2-a54a-c7d6343654fa.jpg?v=1709574876467" data-src="//bizweb.dktcdn.net/thumb/large/100/506/650/products/bb2-50gr-0-nap-494df53fb54c4233b0ba3c0a8ab3dfbe-97fc1701b8a14297ac03ee1e64edf1b2-master-d488b4d7-4784-48b2-a54a-c7d6343654fa.jpg?v=1709574876467" alt="Tổ Yến Tinh Chế cho bé BaBy (loại 3)" data-was-processed="true">
 															</a>
 														</div>
 														<div class="product-info">
@@ -461,13 +552,13 @@
 																</div>
 															</div>
 															<div class="product-button">
-																<input type="hidden" name="variantId" value="111118886" />
+																<input type="hidden" name="variantId" value="111118886">
 																<button class="btn-cart btn-views add_to_cart btn btn-primary " title="Thêm vào giỏ hàng">
 																	<span>Thêm vào giỏ</span>
-																	<svg enable-background="new 0 0 32 32" height="512" viewBox="0 0 32 32" width="512" xmlns="http://www.w3.org/2000/svg"><g><g><path d="m23.8 30h-15.6c-3.3 0-6-2.7-6-6v-.2l.6-16c.1-3.3 2.8-5.8 6-5.8h14.4c3.2 0 5.9 2.5 6 5.8l.6 16c.1 1.6-.5 3.1-1.6 4.3s-2.6 1.9-4.2 1.9c0 0-.1 0-.2 0zm-15-26c-2.2 0-3.9 1.7-4 3.8l-.6 16.2c0 2.2 1.8 4 4 4h15.8c1.1 0 2.1-.5 2.8-1.3s1.1-1.8 1.1-2.9l-.6-16c-.1-2.2-1.8-3.8-4-3.8z" /></g><g><path d="m16 14c-3.9 0-7-3.1-7-7 0-.6.4-1 1-1s1 .4 1 1c0 2.8 2.2 5 5 5s5-2.2 5-5c0-.6.4-1 1-1s1 .4 1 1c0 3.9-3.1 7-7 7z" /></g></g></svg>
+																	<svg enable-background="new 0 0 32 32" height="512" viewBox="0 0 32 32" width="512" xmlns="http://www.w3.org/2000/svg"><g><g><path d="m23.8 30h-15.6c-3.3 0-6-2.7-6-6v-.2l.6-16c.1-3.3 2.8-5.8 6-5.8h14.4c3.2 0 5.9 2.5 6 5.8l.6 16c.1 1.6-.5 3.1-1.6 4.3s-2.6 1.9-4.2 1.9c0 0-.1 0-.2 0zm-15-26c-2.2 0-3.9 1.7-4 3.8l-.6 16.2c0 2.2 1.8 4 4 4h15.8c1.1 0 2.1-.5 2.8-1.3s1.1-1.8 1.1-2.9l-.6-16c-.1-2.2-1.8-3.8-4-3.8z"></path></g><g><path d="m16 14c-3.9 0-7-3.1-7-7 0-.6.4-1 1-1s1 .4 1 1c0 2.8 2.2 5 5 5s5-2.2 5-5c0-.6.4-1 1-1s1 .4 1 1c0 3.9-3.1 7-7 7z"></path></g></g></svg>
 																</button>
 																<a href="javascript:void(0)" class="setWishlist btn-views btn-circle" data-wish="copy-of-to-yen-tinh-che-cho-be-baby-loai-3" tabindex="0" title="Thêm vào yêu thích">
-																	<img width="25" height="25" src="//bizweb.dktcdn.net/100/506/650/themes/944598/assets/heart.png?1728460505311" alt="Thêm vào yêu thích" />
+																	<img width="25" height="25" src="//bizweb.dktcdn.net/100/506/650/themes/944598/assets/heart.png?1728460505311" alt="Thêm vào yêu thích">
 																</a>
 															</div>
 														</div>
@@ -475,15 +566,35 @@
 												</div>
 											</div>
 
-											<div class="swiper-slide">
+											<div class="swiper-slide swiper-slide-next" style="width: 259.333px; margin-right: 10px;">
 												<div class="item_product_main">
 
-													<form action="/cart/add" method="post" class="variants product-action item-product-main duration-300" data-cart-form data-id="product-actions-34619453" enctype="multipart/form-data">
+													<form action="/cart/add" method="post" class="variants product-action item-product-main duration-300" data-cart-form="" data-id="product-actions-34619453" enctype="multipart/form-data">
 
+														<div class="tag-promo" title="Quà tặng">
+															<img src="//bizweb.dktcdn.net/100/506/650/themes/944598/assets/tag_pro_icon.svg?1728460505311" data-src="//bizweb.dktcdn.net/100/506/650/themes/944598/assets/tag_pro_icon.svg?1728460505311" alt="Quà tặng" class="lazyload loaded" data-was-processed="true">
+															<div class="promotion-content">
+																<div class="line-clamp-5-new" title="
+
+Kẹo Hồng Sâm Không Đường 365 Hàn Quốc Gói 500g
+Nước Hồng Sâm Daesan
+Chiết khấu cao cho các doanh nghiệp. Có VAT đầy đủ.
+
+">
+
+																	<ul>
+																		<li>Kẹo Hồng Sâm Không Đường 365 Hàn Quốc Gói 500g</li>
+																		<li>Nước Hồng Sâm Daesan</li>
+																		<li>Chiết khấu cao cho các doanh nghiệp. Có VAT đầy đủ.</li>
+																	</ul>
+
+																</div>
+															</div>
+														</div>
 
 														<div class="product-thumbnail">
 															<a class="image_thumb scale_hover" href="/cao-hong-sam-kgs-han-quoc-hop-1-lo-240g" title="Cao Hồng Sâm KGS Hàn Quốc Hộp 1 Lọ 240g">
-																<img class="lazyload duration-300" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="//bizweb.dktcdn.net/thumb/large/100/506/650/products/cao-hong-sam-kgs-240g-1-8990d1b9b75443ecb7d7e24126011ccb-grande.jpg?v=1708619518840" alt="Cao Hồng Sâm KGS Hàn Quốc Hộp 1 Lọ 240g">
+																<img class="lazyload duration-300 loaded" src="//bizweb.dktcdn.net/thumb/large/100/506/650/products/cao-hong-sam-kgs-240g-1-8990d1b9b75443ecb7d7e24126011ccb-grande.jpg?v=1708619518840" data-src="//bizweb.dktcdn.net/thumb/large/100/506/650/products/cao-hong-sam-kgs-240g-1-8990d1b9b75443ecb7d7e24126011ccb-grande.jpg?v=1708619518840" alt="Cao Hồng Sâm KGS Hàn Quốc Hộp 1 Lọ 240g" data-was-processed="true">
 															</a>
 														</div>
 														<div class="product-info">
@@ -496,13 +607,13 @@
 																</div>
 															</div>
 															<div class="product-button">
-																<input type="hidden" name="variantId" value="110199727" />
+																<input type="hidden" name="variantId" value="110199727">
 																<button class="btn-cart btn-views add_to_cart btn btn-primary " title="Thêm vào giỏ hàng">
 																	<span>Thêm vào giỏ</span>
-																	<svg enable-background="new 0 0 32 32" height="512" viewBox="0 0 32 32" width="512" xmlns="http://www.w3.org/2000/svg"><g><g><path d="m23.8 30h-15.6c-3.3 0-6-2.7-6-6v-.2l.6-16c.1-3.3 2.8-5.8 6-5.8h14.4c3.2 0 5.9 2.5 6 5.8l.6 16c.1 1.6-.5 3.1-1.6 4.3s-2.6 1.9-4.2 1.9c0 0-.1 0-.2 0zm-15-26c-2.2 0-3.9 1.7-4 3.8l-.6 16.2c0 2.2 1.8 4 4 4h15.8c1.1 0 2.1-.5 2.8-1.3s1.1-1.8 1.1-2.9l-.6-16c-.1-2.2-1.8-3.8-4-3.8z" /></g><g><path d="m16 14c-3.9 0-7-3.1-7-7 0-.6.4-1 1-1s1 .4 1 1c0 2.8 2.2 5 5 5s5-2.2 5-5c0-.6.4-1 1-1s1 .4 1 1c0 3.9-3.1 7-7 7z" /></g></g></svg>
+																	<svg enable-background="new 0 0 32 32" height="512" viewBox="0 0 32 32" width="512" xmlns="http://www.w3.org/2000/svg"><g><g><path d="m23.8 30h-15.6c-3.3 0-6-2.7-6-6v-.2l.6-16c.1-3.3 2.8-5.8 6-5.8h14.4c3.2 0 5.9 2.5 6 5.8l.6 16c.1 1.6-.5 3.1-1.6 4.3s-2.6 1.9-4.2 1.9c0 0-.1 0-.2 0zm-15-26c-2.2 0-3.9 1.7-4 3.8l-.6 16.2c0 2.2 1.8 4 4 4h15.8c1.1 0 2.1-.5 2.8-1.3s1.1-1.8 1.1-2.9l-.6-16c-.1-2.2-1.8-3.8-4-3.8z"></path></g><g><path d="m16 14c-3.9 0-7-3.1-7-7 0-.6.4-1 1-1s1 .4 1 1c0 2.8 2.2 5 5 5s5-2.2 5-5c0-.6.4-1 1-1s1 .4 1 1c0 3.9-3.1 7-7 7z"></path></g></g></svg>
 																</button>
 																<a href="javascript:void(0)" class="setWishlist btn-views btn-circle" data-wish="cao-hong-sam-kgs-han-quoc-hop-1-lo-240g" tabindex="0" title="Thêm vào yêu thích">
-																	<img width="25" height="25" src="//bizweb.dktcdn.net/100/506/650/themes/944598/assets/heart.png?1728460505311" alt="Thêm vào yêu thích" />
+																	<img width="25" height="25" src="//bizweb.dktcdn.net/100/506/650/themes/944598/assets/heart.png?1728460505311" alt="Thêm vào yêu thích">
 																</a>
 															</div>
 														</div>
@@ -510,15 +621,15 @@
 												</div>
 											</div>
 
-											<div class="swiper-slide">
+											<div class="swiper-slide" style="width: 259.333px; margin-right: 10px;">
 												<div class="item_product_main">
 
-													<form action="/cart/add" method="post" class="variants product-action item-product-main duration-300" data-cart-form data-id="product-actions-34619401" enctype="multipart/form-data">
+													<form action="/cart/add" method="post" class="variants product-action item-product-main duration-300" data-cart-form="" data-id="product-actions-34619401" enctype="multipart/form-data">
 
 
 														<div class="product-thumbnail">
 															<a class="image_thumb scale_hover" href="/set-6-thuong-vy-yen-dao" title="Set 6 Thượng Vy Yến Đảo">
-																<img class="lazyload duration-300" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="//bizweb.dktcdn.net/thumb/large/100/506/650/products/set-6-thuong-vy-yen-dao.jpg?v=1708618693627" alt="Set 6 Thượng Vy Yến Đảo">
+																<img class="lazyload duration-300 loaded" src="//bizweb.dktcdn.net/thumb/large/100/506/650/products/set-6-thuong-vy-yen-dao.jpg?v=1708618693627" data-src="//bizweb.dktcdn.net/thumb/large/100/506/650/products/set-6-thuong-vy-yen-dao.jpg?v=1708618693627" alt="Set 6 Thượng Vy Yến Đảo" data-was-processed="true">
 															</a>
 														</div>
 														<div class="product-info">
@@ -531,16 +642,16 @@
 																</div>
 															</div>
 															<div class="product-button">
-																<input class="hidden" type="hidden" name="variantId" value="110199638" />
+																<input class="hidden" type="hidden" name="variantId" value="110199638">
 																<button class="btn-cart btn-views quick-view-option btn btn-primary quick-view" title="Tùy chọn" type="button" data-handle="set-6-thuong-vy-yen-dao">
 																	<span>Tùy chọn</span>
 																	<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-gear" viewBox="0 0 16 16">
-																		<path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z" />
-																		<path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115l.094-.319z" />
+																		<path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z"></path>
+																		<path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115l.094-.319z"></path>
 																	</svg>
 																</button>
 																<a href="javascript:void(0)" class="setWishlist btn-views btn-circle" data-wish="set-6-thuong-vy-yen-dao" tabindex="0" title="Thêm vào yêu thích">
-																	<img width="25" height="25" src="//bizweb.dktcdn.net/100/506/650/themes/944598/assets/heart.png?1728460505311" alt="Thêm vào yêu thích" />
+																	<img width="25" height="25" src="//bizweb.dktcdn.net/100/506/650/themes/944598/assets/heart.png?1728460505311" alt="Thêm vào yêu thích">
 																</a>
 															</div>
 														</div>
@@ -548,10 +659,10 @@
 												</div>
 											</div>
 
-											<div class="swiper-slide">
+											<div class="swiper-slide" style="width: 259.333px; margin-right: 10px;">
 												<div class="item_product_main">
 
-													<form action="/cart/add" method="post" class="variants product-action item-product-main duration-300" data-cart-form data-id="product-actions-34618816" enctype="multipart/form-data">
+													<form action="/cart/add" method="post" class="variants product-action item-product-main duration-300" data-cart-form="" data-id="product-actions-34618816" enctype="multipart/form-data">
 
 
 														<div class="product-thumbnail">
@@ -569,13 +680,13 @@
 																</div>
 															</div>
 															<div class="product-button">
-																<input type="hidden" name="variantId" value="110198786" />
+																<input type="hidden" name="variantId" value="110198786">
 																<button class="btn-cart btn-views add_to_cart btn btn-primary " title="Thêm vào giỏ hàng">
 																	<span>Thêm vào giỏ</span>
-																	<svg enable-background="new 0 0 32 32" height="512" viewBox="0 0 32 32" width="512" xmlns="http://www.w3.org/2000/svg"><g><g><path d="m23.8 30h-15.6c-3.3 0-6-2.7-6-6v-.2l.6-16c.1-3.3 2.8-5.8 6-5.8h14.4c3.2 0 5.9 2.5 6 5.8l.6 16c.1 1.6-.5 3.1-1.6 4.3s-2.6 1.9-4.2 1.9c0 0-.1 0-.2 0zm-15-26c-2.2 0-3.9 1.7-4 3.8l-.6 16.2c0 2.2 1.8 4 4 4h15.8c1.1 0 2.1-.5 2.8-1.3s1.1-1.8 1.1-2.9l-.6-16c-.1-2.2-1.8-3.8-4-3.8z" /></g><g><path d="m16 14c-3.9 0-7-3.1-7-7 0-.6.4-1 1-1s1 .4 1 1c0 2.8 2.2 5 5 5s5-2.2 5-5c0-.6.4-1 1-1s1 .4 1 1c0 3.9-3.1 7-7 7z" /></g></g></svg>
+																	<svg enable-background="new 0 0 32 32" height="512" viewBox="0 0 32 32" width="512" xmlns="http://www.w3.org/2000/svg"><g><g><path d="m23.8 30h-15.6c-3.3 0-6-2.7-6-6v-.2l.6-16c.1-3.3 2.8-5.8 6-5.8h14.4c3.2 0 5.9 2.5 6 5.8l.6 16c.1 1.6-.5 3.1-1.6 4.3s-2.6 1.9-4.2 1.9c0 0-.1 0-.2 0zm-15-26c-2.2 0-3.9 1.7-4 3.8l-.6 16.2c0 2.2 1.8 4 4 4h15.8c1.1 0 2.1-.5 2.8-1.3s1.1-1.8 1.1-2.9l-.6-16c-.1-2.2-1.8-3.8-4-3.8z"></path></g><g><path d="m16 14c-3.9 0-7-3.1-7-7 0-.6.4-1 1-1s1 .4 1 1c0 2.8 2.2 5 5 5s5-2.2 5-5c0-.6.4-1 1-1s1 .4 1 1c0 3.9-3.1 7-7 7z"></path></g></g></svg>
 																</button>
 																<a href="javascript:void(0)" class="setWishlist btn-views btn-circle" data-wish="soup-vi-ca-bao-ngu-to-yen-1" tabindex="0" title="Thêm vào yêu thích">
-																	<img width="25" height="25" src="//bizweb.dktcdn.net/100/506/650/themes/944598/assets/heart.png?1728460505311" alt="Thêm vào yêu thích" />
+																	<img width="25" height="25" src="//bizweb.dktcdn.net/100/506/650/themes/944598/assets/heart.png?1728460505311" alt="Thêm vào yêu thích">
 																</a>
 															</div>
 														</div>
@@ -583,10 +694,10 @@
 												</div>
 											</div>
 
-											<div class="swiper-slide">
+											<div class="swiper-slide" style="width: 259.333px; margin-right: 10px;">
 												<div class="item_product_main">
 
-													<form action="/cart/add" method="post" class="variants product-action item-product-main duration-300" data-cart-form data-id="product-actions-34613070" enctype="multipart/form-data">
+													<form action="/cart/add" method="post" class="variants product-action item-product-main duration-300" data-cart-form="" data-id="product-actions-34613070" enctype="multipart/form-data">
 														<span class="flash-sale">
 															-
 															6%
@@ -611,13 +722,13 @@
 																</div>
 															</div>
 															<div class="product-button">
-																<input type="hidden" name="variantId" value="110189169" />
+																<input type="hidden" name="variantId" value="110189169">
 																<button class="btn-cart btn-views add_to_cart btn btn-primary " title="Thêm vào giỏ hàng">
 																	<span>Thêm vào giỏ</span>
-																	<svg enable-background="new 0 0 32 32" height="512" viewBox="0 0 32 32" width="512" xmlns="http://www.w3.org/2000/svg"><g><g><path d="m23.8 30h-15.6c-3.3 0-6-2.7-6-6v-.2l.6-16c.1-3.3 2.8-5.8 6-5.8h14.4c3.2 0 5.9 2.5 6 5.8l.6 16c.1 1.6-.5 3.1-1.6 4.3s-2.6 1.9-4.2 1.9c0 0-.1 0-.2 0zm-15-26c-2.2 0-3.9 1.7-4 3.8l-.6 16.2c0 2.2 1.8 4 4 4h15.8c1.1 0 2.1-.5 2.8-1.3s1.1-1.8 1.1-2.9l-.6-16c-.1-2.2-1.8-3.8-4-3.8z" /></g><g><path d="m16 14c-3.9 0-7-3.1-7-7 0-.6.4-1 1-1s1 .4 1 1c0 2.8 2.2 5 5 5s5-2.2 5-5c0-.6.4-1 1-1s1 .4 1 1c0 3.9-3.1 7-7 7z" /></g></g></svg>
+																	<svg enable-background="new 0 0 32 32" height="512" viewBox="0 0 32 32" width="512" xmlns="http://www.w3.org/2000/svg"><g><g><path d="m23.8 30h-15.6c-3.3 0-6-2.7-6-6v-.2l.6-16c.1-3.3 2.8-5.8 6-5.8h14.4c3.2 0 5.9 2.5 6 5.8l.6 16c.1 1.6-.5 3.1-1.6 4.3s-2.6 1.9-4.2 1.9c0 0-.1 0-.2 0zm-15-26c-2.2 0-3.9 1.7-4 3.8l-.6 16.2c0 2.2 1.8 4 4 4h15.8c1.1 0 2.1-.5 2.8-1.3s1.1-1.8 1.1-2.9l-.6-16c-.1-2.2-1.8-3.8-4-3.8z"></path></g><g><path d="m16 14c-3.9 0-7-3.1-7-7 0-.6.4-1 1-1s1 .4 1 1c0 2.8 2.2 5 5 5s5-2.2 5-5c0-.6.4-1 1-1s1 .4 1 1c0 3.9-3.1 7-7 7z"></path></g></g></svg>
 																</button>
 																<a href="javascript:void(0)" class="setWishlist btn-views btn-circle" data-wish="to-yen-tinh-che-cho-be-baby-loai-2" tabindex="0" title="Thêm vào yêu thích">
-																	<img width="25" height="25" src="//bizweb.dktcdn.net/100/506/650/themes/944598/assets/heart.png?1728460505311" alt="Thêm vào yêu thích" />
+																	<img width="25" height="25" src="//bizweb.dktcdn.net/100/506/650/themes/944598/assets/heart.png?1728460505311" alt="Thêm vào yêu thích">
 																</a>
 															</div>
 														</div>
@@ -625,15 +736,14 @@
 												</div>
 											</div>
 
-											<div class="swiper-slide">
+											<div class="swiper-slide" style="width: 259.333px; margin-right: 10px;">
 												<div class="item_product_main">
 
-													<form action="/cart/add" method="post" class="variants product-action item-product-main duration-300" data-cart-form data-id="product-actions-34613037" enctype="multipart/form-data">
+													<form action="/cart/add" method="post" class="variants product-action item-product-main duration-300" data-cart-form="" data-id="product-actions-34613037" enctype="multipart/form-data">
 														<span class="flash-sale">
 															-
 															7%
 														</span>
-
 
 
 														<div class="product-thumbnail">
@@ -653,16 +763,16 @@
 																</div>
 															</div>
 															<div class="product-button">
-																<input class="hidden" type="hidden" name="variantId" value="110189100" />
+																<input class="hidden" type="hidden" name="variantId" value="110189100">
 																<button class="btn-cart btn-views quick-view-option btn btn-primary quick-view" title="Tùy chọn" type="button" data-handle="to-yen-tinh-che-vip-doc-quyen">
 																	<span>Tùy chọn</span>
 																	<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-gear" viewBox="0 0 16 16">
-																		<path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z" />
-																		<path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115l.094-.319z" />
+																		<path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z"></path>
+																		<path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115l.094-.319z"></path>
 																	</svg>
 																</button>
 																<a href="javascript:void(0)" class="setWishlist btn-views btn-circle" data-wish="to-yen-tinh-che-vip-doc-quyen" tabindex="0" title="Thêm vào yêu thích">
-																	<img width="25" height="25" src="//bizweb.dktcdn.net/100/506/650/themes/944598/assets/heart.png?1728460505311" alt="Thêm vào yêu thích" />
+																	<img width="25" height="25" src="//bizweb.dktcdn.net/100/506/650/themes/944598/assets/heart.png?1728460505311" alt="Thêm vào yêu thích">
 																</a>
 															</div>
 														</div>
@@ -673,18 +783,18 @@
 										</div>
 										<div class="swiper-button-next">
 											<svg width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
-												<rect x="2.13003" y="29" width="38" height="38" transform="rotate(-45 2.13003 29)" stroke="black" fill="#fff" stroke-width="2" />
-												<rect x="8" y="29.2133" width="30" height="30" transform="rotate(-45 8 29.2133)" fill="black" />
-												<path d="M18.5 29H39.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-												<path d="M29 18.5L39.5 29L29 39.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+												<rect x="2.13003" y="29" width="38" height="38" transform="rotate(-45 2.13003 29)" stroke="black" fill="#fff" stroke-width="2"></rect>
+												<rect x="8" y="29.2133" width="30" height="30" transform="rotate(-45 8 29.2133)" fill="black"></rect>
+												<path d="M18.5 29H39.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+												<path d="M29 18.5L39.5 29L29 39.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
 											</svg>
 										</div>
-										<div class="swiper-button-prev">
+										<div class="swiper-button-prev swiper-button-disabled">
 											<svg width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
-												<rect x="2.13003" y="29" width="38" height="38" transform="rotate(-45 2.13003 29)" stroke="black" fill="#fff" stroke-width="2" />
-												<rect x="8" y="29.2133" width="30" height="30" transform="rotate(-45 8 29.2133)" fill="black" />
-												<path d="M18.5 29H39.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-												<path d="M29 18.5L39.5 29L29 39.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+												<rect x="2.13003" y="29" width="38" height="38" transform="rotate(-45 2.13003 29)" stroke="black" fill="#fff" stroke-width="2"></rect>
+												<rect x="8" y="29.2133" width="30" height="30" transform="rotate(-45 8 29.2133)" fill="black"></rect>
+												<path d="M18.5 29H39.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+												<path d="M29 18.5L39.5 29L29 39.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
 											</svg>
 										</div>
 									</div>
@@ -748,7 +858,14 @@
 											Thông tin đơn hàng
 										</div>
 										<div class="checkout-body">
-											<div class="summary-total"></div>
+											<div class="summary-total">
+
+												<div class="content-items">
+													<div class="item-content-left">Tổng tiền</div>
+													<div class="item-content-right"><span class="total-price">2.900.000₫</span></div>
+												</div>
+
+											</div>
 											<div class="summary-action">
 												<p>Phí vận chuyển sẽ được tính ở trang thanh toán.</p>
 												<p>Bạn cũng có thể nhập mã giảm giá ở trang thanh toán.</p>
@@ -761,11 +878,11 @@
 													</h4>
 													<div class="timedeli-modal">
 														<fieldset class="input_group date_pick">
-															<input type="text" placeholder="Chọn ngày" readonly id="date" name="attributes[shipdate]" class="date_picker" required>
+															<input type="text" placeholder="Chọn ngày" readonly="" id="date" name="attributes[shipdate]" class="date_picker" required="">
 														</fieldset>
 														<fieldset class="input_group date_time">
 															<select name="time" class="timeer timedeli-cta">
-																<option selected>Chọn thời gian</option>
+																<option selected="">Chọn thời gian</option>
 
 
 																<option value="08h00 - 12h00">08h00 - 12h00</option>
@@ -780,20 +897,15 @@
 
 													<div class="r-bill">
 														<div class="checkbox">
-															<input type="hidden" name="attributes[invoice]" id="re-checkbox-bill"
-																   value='không'>
-															<input type="checkbox" id="checkbox-bill" name="attributes[invoice]" value="có"
-																   class="regular-checkbox" />
+															<input type="hidden" name="attributes[invoice]" id="re-checkbox-bill" value="không">
+															<input type="checkbox" id="checkbox-bill" name="attributes[invoice]" value="có" class="regular-checkbox">
 															<label for="checkbox-bill" class="box"></label>
 															<label for="checkbox-bill" class="title">Xuất hóa đơn công ty</label>
 														</div>
 														<div class="bill-field">
 															<div class="form-group">
 																<label>Tên công ty</label>
-																<input type="text" class="form-control val-f"
-																	   name="attributes[company_name]"
-																	   value=""
-																	   placeholder="Tên công ty">
+																<input type="text" class="form-control val-f" name="attributes[company_name]" value="" placeholder="Tên công ty">
 															</div>
 															<div class="form-group">
 																<label>Mã số thuế</label>
@@ -801,16 +913,11 @@
 															</div>
 															<div class="form-group">
 																<label>Địa chỉ công ty</label>
-																<textarea class="form-control val-f"
-																		  name="attributes[company_address]"
-																		  placeholder="Nhập địa chỉ công ty (bao gồm Phường/Xã, Quận/Huyện, Tỉnh/Thành phố nếu có)"></textarea>
+																<textarea class="form-control val-f" name="attributes[company_address]" placeholder="Nhập địa chỉ công ty (bao gồm Phường/Xã, Quận/Huyện, Tỉnh/Thành phố nếu có)"></textarea>
 															</div>
 															<div class="form-group">
 																<label>Email nhận hoá đơn</label>
-																<input type="email" class="form-control val-f val-email"
-																	   name="attributes[invoice_email]"
-																	   value=""
-																	   placeholder="Email nhận hoá đơn">
+																<input type="email" class="form-control val-f val-email" name="attributes[invoice_email]" value="" placeholder="Email nhận hoá đơn">
 															</div>
 														</div>
 													</div>
@@ -831,14 +938,14 @@
 								<div class="bg-shadow">
 									<div class="product-coupons">
 										<div class="title">Khuyến mãi dành cho bạn</div>
-										<div class="swiper_coupons swiper-container">
-											<div class="swiper-wrapper">
+										<div class="swiper_coupons swiper-container swiper-container-initialized swiper-container-horizontal swiper-container-pointer-events">
+											<div class="swiper-wrapper" style="transform: translate3d(0px, 0px, 0px);">
 
-												<div class="swiper-slide">
+												<div class="swiper-slide swiper-slide-active" style="width: 298px; margin-right: 10px;">
 													<div class="box-coupon">
 														<div class="mask-ticket"></div>
 														<div class="image">
-															<img width="88" height="88" class="lazyload" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="//bizweb.dktcdn.net/100/506/650/themes/944598/assets/img_coupon_1.jpg?1728460505311" alt="KOIFS200">
+															<img width="88" height="88" class="lazyload loaded" src="//bizweb.dktcdn.net/100/506/650/themes/944598/assets/img_coupon_1.jpg?1728460505311" data-src="//bizweb.dktcdn.net/100/506/650/themes/944598/assets/img_coupon_1.jpg?1728460505311" alt="NEST200" data-was-processed="true">
 														</div>
 														<div class="content_wrap">
 															<a title="Chi tiết" href="javascript:void(0)" class="info-button" data-coupon="KOIFS200" data-time="12/12/2024" data-content="Áp dụng cho đơn hàng từ <b>4,500,000đ</b> trở lên
@@ -860,11 +967,11 @@ Không đi kèm với chương trình khác">
 												</div>
 
 
-												<div class="swiper-slide">
+												<div class="swiper-slide swiper-slide-next" style="width: 298px; margin-right: 10px;">
 													<div class="box-coupon">
 														<div class="mask-ticket"></div>
 														<div class="image">
-															<img width="88" height="88" class="lazyload" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="//bizweb.dktcdn.net/100/506/650/themes/944598/assets/img_coupon_2.jpg?1728460505311" alt="KOIFS100">
+															<img width="88" height="88" class="lazyload loaded" src="//bizweb.dktcdn.net/100/506/650/themes/944598/assets/img_coupon_2.jpg?1728460505311" data-src="//bizweb.dktcdn.net/100/506/650/themes/944598/assets/img_coupon_2.jpg?1728460505311" alt="NEST100" data-was-processed="true">
 														</div>
 														<div class="content_wrap">
 															<a title="Chi tiết" href="javascript:void(0)" class="info-button" data-coupon="KOIFS100" data-time="24/12/2024" data-content="Áp dụng cho đơn hàng từ <b>2,500,000đ</b> trở lên
@@ -886,11 +993,11 @@ Không đi kèm với chương trình khác">
 												</div>
 
 
-												<div class="swiper-slide">
+												<div class="swiper-slide" style="width: 298px; margin-right: 10px;">
 													<div class="box-coupon">
 														<div class="mask-ticket"></div>
 														<div class="image">
-															<img width="88" height="88" class="lazyload" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="//bizweb.dktcdn.net/100/506/650/themes/944598/assets/img_coupon_3.jpg?1728460505311" alt="KOIFS50">
+															<img width="88" height="88" class="lazyload" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="//bizweb.dktcdn.net/100/506/650/themes/944598/assets/img_coupon_3.jpg?1728460505311" alt="NEST50">
 														</div>
 														<div class="content_wrap">
 															<a title="Chi tiết" href="javascript:void(0)" class="info-button" data-coupon="KOIFS50" data-time="25/12/2024" data-content="Áp dụng cho đơn hàng từ <b>1,500,000đ</b> trở lên
@@ -912,11 +1019,11 @@ Không đi kèm với chương trình khác">
 												</div>
 
 
-												<div class="swiper-slide">
+												<div class="swiper-slide" style="width: 298px; margin-right: 10px;">
 													<div class="box-coupon">
 														<div class="mask-ticket"></div>
 														<div class="image">
-															<img width="88" height="88" class="lazyload" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="//bizweb.dktcdn.net/100/506/650/themes/944598/assets/img_coupon_4.jpg?1728460505311" alt="KOIFSFREESHIP">
+															<img width="88" height="88" class="lazyload" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="//bizweb.dktcdn.net/100/506/650/themes/944598/assets/img_coupon_4.jpg?1728460505311" alt="NESTFREESHIP">
 														</div>
 														<div class="content_wrap">
 															<a title="Chi tiết" href="javascript:void(0)" class="info-button" data-coupon="KOIFSFREESHIP" data-time="25/12/2024" data-content="Miễn phí giao hàng (tối đa 30k) cho đơn hàng từ <b>1,000,000đ</b> trở lên">
@@ -939,20 +1046,20 @@ Không đi kèm với chương trình khác">
 
 
 											</div>
-											<div class="swiper-button-prev">
+											<div class="swiper-button-prev swiper-button-disabled">
 												<svg width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
-													<rect x="2.13003" y="29" width="38" height="38" transform="rotate(-45 2.13003 29)" stroke="black" fill="#fff" stroke-width="2" />
-													<rect x="8" y="29.2133" width="30" height="30" transform="rotate(-45 8 29.2133)" fill="black" />
-													<path d="M18.5 29H39.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-													<path d="M29 18.5L39.5 29L29 39.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+													<rect x="2.13003" y="29" width="38" height="38" transform="rotate(-45 2.13003 29)" stroke="black" fill="#fff" stroke-width="2"></rect>
+													<rect x="8" y="29.2133" width="30" height="30" transform="rotate(-45 8 29.2133)" fill="black"></rect>
+													<path d="M18.5 29H39.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+													<path d="M29 18.5L39.5 29L29 39.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
 												</svg>
 											</div>
 											<div class="swiper-button-next">
 												<svg width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
-													<rect x="2.13003" y="29" width="38" height="38" transform="rotate(-45 2.13003 29)" stroke="black" fill="#fff" stroke-width="2" />
-													<rect x="8" y="29.2133" width="30" height="30" transform="rotate(-45 8 29.2133)" fill="black" />
-													<path d="M18.5 29H39.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-													<path d="M29 18.5L39.5 29L29 39.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+													<rect x="2.13003" y="29" width="38" height="38" transform="rotate(-45 2.13003 29)" stroke="black" fill="#fff" stroke-width="2"></rect>
+													<rect x="8" y="29.2133" width="30" height="30" transform="rotate(-45 8 29.2133)" fill="black"></rect>
+													<path d="M18.5 29H39.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+													<path d="M29 18.5L39.5 29L29 39.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
 												</svg>
 											</div>
 										</div>
@@ -965,7 +1072,6 @@ Không đi kèm với chương trình khác">
 				</div>
 			</div>
 		</section>
-
 		<div class="popup-coupon">
 			<div class="content">
 				<div class="title">
@@ -994,10 +1100,10 @@ Không đi kèm với chương trình khác">
 
 
 
-		<script src='~/js/sweetalert-min.js'></script>
+		<script src="~/js/sweetalert-min.js"></script>
 
 
-		<link rel="preload" as="script" href="~/js/bootstrap-datepicker.js" />
+		<link rel="preload" as="script" href="~/js/bootstrap-datepicker.js">
 		<script src="~/js/bootstrap-datepicker.js" type="text/javascript"></script>
 		<script>
 			$(document).ready(function(){
@@ -1013,7 +1119,7 @@ Không đi kèm với chương trình khác">
 				setTimeout(function(){$('.colrightvat').removeClass('d-none')},300)
 			})
 		</script>
-		<script src="~/js/cookie.js" type="text/javascript"></script>
+		<script src="~/js/cookie.js"></script>
 		<script>
 
 			function setCookie(cname, cvalue, exdays) {
@@ -1141,9 +1247,9 @@ Không đi kèm với chương trình khác">
 						  $(this).after('<span class="text-danger">Mã số thuế phải tối thiểu 10 ký tự</span>');
 						}
 						if ($(this).hasClass('val-email')
-								&& !(/^\w+([\.-]?\w+)*\w+([\.-]?\w+)*(\.\w{2,3})+$/.test($(this).val().trim()))) {
-								$(this).after('<span class="text-danger">Định dạng email không đúng</span>');
-							}
+									   if ($(this).hasClass('val-email') && !(/^\w+([\.-]?\w+)*(\.\w{2,3})+$/.test($(this).val().trim()))) {
+									$(this).after('<span class="text-danger">Định dạng không đúng</span>');
+								}
 
 					}
 				})
@@ -1175,10 +1281,11 @@ Không đi kèm với chương trình khác">
 							 if($(this).hasClass('val-n') && $(this).val().trim().length < Number('10')) {
 								 isValidated = false;
 							 }
-									if ($(this).hasClass('val-email') && !(/^\w+([\.-]?\w+)*\w+([\.-]?\w+)*(\.\w{2,3})+$/.test($(this).val().trim()))) {
+									if ($(this).hasClass('val-email') && !(/^\w+([\.-]?\w+)*(\.\w{2,3})+$/.test($(this).val().trim()))) {
 										isValidated = false;
 									}
-								}
+
+						 }
 					 })
 
 					 if (isValidated) {
@@ -1205,10 +1312,10 @@ Không đi kèm với chương trình khác">
 							   && $(this).val().trim().length < Number('10')) {
 							  $(this).after('<span class="text-danger">Mã số thuế phải tối thiểu 10 ký tự nè</span>');
 							}
-										if ($(this).hasClass('val-email')
-											&& !(/^\w+([\.-]?\w+)*\w+([\.-]?\w+)*(\.\w{2,3})+$/.test($(this).val().trim()))) {
-											$(this).after('<span class="text-danger">Định dạng email không đúng</span>');
-										}
+							if ($(this).hasClass('val-email')
+										if ($(this).hasClass('val-email') && !(/^\w+([\.-]?\w+)*(\.\w{2,3})+$/.test($(this).val().trim()))) {
+												$(this).after('<span class="text-danger">Định dạng không đúng</span>');
+											}
 
 						  }
 						})
@@ -1284,10 +1391,14 @@ Không đi kèm với chương trình khác">
 			});
 		</script>
 		<div id="js-global-alert" class="alert alert-success" role="alert">
-			<button type="button" class="close"><span aria-hidden="true"><span aria-hidden="true">&times;</span></span></button>
+			<button type="button" class="close"><span aria-hidden="true"><span aria-hidden="true">×</span></span></button>
 			<h5 class="alert-heading"></h5>
 			<p class="alert-content"></p>
 		</div>
+
+
+
+
 
 
 
@@ -1321,656 +1432,7 @@ Không đi kèm với chương trình khác">
 	<link rel="preload" as="style" href="~/css/ajaxcart.scss.css" type="text/css">
 	<link href="~/css/ajaxcart.scss.css" rel="stylesheet" type="text/css" media="all" />
 	<div class="backdrop__body-backdrop___1rvky"></div>
-	<script type="text/javascript">
-		//api bizweb
-		window.Bizweb || (window.Bizweb = {}), Bizweb.mediaDomainName = "//bizweb.dktcdn.net/", Bizweb.each = function (a, b) { for (var c = 0; c < a.length; c++)b(a[c], c) }, Bizweb.getClass = function (a) { return Object.prototype.toString.call(a).slice(8, -1) }, Bizweb.map = function (a, b) { for (var c = [], d = 0; d < a.length; d++)c.push(b(a[d], d)); return c }, Bizweb.arrayContains = function (a, b) { for (var c = 0; c < a.length; c++)if (a[c] == b) return !0; return !1 }, Bizweb.distinct = function (a) { for (var b = [], c = 0; c < a.length; c++)Bizweb.arrayContains(b, a[c]) || b.push(a[c]); return b }, Bizweb.getUrlParameter = function (a) { var b = RegExp("[?&]" + a + "=([^&]*)").exec(window.location.search); return b && decodeURIComponent(b[1].replace(/\+/g, " ")) }, Bizweb.uniq = function (a) { for (var b = [], c = 0; c < a.length; c++)Bizweb.arrayIncludes(b, a[c]) || b.push(a[c]); return b }, Bizweb.arrayIncludes = function (a, b) { for (var c = 0; c < a.length; c++)if (a[c] == b) return !0; return !1 }, Bizweb.Product = function () { function a(a) { if ("undefined" != typeof a) for (property in a) this[property] = a[property] } return a.prototype.optionNames = function () { return "Array" == Bizweb.getClass(this.options) ? this.options : [] }, a.prototype.optionValues = function (a) { if ("undefined" == typeof this.variants) return null; var b = Bizweb.map(this.variants, function (b) { var c = "option" + (a + 1); return "undefined" == typeof b[c] ? null : b[c] }); return null == b[0] ? null : Bizweb.distinct(b) }, a.prototype.getVariant = function (a) { var b = null; return a.length != this.options.length ? null : (Bizweb.each(this.variants, function (c) { for (var d = !0, e = 0; e < a.length; e++) { var f = "option" + (e + 1); c[f] != a[e] && (d = !1) } if (d) return void (b = c) }), b) }, a.prototype.getVariantById = function (a) { for (var b = 0; b < this.variants.length; b++) { var c = this.variants[b]; if (c.id == a) return c } return null }, a.name = "Product", a }(), Bizweb.money_format = " VND", Bizweb.formatMoney = function (a, b) { function f(a, b, c, d) { if ("undefined" == typeof b && (b = 2), "undefined" == typeof c && (c = "."), "undefined" == typeof d && (d = ","), "undefined" == typeof a || null == a) return 0; a = a.toFixed(b); var e = a.split("."), f = e[0].replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1" + c), g = e[1] ? d + e[1] : ""; return f + g } "string" == typeof a && (a = a.replace(/\./g, ""), a = a.replace(/\,/g, "")); var c = "", d = /\{\{\s*(\w+)\s*\}\}/, e = b || this.money_format; switch (e.match(d)[1]) { case "amount": c = f(a, 2); break; case "amount_no_decimals": c = f(a, 0); break; case "amount_with_comma_separator": c = f(a, 2, ".", ","); break; case "amount_no_decimals_with_comma_separator": c = f(a, 0, ".", ",") }return e.replace(d, c) }, Bizweb.OptionSelectors = function () { function a(a, b) { return this.selectorDivClass = "selector-wrapper", this.selectorClass = "single-option-selector", this.variantIdFieldIdSuffix = "-variant-id", this.variantIdField = null, this.selectors = [], this.domIdPrefix = a, this.product = new Bizweb.Product(b.product), "undefined" != typeof b.onVariantSelected ? this.onVariantSelected = b.onVariantSelected : this.onVariantSelected = function () { }, this.replaceSelector(a), this.initDropdown(), !0 } return a.prototype.replaceSelector = function (a) { var b = document.getElementById(a), c = b.parentNode; Bizweb.each(this.buildSelectors(), function (a) { c.insertBefore(a, b) }), b.style.display = "none", this.variantIdField = b }, a.prototype.buildSelectors = function () { for (var a = 0; a < this.product.optionNames().length; a++) { var b = new Bizweb.SingleOptionSelector(this, a, this.product.optionNames()[a], this.product.optionValues(a)); b.element.disabled = !1, this.selectors.push(b) } var c = this.selectorDivClass, d = this.product.optionNames(), e = Bizweb.map(this.selectors, function (a) { var b = document.createElement("div"); if (b.setAttribute("class", c), d.length > 1) { var e = document.createElement("label"); e.htmlFor = a.element.id, e.innerHTML = a.name, b.appendChild(e) } return b.appendChild(a.element), b }); return e }, a.prototype.initDropdown = function () { var a = { initialLoad: !0 }, b = this.selectVariantFromDropdown(a); if (!b) { var c = this; setTimeout(function () { c.selectVariantFromParams(a) || c.selectors[0].element.onchange(a) }) } }, a.prototype.selectVariantFromDropdown = function (a) { var b = document.getElementById(this.domIdPrefix).querySelector("[selected]"); return !!b && this.selectVariant(b.value, a) }, a.prototype.selectVariantFromParams = function (a) { var b = Bizweb.getUrlParameter("variantid"); return null == b && (b = Bizweb.getUrlParameter("variantId")), this.selectVariant(b, a) }, a.prototype.selectVariant = function (a, b) { var c = this.product.getVariantById(a); if (null == c) return !1; for (var d = 0; d < this.selectors.length; d++) { var e = this.selectors[d].element, f = e.getAttribute("data-option"), g = c[f]; null != g && this.optionExistInSelect(e, g) && (e.value = g) } return "undefined" != typeof jQuery ? jQuery(this.selectors[0].element).trigger("change", b) : this.selectors[0].element.onchange(b), !0 }, a.prototype.optionExistInSelect = function (a, b) { for (var c = 0; c < a.options.length; c++)if (a.options[c].value == b) return !0 }, a.prototype.updateSelectors = function (a, b) { var c = this.selectedValues(), d = this.product.getVariant(c); d ? (this.variantIdField.disabled = !1, this.variantIdField.value = d.id) : this.variantIdField.disabled = !0, this.onVariantSelected(d, this, b), null != this.historyState && this.historyState.onVariantChange(d, this, b) }, a.prototype.selectedValues = function () { for (var a = [], b = 0; b < this.selectors.length; b++) { var c = this.selectors[b].element.value; a.push(c) } return a }, a.name = "OptionSelectors", a }(), Bizweb.SingleOptionSelector = function (a, b, c, d) { this.multiSelector = a, this.values = d, this.index = b, this.name = c, this.element = document.createElement("select"); for (var e = 0; e < d.length; e++) { var f = document.createElement("option"); f.value = d[e], f.innerHTML = d[e], this.element.appendChild(f) } return this.element.setAttribute("class", this.multiSelector.selectorClass), this.element.setAttribute("data-option", "option" + (b + 1)), this.element.id = a.domIdPrefix + "-option-" + b, this.element.onchange = function (c, d) { d = d || {}, a.updateSelectors(b, d) }, !0 }, Bizweb.Image = { preload: function (a, b) { for (var c = 0; c < a.length; c++) { var d = a[c]; this.loadImage(this.getSizedImageUrl(d, b)) } }, loadImage: function (a) { (new Image).src = a }, switchImage: function (a, b, c) { if (a && b) { var d = this.imageSize(b.src), e = this.getSizedImageUrl(a.src, d); c ? c(e, a, b) : b.src = e } }, imageSize: function (a) { var b = a.match(/thumb\/(1024x1024|2048x2048|pico|icon|thumb|small|compact|medium|large|grande)\//); return null != b ? b[1] : null }, getSizedImageUrl: function (a, b) { if (null == b) return a; if ("master" == b) return this.removeProtocol(a); var c = a.match(/\.(jpg|jpeg|gif|png|bmp|bitmap|tiff|tif)(\?v=\d+)?$/i); if (null != c) { var d = Bizweb.mediaDomainName + "thumb/" + b + "/"; return this.removeProtocol(a).replace(Bizweb.mediaDomainName, d).split("?")[0] } return null }, removeProtocol: function (a) { return a.replace(/http(s)?:/, "") } };
-		function floatToString(t, r) { var e = t.toFixed(r).toString(); return e.match(/^\.\d+/) ? "0" + e : e } function attributeToString(t) { return "string" != typeof t && (t += "", "undefined" === t && (t = "")), jQuery.trim(t) } "undefined" == typeof Bizweb && (Bizweb = {}); Bizweb.mediaDomainName = "//bizweb.dktcdn.net/"; Bizweb.money_format = "$", Bizweb.onError = function (XMLHttpRequest, textStatus) { var data = eval("(" + XMLHttpRequest.responseText + ")"); alert(data.message ? data.message + "(" + data.status + "): " + data.description : "Error : " + Bizweb.fullMessagesFromErrors(data).join("; ") + ".") }, Bizweb.fullMessagesFromErrors = function (t) { var r = []; return jQuery.each(t, function (t, e) { jQuery.each(e, function (e, o) { r.push(t + " " + o) }) }), r }, Bizweb.onCartUpdate = function (t) { alert("There are now " + t.item_count + " items in the cart.") }, Bizweb.onCartShippingRatesUpdate = function (t, r) { var e = ""; r.zip && (e += r.zip + ", "), r.province && (e += r.province + ", "), e += r.country, alert("There are " + t.length + " shipping rates available for " + e + ", starting at " + Bizweb.formatMoney(t[0].price) + ".") }, Bizweb.onItemAdded = function (t) { /*alert(t.title + " was added to your shopping cart.")*/ }, Bizweb.onProduct = function (t) { alert("Received everything we ever wanted to know about " + t.title) }, Bizweb.formatMoney = function (amount, moneyFormat) { function getDefault(value, defaultValue) { if (typeof value == "undefined") return defaultValue; return value; } function formatMoney(amount, decimal, thousandSeperate, decimalSeperate) { decimal = getDefault(decimal, 2); thousandSeperate = getDefault(thousandSeperate, ","); decimalSeperate = getDefault(decimalSeperate, "."); if (isNaN(amount) || null == amount) return 0; amount = amount.toFixed(decimal); var amountParts = amount.split("."); var integer = amountParts[0].replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1" + thousandSeperate); var decimal = amountParts[1] ? decimalSeperate + amountParts[1] : ""; return integer + decimal; } if (typeof amount == "string") { amount = amount.replace(".", ""); amount = amount.replace(",", ""); } var result = ""; var moneyRegex = /\{\{\s*(\w+)\s*\}\}/; moneyFormat = moneyFormat || this.money_format; switch (moneyFormat.match(moneyRegex)[1]) { case "amount": result = formatMoney(amount, 2); break; case "amount_no_decimals": result = formatMoney(amount, 0); break; case "amount_with_comma_separator": result = formatMoney(amount, 2, ".", ","); break; case "amount_no_decimals_with_comma_separator": result = formatMoney(amount, 0, ".", ",") } return moneyFormat.replace(moneyRegex, result) }, Bizweb.resizeImage = function (t, r) { try { if ("original" == r) return t; var thumbDomain = Bizweb.mediaDomainName + "thumb/" + r + "/"; return t.replace(Bizweb.mediaDomainName, thumbDomain).split('?')[0]; } catch (o) { return t } }, Bizweb.addItem = function (t, r, e) { var r = r || 1, o = { type: "POST", url: "/cart/add.js", data: "quantity=" + r + "&VariantId=" + t, dataType: "json", success: function (t) { "function" == typeof e ? e(t) : Bizweb.onItemAdded(t) }, error: function (t, r) { Bizweb.onError(t, r) } }; jQuery.ajax(o) }, Bizweb.addItemFromForm = function (t, r) { var e = { type: "POST", url: "/cart/add.js", data: jQuery("#" + t).serialize(), dataType: "json", success: function (t) { "function" == typeof r ? r(t) : Bizweb.onItemAdded(t) }, error: function (t, r) { Bizweb.onError(t, r) } }; jQuery.ajax(e) }, Bizweb.getCart = function (t) { jQuery.getJSON("/cart.js", function (r) { "function" == typeof t ? t(r) : Bizweb.onCartUpdate(r) }) }, Bizweb.pollForCartShippingRatesForDestination = function (t, r, e) { e = e || Bizweb.onError; var o = function () { jQuery.ajax("/cart/async_shipping_rates", { dataType: "json", success: function (e, n, a) { 200 === a.status ? "function" == typeof r ? r(e.shipping_rates, t) : Bizweb.onCartShippingRatesUpdate(e.shipping_rates, t) : setTimeout(o, 500) }, error: e }) }; return o }, Bizweb.getCartShippingRatesForDestination = function (t, r, e) { e = e || Bizweb.onError; var o = { type: "POST", url: "/cart/prepare_shipping_rates", data: Bizweb.param({ shipping_address: t }), success: Bizweb.pollForCartShippingRatesForDestination(t, r, e), error: e }; jQuery.ajax(o) }, Bizweb.getProduct = function (t, r) { jQuery.getJSON("/products/" + t + ".js", function (t) { "function" == typeof r ? r(t) : Bizweb.onProduct(t) }) }, Bizweb.changeItem = function (t, r, e) { var o = { type: "POST", url: "/cart/change.js", data: "quantity=" + r + "&variantId=" + t, dataType: "json", success: function (t) { "function" == typeof e ? e(t) : Bizweb.onCartUpdate(t) }, error: function (t, r) { Bizweb.onError(t, r) } }; jQuery.ajax(o) }, Bizweb.removeItem = function (t, r) { var e = { type: "POST", url: "/cart/change.js", data: "quantity=0&variantId=" + t, dataType: "json", success: function (t) { "function" == typeof r ? r(t) : Bizweb.onCartUpdate(t) }, error: function (t, r) { Bizweb.onError(t, r) } }; jQuery.ajax(e) }, Bizweb.clear = function (t) { var r = { type: "POST", url: "/cart/clear.js", data: "", dataType: "json", success: function (r) { "function" == typeof t ? t(r) : Bizweb.onCartUpdate(r) }, error: function (t, r) { Bizweb.onError(t, r) } }; jQuery.ajax(r) }, Bizweb.updateCartFromForm = function (t, r) { var e = { type: "POST", url: "/cart/update.js", data: jQuery("#" + t).serialize(), dataType: "json", success: function (t) { "function" == typeof r ? r(t) : Bizweb.onCartUpdate(t) }, error: function (t, r) { Bizweb.onError(t, r) } }; jQuery.ajax(e) }, Bizweb.updateCartAttributes = function (t, r) { var e = ""; jQuery.isArray(t) ? jQuery.each(t, function (t, r) { var o = attributeToString(r.key); "" !== o && (e += "attributes[" + o + "]=" + attributeToString(r.value) + "&") }) : "object" == typeof t && null !== t && jQuery.each(t, function (t, r) { e += "attributes[" + attributeToString(t) + "]=" + attributeToString(r) + "&" }); var o = { type: "POST", url: "/cart/update.js", data: e, dataType: "json", success: function (t) { "function" == typeof r ? r(t) : Bizweb.onCartUpdate(t) }, error: function (t, r) { Bizweb.onError(t, r) } }; jQuery.ajax(o) }, Bizweb.updateCartNote = function (t, r) { var e = { type: "POST", url: "/cart/update.js", data: "note=" + attributeToString(t), dataType: "json", success: function (t) { "function" == typeof r ? r(t) : Bizweb.onCartUpdate(t) }, error: function (t, r) { Bizweb.onError(t, r) } }; jQuery.ajax(e) }, jQuery.fn.jquery >= "1.4" ? Bizweb.param = jQuery.param : (Bizweb.param = function (t) { var r = [], e = function (t, e) { e = jQuery.isFunction(e) ? e() : e, r[r.length] = encodeURIComponent(t) + "=" + encodeURIComponent(e) }; if (jQuery.isArray(t) || t.jquery) jQuery.each(t, function () { e(this.name, this.value) }); else for (var o in t) Bizweb.buildParams(o, t[o], e); return r.join("&").replace(/%20/g, "+") }, Bizweb.buildParams = function (t, r, e) { jQuery.isArray(r) && r.length ? jQuery.each(r, function (r, o) { rbracket.test(t) ? e(t, o) : Bizweb.buildParams(t + "[" + ("object" == typeof o || jQuery.isArray(o) ? r : "") + "]", o, e) }) : null != r && "object" == typeof r ? Bizweb.isEmptyObject(r) ? e(t, "") : jQuery.each(r, function (r, o) { Bizweb.buildParams(t + "[" + r + "]", o, e) }) : e(t, r) }, Bizweb.isEmptyObject = function (t) { for (var r in t) return !1; return !0 });
-		// Handlebars v4.7.7
-		(function (t, e) {
-			"object" == typeof exports && "object" == typeof module ? module.exports = e() : "function" == typeof define && define.amd ? define([], e) : "object" == typeof exports ? exports.Handlebars = e() : t.Handlebars = e();
-		})(this, function () {
-			return function (t) {
-				var e = {};
 
-				function r(s) {
-					if (e[s]) return e[s].exports;
-
-					// Kiểm tra xem t[s] có được định nghĩa trước khi gọi không
-					if (!t[s]) {
-						throw new Error('Module ' + s + ' không được định nghĩa');
-					}
-
-					var n = e[s] = { exports: {}, id: s, loaded: false };
-
-					try {
-						// Kiểm tra t[s] trước khi gọi phương thức call
-						if (typeof t[s] === 'function') {
-							t[s].call(n.exports, n, n.exports, r);
-						} else {
-							console.error('Module ' + s + ' không phải là một function');
-							throw new Error('Module ' + s + ' không phải là một function');
-						}
-					} catch (error) {
-						console.error('Lỗi khi tải module ' + s, error);
-						throw error; // Ném lại lỗi sau khi đã ghi lại
-					}
-
-					n.loaded = true;
-					return n.exports;
-				}
-
-
-				return r.m = t, r.c = e, r.p = "", r(0);
-			}([function (t, e, r) {
-				"use strict";
-				var s = r(1).default;
-				e.__esModule = !0;
-				var n = s(r(2)), i = s(r(45)), o = r(46), a = r(51), c = s(r(52)), l = s(r(49)), u = s(r(44)), p = n.default.create;
-
-				function h() {
-					var t = p();
-					return t.compile = function (e, r) { return a.compile(e, r, t) },
-						t.precompile = function (e, r) { return a.precompile(e, r, t) },
-						t.AST = i.default, t.Compiler = a.Compiler,
-						t.JavaScriptCompiler = c.default,
-						t.Parser = o.parser,
-						t.parse = o.parse,
-						t.parseWithoutProcessing = o.parseWithoutProcessing,
-						t;
-				}
-				var f = h();
-				f.create = h, u.default(f),
-					f.Visitor = l.default,
-					f.default = f, e.default = f,
-					t.exports = e.default;
-			}])
-		});
-		/*============================================================================
-
-		Ajaxcartfy - thuongdq
-		==============================================================================*/
-		window.theme = window.theme || {};
-		var wW = $(window).width();
-		var timeout;
-
-		$('.img_hover_cart').click(function () {
-			$('.cart-sidebar, .backdrop__body-backdrop___1rvky').addClass('active');
-		});
-
-		$(document).on('click', '.backdrop__body-backdrop___1rvky, .cart_btn-close', function () {
-			$('.backdrop__body-backdrop___1rvky, .cart-sidebar, #popup-cart-desktop, .popup-cart-mobile').removeClass('active');
-			return false;
-		})
-
-
-
-		Bizweb.addItemFromForm = function (form, callback, errorCallback) {
-			var params = {
-				type: 'POST',
-				url: '/cart/add.js',
-				data: jQuery(form).serialize(),
-				dataType: 'json',
-				success: function (line_item) {
-					if ((typeof callback) === 'function') {
-						callback(line_item, form);
-						$('.popup-cart-mobile, .backdrop__body-backdrop___1rvky').addClass('active');
-						AddCartMobile(line_item);
-					}
-					/*
-			  else {
-				Bizweb.onItemAdded(line_item, form);
-				$('#popup-cart-desktops, .cart-sidebar, .backdrop__body-backdrop___1rvky').addClass('active');
-			  }
-			  */
-				},
-				error: function (XMLHttpRequest, textStatus) {
-					if ((typeof errorCallback) === 'function') {
-						errorCallback(XMLHttpRequest, textStatus);
-					}
-					else {
-						Bizweb.onError(XMLHttpRequest, textStatus);
-					}
-				}
-			};
-			jQuery.ajax(params);
-		};
-
-		/*========================
-		Popup cart mobile
-		=========================*/
-		function AddCartMobile(line_item) {
-			//console.log(line_item);
-			$('.bodycart-mobile').html('');
-			var imagepop = Bizweb.resizeImage(line_item.image, 'compact');
-			if (imagepop == "null" || imagepop == '' || imagepop == null) {
-				imagepop = 'https://bizweb.dktcdn.net/thumb/compact/assets/themes_support/noimage.gif';
-			}
-			var variant_title = line_item.variant_title;
-			if (variant_title === 'Default Title')
-				variant_title = '';
-			var carttem = ''
-				+ '<div class="thumb-1x1">'
-				+ '<img src="' + imagepop + '" alt="' + line_item.title + '">'
-				+ '</div>'
-				+ '<div class="body_content">'
-				+ '<h4 class="product-title"><a href="' + line_item.url + '" title="' + line_item.title + '">' + line_item.title + '</a></h4>'
-				+ '<span class="variant">' + variant_title + '</span>'
-				+ '<div class="product-new-price">'
-				+ '<b>' + Bizweb.formatMoney(line_item.price, "{{amount_no_decimals_with_comma_separator}}₫") + '</b>'
-				+ '</div>'
-				+ '</div>';
-			$('.bodycart-mobile').append(carttem);
-		}
-
-		/*============================================================================
-		  Override POST to cart/change.js. Returns cart JSON.
-			- Use product's line in the cart instead of ID so custom
-			  product properties are supported.
-		==============================================================================*/
-		Bizweb.changeItem = function (line, quantity, callback) {
-			var params = {
-				type: 'POST',
-				url: '/cart/change.js',
-				data: 'quantity=' + quantity + '&line=' + line,
-				dataType: 'json',
-				success: function (cart) {
-					if ((typeof callback) === 'function') {
-						callback(cart);
-					}
-					else {
-						Bizweb.onCartUpdate(cart);
-					}
-				},
-				error: function (XMLHttpRequest, textStatus) {
-					Bizweb.onError(XMLHttpRequest, textStatus);
-				}
-			};
-			jQuery.ajax(params);
-		};
-
-		/*============================================================================
-		  GET cart.js returns the cart in JSON.
-		==============================================================================*/
-		Bizweb.getCart = function (callback) {
-			jQuery.getJSON('/cart.js', function (cart, textStatus) {
-				if ((typeof callback) === 'function') {
-					callback(cart);
-				}
-				else {
-					Bizweb.onCartUpdate(cart);
-				}
-			});
-		};
-
-		/*============================================================================
-		  Ajax Bizweb Add To Cart
-		==============================================================================*/
-		var ajaxCart = (function (module, $) {
-
-			'use strict';
-
-			// Public functions
-			var init, loadCart;
-
-			// Private general variables
-			var settings, isUpdating, $body;
-
-			// Private plugin variables
-			var $formContainer, $errorsContainer, $addToCart, $cartCountSelector, $nameItemAdd, $cartCostSelector, $cartContainer, $cartContainerMobile, $cartContainerPage, $cartPopup, $cartContainerHeader, $cartContainerSidebar, $countItem, $cartFooterPage;
-
-			// Private functions
-			var updateCountPrice, formOverride, itemAddedCallback, itemAddedNoti, itemErrorCallback, cartUpdateCallback, buildCart, cartCallback, adjustCart, adjustCartCallback, qtySelectors, validateQty;
-
-			/*============================================================================
-			Initialise the plugin and define global options
-		  ==============================================================================*/
-			init = function (options) {
-
-				// Default settings
-				settings = {
-					formSelector: '[data-cart-form]',
-					errorSelector: '.product-single__errors',
-					cartContainer: '.CartSideContainer, .CartPageContainer, .CartHeaderContainer, .cartPopupContainer, .CartMobileContainer',
-					cartContainerSidebar: '.CartSideContainer',
-					cartContainerPage: '.CartPageContainer',
-					cartContainerMobile: '.CartMobileContainer',
-					cartContainerHeader: '.CartHeaderContainer',
-					cartContainerPopup: '.cartPopupContainer',
-					addToCartSelector: '.add_to_cart',
-					countItem: '.count_item_pr',
-					cartCountSelector: '.count_item_pr',
-					nameItemAdd: '.cart-popup-name',
-					cartFooterPage: '.col-cart-right .ajaxcart__footer .summary-total',
-					cartCostSelector: null,
-					moneyFormat: '${{amount_no_decimals_with_comma_separator}}₫',
-					disableAjaxCart: false,
-					enableQtySelectors: true
-				};
-
-				// Override defaults with arguments
-				$.extend(settings, options);
-
-				// Select DOM elements
-				$formContainer = $(settings.formSelector);
-				$errorsContainer = $(settings.errorSelector);
-				$cartContainer = $(settings.cartContainer);
-				$cartContainerSidebar = $(settings.cartContainerSidebar);
-				$cartContainerPage = $(settings.cartContainerPage);
-				$cartContainerMobile = $(settings.cartContainerMobile);
-				$cartContainerHeader = $(settings.cartContainerHeader);
-				$cartPopup = $(settings.cartContainerPopup);
-				$addToCart = $formContainer.find(settings.addToCartSelector);
-				$nameItemAdd = $(settings.nameItemAdd);
-				$cartCountSelector = $(settings.cartCountSelector);
-				$cartCostSelector = $(settings.cartCostSelector);
-				$countItem = $(settings.countItem);
-				$cartFooterPage = $(settings.cartFooterPage);
-
-				// General Selectors
-				$body = $('body');
-
-				// Track cart activity status
-				isUpdating = false;
-
-				// Setup ajax quantity selectors on the any template if enableQtySelectors is true
-				if (settings.enableQtySelectors) {
-					qtySelectors();
-				}
-
-				// Take over the add to cart form submit action if ajax enabled
-				if (!settings.disableAjaxCart && $addToCart.length) {
-					formOverride();
-				}
-
-				// Run this function in case we're using the quantity selector outside of the cart
-				adjustCart();
-			};
-
-			loadCart = function () {
-				Bizweb.getCart(cartUpdateCallback);
-			};
-
-			updateCountPrice = function (cart) {
-				if ($cartCountSelector) {
-					$cartCountSelector.html(cart.item_count).removeClass('hidden-count');
-
-					if (cart.item_count === 0) {
-						$cartCountSelector.addClass('hidden-count');
-					}
-				}
-
-				if ($cartCostSelector) {
-					$cartCostSelector.html(Bizweb.formatMoney(cart.total_price, settings.moneyFormat));
-				}
-			};
-
-			formOverride = function () {
-				$formContainer.on('submit', function (evt) {
-					evt.preventDefault();
-					$addToCart.removeClass('is-added').addClass('is-adding');
-					$('.qty-error').remove();
-					Bizweb.addItemFromForm(evt.target, itemAddedCallback, itemErrorCallback);
-				});
-			};
-
-			itemAddedCallback = function (product) {
-				$addToCart.removeClass('is-adding').addClass('is-added');
-				Bizweb.getCart(cartUpdateCallback);
-				$nameItemAdd.html(product.title).attr('href', product.url, 'title', product.title);
-			};
-
-			itemErrorCallback = function (XMLHttpRequest, textStatus) {
-				var data = eval('(' + XMLHttpRequest.responseText + ')');
-				$addToCart.removeClass('is-adding is-added');
-
-				$cartContainer.trigger('ajaxCart.updatedQty');
-
-				if (!!data.message) {
-					if (data.status == 422) {
-						$errorsContainer.html('<div class="errors qty-error">' + data.description + '</div>')
-					}
-				}
-			};
-
-			cartUpdateCallback = function (cart) {
-				// Update quantity and price
-				updateCountPrice(cart);
-				buildCart(cart);
-
-			};
-
-			buildCart = function (cart) {
-				// Start with a fresh cart div
-				var itemListScrollTop = $('.CartHeaderContainer .ajaxcart__inner').scrollTop(),
-					itemPopupScrollTop = $('.cartPopupContainer .ajaxcart__inner').scrollTop(),
-					itemSideCartScrollTop = $('.CartSideContainer .ajaxcart__inner').scrollTop();
-				$cartContainer.empty();
-
-				// Show empty cart
-				if (cart.item_count === 0) {
-					$cartContainer
-						.append('<div class="cart--empty-message"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 201.387 201.387" style="enable-background:new 0 0 201.387 201.387;" xml:space="preserve"> <g> <g> <path d="M129.413,24.885C127.389,10.699,115.041,0,100.692,0C91.464,0,82.7,4.453,77.251,11.916    c-1.113,1.522-0.78,3.657,0.742,4.77c1.517,1.109,3.657,0.78,4.768-0.744c4.171-5.707,10.873-9.115,17.93-9.115    c10.974,0,20.415,8.178,21.963,19.021c0.244,1.703,1.705,2.932,3.376,2.932c0.159,0,0.323-0.012,0.486-0.034    C128.382,28.479,129.679,26.75,129.413,24.885z"/> </g> </g> <g> <g> <path d="M178.712,63.096l-10.24-17.067c-0.616-1.029-1.727-1.657-2.927-1.657h-9.813c-1.884,0-3.413,1.529-3.413,3.413    s1.529,3.413,3.413,3.413h7.881l6.144,10.24H31.626l6.144-10.24h3.615c1.884,0,3.413-1.529,3.413-3.413s-1.529-3.413-3.413-3.413    h-5.547c-1.2,0-2.311,0.628-2.927,1.657l-10.24,17.067c-0.633,1.056-0.648,2.369-0.043,3.439s1.739,1.732,2.97,1.732h150.187    c1.231,0,2.364-0.662,2.97-1.732S179.345,64.15,178.712,63.096z"/> </g> </g> <g> <g> <path d="M161.698,31.623c-0.478-0.771-1.241-1.318-2.123-1.524l-46.531-10.883c-0.881-0.207-1.809-0.053-2.579,0.423    c-0.768,0.478-1.316,1.241-1.522,2.123l-3.509,15c-0.43,1.835,0.71,3.671,2.546,4.099c1.835,0.43,3.673-0.71,4.101-2.546    l2.732-11.675l39.883,9.329l-6.267,26.795c-0.43,1.835,0.71,3.671,2.546,4.099c0.263,0.061,0.524,0.09,0.782,0.09    c1.55,0,2.953-1.062,3.318-2.635l7.045-30.118C162.328,33.319,162.176,32.391,161.698,31.623z"/> </g> </g> <g> <g> <path d="M102.497,39.692l-3.11-26.305c-0.106-0.899-0.565-1.72-1.277-2.28c-0.712-0.56-1.611-0.816-2.514-0.71l-57.09,6.748    c-1.871,0.222-3.209,1.918-2.988,3.791l5.185,43.873c0.206,1.737,1.679,3.014,3.386,3.014c0.133,0,0.27-0.009,0.406-0.024    c1.87-0.222,3.208-1.918,2.988-3.791l-4.785-40.486l50.311-5.946l2.708,22.915c0.222,1.872,1.91,3.202,3.791,2.99    C101.379,43.261,102.717,41.564,102.497,39.692z"/> </g> </g> <g> <g> <path d="M129.492,63.556l-6.775-28.174c-0.212-0.879-0.765-1.64-1.536-2.113c-0.771-0.469-1.696-0.616-2.581-0.406L63.613,46.087    c-1.833,0.44-2.961,2.284-2.521,4.117l3.386,14.082c0.44,1.835,2.284,2.964,4.116,2.521c1.833-0.44,2.961-2.284,2.521-4.117    l-2.589-10.764l48.35-11.626l5.977,24.854c0.375,1.565,1.775,2.615,3.316,2.615c0.265,0,0.533-0.031,0.802-0.096    C128.804,67.232,129.932,65.389,129.492,63.556z"/> </g> </g> <g> <g> <path d="M179.197,64.679c-0.094-1.814-1.592-3.238-3.41-3.238H25.6c-1.818,0-3.316,1.423-3.41,3.238l-6.827,133.12    c-0.048,0.934,0.29,1.848,0.934,2.526c0.645,0.677,1.539,1.062,2.475,1.062h163.84c0.935,0,1.83-0.384,2.478-1.062    c0.643-0.678,0.981-1.591,0.934-2.526L179.197,64.679z M22.364,194.56l6.477-126.293h143.701l6.477,126.293H22.364z"/> </g> </g> <g> <g> <path d="M126.292,75.093c-5.647,0-10.24,4.593-10.24,10.24c0,5.647,4.593,10.24,10.24,10.24c5.647,0,10.24-4.593,10.24-10.24    C136.532,79.686,131.939,75.093,126.292,75.093z M126.292,88.747c-1.883,0-3.413-1.531-3.413-3.413s1.531-3.413,3.413-3.413    c1.882,0,3.413,1.531,3.413,3.413S128.174,88.747,126.292,88.747z"/> </g> </g> <g> <g> <path d="M75.092,75.093c-5.647,0-10.24,4.593-10.24,10.24c0,5.647,4.593,10.24,10.24,10.24c5.647,0,10.24-4.593,10.24-10.24    C85.332,79.686,80.739,75.093,75.092,75.093z M75.092,88.747c-1.882,0-3.413-1.531-3.413-3.413s1.531-3.413,3.413-3.413    s3.413,1.531,3.413,3.413S76.974,88.747,75.092,88.747z"/> </g> </g> <g> <g> <path d="M126.292,85.333h-0.263c-1.884,0-3.413,1.529-3.413,3.413c0,0.466,0.092,0.911,0.263,1.316v17.457    c0,12.233-9.953,22.187-22.187,22.187s-22.187-9.953-22.187-22.187V88.747c0-1.884-1.529-3.413-3.413-3.413    s-3.413,1.529-3.413,3.413v18.773c0,15.998,13.015,29.013,29.013,29.013s29.013-13.015,29.013-29.013V88.747    C129.705,86.863,128.176,85.333,126.292,85.333z"/> </g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> </svg><p>Giỏ hàng của bạn đang trống</p></div>');
-					$countItem.html('0');
-					$('.main-cart-page').addClass('is-empty');
-					$('.cartbar-mobile').attr('data-count-pr', '0');
-					cartCallback(cart);
-					return;
-				}
-
-				// Handlebars.js cart layout
-				var wW = $(window).width(),
-					items = [],
-					item = {},
-					data = {},
-					sourceSideCart = $("#SideCartTemplate").html(), // lấy template sidebar cart
-					sourceCartTemp = $("#CartTemplate").html(), // lấy template page cart
-					sourceCartMobileTemp = $("#CartMobileTemplate").html(), // lấy template page cart mobile
-					sourceCartHeaderTemp = $("#CartHeaderTemplate").html(), // lấy template header cart
-					sourceCartPopTemp = $("#CartPopupTemplate").html(), // lấy template popup cart
-					sourceFooteCartTemp = $("#FooterCartTemplate").html(),
-					templateSideCart = Handlebars.compile(sourceSideCart), // biên dịch
-					templateCartPage = Handlebars.compile(sourceCartTemp), // biên dịch
-					templateCartPop = Handlebars.compile(sourceCartPopTemp), // biên dịch
-					templateCartMobile = Handlebars.compile(sourceCartMobileTemp),
-					templateCartFooter = Handlebars.compile(sourceFooteCartTemp),
-					templateCartHeader = Handlebars.compile(sourceCartHeaderTemp); // biên dịch
-
-				// Add each item to our handlebars.js data
-				$.each(cart.items, function (index, cartItem) {
-
-					// lấy ảnh check xem có ảnh không
-					var prodImg = Bizweb.resizeImage(cartItem.image, 'compact');
-					if (prodImg == "null" || prodImg == '' || prodImg == null) {
-						prodImg = 'https://bizweb.dktcdn.net/thumb/compact/assets/themes_support/noimage.gif';
-					}
-
-					// lấy properties cart
-					if (cartItem.properties !== null) {
-						$.each(cartItem.properties, function (key, value) {
-							if (key.charAt(0) === '_' || !value) {
-								delete cartItem.properties[key];
-							}
-						});
-					}
-
-					var unitPrice = null;
-					if (cartItem.unit_price_measurement) {
-						unitPrice = {
-							addRefererenceValue:
-								cartItem.unit_price_measurement.reference_value !== 1,
-							price: Bizweb.formatMoney(
-								cartItem.unit_price, settings.moneyFormat
-							),
-							reference_value: cartItem.unit_price_measurement.reference_value,
-							reference_unit: cartItem.unit_price_measurement.reference_unit
-						};
-					}
-					// Create item's data object and add to 'items' array
-					// check variant title có không
-					var variant_title = cartItem.variant_title;
-					if (variant_title === 'Default Title')
-						variant_title = '';
-					// gán giá trị cho từng key của template
-					//console.log(cartItem);
-					item = {
-						key: cartItem.key,
-						line: index + 1, // Bizweb uses a 1+ index in the API
-						url: cartItem.url,
-						key: cartItem.key,
-						img: prodImg,
-						name: cartItem.title,
-						variation: variant_title,
-						sellingPlanAllocation: cartItem.selling_plan_allocation,
-						properties: cartItem.properties,
-						itemAdd: cartItem.quantity + 1,
-						itemMinus: cartItem.quantity - 1,
-						itemQty: cartItem.quantity,
-						price: Bizweb.formatMoney(cartItem.price, settings.moneyFormat),
-						vendor: cartItem.vendor,
-						unitPrice: unitPrice,
-						linePrice: Bizweb.formatMoney(cartItem.line_price, settings.moneyFormat),
-						originalLinePrice: Bizweb.formatMoney(cartItem.original_line_price, settings.moneyFormat)
-					};
-
-					items.push(item);
-				});
-
-				// Gather all cart data and add to DOM
-				// Xuất items, ghi chú, tổng giá
-				data = {
-					items: items,
-					note: cart.note,
-					totalPrice: Bizweb.formatMoney(cart.total_price, settings.moneyFormat)
-				}
-				$cartFooterPage.html(templateCartFooter(data));
-				if (wW < 1199) {
-					$cartContainerMobile.append(templateCartMobile(data));  // chèn line item vào template cart mobile
-				}
-				if (wW > 992) {
-					$cartContainerHeader.append(templateCartHeader(data));  // chèn line item vào template cart header
-				}
-				if (wW > 1200) {
-					$cartContainerPage.append(templateCartPage(data));  // chèn line item vào template cart page
-					$cartPopup.append(templateCartPop(data));  // chèn line item vào template cart header
-				}
-				$('.main-cart-page').removeClass('is-empty');
-				$cartContainerSidebar.append(templateSideCart(data)); // chèn line item vào template cart sidebar
-				$countItem.html(cart.item_count);  // Đếm số lượng sp đang có trong giỏ hàng
-				$('.cartbar-mobile').attr('data-count-pr', cart.item_count);
-
-				$('.CartHeaderContainer .ajaxcart__inner').scrollTop(itemListScrollTop);
-				$('.cartPopupContainer .ajaxcart__inner').scrollTop(itemPopupScrollTop);
-				$('.CartSideContainer .ajaxcart__inner').scrollTop(itemSideCartScrollTop);
-				cartCallback(cart);
-			};
-			cartCallback = function (cart) {
-				$cartContainer.trigger('ajaxCart', cart);
-			};
-
-			adjustCart = function () {
-				// Delegate all events because elements reload with the cart
-
-				// Thêm giảm số lượng
-				$cartContainer.on('click', '.items-count', function () {
-					if (isUpdating) return;
-
-
-					var $el = $(this),
-						line = $el.data('line'),
-						$qtySelector = $el.siblings('.number-sidebar'),
-						qty = parseInt($qtySelector.val().replace(/\D/g, ''));
-
-					var qty = validateQty(qty);
-
-					// Add or subtract from the current quantity
-					if ($el.hasClass('ajaxcart__qty--plus')) {
-						qty += 1;
-					} else {
-						qty -= 1;
-						if (qty <= 0) qty = 0;
-					}
-
-					// If it has a data-line, update the cart.
-					// Otherwise, just update the input's number
-					if (line) {
-						updateQuantity(line, qty);
-					} else {
-						$qtySelector.val(qty);
-					}
-				});
-
-				// Update quantity based on input on change
-				$cartContainer.on('change', '.number-sidebar', function () {
-					if (isUpdating) return;
-
-					var $el = $(this),
-						line = $el.data('line'),
-						qty = parseInt($el.val().replace(/\D/g, ''));
-
-					var qty = validateQty(qty);
-
-					// If it has a data-line, update the cart
-					if (line) {
-						updateQuantity(line, qty);
-					}
-				});
-
-				$cartContainer.on('click', '.remove-item-cart', function (evt) {
-					var $el = $(this),
-						line = $el.data('line'),
-						qty = 0;
-					if (line) {
-						updateQuantity(line, qty);
-					}
-				});
-
-				$cartContainer.on('focus', '.number-sidebar', function (evt) {
-					var $el = $(evt.target);
-					$el[0].setSelectionRange(0, $el[0].value.length);
-				});
-
-				// Prevent cart from being submitted while quantities are changing
-				$cartContainer.on('submit', 'form.ajaxcart', function (evt) {
-					if (isUpdating) {
-						evt.preventDefault();
-					}
-				});
-
-				// Highlight the text when focused
-				$cartContainer.on('focus', '.items-count', function () {
-					var $el = $(this);
-					setTimeout(function () {
-						$el.select();
-					}, 50);
-				});
-
-				function updateQuantity(line, qty) {
-					isUpdating = true;
-
-					// Add activity classes when changing cart quantities
-					var $product = $('.ajaxcart__product[data-line="' + line + '"]').addClass('is-loading');
-
-					if (qty === 0) {
-						$product.parent().addClass('is-removed');
-					}
-
-					// Slight delay to make sure removed animation is done
-					setTimeout(function () {
-						Bizweb.changeItem(line, qty, adjustCartCallback);
-					}, 10);
-
-					$cartContainer.trigger('ajaxCart.updatingQty');
-				}
-
-				// Save note anytime it's changed
-				$cartContainer.on('change', 'textarea[name="note"]', function () {
-					var newNote = $(this).val();
-
-					// Update the cart note in case they don't click update/checkout
-					Bizweb.updateCartNote(newNote, function (cart) { });
-				});
-			};
-
-			adjustCartCallback = function (cart) {
-				// Update quantity and price
-				updateCountPrice(cart);
-
-				// Reprint cart on short timeout so you don't see the content being removed
-				setTimeout(function () {
-					isUpdating = false;
-
-					Bizweb.getCart(buildCart);
-				}, 150)
-			};
-
-			qtySelectors = function () {
-				// Change number inputs to JS ones, similar to ajax cart but without API integration.
-				// Make sure to add the existing name and id to the new input element
-				var numInputs = $('input[type="number"][data-ajax-qty]');
-
-				// Qty selector has a minimum of 1 on the product page
-				// and 0 in the cart (determined on qty click)
-				var qtyMin = 0;
-
-				if (numInputs.length) {
-					numInputs.each(function () {
-						var $el = $(this),
-							currentQty = $el.val(),
-							inputName = $el.attr('name'),
-							inputId = $el.attr('id');
-
-						var itemAdd = currentQty + 1,
-							itemMinus = currentQty - 1,
-							itemQty = currentQty;
-
-						var source = $("#JsQty").html(),
-							template = Handlebars.compile(source),
-							data = {
-								key: $el.data('id'),
-								itemQty: itemQty,
-								itemAdd: itemAdd,
-								itemMinus: itemMinus,
-								inputName: inputName,
-								inputId: inputId
-							};
-
-						// Append new quantity selector then remove original
-						$el.after(template(data)).remove();
-					});
-
-					// Setup listeners to add/subtract from the input
-					$('.js-qty__adjust').on('click', function () {
-						var $el = $(this),
-							id = $el.data('id'),
-							$qtySelector = $el.siblings('.js-qty__num'),
-							qty = parseInt($qtySelector.val().replace(/\D/g, ''));
-
-						var qty = validateQty(qty);
-						qtyMin = $body.hasClass('template-product') ? 1 : qtyMin;
-
-						// Add or subtract from the current quantity
-						if ($el.hasClass('js-qty__adjust--plus')) {
-							qty += 1;
-						} else {
-							qty -= 1;
-							if (qty <= qtyMin) qty = qtyMin;
-						}
-
-						// Update the input's number
-						$qtySelector.val(qty);
-					});
-				}
-			};
-
-			validateQty = function (qty) {
-				if ((parseFloat(qty) == parseInt(qty)) && !isNaN(qty)) {
-					// We have a valid number!
-				} else {
-					// Not a number. Default to 1.
-					qty = 1;
-				}
-				return qty;
-			};
-
-			module = {
-				init: init,
-				load: loadCart
-			};
-
-			return module;
-
-		}(ajaxCart || {}, jQuery));
-
-
-		$(window).on('load', function () {
-			ajaxCart.init({
-				moneyFormat: '{{amount_no_decimals_with_comma_separator}}₫'
-			});
-			ajaxCart.load();
-		});
-
-
-	</script>
 	<script id="SideCartTemplate" type="text/template">
 
 		<form action="/cart" method="post" novalidate class="cart ajaxcart">
@@ -2358,13 +1820,13 @@ Không đi kèm với chương trình khác">
 					<a href="~/collections" title="Chương trình khuyến mãi" class="banner-promotion" data-section="banner_popup">
 						<script type="text/x-custom-template" data-template="banner_popup">
 							<img
-										width="400"
-										height="240"
-										src="/img/_popup_banner.jpg"
-									alt="Chương trình khuyến mãi"
-										loading="lazy"
-										class="duration-300"
-									/>
+									width="400"
+									height="240"
+									src="/img/_popup_banner.jpg"
+								alt="Chương trình khuyến mãi"
+									loading="lazy"
+									class="duration-300"
+								/>
 						</script>
 					</a>
 					<div class="check-close">
@@ -2877,5 +2339,5 @@ Không đi kèm với chương trình khác">
 
 
 </body>
-</html>
 
+</html>
