@@ -16,8 +16,9 @@ public partial class KoiFarmShop2024DbContext : DbContext
     }
 
     public virtual DbSet<About> Abouts { get; set; }
+	public virtual DbSet<Addresss> Addresss { get; set; }
 
-    public virtual DbSet<Blog> Blogs { get; set; }
+	public virtual DbSet<Blog> Blogs { get; set; }
 
     public virtual DbSet<Config> Configs { get; set; }
 
@@ -65,7 +66,7 @@ public partial class KoiFarmShop2024DbContext : DbContext
 
     public virtual DbSet<User> Users { get; set; }
 
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+	protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
         => optionsBuilder.UseSqlServer("Data Source=localhost\\SQLEXPRESS;Initial Catalog=KoiFarmShop2024Db;Integrated Security=True;MultipleActiveResultSets=True;TrustServerCertificate=True");
 
@@ -90,7 +91,24 @@ public partial class KoiFarmShop2024DbContext : DbContext
             entity.Property(e => e.UpdateDate).HasColumnType("datetime");
         });
 
-        modelBuilder.Entity<Blog>(entity =>
+		modelBuilder.Entity<Addresss>(entity =>
+		{
+			entity.HasKey(e => e.AddressId).HasName("PK_tb_Addresss");
+			entity.Property(e => e.UserID).HasColumnName("Consignment_id");
+			entity.Property(e => e.Company).HasMaxLength(50);
+			entity.ToTable("Addresss");
+
+			entity.Property(e => e.Address).HasMaxLength(50);
+
+			entity.Property(e => e.CreatedDate)
+				.HasDefaultValueSql("(getdate())")
+				.HasColumnType("datetime");
+			entity.Property(e => e.UpdateDate).HasColumnType("datetime");
+			entity.Property(e => e.IsDefault).HasDefaultValue(false);
+
+		});
+
+		modelBuilder.Entity<Blog>(entity =>
         {
             entity.HasKey(e => e.BlogId).HasName("PK__TbBlog__54379E30436A86BD");
 
