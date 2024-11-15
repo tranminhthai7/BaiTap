@@ -9,37 +9,58 @@ using System.Threading.Tasks;
 
 namespace KoiFarmShop.Services.Services
 {
-    public class PromotionService : IPromotionService
-    {
-        private readonly IPromotionRepository _promotionRepository;
+	public class PromotionService : IPromotionService
+	{
+		private readonly IPromotionRepository _promotionRepository;
 
-        public PromotionService(IPromotionRepository promotionRepository) {
-            _promotionRepository = promotionRepository;
-        }
+		public PromotionService(IPromotionRepository promotionRepository)
+		{
+			_promotionRepository = promotionRepository;
+		}
 
-        public Task<bool> AddPromotion(Promotion promotion)
-        {
-            return _promotionRepository.AddPromotion(promotion);
-        }
+		public async Task<bool> AddPromotionAsync(Promotion promotion)
+		{
+			return await _promotionRepository.AddPromotionAsync(promotion);
+		}
 
-        public Task<bool> DeletePromotionAsync(int promotionId)
-        {
-            return _promotionRepository.DeletePromotionAsync(promotionId);
-        }
+		public async Task<bool> DeletePromotionByIdAsync(int promotionId)
+		{
+			return await _promotionRepository.DeletePromotionByIdAsync(promotionId);
+		}
 
-        public async Task<List<Promotion>> GetPromotions()
-        {
-            return await _promotionRepository.GetPromotions();
-        }
+		public async Task<List<Promotion>> GetAllPromotionsAsync()
+		{
+			return await _promotionRepository.GetAllPromotionsAsync();
+		}
 
-        public Task<bool> UpdatePromotion(Promotion promotion)
-        {
-            return _promotionRepository.UpdatePromotion(promotion);
-        }
+		public async Task<Promotion> GetPromotionByIdAsync(int promotionId)
+		{
+			return await _promotionRepository.GetPromotionByIdAsync(promotionId);
+		}
 
-        public Task<bool> RemovePromotionAsync(Promotion promotion)
-        {
-            throw new NotImplementedException();
-        }
-    }
+		public async Task<Promotion> GetPromotionByProductIdAsync(int productId)
+		{
+			return await _promotionRepository.GetPromotionByProductIdAsync(productId);
+		}
+
+		public async Task<bool> UpdatePromotionAsync(Promotion promotion)
+		{
+			return await _promotionRepository.UpdatePromotionAsync(promotion);
+		}
+
+		public async Task<bool> RemovePromotionAsync(Promotion promotion)
+		{
+			return await _promotionRepository.RemovePromotionAsync(promotion);
+		}
+
+		public async Task<List<Promotion>> GetActivePromotionsAsync()
+		{
+			var allPromotions = await _promotionRepository.GetAllPromotionsAsync();
+			var activePromotions = allPromotions
+				.Where(p => p.StartDate <= DateTime.Now && p.EndDate >= DateTime.Now)
+				.ToList();
+
+			return activePromotions;
+		}
+	}
 }

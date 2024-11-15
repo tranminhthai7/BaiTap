@@ -123,5 +123,9 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapRazorPages();
+app.MapGet("/", async (HttpContext context) =>
+{
+    context.Response.Redirect("/Home/Index");
+});
 
 app.Run();

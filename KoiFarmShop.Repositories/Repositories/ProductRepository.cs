@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,82 +7,94 @@ using Microsoft.EntityFrameworkCore;
 using KoiFarmShop.Repositories.Entities;
 using KoiFarmShop.Repositories.Interfaces;
 
+
 namespace KoiFarmShop.Repositories.Repositories
 {
-    public class ProductRepository : IProductRepository
-    {
-        private readonly KoiFarmShop2024DbContext _dbContext;
+	public class ProductRepository : IProductRepository
+	{
+		private readonly KoiFarmShop2024DbContext _dbContext;
 
-        public ProductRepository(KoiFarmShop2024DbContext dbContext) 
-        {
-            _dbContext = dbContext;
-        }
+		public ProductRepository(KoiFarmShop2024DbContext dbContext)
+		{
+			_dbContext = dbContext;
+		}
 
-        public Task<bool> AddProduct(Product product)
-        {
-            try
-            {
-                _dbContext.Products.AddAsync(product);
-                _dbContext.SaveChanges();
-                return Task.FromResult(true);
-            }
-            catch (Exception ex) 
-            {
-                throw new NotImplementedException(ex.ToString());
-            }
-        }
+		public async Task<bool> AddProductAsync(Product product)
+		{
+			try
+			{
+				await _dbContext.Products.AddAsync(product);
+				await _dbContext.SaveChangesAsync();
+				return true;
+			}
+			catch (Exception ex)
+			{
+				// Log the exception (logging framework or custom logger can be used here)
+				return false;
+			}
+		}
 
-        public async Task<bool> DeleteProductAsync(int productId)
-        {
-            var objDel = await _dbContext.Products.Where(p => p.ProductId.Equals(productId)).FirstOrDefaultAsync();
-            try
-            {
-                if (objDel != null)
-                {
-                    _dbContext.Products.Remove(objDel);
-                    await _dbContext.SaveChangesAsync();
-                    return true;
-                }
-                return false;
-            }
-            catch (Exception ex)
-            {
-                // Log the exception
-                return false;
-            }
-        }
+		public async Task<bool> DeleteProductAsync(int productId)
+		{
+			try
+			{
+				var objDel = await _dbContext.Products.FindAsync(productId);
+				if (objDel != null)
+				{
+					_dbContext.Products.Remove(objDel);
+					await _dbContext.SaveChangesAsync();
+					return true;
+				}
+				return false;
+			}
+			catch (Exception ex)
+			{
+				// Log the exception
+				return false;
+			}
+		}
 
-        public async Task<List<Product>> GetProducts()
-        {
-            List<Product> products = null;
-            try
-            {
-                products = await _dbContext.Products.ToListAsync();
-            }
-            catch (Exception ex) 
-            {
-                products?.Add(new Product());
-            }
-            return products;
-        }
+		public async Task<List<Product>> GetProductsAsync()
+		{
+			try
+			{
+				return await _dbContext.Products.ToListAsync();
+			}
+			catch (Exception ex)
+			{
+				// Log the exception
+				return new List<Product>(); // Trả về danh sách rỗng nếu có lỗi
+			}
+		}
 
-        public Task<bool> RemoveProductAsync(Product product)
-        {
-            throw new NotImplementedException();
-        }
+		public async Task<bool> RemoveProductAsyncByEntity(Product product)
+		{
+			try
+			{
+				_dbContext.Products.Remove(product);
+				await _dbContext.SaveChangesAsync();
+				return true;
+			}
+			catch (Exception ex)
+			{
+				// Log the exception
+				return false;
+			}
+		}
 
-        public Task<bool> UpdateProduct(Product product)
-        {
-            try
-            {
-                _dbContext.Products.Update(product);
-                _dbContext.SaveChanges();
-                return Task.FromResult(true);
-            }
-            catch (Exception ex)
-            {
-                return Task.FromResult(false);
-            }
-        }
-    }
+		public async Task<bool> UpdateProductAsync(Product product)
+		{
+			try
+			{
+				_dbContext.Products.Update(product);
+				await _dbContext.SaveChangesAsync();
+				return true;
+			}
+			catch (Exception ex)
+			{
+				// Log the exception
+				return false;
+			}
+		}
+	}
 }
