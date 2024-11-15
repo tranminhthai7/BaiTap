@@ -1,9 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace KoiFarmShop.WebApplication.Pages.Accounts
+namespace KoiFarmShop.WebApplication.Pages.Introduce
 {
-    public class AddressesModel : PageModel
+    public class gioi_thieu
     {
         public void OnGet()
         {

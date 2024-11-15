@@ -5,6 +5,8 @@ using KoiFarmShop.Repositories.Interfaces;
 using KoiFarmShop.Services.Interfaces;
 using KoiFarmShop.Services.Services;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using KoiFarmShop.Service.Services;
+using KoiFarmShop.Service.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
@@ -25,6 +27,9 @@ builder.Services.AddDbContext<KoiFarmShop2024DbContext>(options =>
 // Đăng ký các dịch vụ và repository
 builder.Services.AddScoped<IAboutRepository, AboutRepository>();
 builder.Services.AddScoped<IAboutService, AboutService>();
+
+builder.Services.AddScoped<IAddresssRepository, AddresssRepository>();
+builder.Services.AddScoped<IAddresssService, AddresssService>();
 
 builder.Services.AddScoped<IBlogRepository, BlogRepository>();
 builder.Services.AddScoped<IBlogService, BlogService>();
@@ -118,6 +123,7 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+
 app.UseAuthentication();
 
 app.UseAuthorization();
@@ -128,4 +134,6 @@ app.MapGet("/", async (HttpContext context) =>
     context.Response.Redirect("/Home/Index");
 });
 
+
+app.UseStatusCodePagesWithReExecute("/Shared/Error", "?statusCode={0}");
 app.Run();
