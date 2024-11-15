@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -91,18 +91,21 @@ namespace KoiFarmShop.Repositories.Repositories
             return await _dbContext.Users.Where(u => u.Id.Equals(id)).FirstOrDefaultAsync();
         }
 
-        public bool UpdUser(User user)
-        {
-            try
-            {
-                _dbContext.Users.Update(user);
-                _dbContext.SaveChanges();
-                return true;
-            }
-            catch (Exception ex)
-            {
-                return false;
-            }
-        }
-    }
+		public Boolean UpdUser(User user)
+		{
+			try
+			{
+				_dbContext.Users.Update(user);
+				_dbContext.SaveChanges();
+				return true;  // Nếu cập nhật thành công
+			}
+			catch (Exception ex)
+			{
+				// Nếu có lỗi, bạn có thể ghi log hoặc xử lý khác ở đây
+				return false;  // Trả về false khi có lỗi
+			}
+		}
+
+
+	}
 }

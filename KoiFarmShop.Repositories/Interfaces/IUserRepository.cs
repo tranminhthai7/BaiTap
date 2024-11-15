@@ -18,6 +18,6 @@ namespace KoiFarmShop.Repositories.Interfaces
 
         Task<User?> GetUserByEmailAsync(string email);
         Task<User> RegisterUserAsync(User user);
-    }
+	}
 
 }

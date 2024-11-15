@@ -35,21 +35,17 @@ namespace KoiFarmShop.WebApplication.Pages.Accounts
                 return Page();
             }
 
-            // Lấy danh sách người dùng từ cơ sở dữ liệu
-            var users = await _context.GetUsers();
-
-            // Kiểm tra thông tin đăng nhập
-            var account = users
-                .FirstOrDefault(a => a.Email == Email && a.Password == Password);
+            var account = await _context.LoginAsync(Email, Password);
 
             if (account != null)
             {
                 // Đăng nhập thành công, lưu thông tin người dùng vào Cookie
                 var cookieOptions = new CookieOptions
                 {
-                    Expires = DateTime.Now.AddMinutes(30), // Đặt thời gian hết hạn của Cookie
-                    HttpOnly = true, // Chỉ có thể truy cập từ server, không từ client-side JavaScript
-                    Secure = true, // Chỉ gửi Cookie qua kết nối HTTPS
+                    Expires = DateTime.Now.AddMinutes(30),
+                    HttpOnly = true,  // Bảo vệ cookie khỏi các script của client
+                    Secure = true,    // Chỉ gửi cookie qua HTTPS
+                    SameSite = SameSiteMode.Strict  // Giới hạn cookie để tránh cross-site request
                 };
 
                 Response.Cookies.Append("UserEmail", account.Email, cookieOptions);

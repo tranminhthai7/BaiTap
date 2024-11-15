@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace KoiFarmShop.Repositories.Entities;
 
-public partial class Contact
+public class Contact
 {
     public int Id { get; set; }
 

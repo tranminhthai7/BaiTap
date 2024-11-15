@@ -14,14 +14,14 @@ namespace KoiFarmShop.Services.Interfaces
         Boolean DelUser(int Id);
         Boolean DelUser(User account);
         Boolean AddUser(User account);
-        Boolean UpdUser(User account);
-        //Task<bool> RegisterUserAsync(string email, string password);
-        Task<User> GetUserById(int Id);
+		Boolean UpdUser(User user);        //Task<bool> RegisterUserAsync(string email, string password);
+		Task<User> GetUserById(int Id);
         //Task<bool> RegisterUserAsync(User user);
         Task<User?> LoginAsync(string email, string password);
         Task<User> RegisterAsync(string userName, string password, string fullName, string email, string phone, string address);
         Task<bool> RegisterUserAsync(User user);
         Task AddUserAsync(User newUser);
-    }
-}
 
+		Task<bool> ChangePasswordAsync(string email, string currentPassword, string newPassword);
+	}
+}

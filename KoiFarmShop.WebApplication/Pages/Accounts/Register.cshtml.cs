@@ -1,63 +1,58 @@
-﻿//using Microsoft.AspNetCore.Mvc;
-//using Microsoft.AspNetCore.Mvc.RazorPages;
-//using KoiFarmShop.Repositories.Entities;
-//using KoiFarmShop.Services.Interfaces;
-//using System.Threading.Tasks;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
+using KoiFarmShop.Services.Interfaces;
+using KoiFarmShop.Repositories.Entities;
+using System.Threading.Tasks;
 
-//namespace KoiFarmShop.WebApplication.Pages.Accounts
-//{
-//    public class RegisterModel : PageModel
-//    {
-//        private readonly IUserService _userService;
+namespace KoiFarmShop.WebApplication.Pages.Accounts
+{
+    public class RegisterModel : PageModel
+    {
+        private readonly IUserService _userService;
 
-//        public RegisterModel(IUserService userService)
-//        {
-//            _userService = userService;
-//        }
+        public RegisterModel(IUserService userService)
+        {
+            _userService = userService;
+        }
 
-//        [BindProperty]
-//        public RegisterViewModel RegisterInfo { get; set; }
+        [BindProperty]
+        public User Input { get; set; }
 
-//        public string SuccessMessage { get; set; }
+        public void OnGet()
+        {
+            // Khởi tạo đối tượng người dùng rỗng
+            Input = new User();
+        }
 
-//        public void OnGet()
-//        {
-//            RegisterInfo = new RegisterViewModel();
-//        }
+        public async Task<IActionResult> OnPostAsync()
+        {
+            // Kiểm tra dữ liệu hợp lệ
+            if (!ModelState.IsValid)
+            {
+                return Page();
+            }
 
-//        public async Task<IActionResult> OnPostAsync()
-//        {
-//            if (!ModelState.IsValid)
-//            {
-//                return Page();
-//            }
-//            var user = new User
-//            {
-//                Email = RegisterInfo.Email,
-//                Password = RegisterInfo.Password
-//                // Thêm các thuộc tính khác nếu cần
-//            };
-//            // Gọi dịch vụ để thêm người dùng mới
-//            var result = await _userService.RegisterUserAsync(user);
-//            if (result)
-//            {
-//                SuccessMessage = "Đăng ký thành công!";
-//                return RedirectToPage("/Account/Login"); // Chuyển hướng đến trang đăng nhập
-//            }
-//            else
-//            {
-//                ModelState.AddModelError(string.Empty, "Đăng ký thất bại. Vui lòng thử lại.");
-//                return Page();
-//            }
-//        }
-//    }
+            // Thêm người dùng vào hệ thống
+            var registeredUser = await _userService.RegisterAsync(
+                Input.UserName,
+                Input.Password,
+                Input.FullName,
+                Input.Email,
+                Input.Phone,
+                Input.Address
+            );
 
-//    public class RegisterViewModel
-//    {
-//        public string FirstName { get; set; }
-//        public string LastName { get; set; }
-//        public string Email { get; set; }
-//        public string PhoneNumber { get; set; }
-//        public string Password { get; set; }
-//    }
-//}
+            if (registeredUser != null)
+            {
+                // Nếu đăng ký thành công, chuyển hướng về trang chủ
+                return RedirectToPage("/Index");
+            }
+            else
+            {
+                // Nếu đăng ký thất bại, hiển thị thông báo lỗi
+                ModelState.AddModelError(string.Empty, "Email đã tồn tại hoặc có lỗi khi đăng ký.");
+                return Page();
+            }
+        }
+    }
+}

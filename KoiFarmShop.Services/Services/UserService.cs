@@ -8,6 +8,7 @@ using KoiFarmShop.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using System.Security.Cryptography;
 using System.Text;
+using KoiFarmShop.Repositories.Repositories;
 
 namespace KoiFarmShop.Services.Services
 {
@@ -25,7 +26,7 @@ namespace KoiFarmShop.Services.Services
         public async Task<User?> LoginAsync(string email, string password)
         {
             var user = await _repository.GetUserByEmailAsync(email);
-            if (user != null && VerifyPassword(password, user.Password))
+            if (user != null && VerifyPassword(password, user.Password))  // Kiểm tra mật khẩu
             {
                 return user;
             }
@@ -61,7 +62,7 @@ namespace KoiFarmShop.Services.Services
         // Kiểm tra mật khẩu đã nhập so với mật khẩu lưu trữ
         private bool VerifyPassword(string enteredPassword, string storedPassword)
         {
-            return storedPassword == HashPassword(enteredPassword);
+            return storedPassword == HashPassword(enteredPassword); // So sánh mật khẩu đã mã hóa
         }
 
         // Phương thức đăng ký người dùng bằng cách truyền vào đối tượng User
@@ -80,11 +81,10 @@ namespace KoiFarmShop.Services.Services
                 // Mã hóa mật khẩu trước khi lưu vào cơ sở dữ liệu
                 user.Password = HashPassword(user.Password);
 
-                // Thêm người dùng mới vào cơ sở dữ liệu thông qua repository
-                _repository.AddUser(user);
+                // Thực hiện thao tác bất đồng bộ nhưng không thay đổi kiểu trả về của AddUser
+                var result = await Task.Run(() => _repository.AddUser(user));
 
-
-                return true; // Đăng ký thành công
+                return result; // Trả về kết quả từ AddUser
             }
             catch (Exception ex)
             {
@@ -137,5 +137,16 @@ namespace KoiFarmShop.Services.Services
         {
             throw new NotImplementedException();
         }
-    }
+
+		public async Task<bool> ChangePasswordAsync(string email, string currentPassword, string newPassword)
+		{
+			var user = await _repository.GetUserByEmailAsync(email);
+			if (user != null && VerifyPassword(currentPassword, user.Password))
+			{
+				user.Password = HashPassword(newPassword); // Mã hóa mật khẩu mới
+				return _repository.UpdUser(user);
+			}
+			return false;
+		}
+	}
 }

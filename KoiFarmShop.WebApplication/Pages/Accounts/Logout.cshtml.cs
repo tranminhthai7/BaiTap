@@ -1,20 +1,23 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Http;
+using System.Threading.Tasks;
 
 namespace KoiFarmShop.WebApplication.Pages.Accounts
 {
     public class LogoutModel : PageModel
     {
-        public IActionResult OnPost()
+        public async Task<IActionResult> OnGetAsync()
         {
-            // Xóa tất cả cookies liên quan đến người dùng
+            // Clear the authentication cookies to log the user out
             Response.Cookies.Delete("UserEmail");
             Response.Cookies.Delete("UserName");
             Response.Cookies.Delete("UserFullName");
 
-            // Sau khi logout, chuyển hướng người dùng về trang đăng nhập
-            return RedirectToPage("/Index");
+            // Optionally, you could add more logic here, like logging or audit trails for the logout
+
+            // Redirect to the Login page or another page after logout
+            return RedirectToPage("/Accounts/Login");
         }
     }
 }

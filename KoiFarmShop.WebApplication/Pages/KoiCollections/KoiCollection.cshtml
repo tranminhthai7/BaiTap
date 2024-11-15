@@ -1,0 +1,37 @@
+﻿@page
+@model KoiFarmShop.WebApplication.Pages.KoiCollections.KoiCollectionModel
+
+<h2>Koi Collection</h2>
+
+@if (Model.KoiCollection != null && Model.KoiCollection.Any())
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Breed</th>
+                <th>Gender</th>
+                <th>Age</th>
+                <th>Size</th>
+                <th>Origin</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var koi in Model.KoiCollection)
+            {
+                <tr>
+                    <td>@koi.Name</td>
+                    <td>@koi.Breed</td>
+                    <td>@koi.Gender</td>
+                    <td>@koi.Age</td>
+                    <td>@koi.Size</td>
+                    <td>@koi.Origin</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No koi found in the collection.</p>
+}
