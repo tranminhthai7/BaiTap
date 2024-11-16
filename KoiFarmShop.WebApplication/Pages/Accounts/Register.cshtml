@@ -404,91 +404,50 @@
 
             <section class="section">
                 <div class="container">
-                    <div class="wrap_background_aside  page_login">
-                        <div class="wrap_background_aside">
+                    <div class="wrap_background_aside page_register">
                         <div class="row">
                             <div class="col-lg-4 col-md-6 col-sm-12 col-12 col-xl-4 offset-xl-4 offset-lg-4 offset-md-3 offset-xl-3">
-                                    <div class="row">
-                                        <div class="page-login pagecustome clearfix">
-                                            <div class="wpx">
-                                                <h1 class="title_heads a-center"><span>Đăng ký</span></h1>
-                                                <span class="block a-center dkm margin-top-10">Đã có tài khoản, đăng nhập <a href="/Accounts/login" class="btn-link-style btn-register">tại đây</a></span>
-                                                <div id="login" class="section">
-                                                    <form method="post" action="/Accounts/register" id="customer_register" accept-charset="UTF-8">
-                                                        <input name="FormType" type="hidden" value="customer_register" /><input name="utf8" type="hidden" value="true" /><input type="hidden" id="Token-398d5f037d7247419163103c481dfa37" name="Token" /><script src="https://www.google.com/recaptcha/api.js?render=6Ldtu4IUAAAAAMQzG1gCw3wFlx_GytlZyLrXcsuK"></script><script>grecaptcha.ready(function () { grecaptcha.execute("6Ldtu4IUAAAAAMQzG1gCw3wFlx_GytlZyLrXcsuK", { action: "customer_register" }).then(function (token) { document.getElementById("Token-398d5f037d7247419163103c481dfa37").value = token }); });</script>
-                                                        <div class="form-signup " style="color:red;">
-                                                           </div>
-                                                            <div class="form-signup clearfix">
-                                                            <div class="row">
+                                <div class="page-register clearfix">
+                                    <h1 class="title_heads a-center"><span>Đăng ký</span></h1>
+
+                                    <form method="post">
                                         @Html.AntiForgeryToken()
                                         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                                                                </div>
-                                                            <div class="row">
-                                                            <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
 
-                                       
                                         <fieldset class="form-group">
                                             <input placeholder="Tên đăng nhập" type="text" class="form-control form-control-lg" asp-for="Input.UserName" required />
                                             <span asp-validation-for="Input.UserName" class="text-danger"></span>
                                         </fieldset>
-                                                            </div>
-                                                            <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
 
-                                         <fieldset class="form-group">
+                                        <fieldset class="form-group">
                                             <input placeholder="Họ và tên" type="text" class="form-control form-control-lg" asp-for="Input.FullName" required />
                                             <span asp-validation-for="Input.FullName" class="text-danger"></span>
                                         </fieldset>
-                                                        
-                                                        </div>
-                                                            </div>
-                                                            <div class="row">
-                                                            <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
 
                                         <fieldset class="form-group">
                                             <input placeholder="Email" type="email" class="form-control form-control-lg" asp-for="Input.Email" required />
                                             <span asp-validation-for="Input.Email" class="text-danger"></span>
                                         </fieldset>
-                                                            </div>
-                                                            <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
 
-                                                                <fieldset class="form-group">
+                                        <fieldset class="form-group">
                                             <input placeholder="Số điện thoại" type="text" class="form-control form-control-lg" asp-for="Input.Phone" required />
                                             <span asp-validation-for="Input.Phone" class="text-danger"></span>
                                         </fieldset>
-                                                                </div>
-                                                            <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
 
                                         <fieldset class="form-group">
                                             <input placeholder="Mật khẩu" type="password" class="form-control form-control-lg" asp-for="Input.Password" required />
                                             <span asp-validation-for="Input.Password" class="text-danger"></span>
                                         </fieldset>
-                                                                </div>
-                                                            </div>
-                                                            <div class="section">
+
                                         <button type="submit" class="btn btn-primary">Đăng ký</button>
-                                                            </div>
-                                                        </div>
                                     </form>
-                                                    <div class="block social-login--facebooks margin-top-15">
-                                                        <p class="a-center">
-                                                            Hoặc đăng nhập bằng
-                                                        </p>
-                                                        <script>function loginFacebook() { var a = { client_id: "947410958642584", redirect_uri: "https://store.mysapo.net/account/facebook_account_callback", state: JSON.stringify({ redirect_url: window.location.href }), scope: "email", response_type: "code" }, b = "https://www.facebook.com/v3.2/dialog/oauth" + encodeURIParams(a, !0); window.location.href = b } function loginGoogle() { var a = { client_id: "997675985899-pu3vhvc2rngfcuqgh5ddgt7mpibgrasr.apps.googleusercontent.com", redirect_uri: "https://store.mysapo.net/account/google_account_callback", scope: "email profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile", access_type: "online", state: JSON.stringify({ redirect_url: window.location.href }), response_type: "code" }, b = "https://accounts.google.com/o/oauth2/v2/auth" + encodeURIParams(a, !0); window.location.href = b } function encodeURIParams(a, b) { var c = []; for (var d in a) if (a.hasOwnProperty(d)) { var e = a[d]; null != e && c.push(encodeURIComponent(d) + "=" + encodeURIComponent(e)) } return 0 == c.length ? "" : (b ? "?" : "") + c.join("&") }</script>
-                                                        <a href="javascript:void(0)" class="social-login--facebook" onclick="loginFacebook()"><img width="129px" height="37px" alt="facebook-login-button" src="//bizweb.dktcdn.net/assets/admin/images/login/fb-btn.svg"></a>
-                                                        <a href="javascript:void(0)" class="social-login--google" onclick="loginGoogle()"><img width="129px" height="37px" alt="google-login-button" src="//bizweb.dktcdn.net/assets/admin/images/login/gp-btn.svg"></a>
-                                                    </div>
-                                                </div>
                                 </div>
                             </div>
                         </div>
-                                    </div>
-                                </div>
-                            </div>
                     </div>
                 </div>
-              
             </section>
-    </div>
+        </div>
             @section Scripts {
                 <partial name="_ValidationScriptsPartial" />
             }
@@ -1340,56 +1299,40 @@
 
     <div class="popup-sapo">
         <div class="icon">
-            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
-                <path d="M224 0c-17.7 0-32 14.3-32 32V51.2C119 66 64 130.6 64 208v18.8c0 47-17.3 92.4-48.5 127.6l-7.4 8.3c-8.4 9.4-10.4 22.9-5.3 34.4S19.4 416 32 416H416c12.6 0 24-7.4 29.2-18.9s3.1-25-5.3-34.4l-7.4-8.3C401.3 319.2 384 273.9 384 226.8V208c0-77.4-55-142-128-156.8V32c0-17.7-14.3-32-32-32zm45.3 493.3c12-12 18.7-28.3 18.7-45.3H224 160c0 17 6.7 33.3 18.7 45.3s28.3 18.7 45.3 18.7s33.3-6.7 45.3-18.7z" />
-            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><path d="M224 0c-17.7 0-32 14.3-32 32V51.2C119 66 64 130.6 64 208v18.8c0 47-17.3 92.4-48.5 127.6l-7.4 8.3c-8.4 9.4-10.4 22.9-5.3 34.4S19.4 416 32 416H416c12.6 0 24-7.4 29.2-18.9s3.1-25-5.3-34.4l-7.4-8.3C401.3 319.2 384 273.9 384 226.8V208c0-77.4-55-142-128-156.8V32c0-17.7-14.3-32-32-32zm45.3 493.3c12-12 18.7-28.3 18.7-45.3H224 160c0 17 6.7 33.3 18.7 45.3s28.3 18.7 45.3 18.7s33.3-6.7 45.3-18.7z" /></svg>
         </div>
         <div class="content">
-            <div class="title">Tích hợp sẵn các ứng dụng</div>
+            <div class="title">
+                Các Tin Tức Hữu Ích
+            </div>
             <ul>
-                <li>
-                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
-                        <path d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z" />
-                    </svg>
-                    <a href="https://apps.sapo.vn/danh-gia-san-pham-v2" target="_blank" title="Đánh giá sản phẩm">Đánh giá sản phẩm</a>
-                </li>
-                <li>
-                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
-                        <path d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z" />
-                    </svg>
-                    <a href="https://apps.sapo.vn/mua-x-tang-y-v2" target="_blank" title="Mua X tặng Y">Mua X tặng Y</a>
-                </li>
 
                 <li>
-                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
-                        <path d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z" />
-                    </svg>
-                    <a href="https://apps.sapo.vn/quan-ly-affiliate-v2" target="_blank" title="Ứng dụng Affiliate">Ứng dụng Affiliate</a>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><path d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z" /></svg>
+                    <a href="/News/kien-thuc" target="_blank" title="Kiến Thức">Kiến Thức</a>
                 </li>
 
-                <li>
-                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
-                        <path d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z" />
-                    </svg>
-                    <a href="https://apps.sapo.vn/ae-da-ngon-ngu" target="_blank" title="Đa ngôn ngữ">Đa ngôn ngữ</a>
-                </li>
 
                 <li>
-                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
-                        <path d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z" />
-                    </svg>
-                    <a href="#" target="_blank" title="Livechat Facebook">Livechat Facebook</a>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><path d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z" /></svg>
+                    <a href="/News/kinh-nghiem" target="_blank" title="Kinh Nghiệm">Kinh Nghiệm</a>
                 </li>
+
+
+                <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><path d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z" /></svg>
+                    <a href="https://www.facebook.com/profile.php?id=61568145657284&mibextid=ZbWKwL" target="_blank" title="FanPage Facebook">FanPage Facebook</a>
+                </li>
+
 
 
             </ul>
             <div class="ghichu">
-                Lưu ý với các ứng dụng trả phí bạn cần cài đặt và mua ứng dụng này trên App store để sử dụng ngay
+                Cảm ơn các bạn đã ghé thăm Koi Farm Shop!
+                Hãy khám phá thêm các sản phẩm và dịch vụ tuyệt vời từ cửa hàng của chúng tôi.
             </div>
             <a title="Đóng" class="close-popup-sapo">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512.001 512.001">
-                    <path d="M284.286,256.002L506.143,34.144c7.811-7.811,7.811-20.475,0-28.285c-7.811-7.81-20.475-7.811-28.285,0L256,227.717    L34.143,5.859c-7.811-7.811-20.475-7.811-28.285,0c-7.81,7.811-7.811,20.475,0,28.285l221.857,221.857L5.858,477.859    c-7.811,7.811-7.811,20.475,0,28.285c3.905,3.905,9.024,5.857,14.143,5.857c5.119,0,10.237-1.952,14.143-5.857L256,284.287    l221.857,221.857c3.905,3.905,9.024,5.857,14.143,5.857s10.237-1.952,14.143-5.857c7.811-7.811,7.811-20.475,0-28.285    L284.286,256.002z" />
-                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 512.001 512.001" style="enable-background:new 0 0 512.001 512.001;" xml:space="preserve"> <g> <g> <path d="M284.286,256.002L506.143,34.144c7.811-7.811,7.811-20.475,0-28.285c-7.811-7.81-20.475-7.811-28.285,0L256,227.717    L34.143,5.859c-7.811-7.811-20.475-7.811-28.285,0c-7.81,7.811-7.811,20.475,0,28.285l221.857,221.857L5.858,477.859    c-7.811,7.811-7.811,20.475,0,28.285c3.905,3.905,9.024,5.857,14.143,5.857c5.119,0,10.237-1.952,14.143-5.857L256,284.287    l221.857,221.857c3.905,3.905,9.024,5.857,14.143,5.857s10.237-1.952,14.143-5.857c7.811-7.811,7.811-20.475,0-28.285    L284.286,256.002z"></path> </g> </g> </svg>
             </a>
         </div>
     </div>

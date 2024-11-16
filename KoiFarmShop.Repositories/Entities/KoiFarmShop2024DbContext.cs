@@ -322,7 +322,8 @@ public partial class KoiFarmShop2024DbContext : DbContext
             entity.Property(e => e.MateKeywords).HasMaxLength(250);
             entity.Property(e => e.MetaDescriptioins).HasMaxLength(250);
             entity.Property(e => e.Name).HasMaxLength(250);
-            entity.Property(e => e.Price)
+			entity.Property(e => e.Loai).HasMaxLength(250);
+			entity.Property(e => e.Price)
                 .HasDefaultValue(0m)
                 .HasColumnType("decimal(18, 0)");
             entity.Property(e => e.ProductId).HasColumnName("ProductID");
