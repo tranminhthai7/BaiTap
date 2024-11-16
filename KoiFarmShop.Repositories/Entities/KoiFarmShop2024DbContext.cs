@@ -94,7 +94,6 @@ public partial class KoiFarmShop2024DbContext : DbContext
 		modelBuilder.Entity<Addresss>(entity =>
 		{
 			entity.HasKey(e => e.AddressId).HasName("PK_tb_Addresss");
-			entity.Property(e => e.UserID).HasColumnName("Consignment_id");
 			entity.Property(e => e.Company).HasMaxLength(50);
 			entity.ToTable("Addresss");
 

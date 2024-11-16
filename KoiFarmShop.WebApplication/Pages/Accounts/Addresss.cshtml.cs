@@ -1,63 +1,58 @@
-﻿//using KoiFarmShop.Repositories.Entities;
-//using KoiFarmShop.Service.Interfaces;
-//using Microsoft.AspNetCore.Mvc;
-//using Microsoft.AspNetCore.Mvc.RazorPages;
-//using System.Threading.Tasks;
+﻿using KoiFarmShop.Service.Interfaces;
+using KoiFarmShop.Repositories.Entities;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
-//namespace KoiFarmShop.WebApplication.Pages.Accounts
-//{
-//	public class AddresssModel : PageModel
-//	{
-//		private readonly IAddresssService _addresssService;
+namespace KoiFarmShop.WebApplication.Pages.Accounts
+{
+	public class AddresssModel : PageModel
+	{
+		private readonly IAddresssService _addresssService;
 
-//		public AddresssModel(IAddresssService addresssService)
-//		{
-//			_addresssService = addresssService;
-//		}
+		public AddresssModel(IAddresssService addresssService)
+		{
+			_addresssService = addresssService;
+		}
 
-//		[BindProperty]
-//		public Addresss Address { get; set; }
+		[BindProperty]
+		public string UserPhone { get; set; }
 
-//		// Địa chỉ đầy đủ từ người dùng
-//		[BindProperty]
-//		public string FullAddress { get; set; }
+		[BindProperty]
+		public string Company { get; set; }
 
-//		public async Task<IActionResult> OnGetAsync(int? id)
-//		{
-//			if (id.HasValue)
-//			{
-//				Address = await _addresssService.GetAddressByIdAsync(id.Value);
-//				if (Address == null)
-//				{
-//					return NotFound();
-//				}
-//			}
-//			else
-//			{
-//				Address = new Addresss();
-//			}
-//			return Page();
-//		}
+		[BindProperty]
+		public string FullAddress { get; set; }
 
-//		public async Task<IActionResult> OnPostAsync()
-//		{
-//			if (!ModelState.IsValid)
-//			{
-//				return Page();
-//			}
+		[BindProperty]
+		public bool IsDefault { get; set; }
 
-//			Address.Address = FullAddress;
+		public List<Addresss> UserAddresses { get; set; }
 
-//			if (Address.Id > 0)
-//			{
-//				await _addresssService.UpdateAddressAsync(Address);
-//			}
-//			else
-//			{
-//				await _addresssService.AddAddressAsync(Address);
-//			}
+		public async Task<IActionResult> OnGetAsync()
+		{
+			var userName = User.Identity.Name;
+			UserAddresses = await _addresssService.GetAddressesByUserNameAsync(userName);
+			UserPhone = Request.Cookies["UserPhone"];
+			Company = Request.Cookies["UserCompany"];
+			FullAddress = Request.Cookies["UserAddress"];
+			return Page();
+		}
 
-//			return RedirectToPage("AddresssList");
-//		}
-//	}
-//}
+		public async Task<IActionResult> OnPostAsync()
+		{
+			if (ModelState.IsValid)
+			{
+				var newAddress = await _addresssService.AddAddressFromDetailsAsync(UserPhone, Company, FullAddress);
+				return RedirectToPage();
+			}
+			else
+			{
+				return Page();
+			}
+		}
+	}
+}
+
+

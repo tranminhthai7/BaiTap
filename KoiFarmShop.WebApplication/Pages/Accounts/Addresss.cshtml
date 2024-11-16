@@ -1,4 +1,4 @@
-﻿@* @page
+﻿@page
 @model KoiFarmShop.WebApplication.Pages.Accounts.AddresssModel
 @{
     Layout = "_Layout";
@@ -400,104 +400,69 @@
 </section> 
 
 <div class="op_address"></div>
-<section class="address">
-	<div class="container page_address margin-bottom-20">
-		<div class="row">
-					<div class="col-xs-12 col-sm-12 col-lg-3 col-left-ac">
-						<div class="block-account bg-shadow">
-							<h5 class="title-account">Trang tài khoản</h5>
-							@if (Request.Cookies["UserEmail"] != null)
-							{
-								<p>Xin chào, <span style="color:#8d251c;">@Request.Cookies["UserName"]</span>!</p>
-							}
-							else
-							{
-								<p>Xin chào, khách hàng!</p>
-							}
-							<ul>
-								<li>
-									<a disabled="disabled" class="title-info active" title="Thông tin tài khoản" href="javascript:void(0);">Thông tin tài khoản</a>
-								</li>
-								<li>
-									<a class="title-info" href="/Accounts/Orders" title="Đơn hàng của bạn">Đơn hàng của bạn</a>
-								</li>
-								<li>
-									<a class="title-info" href="/danh-sach-yeu-thich" title="Danh sách yêu thích">
-										Danh sách yêu thích (<span class="js-wishlist-count">0</span>)
-									</a>
-								</li>
-								<li>
-									<a class="title-info" href="/Accounts/Changepassword" title="Đổi mật khẩu">Đổi mật khẩu</a>
-								</li>
-								<li>
-									<a class="title-info" href="/Accounts/Addresses" title="Sổ địa chỉ (0)">Sổ địa chỉ (0)</a>
-								</li>
-								<li>
-									<a class="title-info" href="/Accounts/Logout" title="Đăng xuất">Đăng xuất</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-12 col-lg-9">
-						<div class="bg-shadow">
-							<h1 class="title-head">Địa chỉ của bạn</h1>
-							<p class="btn-row">
-								<button class="btn-edit-addr btn btn-primary btn-more" type="button" onclick="document.getElementById('add_address').style.display='block';">Thêm địa chỉ</button>
-							</p>
-							<div id="add_address" class="form-list modal_address modal" style="display: none;">
-								<div class="btn-close closed_pop" onclick="document.getElementById('add_address').style.display='none';"><span></span></div>
-								<h2 class="title_pop">Thêm địa chỉ mới</h2>
+@if (Model.UserAddresses != null && Model.UserAddresses.Count > 0)
+{
+    <ul>
+        @foreach (var address in Model.UserAddresses)
+        {
+            <li>
+                <strong>@address.Company</strong><br />
+                @address.Address<br />
+				<small>@(address.CreatedDate.HasValue ? address.CreatedDate.Value.ToString("dd/MM/yyyy") : "Chưa có thông tin")</small>
+            </li>
+        }
+    </ul>
+}
+else
+{
+    <p>Không có địa chỉ nào.</p>
+}
 
-								<form method="post">
-									<div class="pop_bottom">
-										<div class="form_address">
-											<div class="field">
-												<fieldset class="form-group">
-													<input type="text" class="form-control" asp-for="Address.Phone" required maxlength="12" pattern="\d+" />
-													<label asp-for="Address.Phone">Số điện thoại*</label>
-												</fieldset>
-											</div>
+<button class="btn-edit-addr btn btn-primary btn-more" type="button" onclick="document.getElementById('add_address').style.display='block';">Thêm địa chỉ</button>
 
-											<div class="field">
-												<fieldset class="form-group">
-													<input type="text" class="form-control" asp-for="Address.Company" />
-													<label asp-for="Address.Company">Công ty</label>
-												</fieldset>
-											</div>
+<div id="add_address" class="form-list modal_address modal" style="display: none;">
+    <div class="btn-close closed_pop" onclick="document.getElementById('add_address').style.display='none';"><span></span></div>
+    <h2 class="title_pop">Thêm địa chỉ mới</h2>
 
-											<div class="field">
-												<fieldset class="form-group select-field">
-													<select asp-for="Address.Country" class="form-control" required>
-														<option value="Việt Nam" selected>Việt Nam</option>
-														<option value="United States">United States</option>
-														<option value="Canada">Canada</option>
-														<option value="Australia">Australia</option>
-														<option value="Japan">Japan</option>
-														<!-- Thêm các quốc gia khác nếu cần -->
-													</select>
-													<label asp-for="Address.Country">Quốc gia</label>
-												</fieldset>
-											</div>
+    <form method="post">
+        <div class="pop_bottom">
+            <div class="form_address">
+                <div class="field">
+                    <fieldset class="form-group">
+                        <input type="text" class="form-control" name="UserPhone" value="@Model.UserPhone" required maxlength="12" pattern="\d+" />
+                        <label for="UserPhone">Số điện thoại*</label>
+                    </fieldset>
+                </div>
 
-											<div class="field">
-												<fieldset class="form-group">
-													<input type="text" class="form-control" asp-for="FullAddress" required />
-													<label for="FullAddress">Địa chỉ đầy đủ</label>
-												</fieldset>
-											</div>
-										</div>
-										<div class="form-group">
-											<button type="submit" class="btn btn-primary">Lưu địa chỉ</button>
-										</div>
-									</div>
-								</form>
-							</div>
-						</div>
-					</div>
-		</div>
-	</div>
-</section>
+                <div class="field">
+                    <fieldset class="form-group">
+                        <input type="text" class="form-control" name="Company" value="@Model.Company" />
+                        <label for="Company">Công ty</label>
+                    </fieldset>
+                </div>
 
+                <div class="field">
+                    <fieldset class="form-group">
+                        <input type="text" class="form-control" name="FullAddress" value="@Model.FullAddress" required />
+                        <label for="FullAddress">Địa chỉ đầy đủ</label>
+                    </fieldset>
+                </div>
+            </div>
+
+            <div class="checkbox">
+                <label class="c-input c-checkbox" style="padding-left: 20px;">
+                    <input type="checkbox" name="IsDefault" value="true" />
+                    <span class="c-indicator">Đặt là địa chỉ mặc định?</span>
+                </label>
+            </div>
+
+            <div class="btn-row">
+                <button class="btn btn-lg btn-dark-address btn-outline article-readmore btn-close" type="button" onclick="document.getElementById('add_address').style.display='none';"><span>Hủy</span></button>
+                <button class="btn btn-lg btn-primary btn-submit" type="submit"><span>Thêm địa chỉ</span></button>
+            </div>
+        </div>
+    </form>
+</div>
 <!--yeu cau su dung jquery 3. trở lên-->
 <script src="~/js/jquery.validate.min.js"></script>
 <script>$.validate({});</script>
@@ -1839,4 +1804,4 @@
 
 
 </body>
-</html> *@
+</html>

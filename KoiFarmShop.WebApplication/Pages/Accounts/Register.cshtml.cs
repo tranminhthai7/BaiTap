@@ -45,7 +45,7 @@ namespace KoiFarmShop.WebApplication.Pages.Accounts
             if (registeredUser != null)
             {
                 // Nếu đăng ký thành công, chuyển hướng về trang chủ
-                return RedirectToPage("/Index");
+                return RedirectToPage("/Home/Index");
             }
             else
             {
