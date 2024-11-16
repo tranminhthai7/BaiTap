@@ -39,5 +39,30 @@ namespace KoiFarmShop.Service.Services
 		{
 			await _addresssRepository.DeleteAddressAsync(addressId);
 		}
+
+		public async Task<Addresss> AddAddressFromCookieAsync(string phone, string company, string address)
+		{
+			return await AddAddressFromDetailsAsync(phone, company, address);
+		}
+
+		// Implement phương thức này
+		public async Task<Addresss> AddAddressFromDetailsAsync(string phone, string company, string address)
+		{
+			var newAddress = new Addresss
+			{
+				Company = company,
+				Address = address,
+				CreatedDate = DateTime.Now
+			};
+
+			await _addresssRepository.AddAddressAsync(newAddress);
+
+			return newAddress;
+		}
+
+		public async Task<List<Addresss>> GetAddressesByUserNameAsync(string userName)
+		{
+			return await _addresssRepository.GetAddressesByUserNameAsync(userName);
+		}
 	}
 }

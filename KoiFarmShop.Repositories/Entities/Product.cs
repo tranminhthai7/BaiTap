@@ -25,6 +25,7 @@ public partial class Product
 	public decimal? PromotionPrice { get; set; }
 
 	public DateTime? Hot { get; set; }
+	public bool? YeuThich { get; set; }
 
 	public string? Desiption { get; set; }
 

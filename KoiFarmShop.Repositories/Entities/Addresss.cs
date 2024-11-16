@@ -23,4 +23,7 @@ public partial class Addresss
 	public int? UpdateBy { get; set; }
 
 	public DateTime? UpdateDate { get; set; }
+	public int UserId { get; set; } // Thêm UserId để liên kết với User
+	public User User { get; set; }   // Quan hệ với bảng User
+
 }

@@ -418,7 +418,7 @@
 									<a class="title-info" href="/Accounts/Changepassword" title="Đổi mật khẩu">Đổi mật khẩu</a>
 								</li>
 								<li>
-									<a class="title-info" href="/Accounts/Addresses" title="Sổ địa chỉ (0)">Sổ địa chỉ (0)</a>
+									<a class="title-info" href="/Accounts/Addresss" title="Sổ địa chỉ (0)">Sổ địa chỉ (0)</a>
 								</li>
 								<li>
 									<a class="title-info" href="/Accounts/Logout" title="Đăng xuất">Đăng xuất</a>
@@ -434,6 +434,8 @@
 								<div class="form-signup name-account m992">
 									<p><strong>Họ tên:</strong> @Request.Cookies["UserFullName"]</p>
 									<p><strong>Email:</strong> @Request.Cookies["UserEmail"]</p>
+									<p><strong>Số điện thoại:</strong> @Request.Cookies["UserPhone"]</p>
+
 								</div>
 							}
 							else

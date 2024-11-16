@@ -51,9 +51,11 @@ namespace KoiFarmShop.WebApplication.Pages.Accounts
                 Response.Cookies.Append("UserEmail", account.Email, cookieOptions);
                 Response.Cookies.Append("UserName", account.UserName, cookieOptions);
                 Response.Cookies.Append("UserFullName", account.FullName, cookieOptions);
+				Response.Cookies.Append("UserPhone", account.Phone, cookieOptions);
 
-                // Chuyển hướng đến trang thông tin người dùng
-                return RedirectToPage("/Accounts/Index");
+
+				// Chuyển hướng đến trang thông tin người dùng
+				return RedirectToPage("/Accounts/Index");
             }
             else
             {
