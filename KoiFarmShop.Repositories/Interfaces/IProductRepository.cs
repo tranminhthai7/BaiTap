@@ -23,5 +23,12 @@ namespace KoiFarmShop.Repositories.Interfaces
 
 		// Cập nhật thông tin sản phẩm
 		Task<bool> UpdateProductAsync(Product product);
+		Task<IEnumerable<object>> FilterProductsAsync(decimal? minPrice, decimal? maxPrice, string? category);
+
+		// Thêm phương thức lọc sản phẩm
+		public interface IProductRepository
+		{
+			Task<List<Product>> FilterProductsAsync(decimal? minPrice, decimal? maxPrice, string? category);
+		}
 	}
 }

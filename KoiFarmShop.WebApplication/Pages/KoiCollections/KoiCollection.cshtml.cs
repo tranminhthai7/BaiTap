@@ -1,28 +1,37 @@
 ﻿using KoiFarmShop.Repositories.Entities;
+using KoiFarmShop.Repositories.Interfaces;
 using KoiFarmShop.Services.Interfaces;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
+
 namespace KoiFarmShop.WebApplication.Pages.KoiCollections
 {
-    public class KoiCollectionModel : PageModel
-    {
-        private readonly IKoiService _koiService;
+	public class KoiCollectionModel : PageModel
+	{
+		private readonly IProductService _productService;
+		private readonly IPromotionService _promotionService;
+		private readonly IProductRepository _productRepository;
 
-        // Inject IKoiService vào constructor
-        public KoiCollectionModel(IKoiService koiService)
-        {
-            _koiService = koiService;
-        }
+		// Constructor duy nhất nhận DI
+		public KoiCollectionModel(IProductService productService, IPromotionService promotionService, IProductRepository productRepository)
+		{
+			_productService = productService ?? throw new ArgumentNullException(nameof(productService));
+			_promotionService = promotionService ?? throw new ArgumentNullException(nameof(promotionService));
+			_productRepository = productRepository ?? throw new ArgumentNullException(nameof(productRepository));
+		}
 
-        // Property để chứa danh sách các Koi
-        public List<Koi> KoiCollection { get; set; }
+		public IEnumerable<Product> Products { get; private set; }
+		public IEnumerable<KoiFarmShop.Repositories.Entities.Promotion> Promotions { get; private set; }
 
-        // Phương thức OnGetAsync sẽ được gọi khi tải trang
-        public async Task OnGetAsync()
-        {
-            KoiCollection = await _koiService.GetKois(); // Lấy danh sách Koi từ Service
-        }
-    }
-}
+		// Phương thức GET để lấy dữ liệu sản phẩm và khuyến mãi
+		public async Task OnGetAsync()
+		{
+			Products = await _productService.GetAllProductsAsync();
+			Promotions = await _promotionService.GetAllPromotionsAsync();
+		}
+
+		}
+	}
