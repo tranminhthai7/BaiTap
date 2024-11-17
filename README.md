@@ -1,32 +1,36 @@
-# Custom User Management in ASP.NET Core MVC with Identity
+##Koi Farm Shop là giải pháp phần mềm toàn diện được thiết kế để quản lý việc bán hàng và các dịch vụ liên quan đến cá koi. Phần mềm này dành cho chủ trại cá, nhân viên và khách hàng, giúp đơn giản hóa quy trình, nâng cao trải nghiệm người dùng và đảm bảo hiệu quả vận hành.
 
-In this article, let’s go in-depth and understand the functionalities you can achieve with the help of Microsoft Identity. We will build a small yet practical implementation of Custom User Management in ASP.NET Core MVC with Identity. This will cover most of the practical use cases involved while developing User Management in ASP.NET Core. 
+##⭐️ Hãy Để Lại Một Đánh Giá ⭐️
+Nếu bạn thấy dự án này hữu ích hoặc đã áp dụng nó vào công việc kinh doanh của mình, hãy để lại một đánh giá. Sự ủng hộ của bạn là động lực để chúng tôi tiếp tục phát triển những công cụ tuyệt vời hơn nữa!
 
-## Give a Star ⭐️
-If you found this Implementation helpful or used it in your Projects, do give it a star. Thanks!
+##Các Tính Năng
+##Đây là những gì Koi Farm Shop mang lại:
 
-## Here are the Topics we will cover
-- Microsoft Identity – Overview
-- Setting up the ASP.NET Core MVC Application
-- Scaffolding the Identity UI
-- Renaming the Default Identity Tables and Updating.
-- Adding Custom Fields to Identity User
-- Extending the Registration Form
-- Allow Login with both Username and Email
-- Adding the Custom User Fields To Profile Settings
-- Adding a Profile Picture
-- Setting a Limit to Change Username
-- User Roles – Overview
-- Seed Default Roles
-- Seed Default Super Admin user
-- Add A Default Role to Newly Registered User
-- Add / View Available Roles
-- Listing Users with Corresponding Roles
-- Addings Users to Roles
-
-Read the entire blog post here - https://www.codewithmukesh.com/blog/user-management-in-aspnet-core-mvc/
-
-## Support
-Has this Project helped you learn something New? or Helped you at work? Do Consider Supporting.
-
-<a href="https://www.buymeacoffee.com/codewithmukesh" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" width="200"  ></a>
+Trang chủ: Giới thiệu về trại cá, thông tin các giống cá koi, blog và câu hỏi thường gặp.
+Thông tin chi tiết về cá koi: Xem thông tin cụ thể về cá koi (nguồn gốc, giống, kích thước, tuổi, cân nặng, v.v.).
+Lọc & Tìm kiếm: Lọc cá koi theo nguồn gốc, giống, chứng nhận và các tiêu chí khác.
+Phương thức mua hàng: Lựa chọn giữa mua hàng trực tuyến hoặc ngoại tuyến.
+Dịch vụ ký gửi: Gửi cá koi đến trại để bán ký gửi.
+Dịch vụ chăm sóc cá: Chăm sóc cá koi được khách hàng gửi gắm tại trại.
+Quản lý đơn hàng: So sánh đơn hàng, theo dõi doanh số và quản lý khuyến mãi.
+Đánh giá của khách hàng: Thu thập đánh giá và phản hồi từ khách hàng.
+Hồ sơ & Lịch sử: Quản lý hồ sơ và lịch sử mua hàng của khách hàng.
+Báo cáo & Bảng điều khiển: Tạo báo cáo và bảng điều khiển chi tiết cho doanh số và hoạt động.
+##Công Nghệ Sử Dụng
+Frontend: HTML, CSS, WordPress (Giao diện tối giản, tông màu tối).
+Backend: ASP.NET Core, C#.
+Cơ sở dữ liệu: Microsoft SQL Server.
+Công nghệ khác: ReactJS (cho một số thành phần), Ant Design, Firebase để xác thực.
+##Tài Liệu Nổi Bật
+Hướng dẫn thiết lập dự án trên WordPress.
+Lược đồ cơ sở dữ liệu cho quản lý cá koi và khách hàng.
+Tích hợp dịch vụ ký gửi và chăm sóc cá.
+Thuật toán lọc và sắp xếp cho tìm kiếm cá koi.
+Phân quyền truy cập theo vai trò cho nhân viên và quản lý.
+Tài liệu API chi tiết cho các dịch vụ backend.
+##Cải Tiến Trong Tương Lai
+Tích hợp AI để dự đoán giá trị cá koi dựa trên dữ liệu lịch sử.
+Hỗ trợ đa ngôn ngữ cho khách hàng toàn cầu.
+Phát triển ứng dụng di động để dễ dàng tiếp cận hơn.
+##Hỗ Trợ
+Dự án này đã giúp bạn quản lý trại cá koi hiệu quả hơn hay mang lại những giá trị hữu ích? Hãy cân nhắc ủng hộ chúng tôi!
