@@ -462,6 +462,7 @@ public partial class KoiFarmShop2024DbContext : DbContext
             entity.Property(e => e.Phone).HasMaxLength(15);
             entity.Property(e => e.UpdateDate).HasColumnType("datetime");
             entity.Property(e => e.UserName).HasMaxLength(50);
+            entity.Property(e => e.Role).HasMaxLength(50); // Ensure this line is present
         });
 
         OnModelCreatingPartial(modelBuilder);

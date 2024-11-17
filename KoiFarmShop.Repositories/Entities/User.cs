@@ -30,4 +30,6 @@ public partial class User
     public int? UpdateBy { get; set; }
 
     public DateTime? UpdateDate { get; set; }
+
+    public string? Role { get; set; }
 }
