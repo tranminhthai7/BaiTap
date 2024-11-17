@@ -457,22 +457,22 @@
                                             <div class="search-list">
 
 
-                                                <a href="/KoiCollections/KoiCollection" class="search-item" title="Tìm kiếm Cá Koi">
+                                                <a href="/search?q=Cá%20Koi" class="search-item" title="Tìm kiếm Cá Koi">
                                                     Cá Koi
                                                 </a>
 
 
-                                                <a href="/KoiCollections/KoiCollection" class="search-item" title="Tìm kiếm Koi Đang Bán">
+                                                <a href="/search?q=Koi%20đang%2bán" class="search-item" title="Tìm kiếm Koi Đang Bán">
                                                     Koi Đang Bán
                                                 </a>
 
 
 
-                                                <a href="/Koi-ki-gui/koi-ki-gui" class="search-item" title="Tìm kiếm Koi Kí Gửi">
+                                                <a href="/search?q=Koi%20kí%20gửi" class="search-item" title="Tìm kiếm Koi Kí Gửi">
                                                     Koi Kí Gửi
                                                 </a>
 
-                                                <a href="/He-thong-loc-ho-ca-koi/hr-thong-loc-ho-ca-koi" class="search-item" title="Tìm kiếm Hệ thống lọc hồ cá koi">
+                                                <a href="/search?q=Hệ%20thống%20lọc%20hồ%20cá%20koi" class="search-item" title="Tìm kiếm Hệ thống lọc hồ cá koi">
                                                     Hệ thống lọc hồ cá koi
                                                 </a>
 
@@ -517,6 +517,17 @@
                                 // Nếu từ khóa là "chính sách", chuyển hướng đến trang tìm kiếm "Chính Sách"
                                 if (query === "các bệnh cá koi") {
                                     window.location.href = "/Blogs/cac-benh-ca-Koi";  // Chuyển hướng đến trang tìm kiếm Chính Sách
+                                    return false;  // Ngừng hành động gửi form
+                                }
+
+                                // Nếu từ khóa là "chính sách", chuyển hướng đến trang tìm kiếm "Chính Sách"
+                                if (query === "Koi kí gửi") {
+                                    window.location.href = "/Koi-Ki-Gui/koi-ki-gui";  // Chuyển hướng đến trang tìm kiếm Chính Sách
+                                    return false;  // Ngừng hành động gửi form
+                                }
+
+                                if (query === "Hệ Thống Lọc Hồ Cá") {
+                                    window.location.href = "/He-thong-loc-ho-ca-koi/he-thong-loc-ho-ca-koi";  // Chuyển hướng đến trang tìm kiếm Chính Sách
                                     return false;  // Ngừng hành động gửi form
                                 }
 
@@ -624,7 +635,7 @@
                                     </li>
 
                                 </ul>
-                                
+
 
                             </div>
                             <div class="sudes-header-cart header-action_cart">
@@ -691,7 +702,7 @@
 
 
                                         <li class="sudes-main-cate-has-child menu-item-count ">
-                                            <a href="/KoiCollections/KoiCollection" title="Cá Koi">
+                                            <a href="/KoiColecctions/KoiCollection" title="Cá Koi">
                                                   <img width="400"
                                          height="240"
                                          src="/img/icon_cakoi.png"
@@ -714,7 +725,7 @@
 
 
 
-                                        <li class="menu-item-count ">
+                                        <li class="sudes-main-cate-has-child menu-item-count ">
                                             <a href="/KoiCollections/KoiCollection" title="Koi Đang Bán">
                                                         <img width="400"
                                          height="240"
@@ -725,15 +736,15 @@
                                                 Koi Đang Bán
                                         </a>
                                             <i class="open_mnu down_icon"></i>
-                                          
+
                                         </li>
 
 
 
 
 
-                                        <li class="menu-item-count">
-                                            <a href="/Koi-ki-gui/koi-ki-gui" title="Koi Kí Gửi">
+                                        <li class="sudes-main-cate-has-child menu-item-count ">
+                                            <a href="/Koi-Ki-Gui/koi-ki-gui" title="Koi Kí Gửi">
                                                     <img width="400"
                                          height="240"
                                          src="/img/icon_kí_gửi.png"
@@ -743,12 +754,12 @@
                                                 Koi Kí Gửi
                                         </a>
                                                                                 <i class="open_mnu down_icon"></i>
-                                
 
 
 
-                                        <li class="menu-item-count">
-                                            <a href="/He-thong-loc-ho-ki-koi/he-thong-loc-ho-ca-koi" title="Hệ Thống Lọc Hồ Cá Koi">
+
+                                        <li class="sudes-main-cate-has-child menu-item-count ">
+                                            <a href="/He-thong-loc-ho-ca-koi/he-thong-loc-ho-ca-koi" title="Hệ Thống Lọc Hồ Cá Koi">
                                                     <img width="400"
                                          height="240"
                                          src="/img/icon_loc_hồ.png"
@@ -757,8 +768,9 @@
                                          class="duration-300" />
                                                 Hệ Thống Lọc Hồ Cá Koi
                                         </a>
-                                           
-                    
+                                            <i class="open_mnu down_icon"></i>
+                                            <ul class="menu-child sub-menu sudes-sub-mega-menu">
+
 
 
 
@@ -839,14 +851,14 @@
                                             <ul class="dropdown-menu">
 
 
-                                                <li class="nav-item-lv2">
+                                                <li class="dropdown-submenu nav-item-lv2 has-childs2">
                                                     <a class="nav-link" href="/KoiCollections/KoiCollection" title="Cá Koi">Cá Koi <svg width="8" height="17" viewBox="0 0 8 17" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M7.13382 7.1278L7.13379 7.12777L0.512271 0.509686L0.795057 0.226752L0.51227 0.509685C0.512123 0.509538 0.51201 0.509431 0.511927 0.509356L7.13382 7.1278ZM7.13382 7.1278C7.62239 7.61603 7.622 8.40641 7.13301 8.89414L7.13298 8.89417L0.502368 15.5089C0.50222 15.509 0.502106 15.5091 0.502022 15.5092C0.501841 15.5092 0.501547 15.5093 0.501149 15.5093C0.500827 15.5093 0.500574 15.5093 0.500392 15.5092L7.13055 8.89499C7.13056 8.89498 7.13057 8.89497 7.13058 8.89495C7.61976 8.407 7.62011 7.61541 7.13138 7.12699L7.13382 7.1278Z"></path></svg></a>
                                                     <i class="open_mnu down_icon"></i>
                                                    </li>
 
 
 
-                                               <li class="nav-item-lv2">
+                                                <li class="dropdown-submenu nav-item-lv2 has-childs2">
                                                     <a class="nav-link" href="/KoiCollections/KoiCollection" title="Koi Đang Bán">Koi Đang Bán <svg width="8" height="17" viewBox="0 0 8 17" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M7.13382 7.1278L7.13379 7.12777L0.512271 0.509686L0.795057 0.226752L0.51227 0.509685C0.512123 0.509538 0.51201 0.509431 0.511927 0.509356L7.13382 7.1278ZM7.13382 7.1278C7.62239 7.61603 7.622 8.40641 7.13301 8.89414L7.13298 8.89417L0.502368 15.5089C0.50222 15.509 0.502106 15.5091 0.502022 15.5092C0.501841 15.5092 0.501547 15.5093 0.501149 15.5093C0.500827 15.5093 0.500574 15.5093 0.500392 15.5092L7.13055 8.89499C7.13056 8.89498 7.13057 8.89497 7.13058 8.89495C7.61976 8.407 7.62011 7.61541 7.13138 7.12699L7.13382 7.1278Z"></path></svg></a>
                                                     <i class="open_mnu down_icon"></i>
 
@@ -856,16 +868,17 @@
 
 
 
-                                               <li class="nav-item-lv2">
+                                                <li class="dropdown-submenu nav-item-lv2 has-childs2">
                                                     <a class="nav-link" href="/Koi-Ki-Gui/koi-ki-gui" title="Koi Kí Gửi">Koi Kí Gửi <svg width="8" height="17" viewBox="0 0 8 17" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M7.13382 7.1278L7.13379 7.12777L0.512271 0.509686L0.795057 0.226752L0.51227 0.509685C0.512123 0.509538 0.51201 0.509431 0.511927 0.509356L7.13382 7.1278ZM7.13382 7.1278C7.62239 7.61603 7.622 8.40641 7.13301 8.89414L7.13298 8.89417L0.502368 15.5089C0.50222 15.509 0.502106 15.5091 0.502022 15.5092C0.501841 15.5092 0.501547 15.5093 0.501149 15.5093C0.500827 15.5093 0.500574 15.5093 0.500392 15.5092L7.13055 8.89499C7.13056 8.89498 7.13057 8.89497 7.13058 8.89495C7.61976 8.407 7.62011 7.61541 7.13138 7.12699L7.13382 7.1278Z"></path></svg></a>
                                                     <i class="open_mnu down_icon"></i>
 
                                                 </li>
 
 
-                                                <li class="nav-item-lv2">
+
+                                                <li class="dropdown-submenu nav-item-lv2 has-childs2">
                                                     <a class="nav-link" href="/He-thong-loc-ho-ca-koi/he-thong-loc-ho-ca-koi" title="Hệ Thống Lọc Hồ Cá Koi">Hệ Thống Lọc Hồ Cá Koi <svg width="8" height="17" viewBox="0 0 8 17" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M7.13382 7.1278L7.13379 7.12777L0.512271 0.509686L0.795057 0.226752L0.51227 0.509685C0.512123 0.509538 0.51201 0.509431 0.511927 0.509356L7.13382 7.1278ZM7.13382 7.1278C7.62239 7.61603 7.622 8.40641 7.13301 8.89414L7.13298 8.89417L0.502368 15.5089C0.50222 15.509 0.502106 15.5091 0.502022 15.5092C0.501841 15.5092 0.501547 15.5093 0.501149 15.5093C0.500827 15.5093 0.500574 15.5093 0.500392 15.5092L7.13055 8.89499C7.13056 8.89498 7.13057 8.89497 7.13058 8.89495C7.61976 8.407 7.62011 7.61541 7.13138 7.12699L7.13382 7.1278Z"></path></svg></a>
-                                                   
+                                                    <i class="open_mnu down_icon"></i>
                                                     <ul class="dropdown-menu">
 
 
