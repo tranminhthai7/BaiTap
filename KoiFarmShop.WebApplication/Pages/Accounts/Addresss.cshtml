@@ -1,30 +1,30 @@
 ﻿@page
 @model KoiFarmShop.WebApplication.Pages.Accounts.AddresssModel
 @{
-    Layout = "_Layout";
-    ViewData["Title"] = "Accounts";
+	Layout = "_Layout";
+	ViewData["Title"] = "Accounts";
 }
 
 <!DOCTYPE html>
 <html lang="vi">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="theme-color" content="#8d251c" />
-		<link rel="canonical" href="https://localhost:7197/Accounts/Addresses"/>
-		<meta name='revisit-after' content='2 days' />
-		<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">	
-		<meta name="robots" content="noodp,index,follow" />
-		<meta name="description" content="">
-		<title>Sổ địa chỉ		</title>
-		<meta name="keywords" content="Sổ địa chỉ, Koi Farm Shop, sudes-nest.mysapo.net"/>		
-		
+<head>
+	<meta charset="UTF-8" />
+	<meta name="theme-color" content="#8d251c" />
+	<link rel="canonical" href="https://localhost:7197/Accounts/Addresses" />
+	<meta name='revisit-after' content='2 days' />
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="robots" content="noodp,index,follow" />
+	<meta name="description" content="">
+	<title>Sổ địa chỉ		</title>
+	<meta name="keywords" content="Sổ địa chỉ, Koi Farm Shop, sudes-nest.mysapo.net" />
+
 	<meta property="og:type" content="website">
 	<meta property="og:title" content="Sổ địa chỉ">
 
 
-<meta property="og:description" content="">
-<meta property="og:url" content="https://localhost:7197/Accounts/Addresses">
-<meta property="og:site_name" content="Koi Farm Shop">
+	<meta property="og:description" content="">
+	<meta property="og:url" content="https://localhost:7197/Accounts/Addresses">
+	<meta property="og:site_name" content="Koi Farm Shop">
 	<link rel="preload" as="script" href="~/js/jquery.js" />
 	<script src="~/js/jquery.js" type="text/javascript"></script>
 	<link rel="preload" as="script" href="~/js/swiper.js" />
@@ -48,6 +48,7 @@
 
 
 	<link rel="preload" as='image' media="screen and (max-width: 480px)" href="./img/slider3.jpg">
+
 
 
 
@@ -157,713 +158,769 @@
 	</script>
 	<script src="~/js/common.js" type="text/javascript"></script>
 	<script src="~/js/customer.js" type="text/javascript"></script>
-		
-		
 
-		<script>
-			document.addEventListener('DOMContentLoaded', function () {
-				awe_lazyloadImage();
 
-				/*Header promotion*/
-				
-				var index = 0,
-					stop = false,
-					num = document.querySelectorAll('.js-promo > li').length,
-					liEls = document.querySelectorAll('.js-promo > li');
 
-				function shippingflipInX() {
-					if (stop) return false;
-					if (index > (num - 2)) {
-						liEls.forEach(function (el) {
-							el.classList.add('see-none');
-							el.classList.remove('animated', 'flipInX', 'see-block');
-						});
-						index = 0;
-						liEls[0].classList.add('animated', 'flipInX', 'see-block');
-						liEls[0].classList.remove('see-none');
-						return;
-					}
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			awe_lazyloadImage();
 
+			/*Header promotion*/
+
+			var index = 0,
+				stop = false,
+				num = document.querySelectorAll('.js-promo > li').length,
+				liEls = document.querySelectorAll('.js-promo > li');
+
+			function shippingflipInX() {
+				if (stop) return false;
+				if (index > (num - 2)) {
 					liEls.forEach(function (el) {
 						el.classList.add('see-none');
 						el.classList.remove('animated', 'flipInX', 'see-block');
 					});
-					liEls[index + 1].classList.remove('see-none');
-					liEls[index + 1].classList.add('animated', 'flipInX', 'see-block');
-					index++;
+					index = 0;
+					liEls[0].classList.add('animated', 'flipInX', 'see-block');
+					liEls[0].classList.remove('see-none');
+					return;
 				}
 
-				var hdtimer = setInterval(function () {
-					shippingflipInX();
-				}, 5000);
-
-				document.querySelector('.js-promo').addEventListener('mouseenter', function () {
-					stop = true;
+				liEls.forEach(function (el) {
+					el.classList.add('see-none');
+					el.classList.remove('animated', 'flipInX', 'see-block');
 				});
+				liEls[index + 1].classList.remove('see-none');
+				liEls[index + 1].classList.add('animated', 'flipInX', 'see-block');
+				index++;
+			}
 
-				document.querySelector('.js-promo').addEventListener('mouseleave', function () {
-					stop = false;
-				});
-				
-				
-				function getItemSearch(name, smartjson) {
-					return fetch(`https://${window.location.hostname}/search?q=${name}&view=${smartjson}&type=product`)
-						.then(res => res.json())
-						.catch(err => console.error(err));
-				}
+			var hdtimer = setInterval(function () {
+				shippingflipInX();
+			}, 5000);
 
-				var searchRecent = document.querySelector('.search-suggest .search-recent');
-				var searchRecentList = localStorage.getItem('search_recent_list');
-				var recentList = searchRecentList ? JSON.parse(searchRecentList) : [];
+			document.querySelector('.js-promo').addEventListener('mouseenter', function () {
+				stop = true;
+			});
 
-				if (recentList.length > 0) {
-					searchRecent.classList.remove('d-none');
-					var searchList = searchRecent.querySelector('.search-list');
-					recentList.forEach(function (item) {
-						var link = document.createElement('a');
-						link.href = `/search?query=${encodeURIComponent(item)}&type=product`;
-						link.textContent = item;
-						link.title = `Tìm kiếm ${item}`;
-						link.classList.add('search-item');
+			document.querySelector('.js-promo').addEventListener('mouseleave', function () {
+				stop = false;
+			});
 
-						var closeSpan = document.createElement('span');
-						closeSpan.textContent = 'Đóng';
-						closeSpan.title = 'Đóng';
-						closeSpan.classList.add('close');
 
-						closeSpan.addEventListener('click', function (e) {
-							e.preventDefault();
-							e.stopPropagation();
-							var index = recentList.indexOf(item);
-							if (index !== -1) {
-								recentList.splice(index, 1);
-								localStorage.setItem('search_recent_list', JSON.stringify(recentList));
-								searchList.removeChild(link);
-								if (recentList.length == 0) {
-									searchRecent.classList.toggle('d-none');
-								}
+			function getItemSearch(name, smartjson) {
+				return fetch(`https://${window.location.hostname}/search?q=${name}&view=${smartjson}&type=product`)
+					.then(res => res.json())
+					.catch(err => console.error(err));
+			}
+
+			var searchRecent = document.querySelector('.search-suggest .search-recent');
+			var searchRecentList = localStorage.getItem('search_recent_list');
+			var recentList = searchRecentList ? JSON.parse(searchRecentList) : [];
+
+			if (recentList.length > 0) {
+				searchRecent.classList.remove('d-none');
+				var searchList = searchRecent.querySelector('.search-list');
+				recentList.forEach(function (item) {
+					var link = document.createElement('a');
+					link.href = `/search?query=${encodeURIComponent(item)}&type=product`;
+					link.textContent = item;
+					link.title = `Tìm kiếm ${item}`;
+					link.classList.add('search-item');
+
+					var closeSpan = document.createElement('span');
+					closeSpan.textContent = 'Đóng';
+					closeSpan.title = 'Đóng';
+					closeSpan.classList.add('close');
+
+					closeSpan.addEventListener('click', function (e) {
+						e.preventDefault();
+						e.stopPropagation();
+						var index = recentList.indexOf(item);
+						if (index !== -1) {
+							recentList.splice(index, 1);
+							localStorage.setItem('search_recent_list', JSON.stringify(recentList));
+							searchList.removeChild(link);
+							if (recentList.length == 0) {
+								searchRecent.classList.toggle('d-none');
 							}
-						});
-
-						link.appendChild(closeSpan);
-						searchList.appendChild(link);
-					});
-				}
-
-				var searchInput = document.querySelectorAll('.header_tim_kiem input[type="text"], .search-mobile input[type="text"]');
-				searchInput.forEach(function (input) {
-					input.addEventListener('keyup', function (e) {
-						let term = this.value.trim();
-						let data = '';
-						var resultbox = '';
-						if (term.length > 1) {
-							searchRecent.classList.add('d-none');
-
-							async function goawaySearch() {
-								data = await getItemSearch(term, 'smartjson');
-								setTimeout(function () {
-									var sizeData = Object.keys(data).length;
-									if (sizeData > 0) {
-										Object.keys(data).forEach(function (key) {
-											if (data[key].compare_price !== 0) {
-												resultbox += `<a class="product-smart" href="${data[key].url}" title="${data[key].name}"><div class="image_thumb"><img width="58" height="58" class="lazyload loaded" src="${data[key].image}" data-src="${data[key].image}" alt="${data[key].name}" data-was-processed="true"></div><div class="product-info"><h3 class="product-name"><span>${data[key].name}</span></h3><div class="price-box"><span class="price">${data[key].price}</span><span class="compare-price">${data[key].compare_price}</span></div></div></a>`;
-											} else {
-												resultbox += `<a class="product-smart" href="${data[key].url}" title="${data[key].name}"><div class="image_thumb"><img width="58" height="58" class="lazyload loaded" src="${data[key].image}" data-src="${data[key].image}" alt="${data[key].name}" data-was-processed="true"></div><div class="product-info"><h3 class="product-name"><span>${data[key].name}</span></h3><div class="price-box"><span class="price">${data[key].price}</span></div></div></a>`;
-											}
-										});
-										resultbox += `<a href="/search?query=${term}&type=product" class="see-all-search" title="Xem tất cả">Xem tất cả kết quả »</a>`;
-										document.querySelector('.list-search').innerHTML = resultbox;
-									} else {
-										document.querySelector('.list-search').innerHTML = '<div class="not-pro">Không có thấy kết quả tìm kiếm</div>';
-									}
-								}, 200);
-							}
-
-							goawaySearch();
-						} else {
-							if (recentList.length > 0) {
-								searchRecent.classList.remove('d-none');
-							}
-							document.querySelector('.list-search').innerHTML = '';
 						}
 					});
+
+					link.appendChild(closeSpan);
+					searchList.appendChild(link);
 				});
-				
+			}
+
+			var searchInput = document.querySelectorAll('.header_tim_kiem input[type="text"], .search-mobile input[type="text"]');
+			searchInput.forEach(function (input) {
+				input.addEventListener('keyup', function (e) {
+					let term = this.value.trim();
+					let data = '';
+					var resultbox = '';
+					if (term.length > 1) {
+						searchRecent.classList.add('d-none');
+
+						async function goawaySearch() {
+							data = await getItemSearch(term, 'smartjson');
+							setTimeout(function () {
+								var sizeData = Object.keys(data).length;
+								if (sizeData > 0) {
+									Object.keys(data).forEach(function (key) {
+										if (data[key].compare_price !== 0) {
+											resultbox += `<a class="product-smart" href="${data[key].url}" title="${data[key].name}"><div class="image_thumb"><img width="58" height="58" class="lazyload loaded" src="${data[key].image}" data-src="${data[key].image}" alt="${data[key].name}" data-was-processed="true"></div><div class="product-info"><h3 class="product-name"><span>${data[key].name}</span></h3><div class="price-box"><span class="price">${data[key].price}</span><span class="compare-price">${data[key].compare_price}</span></div></div></a>`;
+										} else {
+											resultbox += `<a class="product-smart" href="${data[key].url}" title="${data[key].name}"><div class="image_thumb"><img width="58" height="58" class="lazyload loaded" src="${data[key].image}" data-src="${data[key].image}" alt="${data[key].name}" data-was-processed="true"></div><div class="product-info"><h3 class="product-name"><span>${data[key].name}</span></h3><div class="price-box"><span class="price">${data[key].price}</span></div></div></a>`;
+										}
+									});
+									resultbox += `<a href="/search?query=${term}&type=product" class="see-all-search" title="Xem tất cả">Xem tất cả kết quả »</a>`;
+									document.querySelector('.list-search').innerHTML = resultbox;
+								} else {
+									document.querySelector('.list-search').innerHTML = '<div class="not-pro">Không có thấy kết quả tìm kiếm</div>';
+								}
+							}, 200);
+						}
+
+						goawaySearch();
+					} else {
+						if (recentList.length > 0) {
+							searchRecent.classList.remove('d-none');
+						}
+						document.querySelector('.list-search').innerHTML = '';
+					}
+				});
 			});
-			function awe_lazyloadImage() {
-				var ll = new LazyLoad({
-					elements_selector: ".lazyload",
-					load_delay: 100,
-					threshold: 0
+
+		});
+		function awe_lazyloadImage() {
+			var ll = new LazyLoad({
+				elements_selector: ".lazyload",
+				load_delay: 100,
+				threshold: 0
+			});
+		} window.awe_lazyloadImage = awe_lazyloadImage;
+
+
+	</script>
+</head>
+<body>
+	<div class="opacity_menu"></div>
+
+	<script>
+		const header = document.querySelector('header.header');
+		let headerHeight = header.offsetHeight;
+		let resizeWindow = window.innerWidth;
+		let offsetStickyHeader = header.offsetHeight;
+		let offsetStickyDown = 0;
+		let resizeTimer;
+
+		const tabLinks = document.querySelectorAll('.tab-link');
+		const tabContents = document.querySelectorAll('.tab-content-mb');
+
+		const handleResize = () => {
+			if (resizeTimer) clearTimeout(resizeTimer);
+
+			resizeTimer = setTimeout(() => {
+				const newWidth = window.innerWidth;
+
+				if (resizeWindow !== newWidth) {
+					header.classList.remove('hSticky');
+					header.style.minHeight = '';
+
+					headerHeight = header.offsetHeight;
+					header.style.minHeight = `${headerHeight}px`;
+
+					resizeWindow = newWidth;
+				}
+			}, 200);
+		};
+
+		const handleScroll = () => {
+			const scrollTop = window.scrollY;
+
+			if (scrollTop > offsetStickyHeader && scrollTop > offsetStickyDown) {
+				header.classList.add('hSticky');
+			}
+
+			if (scrollTop <= offsetStickyDown && scrollTop <= offsetStickyHeader) {
+				header.classList.remove('hSticky');
+			}
+
+			offsetStickyDown = scrollTop;
+		};
+
+		const handleTabClick = (tabLink) => {
+			const tabId = tabLink.dataset.tab;
+
+			tabLinks.forEach((link) => link.classList.remove('active'));
+			tabLink.classList.add('active');
+
+			tabContents.forEach((tabContent) => tabContent.classList.remove('active'));
+			document.getElementById(tabId).classList.add('active');
+		};
+
+		const initializeTabs = () => {
+			if (window.innerWidth <= 991) {
+				const tabMenu1 = document.getElementById('tab-menu-1');
+				const tabLinkMenu1 = document.querySelector('.tab-link[data-tab="tab-menu-1"]');
+
+				tabMenu1.classList.add('active');
+				tabLinkMenu1.classList.add('active');
+
+				tabLinks.forEach((tabLink) => {
+					tabLink.addEventListener('click', () => handleTabClick(tabLink));
 				});
-			} window.awe_lazyloadImage=awe_lazyloadImage;
+			}
+		};
+
+		window.addEventListener('resize', handleResize);
+		window.addEventListener('scroll', handleScroll);
+
+		tabLinks.forEach((tabLink) => {
+			tabLink.addEventListener('click', () => handleTabClick(tabLink));
+		});
+
+		document.addEventListener('DOMContentLoaded', initializeTabs);
+	</script>
+	<div class="bodywrap">
+		<section class="bread-crumb">
+			<div class="container">
+				<ul class="breadcrumb">
+					<li class="home">
+						<a href="/" title="Trang chủ"><span>Trang chủ</span></a>
+						<span class="mr_lr">&nbsp;<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-chevron-right fa-w-10"><path fill="currentColor" d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z" class=""></path></svg>&nbsp;</span>
+					</li>
+
+					<li>
+						<a href="/Accounts" title="Tài khoản"><span>Tài khoản</span></a>
+						<span class="mr_lr">&nbsp;<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-chevron-right fa-w-10"><path fill="currentColor" d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z" class=""></path></svg>&nbsp;</span>
+					</li>
+					<li><strong><span>Địa chỉ khách hàng</span></strong></li>
+
+				</ul>
+			</div>
+		</section>
+
+		<section class="address">
+			<div class="container page_address margin-bottom-20">
+				<div class="row">
+					<div class="col-xs-12 col-sm-12 col-lg-3 col-left-ac">
+			<div class="block-account bg-shadow">
+				<h5 class="title-account">Trang tài khoản</h5>
+				@if (Request.Cookies["UserEmail"] != null)
+				{
+					<p>Xin chào, <span style="color:#8d251c;">@Request.Cookies["UserName"]</span>!</p>
+				}
+				else
+				{
+					<p>Xin chào, khách hàng!</p>
+				}
+				<ul>
+					<li>
+						<a disabled="disabled" class="title-info active" title="Thông tin tài khoản" href="javascript:void(0);">Thông tin tài khoản</a>
+					</li>
+					<li>
+						<a class="title-info" href="/Accounts/Orders" title="Đơn hàng của bạn">Đơn hàng của bạn</a>
+					</li>
+					<li>
+						<a class="title-info" href="/danh-sach-yeu-thich" title="Danh sách yêu thích">
+							Danh sách yêu thích (<span class="js-wishlist-count">0</span>)
+						</a>
+					</li>
+					<li>
+						<a class="title-info" href="/Accounts/Changepassword" title="Đổi mật khẩu">Đổi mật khẩu</a>
+					</li>
+					<li>
+						<a class="title-info" href="/Accounts/Addresss" title="Sổ địa chỉ (0)">Sổ địa chỉ (0)</a>
+					</li>
+					<li>
+						<a class="title-info" href="/Accounts/Logout" title="Đăng xuất">Đăng xuất</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="col-xs-12 col-sm-12 col-lg-9 col-right-ac">
+					<h1 class="title-head">Địa chỉ của bạn</h1>	
+
+			<div class="bg-shadow">
+		@if (Model.UserAddresses != null && Model.UserAddresses.Count > 0)
+		{
+			<ul>
+				@foreach (var address in Model.UserAddresses)
+				{
+					<li>
+						<strong>Họ tên: @address.Company</strong><br />
+						Địa chỉ: @address.FullAddress<br />
+						Số điện thoại: @address.UserPhone<br />
+						Công ty: @address.Company<br />
+						<small>@(address.CreatedDate.HasValue ? address.CreatedDate.Value.ToString("dd/MM/yyyy") : "Chưa có thông tin")</small>
+						<br />
+						<button type="button" onclick="editAddress(@address.AddressId)">Sửa</button>
+						<form method="post" asp-page-handler="DeleteAddress">
+							<input type="hidden" name="addressToDelete" value="@address.FullAddress" />
+							<button type="submit">Xóa</button>
+						</form>
+					</li>
+				}
+			</ul>
+		}
+		else
+		{
+			<p>Không có địa chỉ nào.</p>
+		}
+
+		<button class="btn-edit-addr btn btn-primary btn-more" type="button" onclick="document.getElementById('add_address').style.display='block';">Thêm địa chỉ</button>
+
+		<div id="add_address" class="form-list modal_address modal" style="display: none;">
+			<div class="btn-close closed_pop" onclick="document.getElementById('add_address').style.display='none';"><span></span></div>
+			<h2 class="title_pop">Thêm địa chỉ mới</h2>
+
+			<form method="post" asp-page-handler="AddAddress">
+				<div class="pop_bottom">
+					<div class="form_address">
+						<div class="field">
+							<fieldset class="form-group">
+								<input type="text" class="form-control" name="UserPhone" value="@Model.UserPhone" required maxlength="12" pattern="\d+" />
+								<label for="UserPhone">Số điện thoại*</label>
+							</fieldset>
+						</div>
+
+						<div class="field">
+							<fieldset class="form-group">
+								<input type="text" class="form-control" name="Company" value="@Model.Company" />
+								<label for="Company">Công ty</label>
+							</fieldset>
+						</div>
+
+						<div class="field">
+							<fieldset class="form-group">
+								<input type="text" class="form-control" name="FullAddress" value="@Model.FullAddress" required />
+								<label for="FullAddress">Địa chỉ đầy đủ</label>
+							</fieldset>
+						</div>
+					</div>
+
+					<div class="checkbox">
+						<label class="c-input c-checkbox" style="padding-left: 20px;">
+							<input type="checkbox" name="IsDefault" value="true" />
+							<span class="c-indicator">Đặt là địa chỉ mặc định?</span>
+						</label>
+					</div>
+
+					<div class="btn-row">
+						<button class="btn btn-lg btn-dark-address btn-outline article-readmore btn-close" type="button" onclick="document.getElementById('add_address').style.display='none';"><span>Hủy</span></button>
+						<button class="btn btn-lg btn-primary btn-submit" type="submit"><span>Thêm địa chỉ</span></button>
+					</div>
+				</div>
+			</form>
+		</div>
+		</div>
+		</div>
+		</div>
+		</div>
+		</section>
+		<!--yeu cau su dung jquery 3. trở lên-->
+		<script src="~/js/jquery.validate.min.js"></script>
+		<script>$.validate({});</script>
+
+		<script type="text/javascript" charset="utf-8">
+
+
+			//JS address with json
+
+			(function (window) {
+				var allProvince = [];
+				var allDistrict = [];
+				var allWard = [];
+				var loadedData = false;
+
+				function setProvince(zone, province) {
+					$province = $("select[data-address-type='province'][data-address-zone='" + zone + "']");
+					if (!$province) {
+						return;
+					}
+					var list = ['<option value="" hidden>---</option>'];
+					for (var i = 0; i < allProvince.length; i++) {
+						var p = allProvince[i];
+						if (p.name == province) {
+							list.push("<option value='" + p.name + "' selected>" + p.name + "</option>");
+							continue;
+						}
+						list.push("<option value='" + p.name + "'>" + p.name + "</option>");
+					}
+
+					$province.html(list.join(''));
+				};
+
+				function setDistrict(zone, province, district) {
+					var $district = $("select[data-address-type='district'][data-address-zone='" + zone + "']");
+					if (!$district) {
+						return;
+					}
+					if (!province) {
+						$district.val('');
+						$district.attr('disabled', 'disabled');
+						$district.html('');
+						return;
+					}
+					var provinceObj = allProvince.find(function (p) { return p.name == province; });
+					var districts = allDistrict.filter(function (d) { return d.province_id == provinceObj.id; });
+					var list = ['<option value="" hidden>---</option>'];
+					for (var i = 0; i < districts.length; i++) {
+						var d = districts[i];
+						if (d.name == district) {
+							list.push("<option value='" + d.name + "' selected>" + d.name + "</option>");
+							continue;
+						}
+						list.push("<option value='" + d.name + "'>" + d.name + "</option>");
+					}
+					$district.removeAttr('disabled');
+					$district.html(list.join(''));
+				};
+
+				function setWard(zone, district, ward) {
+					var $ward = $("select[data-address-type='ward'][data-address-zone='" + zone + "']");
+					if (!$ward) {
+						return;
+					}
+					if (!district) {
+						$ward.val('');
+						$ward.attr('disabled', 'disabled');
+						$ward.html('');
+						return;
+					}
+					var list = ['<option value="" hidden>---</option>'];
+					var districtObj = allDistrict.find(function (d) { return d.name == district; });
+					var wards = allWard.filter(function (w) { return w.district_id == districtObj.id; });
+					for (var i = 0; i < wards.length; i++) {
+						var w = wards[i];
+						if (w.name == ward) {
+							list.push("<option value='" + w.name + "' selected>" + w.name + "</option>");
+							continue;
+						}
+						list.push("<option value='" + w.name + "'>" + w.name + "</option>");
+					}
+					$ward.removeAttr('disabled');
+					$ward.html(list.join(''));
+				};
+
+
+				function loadData() {
+					if (loadedData) {
+						return {
+							then: function (f) {
+								return f();
+							}
+						};
+					}
+					return fetch('/checkout/addresses.json')
+						.then(function (rs) { return rs.json(); })
+						.then(function (rs) {
+							allProvince = rs.provinces;
+							allDistrict = rs.districts;
+							allWard = rs.wards;
+							loadedData = true;
+						});
+				};
+
+				function Address() {
+
+				}
+
+				function triggerChange(zone, type) {
+					$('select[data-address-type="' + type + '"][data-address-zone="' + zone + '"]').trigger('address:change');
+				}
+
+				Address.prototype.bind = function () {
+					$('body')
+						.on('change', 'select[data-address-type]', function (e) {
+							var type = e.target.getAttribute('data-address-type');
+							var zone = e.target.getAttribute('data-address-zone');
+							if (type === 'province') {
+								triggerChange(zone, 'province');
+								setDistrict(zone, e.target.value, undefined);
+								triggerChange(zone, 'district');
+								setWard(zone, '', undefined);
+								triggerChange(zone, 'ward');
+							} else if (type === 'district') {
+								triggerChange(zone, 'district');
+								setWard(zone, e.target.value, undefined);
+								triggerChange(zone, 'ward');
+							}
+						})
+					return this;
+				};
+
+				Address.prototype.refresh = function (callback) {
+					var zones = {};
+					$('[data-address-zone]').each(function () {
+						var $this = $(this);
+						var type = $this.data('address-type');
+						if (!type) {
+							return;
+						}
+						var zoneName = $this.data('address-zone');
+						var zone = zones[zoneName] || (zones[zoneName] = {});
+						zone[type] = $this.val() || $this.attr('value');
+					});
+					var zoneNames = Object.keys(zones);
+					if (zoneNames.length == 0) {
+						return;
+					}
+					loadData().then(function () {
+						zoneNames.forEach(function (zoneName) {
+							var zone = zones[zoneName];
+							setProvince(zoneName, zone.province);
+							triggerChange(zoneName, 'province');
+							setDistrict(zoneName, zone.province, zone.district);
+							triggerChange(zoneName, 'district');
+							setWard(zoneName, zone.district, zone.ward);
+							triggerChange(zoneName, 'ward');
+						});
+						if (callback) {
+							callback();
+						}
+					});
+				};
+
+				window.Address = new Address();
+
+			})(window)
+
+
+			//Page address
+
+			new Bizweb.CountrySelector('address_country_new');
+
+
+			$(document).ready(function () {
+
+				var elements = $("input, select, textarea");
+				for (var i = 0; i < elements.length; i++) {
+					elements[i].oninvalid = function (e) {
+						e.target.setCustomValidity("");
+						if (!e.target.validity.valid) {
+							e.target.setCustomValidity(e.target.getAttribute("requiredmsg"));
+						}
+					};
+					elements[i].oninput = function (e) {
+						e.target.setCustomValidity("");
+					};
+				}
+				$('.mySelect2').each(function () {
+					var old = $(this).attr('data-default');
+					$(this).val(old);
+					$(this).change();
+				})
+
+				$('.btn-close').on('click', function (e) {
+					e.preventDefault();
+					$('.op_address').removeClass('opened');
+					$('.modal_address').hide();
+					$('html').removeClass('no-scroll');
+					$('.not-vn').removeClass('hidden');
+					Address.bind().refresh();
+					$('.mySelect2').each(function () {
+						var old = $(this).attr('data-default');
+						$(this).val(old);
+						$(this).change();
+					})
+					setTimeout(function () {
+						$('input').prop('selected', false);
+					}, 500)
+					$('.form-group input').each(function () {
+						if ($(this).val() != "") {
+							$(this).addClass("has-content");
+						} else {
+							$(this).removeClass("has-content");
+						}
+					})
+				});
+				$('.btn-fix-addr').click(function (e) {
+					$(this).parents('.collapse').removeClass('in').hide();
+				})
+			})
+
+			$('fieldset').click(function () {
+				$(this).find('input').focus();
+			});
+
+			$(document).on('click', '.btn-more', function (e) {
+				$('.op_address').toggleClass('opened');
+				$('#add_address').show();
+				$('html').toggleClass('no-scroll');
+				$('.mySelect2').each(function () {
+					var old = $(this).attr('data-default');
+					$(this).val(old);
+					$(this).change();
+				})
+				if ($("#customer_address select[name='Country'] option:selected").val() != 'Vietnam') {
+					$('.not-vn').addClass('hidden');
+				} else {
+					$('.not-vn').removeClass('hidden');
+				}
+
+				Address.bind().refresh();
+				$('.form-group input').each(function () {
+					if ($(this).val() != "") {
+						$(this).addClass("has-content");
+					} else {
+						$(this).removeClass("has-content");
+					}
+				})
+			});
+			if ($(window).width() > 768) {
+				$(function () {
+					setInterval(function () {
+						if ($('.modal_address').find("select[name='Country'] option:selected").val() != 'Vietnam') {
+							if ($(".modal_address input[name='FullName']").val() === '') {
+								if ($('.help-block.form-error').length) {
+									$('.modal_address').css("height", "515px");
+								} else {
+									$('.modal_address').css("height", "495px");
+								}
+							} else {
+								$('.modal_address').css("height", "495px");
+							}
+						} else if ($('.modal_address').find("select[name='Country'] option:selected").val() === 'Vietnam') {
+							if ($(".modal_address input[name='FullName']").val() !== '') {
+								$('.modal_address').css("height", "545px");
+							} else {
+								if ($('.help-block.form-error').length) {
+									$('.modal_address').css("height", "575px");
+								} else {
+									$('.modal_address').css("height", "545px");
+								}
+							}
+						} else {
+							$('.modal_address').css("height", "545px");
+						}
+
+
+
+						if ($('.modal_edit_address').find("select[name='Country'] option:selected").val() != 'Vietnam') {
+							if ($(".modal_edit_address input[name='FullName']").val() === '') {
+								if ($('.help-block.form-error').length) {
+									$('.modal_edit_address').css("height", "515px");
+								} else {
+									$('.modal_edit_address').css("height", "495px");
+								}
+							} else {
+								$('.modal_edit_address').css("height", "495px");
+							}
+						} else if ($('.modal_edit_address').find("select[name='Country'] option:selected").val() === 'Vietnam') {
+							if ($(".modal_edit_address input[name='FullName']").val() !== '') {
+								$('.modal_edit_address').css("height", "545px");
+							} else {
+								if ($('.help-block.form-error').length) {
+									$('.modal_edit_address').css("height", "575px");
+								} else {
+									$('.modal_edit_address').css("height", "545px");
+								}
+							}
+						} else {
+							$('.modal_edit_address').css("height", "545px");
+						}
+
+					}, 500);
+				})
+			}
+
+			$(function () {
+				$("select[name='Country']").change(function () {
+					if ($(this).val() != 'Vietnam') {
+						$('.not-vn').addClass('hidden');
+					} else {
+						$('.not-vn').removeClass('hidden');
+					}
+				});
+			});
+
+
+			$(document).on('click', '.btn-edit', function (e) {
+				$('.op_address').toggleClass('opened');
+				var ctr = $(this).attr('aria-controls');
+				$('#' + ctr).show();
+				$('html').toggleClass('no-scroll');
+				Address.bind().refresh();
+				var idform = $(this).data('form');
+				$('.mySelect2').each(function () {
+					var old = $(this).attr('data-default');
+					$(this).val(old);
+					$(this).change();
+				})
+				if ($('#' + idform).find("select[name='Country']").data('default') != 'Vietnam') {
+					$('.not-vn').addClass('hidden');
+				} else {
+					$('.not-vn').removeClass('hidden');
+				}
+				$('#' + idform).each(function () {
+					var thisform = $(this);
+					$(thisform).find('.province').each(function () {
+						if ($(thisform).find('.province').data('default') != "") {
+							$(thisform).find('.province').addClass("has-content");
+						} else {
+							$(thisform).find('.province').removeClass("has-content");
+						}
+					})
+					$(thisform).find('.district').each(function () {
+						if ($(thisform).find('.district').data('default') != "") {
+							$(thisform).find('.district').addClass("has-content");
+						} else {
+							$(thisform).find('.district').removeClass("has-content");
+						}
+					})
+					$(thisform).find('.ward').each(function () {
+						if ($(thisform).find('.ward').data('default') != "") {
+							$(thisform).find('.ward').addClass("has-content");
+						} else {
+							$(thisform).find('.ward').removeClass("has-content");
+						}
+					})
+				});
+			});
+
+
+
+			$(window).load(function () {
+				setTimeout(function () {
+					$('.form-group input').each(function () {
+						if ($(this).val() != "") {
+							$(this).addClass("has-content");
+						} else {
+							$(this).removeClass("has-content");
+						}
+					})
+					$('.form-group select').each(function () {
+						$('.form-group .add').val("Vietnam");
+						if ($(this).val() != "") {
+							$(this).addClass("has-content");
+						} else {
+							$(this).removeClass("has-content");
+						}
+					})
+					$(".form-group input,.form-group select").focusout(function () {
+						if ($(this).val() != "") {
+							$(this).addClass("has-content");
+						} else {
+							$(this).removeClass("has-content");
+						}
+					})
+				}, 500);
+				return false;
+			});
+
 
 
 		</script>
-	</head>
-	<body>
-		<div class="opacity_menu"></div>
+		<div id="js-global-alert" class="alert alert-success" role="alert">
+			<button type="button" class="close"><span aria-hidden="true"><span aria-hidden="true">&times;</span></span></button>
+			<h5 class="alert-heading"></h5>
+			<p class="alert-content"></p>
+		</div>
 
-<script>
-	const header = document.querySelector('header.header');
-	let headerHeight = header.offsetHeight;
-	let resizeWindow = window.innerWidth;
-	let offsetStickyHeader = header.offsetHeight;
-	let offsetStickyDown = 0;
-	let resizeTimer;
 
-	const tabLinks = document.querySelectorAll('.tab-link');
-	const tabContents = document.querySelectorAll('.tab-content-mb');
 
-	const handleResize = () => {
-		if (resizeTimer) clearTimeout(resizeTimer);
 
-		resizeTimer = setTimeout(() => {
-			const newWidth = window.innerWidth;
-
-			if (resizeWindow !== newWidth) {
-				header.classList.remove('hSticky');
-				header.style.minHeight = '';
-
-				headerHeight = header.offsetHeight;
-				header.style.minHeight = `${headerHeight}px`;
-
-				resizeWindow = newWidth;
-			}
-		}, 200);
-	};
-
-	const handleScroll = () => {
-		const scrollTop = window.scrollY;
-
-		if (scrollTop > offsetStickyHeader && scrollTop > offsetStickyDown) {
-			header.classList.add('hSticky');
-		}
-
-		if (scrollTop <= offsetStickyDown && scrollTop <= offsetStickyHeader) {
-			header.classList.remove('hSticky');
-		}
-
-		offsetStickyDown = scrollTop;
-	};
-
-	const handleTabClick = (tabLink) => {
-		const tabId = tabLink.dataset.tab;
-
-		tabLinks.forEach((link) => link.classList.remove('active'));
-		tabLink.classList.add('active');
-
-		tabContents.forEach((tabContent) => tabContent.classList.remove('active'));
-		document.getElementById(tabId).classList.add('active');
-	};
-
-	const initializeTabs = () => {
-		if (window.innerWidth <= 991) {
-			const tabMenu1 = document.getElementById('tab-menu-1');
-			const tabLinkMenu1 = document.querySelector('.tab-link[data-tab="tab-menu-1"]');
-
-			tabMenu1.classList.add('active');
-			tabLinkMenu1.classList.add('active');
-
-			tabLinks.forEach((tabLink) => {
-				tabLink.addEventListener('click', () => handleTabClick(tabLink));
-			});
-		}
-	};
-
-	window.addEventListener('resize', handleResize);
-	window.addEventListener('scroll', handleScroll);
-
-	tabLinks.forEach((tabLink) => {
-		tabLink.addEventListener('click', () => handleTabClick(tabLink));
-	});
-
-	document.addEventListener('DOMContentLoaded', initializeTabs);
-</script>
-		<div class="bodywrap">
-			<section class="bread-crumb">
-	<div class="container">
-		<ul class="breadcrumb" >					
-			<li class="home">
-				<a  href="/" title="Trang chủ"><span >Trang chủ</span></a>						
-				<span class="mr_lr">&nbsp;<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-chevron-right fa-w-10"><path fill="currentColor" d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z" class=""></path></svg>&nbsp;</span>
-			</li>
-			
-			<li>
-				<a  href="/Accounts" title="Tài khoản"><span>Tài khoản</span></a>
-				<span class="mr_lr">&nbsp;<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-chevron-right fa-w-10"><path fill="currentColor" d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z" class=""></path></svg>&nbsp;</span>
-			</li>
-			<li><strong><span >Địa chỉ khách hàng</span></strong></li>
-			
-		</ul>
-	</div>
-</section> 
-
-<div class="op_address"></div>
-@if (Model.UserAddresses != null && Model.UserAddresses.Count > 0)
-{
-    <ul>
-        @foreach (var address in Model.UserAddresses)
-        {
-            <li>
-                <strong>@address.Company</strong><br />
-                @address.Address<br />
-				<small>@(address.CreatedDate.HasValue ? address.CreatedDate.Value.ToString("dd/MM/yyyy") : "Chưa có thông tin")</small>
-            </li>
-        }
-    </ul>
-}
-else
-{
-    <p>Không có địa chỉ nào.</p>
-}
-
-<button class="btn-edit-addr btn btn-primary btn-more" type="button" onclick="document.getElementById('add_address').style.display='block';">Thêm địa chỉ</button>
-
-<div id="add_address" class="form-list modal_address modal" style="display: none;">
-    <div class="btn-close closed_pop" onclick="document.getElementById('add_address').style.display='none';"><span></span></div>
-    <h2 class="title_pop">Thêm địa chỉ mới</h2>
-
-    <form method="post">
-        <div class="pop_bottom">
-            <div class="form_address">
-                <div class="field">
-                    <fieldset class="form-group">
-                        <input type="text" class="form-control" name="UserPhone" value="@Model.UserPhone" required maxlength="12" pattern="\d+" />
-                        <label for="UserPhone">Số điện thoại*</label>
-                    </fieldset>
-                </div>
-
-                <div class="field">
-                    <fieldset class="form-group">
-                        <input type="text" class="form-control" name="Company" value="@Model.Company" />
-                        <label for="Company">Công ty</label>
-                    </fieldset>
-                </div>
-
-                <div class="field">
-                    <fieldset class="form-group">
-                        <input type="text" class="form-control" name="FullAddress" value="@Model.FullAddress" required />
-                        <label for="FullAddress">Địa chỉ đầy đủ</label>
-                    </fieldset>
-                </div>
-            </div>
-
-            <div class="checkbox">
-                <label class="c-input c-checkbox" style="padding-left: 20px;">
-                    <input type="checkbox" name="IsDefault" value="true" />
-                    <span class="c-indicator">Đặt là địa chỉ mặc định?</span>
-                </label>
-            </div>
-
-            <div class="btn-row">
-                <button class="btn btn-lg btn-dark-address btn-outline article-readmore btn-close" type="button" onclick="document.getElementById('add_address').style.display='none';"><span>Hủy</span></button>
-                <button class="btn btn-lg btn-primary btn-submit" type="submit"><span>Thêm địa chỉ</span></button>
-            </div>
-        </div>
-    </form>
-</div>
-<!--yeu cau su dung jquery 3. trở lên-->
-<script src="~/js/jquery.validate.min.js"></script>
-<script>$.validate({});</script>
-
-<script type="text/javascript" charset="utf-8">
-
-
-	//JS address with json
-
-	(function (window) {
-		var allProvince = [];
-		var allDistrict = [];
-		var allWard = [];
-		var loadedData = false;
-
-		function setProvince(zone, province) {
-			$province = $("select[data-address-type='province'][data-address-zone='" + zone + "']");
-			if (!$province) {
-				return;
-			}
-			var list = ['<option value="" hidden>---</option>'];
-			for (var i = 0; i < allProvince.length; i++) {
-				var p = allProvince[i];
-				if (p.name == province) {
-					list.push("<option value='" + p.name + "' selected>" + p.name + "</option>");
-					continue;
-				}
-				list.push("<option value='" + p.name + "'>" + p.name + "</option>");
-			}
-
-			$province.html(list.join(''));
-		};
-
-		function setDistrict(zone, province, district) {
-			var $district = $("select[data-address-type='district'][data-address-zone='" + zone + "']");
-			if (!$district) {
-				return;
-			}
-			if (!province) {
-				$district.val('');
-				$district.attr('disabled', 'disabled');
-				$district.html('');
-				return;
-			}
-			var provinceObj = allProvince.find(function(p) { return p.name == province; });
-			var districts = allDistrict.filter(function (d) { return d.province_id == provinceObj.id; });
-			var list = ['<option value="" hidden>---</option>'];
-			for (var i = 0; i < districts.length; i++) {
-				var d = districts[i];
-				if (d.name == district) {
-					list.push("<option value='" + d.name + "' selected>" + d.name + "</option>");
-					continue;
-				}
-				list.push("<option value='" + d.name + "'>" + d.name + "</option>");
-			}
-			$district.removeAttr('disabled');
-			$district.html(list.join(''));
-		};
-
-		function setWard(zone, district, ward) {
-			var $ward = $("select[data-address-type='ward'][data-address-zone='" + zone + "']");
-			if (!$ward) {
-				return;
-			}
-			if (!district) {
-				$ward.val('');
-				$ward.attr('disabled', 'disabled');
-				$ward.html('');
-				return;
-			}
-			var list = ['<option value="" hidden>---</option>'];
-			var districtObj = allDistrict.find(function(d) { return d.name == district; });
-			var wards = allWard.filter(function (w) { return w.district_id == districtObj.id; });
-			for (var i = 0; i < wards.length; i++) {
-				var w = wards[i];
-				if (w.name == ward) {
-					list.push("<option value='" + w.name + "' selected>" + w.name + "</option>");
-					continue;
-				}
-				list.push("<option value='" + w.name+ "'>" + w.name + "</option>");
-			}
-			$ward.removeAttr('disabled');
-			$ward.html(list.join(''));
-		};
-
-
-		function loadData() {
-			if (loadedData) {
-				return {
-					then: function (f) {
-						return f();
-					}
-				};
-			}
-			return fetch('/checkout/addresses.json')
-				.then(function (rs) { return rs.json(); })
-				.then(function (rs) {
-				allProvince = rs.provinces;
-				allDistrict = rs.districts;
-				allWard = rs.wards;
-				loadedData = true;
-			});
-		};
-
-		function Address() {
-
-		}
-
-		function triggerChange(zone, type) {
-			$('select[data-address-type="' + type + '"][data-address-zone="' + zone + '"]').trigger('address:change');
-		}
-
-		Address.prototype.bind = function () {
-			$('body')
-				.on('change', 'select[data-address-type]', function (e) {
-				var type = e.target.getAttribute('data-address-type');
-				var zone = e.target.getAttribute('data-address-zone');
-				if (type === 'province') {
-					triggerChange(zone, 'province');
-					setDistrict(zone, e.target.value, undefined);
-					triggerChange(zone, 'district');
-					setWard(zone, '', undefined);
-					triggerChange(zone, 'ward');
-				} else if (type === 'district') {
-					triggerChange(zone, 'district');
-					setWard(zone, e.target.value, undefined);
-					triggerChange(zone, 'ward');
-				}
-			})
-			return this;
-		};
-
-		Address.prototype.refresh = function (callback) {
-			var zones = {};
-			$('[data-address-zone]').each(function () {
-				var $this = $(this);
-				var type = $this.data('address-type');
-				if (!type) {
-					return;
-				}
-				var zoneName = $this.data('address-zone');
-				var zone = zones[zoneName] || (zones[zoneName] = {});
-				zone[type] = $this.val() || $this.attr('value');
-			});
-			var zoneNames = Object.keys(zones);
-			if (zoneNames.length == 0) {
-				return;
-			}
-			loadData().then(function () {
-				zoneNames.forEach(function (zoneName) {
-					var zone = zones[zoneName];
-					setProvince(zoneName, zone.province);
-					triggerChange(zoneName, 'province');
-					setDistrict(zoneName, zone.province, zone.district);
-					triggerChange(zoneName, 'district');
-					setWard(zoneName, zone.district, zone.ward);
-					triggerChange(zoneName, 'ward');
-				});
-				if (callback) {
-					callback();
-				}
-			});
-		};
-
-		window.Address = new Address();
-
-	})(window)
-
-
-	//Page address
-
-	new Bizweb.CountrySelector('address_country_new');
-	
-
-							   $(document).ready(function() {
-
-		var elements = $("input, select, textarea");
-		for (var i = 0; i < elements.length; i++) {
-			elements[i].oninvalid = function(e) {
-				e.target.setCustomValidity("");
-				if (!e.target.validity.valid) {
-					e.target.setCustomValidity(e.target.getAttribute("requiredmsg"));
-				}
-			};
-			elements[i].oninput = function(e) {
-				e.target.setCustomValidity("");
-			};
-		}
-		$('.mySelect2').each(function(){
-			var old = $(this).attr('data-default');			  
-			$(this).val(old);
-			$(this).change();
-		})
-
-		$('.btn-close').on('click', function(e){
-			e.preventDefault();
-			$('.op_address').removeClass('opened');
-			$('.modal_address').hide();
-			$('html').removeClass('no-scroll');
-			$('.not-vn').removeClass('hidden');
-			Address.bind().refresh();
-			$('.mySelect2').each(function(){
-				var old = $(this).attr('data-default');			  
-				$(this).val(old);
-				$(this).change();
-			})
-			setTimeout( function() {
-				$('input').prop('selected', false);
-			}, 500)
-			$('.form-group input').each(function(){
-				if($(this).val() != ""){
-					$(this).addClass("has-content");
-				}else{
-					$(this).removeClass("has-content");
-				}
-			})
-		});
-		$('.btn-fix-addr').click(function(e){
-			$(this).parents('.collapse').removeClass('in').hide();
-		})
-	})
-
-	$('fieldset').click(function(){
-		$(this).find('input').focus();
-	});
-
-	$(document).on('click', '.btn-more', function(e) {
-		$('.op_address').toggleClass('opened');
-		$('#add_address').show();
-		$('html').toggleClass('no-scroll');
-		$('.mySelect2').each(function(){
-			var old = $(this).attr('data-default');			  
-			$(this).val(old);
-			$(this).change();
-		})
-		if($("#customer_address select[name='Country'] option:selected").val() != 'Vietnam'){
-			$('.not-vn').addClass('hidden');
-		}else {
-			$('.not-vn').removeClass('hidden');
-		}
-
-		Address.bind().refresh();
-		$('.form-group input').each(function(){
-			if($(this).val() != ""){
-				$(this).addClass("has-content");
-			}else{
-				$(this).removeClass("has-content");
-			}
-		})
-	});
-	if ($( window ).width() > 768) {
-		$(function(){
-			setInterval(function() {
-				if($('.modal_address').find("select[name='Country'] option:selected").val() != 'Vietnam') {
-					if ($(".modal_address input[name='FullName']").val() === '') {
-						if ($('.help-block.form-error').length) {
-							$('.modal_address').css("height","515px");
-						}else {
-							$('.modal_address').css("height","495px");
-						}
-					}else {
-						$('.modal_address').css("height","495px");
-					}
-				} else if ($('.modal_address').find("select[name='Country'] option:selected").val() === 'Vietnam') {
-					if ($(".modal_address input[name='FullName']").val() !== '') {
-						$('.modal_address').css("height","545px");
-					}else {
-						if ($('.help-block.form-error').length) {
-							$('.modal_address').css("height","575px");
-						}else {
-							$('.modal_address').css("height","545px");
-						}
-					}
-				}else {
-					$('.modal_address').css("height","545px");
-				}
-
-
-
-				if($('.modal_edit_address').find("select[name='Country'] option:selected").val() != 'Vietnam') {
-					if ($(".modal_edit_address input[name='FullName']").val() === '') {
-						if ($('.help-block.form-error').length) {
-							$('.modal_edit_address').css("height","515px");
-						}else {
-							$('.modal_edit_address').css("height","495px");
-						}
-					}else {
-						$('.modal_edit_address').css("height","495px");
-					}
-				} else if ($('.modal_edit_address').find("select[name='Country'] option:selected").val() === 'Vietnam') {
-					if ($(".modal_edit_address input[name='FullName']").val() !== '') {
-						$('.modal_edit_address').css("height","545px");
-					}else {
-						if ($('.help-block.form-error').length) {
-							$('.modal_edit_address').css("height","575px");
-						}else {
-							$('.modal_edit_address').css("height","545px");
-						}
-					}
-				}else {
-					$('.modal_edit_address').css("height","545px");
-				}
-
-			}, 500);
-		})
-	}
-
-	$(function(){    
-		$("select[name='Country']").change(function(){
-			if( $(this).val() != 'Vietnam'){
-				$('.not-vn').addClass('hidden');
-			}else {
-				$('.not-vn').removeClass('hidden');
-			}
-		}); 
-	});
-
-
-	$(document).on('click', '.btn-edit', function(e) {
-		$('.op_address').toggleClass('opened');
-		var ctr = $(this).attr('aria-controls');			
-		$('#'+ctr).show();
-		$('html').toggleClass('no-scroll');
-		Address.bind().refresh();
-		var idform = $(this).data('form');
-		$('.mySelect2').each(function(){
-			var old = $(this).attr('data-default');			  
-			$(this).val(old);
-			$(this).change();
-		})
-		if( $('#'+idform).find("select[name='Country']").data('default') != 'Vietnam'){
-			$('.not-vn').addClass('hidden');
-		}else {
-			$('.not-vn').removeClass('hidden');
-		}
-		$('#'+idform).each(function() {
-			var thisform = $(this);
-			$(thisform).find('.province').each(function(){
-				if($(thisform).find('.province').data('default') != ""){
-					$(thisform).find('.province').addClass("has-content");
-				}else{
-					$(thisform).find('.province').removeClass("has-content");
-				}
-			})
-			$(thisform).find('.district').each(function(){
-				if($(thisform).find('.district').data('default') != ""){
-					$(thisform).find('.district').addClass("has-content");
-				}else{
-					$(thisform).find('.district').removeClass("has-content");
-				}
-			})
-			$(thisform).find('.ward').each(function(){
-				if($(thisform).find('.ward').data('default') != ""){
-					$(thisform).find('.ward').addClass("has-content");
-				}else{
-					$(thisform).find('.ward').removeClass("has-content");
-				}
-			})
-		});
-	});
-
-
-
-	$(window).load(function(){
-		setTimeout(function(){
-			$('.form-group input').each(function(){
-				if($(this).val() != ""){
-					$(this).addClass("has-content");
-				}else{
-					$(this).removeClass("has-content");
-				}
-			})
-			$('.form-group select').each(function(){
-				$('.form-group .add').val("Vietnam");
-				if($(this).val() != ""){
-					$(this).addClass("has-content");
-				}else{
-					$(this).removeClass("has-content");
-				}
-			})
-			$(".form-group input,.form-group select").focusout(function(){
-				if($(this).val() != ""){
-					$(this).addClass("has-content");
-				}else{
-					$(this).removeClass("has-content");
-				}
-			})
-		},500);
-		return false;
-	});
-
-
-
-</script>
-			<div id="js-global-alert" class="alert alert-success" role="alert">
-				<button type="button" class="close"><span aria-hidden="true"><span aria-hidden="true">&times;</span></span></button>
-				<h5 class="alert-heading"></h5>
-				<p class="alert-content"></p>
-			</div>
-			
-			
 
 
 
@@ -1299,7 +1356,7 @@ else
 						<label for="check-close-banner">Không hiển thị hôm nay</label>
 					</div>
 					<a title="Đóng" class="modalbanner-close close-window" href="javascript:;">
-						<svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="times" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-times fa-w-10"><path fill="currentColor" d="M207.6 256l107.72-107.72c6.23-6.23 6.23-16.34 0-22.58l-25.03-25.03c-6.23-6.23-16.34-6.23-22.58 0L160 208.4 52.28 100.68c-6.23-6.23-16.34-6.23-22.58 0L4.68 125.7c-6.23 6.23-6.23 16.34 0 22.58L112.4 256 4.68 363.72c-6.23 6.23-6.23 16.34 0 22.58l25.03 25.03c6.23 6.23 16.34 6.23 22.58 0L160 303.6l107.72 107.72c6.23 6.23 16.34 6.23 22.58 0l25.03-25.03c6.23-6.23 6.23-16.34 0-22.58L207.6 256z" class=""></path></svg>
+						<svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="times" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-times fa-w-10"><path fill="currentColor" d="M207.6 256l107.72-107.72c6.23-6.23 6.23-16.34 0-22.58l-25.03-25.03c-6.23-6.23-16.34-6.23-22.58 0l-107.72 107.72L52.28 100.68c-6.23-6.23-16.34-6.23-22.58 0L4.68 125.7c-6.23 6.23-6.23 16.34 0 22.58L112.4 256 4.68 363.72c-6.23 6.23-6.23 16.34 0 22.58l25.03 25.03c6.23 6.23 16.34 6.23 22.58 0L160 303.6l107.72 107.72c6.23 6.23 16.34 6.23 22.58 0l25.03-25.03c6.23-6.23 6.23-16.34 0-22.58L207.6 256z" class=""></path></svg>
 					</a>
 				</form>
 
@@ -1560,7 +1617,7 @@ else
 				Liên hệ với chúng tôi
 				<div class="close-icon" title="Đóng">
 					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
-						<path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+						<path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
 					</svg>
 				</div>
 			</div>
@@ -1654,154 +1711,336 @@ else
 					<span class="img zalo item">
 						<svg width="25" height="25" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 614.501 613.667" xml:space="preserve"><path fill="currentColor" d="M464.721,301.399c-13.984-0.014-23.707,11.478-23.944,28.312c-0.251,17.771,9.168,29.208,24.037,29.202   c14.287-0.007,23.799-11.095,24.01-27.995C489.028,313.536,479.127,301.399,464.721,301.399z"></path><path fill="currentColor" d="M291.83,301.392c-14.473-0.316-24.578,11.603-24.604,29.024c-0.02,16.959,9.294,28.259,23.496,28.502   c15.072,0.251,24.592-10.87,24.539-28.707C315.214,313.318,305.769,301.696,291.83,301.392z"></path><path fill="currentColor" d="M310.518,3.158C143.102,3.158,7.375,138.884,7.375,306.3s135.727,303.142,303.143,303.142   c167.415,0,303.143-135.727,303.143-303.142S477.933,3.158,310.518,3.158z M217.858,391.083   c-33.364,0.818-66.828,1.353-100.133-0.343c-21.326-1.095-27.652-18.647-14.248-36.583c21.55-28.826,43.886-57.065,65.792-85.621   c2.546-3.305,6.214-5.996,7.15-12.705c-16.609,0-32.784,0.04-48.958-0.013c-19.195-0.066-28.278-5.805-28.14-17.652   c0.132-11.768,9.175-17.329,28.397-17.348c25.159-0.026,50.324-0.06,75.476,0.026c9.637,0.033,19.604,0.105,25.304,9.789   c6.22,10.561,0.284,19.512-5.646,27.454c-21.26,28.497-43.015,56.624-64.559,84.902c-2.599,3.41-5.119,6.88-9.453,12.725   c23.424,0,44.123-0.053,64.816,0.026c8.674,0.026,16.662,1.873,19.941,11.267C237.892,379.329,231.368,390.752,217.858,391.083z    M350.854,330.211c0,13.417-0.093,26.841,0.039,40.265c0.073,7.599-2.599,13.647-9.512,17.084   c-7.296,3.642-14.71,3.028-20.304-2.968c-3.997-4.281-6.214-3.213-10.488-0.422c-17.955,11.728-39.908,9.96-56.597-3.866   c-29.928-24.789-30.026-74.803-0.211-99.776c16.194-13.562,39.592-15.462,56.709-4.143c3.951,2.619,6.201,4.815,10.396-0.053   c5.39-6.267,13.055-6.761,20.271-3.357c7.454,3.509,9.935,10.165,9.776,18.265C350.67,304.222,350.86,317.217,350.854,330.211z    M395.617,369.579c-0.118,12.837-6.398,19.783-17.196,19.908c-10.779,0.132-17.593-6.966-17.646-19.512   c-0.179-43.352-0.185-86.696,0.007-130.041c0.059-12.256,7.302-19.921,17.896-19.222c11.425,0.752,16.992,7.448,16.992,18.833   c0,22.104,0,44.216,0,66.327C395.677,327.105,395.828,348.345,395.617,369.579z M463.981,391.868   c-34.399-0.336-59.037-26.444-58.786-62.289c0.251-35.66,25.304-60.713,60.383-60.396c34.631,0.304,59.374,26.306,58.998,61.986   C524.207,366.492,498.534,392.205,463.981,391.868z"></path></svg>
 					</span>
+					<div class="detail">
+						<b class="arcu-item-title">
+							Zalo chat:
+						</b>
+						<span class="arcu-item-subtitle">
+							Tài khoản Zalo: 0876578996
+						</span>
+					</div>
+				</a>
+			</div>
 
 
-					<span class="img mess item">
-						<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-messenger" viewBox="0 0 16 16">
+			<div class="item mess">
+				<a target="_blank" href="https://m.me/463293720202704">
+					<span class="img">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-messenger" viewBox="0 0 16 16">
 							<path d="M0 7.76C0 3.301 3.493 0 8 0s8 3.301 8 7.76-3.493 7.76-8 7.76c-.81 0-1.586-.107-2.316-.307a.639.639 0 0 0-.427.03l-1.588.702a.64.64 0 0 1-.898-.566l-.044-1.423a.639.639 0 0 0-.215-.456C.956 12.108 0 10.092 0 7.76zm5.546-1.459-2.35 3.728c-.225.358.214.761.551.506l2.525-1.916a.48.48 0 0 1 .578-.002l1.869 1.402a1.2 1.2 0 0 0 1.735-.32l2.35-3.728c.226-.358-.214-.761-.551-.506L9.728 7.381a.48.48 0 0 1-.578.002L7.281 5.98a1.2 1.2 0 0 0-1.735.32z" />
 						</svg>
 					</span>
+					<div class="detail">
+						<b class="arcu-item-title">
+							Messenger:
+						</b>
+						<span class="arcu-item-subtitle">
+							m.me/koifarmshop
+						</span>
+					</div>
+				</a>
+			</div>
 
 
-					<span class="img map item">
-						<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-pin-map" viewBox="0 0 16 16">
+			<div class="item map">
+				<a target="_blank" href="/Contact/he-thong-cua-hang">
+					<span class="img">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pin-map" viewBox="0 0 16 16">
 							<path fill-rule="evenodd" d="M3.1 11.2a.5.5 0 0 1 .4-.2H6a.5.5 0 0 1 0 1H3.75L1.5 15h13l-2.25-3H10a.5.5 0 0 1 0-1h2.5a.5.5 0 0 1 .4.2l3 4a.5.5 0 0 1-.4.8H.5a.5.5 0 0 1-.4-.8l3-4z" />
 							<path fill-rule="evenodd" d="M8 1a3 3 0 1 0 0 6 3 3 0 0 0 0-6zM4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999z" />
 						</svg>
 					</span>
+					<div class="detail">
+						<b class="arcu-item-title">
+							Hệ thống cửa hàng:
+						</b>
+						<span class="arcu-item-subtitle">
+							Xem địa chỉ cửa hàng
+						</span>
+					</div>
+				</a>
+			</div>
 
+		</div>
+		<div class="out-circle">
+			<div class="pregan element"></div>
+			<div class="pregan element"></div>
+			<div class="main-icon">
+				<svg width="20" height="20" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="translate(-825 -308)"><g><path transform="translate(825 308)" fill="#FFFFFF" d="M 19 4L 17 4L 17 13L 4 13L 4 15C 4 15.55 4.45 16 5 16L 16 16L 20 20L 20 5C 20 4.45 19.55 4 19 4ZM 15 10L 15 1C 15 0.45 14.55 0 14 0L 1 0C 0.45 0 0 0.45 0 1L 0 15L 4 11L 14 11C 14.55 11 15 10.55 15 10Z"></path></g></g></svg>
+				<p>
+					Liên hệ
+				</p>
+			</div>
+			<div class="ser-icon unsee element">
+				<div class="process">
+					<span class="img phone item">
+						<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 512 512"><path fill="currentColor" d="M493.4 24.6l-104-24c-11.3-2.6-22.9 3.3-27.5 13.9l-48 112c-4.2 9.8-1.4 21.3 6.9 28l60.6 49.6c-36 76.7-98.9 140.5-177.2 177.2l-49.6-60.6c-6.8-8.3-18.2-11.1-28-6.9l-112 48C3.9 366.5-2 378.1.6 389.4l24 104C27.1 504.2 36.7 512 48 512c256.1 0 464-207.5 464-464 0-11.2-7.7-20.9-18.6-23.4z"></path></svg>
+					</span>
+
+					<span class="img zalo item">
+						<svg width="25" height="25" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 614.501 613.667" xml:space="preserve"><path fill="currentColor" d="M464.721,301.399c-13.984-0.014-23.707,11.478-23.944,28.312c-0.251,17.771,9.168,29.208,24.037,29.202   c14.287-0.007,23.799-11.095,24.01-27.995C489.028,313.536,479.127,301.399,464.721,301.399z"></path><path fill="currentColor" d="M291.83,301.392c-14.473-0.316-24.578,11.603-24.604,29.024c-0.02,16.959,9.294,28.259,23.496,28.502   c15.072,0.251,24.592-10.87,24.539-28.707C315.214,313.318,305.769,301.696,291.83,301.392z"></path><path fill="currentColor" d="M310.518,3.158C143.102,3.158,7.375,138.884,7.375,306.3s135.727,303.142,303.143,303.142   c167.415,0,303.143-135.727,303.143-303.142S477.933,3.158,310.518,3.158z M217.858,391.083   c-33.364,0.818-66.828,1.353-100.133-0.343c-21.326-1.095-27.652-18.647-14.248-36.583c21.55-28.826,43.886-57.065,65.792-85.621   c2.546-3.305,6.214-5.996,7.15-12.705c-16.609,0-32.784,0.04-48.958-0.013c-19.195-0.066-28.278-5.805-28.14-17.652   c0.132-11.768,9.175-17.329,28.397-17.348c25.159-0.026,50.324-0.06,75.476,0.026c9.637,0.033,19.604,0.105,25.304,9.789   c6.22,10.561,0.284,19.512-5.646,27.454c-21.26,28.497-43.015,56.624-64.559,84.902c-2.599,3.41-5.119,6.88-9.453,12.725   c23.424,0,44.123-0.053,64.816,0.026c8.674,0.026,16.662,1.873,19.941,11.267C237.892,379.329,231.368,390.752,217.858,391.083z    M350.854,330.211c0,13.417-0.093,26.841,0.039,40.265c0.073,7.599-2.599,13.647-9.512,17.084   c-7.296,3.642-14.71,3.028-20.304-2.968c-3.997-4.281-6.214-3.213-10.488-0.422c-17.955,11.728-39.908,9.96-56.597-3.866   c-29.928-24.789-30.026-74.803-0.211-99.776c16.194-13.562,39.592-15.462,56.709-4.143c3.951,2.619,6.201,4.815,10.396-0.053   c5.39-6.267,13.055-6.761,20.271-3.357c7.454,3.509,9.935,10.165,9.776,18.265C350.67,304.222,350.86,317.217,350.854,330.211z    M395.617,369.579c-0.118,12.837-6.398,19.783-17.196,19.908c-10.779,0.132-17.593-6.966-17.646-19.512   c-0.179-43.352-0.185-86.696,0.007-130.041c0.059-12.256,7.302-19.921,17.896-19.222c11.425,0.752,16.992,7.448,16.992,18.833   c0,22.104,0,44.216,0,66.327C395.677,327.105,395.828,348.345,395.617,369.579z M463.981,391.868   c-34.399-0.336-59.037-26.444-58.786-62.289c0.251-35.66,25.304-60.713,60.383-60.396c34.631,0.304,59.374,26.306,58.998,61.986   C524.207,366.492,498.534,392.205,463.981,391.868z"></path></svg>
+					</span>
+					<div class="detail">
+						<b class="arcu-item-title">
+							Zalo chat:
+						</b>
+						<span class="arcu-item-subtitle">
+							Tài khoản Zalo: 0876578996
+						</span>
+					</div>
+				</a>
+			</div>
+
+
+			<div class="item mess">
+				<a target="_blank" href="https://m.me/463293720202704">
+					<span class="img">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-messenger" viewBox="0 0 16 16">
+							<path d="M0 7.76C0 3.301 3.493 0 8 0s8 3.301 8 7.76-3.493 7.76-8 7.76c-.81 0-1.586-.107-2.316-.307a.639.639 0 0 0-.427.03l-1.588.702a.64.64 0 0 1-.898-.566l-.044-1.423a.639.639 0 0 0-.215-.456C.956 12.108 0 10.092 0 7.76zm5.546-1.459-2.35 3.728c-.225.358.214.761.551.506l2.525-1.916a.48.48 0 0 1 .578-.002l1.869 1.402a1.2 1.2 0 0 0 1.735-.32l2.35-3.728c.226-.358-.214-.761-.551-.506L9.728 7.381a.48.48 0 0 1-.578.002L7.281 5.98a1.2 1.2 0 0 0-1.735.32z" />
+						</svg>
+					</span>
+					<div class="detail">
+						<b class="arcu-item-title">
+							Messenger:
+						</b>
+						<span class="arcu-item-subtitle">
+							m.me/koifarmshop
+						</span>
+					</div>
+				</a>
+			</div>
+
+
+			<div class="item map">
+				<a target="_blank" href="/Contact/he-thong-cua-hang">
+					<span class="img">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pin-map" viewBox="0 0 16 16">
+							<path fill-rule="evenodd" d="M3.1 11.2a.5.5 0 0 1 .4-.2H6a.5.5 0 0 1 0 1H3.75L1.5 15h13l-2.25-3H10a.5.5 0 0 1 0-1h2.5a.5.5 0 0 1 .4.2l3 4a.5.5 0 0 1-.4.8H.5a.5.5 0 0 1-.4-.8l3-4z" />
+							<path fill-rule="evenodd" d="M8 1a3 3 0 1 0 0 6 3 3 0 0 0 0-6zM4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999z" />
+						</svg>
+					</span>
+					<div class="detail">
+						<b class="arcu-item-title">
+							Hệ thống cửa hàng:
+						</b>
+						<span class="arcu-item-subtitle">
+							Xem địa chỉ cửa hàng
+						</span>
+					</div>
+				</a>
+			</div>
+
+		</div>
+		<script>
+			$(function () {
+				var i = 1;
+				var n = $('.ser-icon .process .item').length;
+				var len = $('.ser-icon .process').width() / n;
+				var pos = new WebKitCSSMatrix($('.ser-icon .process').css('transform'));
+				$('.ser-icon').removeClass('unsee');
+				function nextFrame() {
+					if (i < n) {
+						i++;
+						var pos2 = new WebKitCSSMatrix($('.ser-icon .process').css('transform'));
+						$('.ser-icon .process').css('transform', 'translateX(' + (pos2.m41 - len) + 'px)');
+						setTimeout(nextFrame, 800);
+					} else {
+						$('.ser-icon').addClass('unsee');
+						i = 1;
+						$('.ser-icon .process').css('transform', 'translateX(' + (pos.m41) + 'px)');
+						setTimeout(beginFrame, 2000);
+					}
+				};
+				function beginFrame() {
+					$('.ser-icon').removeClass('unsee');
+					setTimeout(nextFrame, 900);
+				};
+				setTimeout(beginFrame, 2000);
+				$('.close-icon').click(function (event) {
+					$('.element').toggleClass('unsee');
+				});
+			});
+		</script>
+		<div id="popupCartModal" class="modal fade" role="dialog">
+		</div>
+
+
+		<div class="popup-sapo">
+			<div class="icon">
+				<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+					<path d="M224 0c-17.7 0-32 14.3-32 32V51.2C119 66 64 130.6 64 208v18.8c0 47-17.3 92.4-48.5 127.6l-7.4 8.3c-8.4 9.4-10.4 22.9-5.3 34.4S19.4 416 32 416H416c12.6 0 24-7.4 29.2-18.9s3.1-25-5.3-34.4l-7.4-8.3C401.3 319.2 384 273.9 384 226.8V208c0-77.4-55-142-128-156.8V32c0-17.7-14.3-32-32-32zm45.3 493.3c12-12 18.7-28.3 18.7-45.3H224 160c0 17 6.7 33.3 18.7 45.3s28.3 18.7 45.3 18.7s33.3-6.7 45.3-18.7z" />
+				</svg>
+			</div>
+			<div class="content">
+				<div class="title">Tích hợp sẵn các ứng dụng</div>
+				<ul>
+					<li>
+						<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+							<path d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z" />
+						</svg>
+						<a href="https://apps.sapo.vn/danh-gia-san-pham-v2" target="_blank" title="Đánh giá sản phẩm">Đánh giá sản phẩm</a>
+					</li>
+					<li>
+						<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+							<path d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z" />
+						</svg>
+						<a href="https://apps.sapo.vn/mua-x-tang-y-v2" target="_blank" title="Mua X tặng Y">Mua X tặng Y</a>
+					</li>
+
+					<li>
+						<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+							<path d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z" />
+						</svg>
+						<a href="https://apps.sapo.vn/quan-ly-affiliate-v2" target="_blank" title="Ứng dụng Affiliate">Ứng dụng Affiliate</a>
+					</li>
+
+					<li>
+						<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+							<path d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z" />
+						</svg>
+						<a href="https://apps.sapo.vn/ae-da-ngon-ngu" target="_blank" title="Đa ngôn ngữ">Đa ngôn ngữ</a>
+					</li>
+
+					<li>
+						<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+							<path d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z" />
+						</svg>
+						<a href="#" target="_blank" title="Livechat Facebook">Livechat Facebook</a>
+					</li>
+
+
+				</ul>
+				<div class="ghichu">
+					Lưu ý với các ứng dụng trả phí bạn cần cài đặt và mua ứng dụng này trên App store để sử dụng ngay
+				</div>
+				<a title="Đóng" class="close-popup-sapo">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512.001 512.001">
+						<path d="M284.286,256.002L506.143,34.144c7.811-7.811,7.811-20.475,0-28.285c-7.811-7.81-20.475-7.811-28.285,0L256,227.717    L34.143,5.859c-7.811-7.811-20.475-7.811-28.285,0c-7.81,7.811-7.811,20.475,0,28.285l221.857,221.857L5.858,477.859    c-7.811,7.811-7.811,20.475,0,28.285c3.905,3.905,9.024,5.857,14.143,5.857c5.119,0,10.237-1.952,14.143-5.857L256,284.287    l221.857,221.857c3.905,3.905,9.024,5.857,14.143,5.857s10.237-1.952,14.143-5.857c7.811-7.811,7.811-20.475,0-28.285    L284.286,256.002z" />
+					</svg>
+				</a>
+			</div>
+		</div>
+
+		<script>
+			$('.popup-sapo .icon').click(function () {
+				$(".popup-sapo").toggleClass("active");
+			});
+			$('.close-popup-sapo').click(function () {
+				$(".popup-sapo").toggleClass("active");
+			});
+		</script>
+
+
+		<div class="popup-ngonngu">
+			<div class="icon">
+				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-globe2" viewBox="0 0 16 16">
+					<path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855-.143.268-.276.56-.395.872.705.157 1.472.257 2.282.287V1.077zM4.249 3.539c.142-.384.304-.744.481-1.078a6.7 6.7 0 0 1 .597-.933A7.01 7.01 0 0 0 3.051 3.05c.362.184.763.349 1.198.49zM3.509 7.5c.036-1.07.188-2.087.436-3.008a9.124 9.124 0 0 1-1.565-.667A6.964 6.964 0 0 0 1.018 7.5h2.49zm1.4-2.741a12.344 12.344 0 0 0-.4 2.741H7.5V5.091c-.91-.03-1.783-.145-2.591-.332zM8.5 5.09V7.5h2.99a12.342 12.342 0 0 0-.399-2.741c-.808.187-1.681.301-2.591.332zM4.51 8.5c.035.987.176 1.914.399 2.741A13.612 13.612 0 0 1 7.5 10.91V8.5H4.51zm3.99 0v2.409c.91.03 1.783.145 2.591.332.223-.827.364-1.754.4-2.741H8.5zm-3.282 3.696c.12.312.252.604.395.872.552 1.035 1.218 1.65 1.887 1.855V11.91c-.81.03-1.577.13-2.282.287zm.11 2.276a6.696 6.696 0 0 1-.598-.933 8.853 8.853 0 0 1-.481-1.079 8.38 8.38 0 0 0-1.198.49 7.01 7.01 0 0 0 2.276 1.522zm-1.383-2.964A13.36 13.36 0 0 1 3.508 8.5h-2.49a6.963 6.963 0 0 0 1.362 3.675c.47-.258.995-.482 1.565-.667zm6.728 2.964a7.009 7.009 0 0 0 2.275-1.521 8.376 8.376 0 0 0-1.197-.49 8.853 8.853 0 0 1-.481 1.078 6.688 6.688 0 0 1-.597.933zM8.5 11.909v3.014c.67-.204 1.335-.82 1.887-1.855.143-.268.276-.56.395-.872A12.63 12.63 0 0 0 8.5 11.91zm3.555-.401c.57.185 1.095.409 1.565.667A6.963 6.963 0 0 0 14.982 8.5h-2.49a13.36 13.36 0 0 1-.437 3.008zM14.982 7.5a6.963 6.963 0 0 0-1.362-3.675c-.47.258-.995.482-1.565.667.248.92.4 1.938.437 3.008h2.49zM11.27 2.461c.177.334.339.694.482 1.078a8.368 8.368 0 0 0 1.196-.49 7.01 7.01 0 0 0-2.275-1.52c.218.283.418.597.597.932zm-.488 1.343a7.765 7.765 0 0 0-.395-.872C9.835 1.897 9.17 1.282 8.5 1.077V4.09c.81-.03 1.577-.13 2.282-.287z" />
+				</svg>
+			</div>
+			<ul class="language">
+				<li>
+					<a href="#">
+						<img width="16" height="16" src="~/img/vn.png" alt="Tiếng Việt">
+						<span>Tiếng Việt</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img width="16" height="16" src="~/img/en.png" alt="Tiếng Anh">
+						<span>English</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+
+		<script>
+	function editAddress(addressId) {
+			// Fetch address details and populate the form
+			$.ajax({
+				url: '/Accounts/GetAddress',
+				type: 'GET',
+				data: { id: addressId },
+				success: function (address) {
+					$('#edit_address_id').val(address.addressId);
+					$('#edit_phone').val(address.userPhone);
+					$('#edit_company').val(address.company);
+					$('#edit_fullAddress').val(address.fullAddress);
+					$('#edit_address').show();
+				}
+			});
+		}
+
+		function deleteAddress(addressId) {
+			if (confirm('Bạn có chắc chắn muốn xóa địa chỉ này?')) {
+				$.ajax({
+					url: '/Accounts/DeleteAddress',
+					type: 'POST',
+					data: { id: addressId },
+					success: function (result) {
+						if (result.success) {
+							location.reload();
+						} else {
+							alert('Xóa địa chỉ thất bại.');
+						}
+					}
+				});
+			}
+		}
+</script>
+
+<div id="edit_address" class="form-list modal_address modal" style="display: none;">
+	<div class="btn-close closed_pop" onclick="document.getElementById('edit_address').style.display='none';"><span></span></div>
+	<h2 class="title_pop">Sửa địa chỉ</h2>
+	<form method="post" id="editAddressForm">
+		<input type="hidden" id="edit_address_id" name="AddressId" />
+		<div class="pop_bottom">
+			<div class="form_address">
+				<div class="field">
+					<fieldset class="form-group">
+						<input type="text" class="form-control" id="edit_phone" name="UserPhone" required maxlength="12" pattern="\d+" />
+						<label for="edit_phone">Số điện thoại*</label>
+					</fieldset>
+				</div>
+				<div class="field">
+					<fieldset class="form-group">
+						<input type="text" class="form-control" id="edit_company" name="Company" />
+						<label for="edit_company">Công ty</label>
+					</fieldset>
+				</div>
+				<div class="field">
+					<fieldset class="form-group">
+						<input type="text" class="form-control" id="edit_fullAddress" name="FullAddress" required />
+						<label for="edit_fullAddress">Địa chỉ đầy đủ</label>
+					</fieldset>
 				</div>
 			</div>
-			<div class="close-icon unsee element">
-				<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
-					<path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
-				</svg>
+			<div class="btn-row">
+				<button class="btn btn-lg btn-dark-address btn-outline article-readmore btn-close" type="button" onclick="document.getElementById('edit_address').style.display='none';"><span>Hủy</span></button>
+				<button class="btn btn-lg btn-primary btn-submit" type="submit"><span>Lưu thay đổi</span></button>
 			</div>
 		</div>
-	</div>
-	<script>
-		$(function () {
-			var i = 1;
-			var n = $('.ser-icon .process .item').length;
-			var len = $('.ser-icon .process').width() / n;
-			var pos = new WebKitCSSMatrix($('.ser-icon .process').css('transform'));
-			$('.ser-icon').removeClass('unsee');
-			function nextFrame() {
-				if (i < n) {
-					i++;
-					var pos2 = new WebKitCSSMatrix($('.ser-icon .process').css('transform'));
-					$('.ser-icon .process').css('transform', 'translateX(' + (pos2.m41 - len) + 'px)');
-					setTimeout(nextFrame, 800);
-				} else {
-					$('.ser-icon').addClass('unsee');
-					i = 1;
-					$('.ser-icon .process').css('transform', 'translateX(' + (pos.m41) + 'px)');
-					setTimeout(beginFrame, 2000);
+	</form>
+</div>
+
+<script>
+	$(document).ready(function () {
+		$('#editAddressForm').on('submit', function (e) {
+			e.preventDefault();
+			$.ajax({
+				url: '/Accounts/EditAddress',
+				type: 'POST',
+				data: $(this).serialize(),
+				success: function (result) {
+					if (result.success) {
+						location.reload();
+					} else {
+						alert('Cập nhật địa chỉ thất bại.');
+					}
 				}
-			};
-			function beginFrame() {
-				$('.ser-icon').removeClass('unsee');
-				setTimeout(nextFrame, 900);
-			};
-			setTimeout(beginFrame, 2000);
-			$('.close-icon').click(function (event) {
-				$('.element').toggleClass('unsee');
 			});
 		});
-	</script>
-	<div id="popupCartModal" class="modal fade" role="dialog">
-	</div>
-
-
-	<div class="popup-sapo">
-		<div class="icon">
-			<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
-				<path d="M224 0c-17.7 0-32 14.3-32 32V51.2C119 66 64 130.6 64 208v18.8c0 47-17.3 92.4-48.5 127.6l-7.4 8.3c-8.4 9.4-10.4 22.9-5.3 34.4S19.4 416 32 416H416c12.6 0 24-7.4 29.2-18.9s3.1-25-5.3-34.4l-7.4-8.3C401.3 319.2 384 273.9 384 226.8V208c0-77.4-55-142-128-156.8V32c0-17.7-14.3-32-32-32zm45.3 493.3c12-12 18.7-28.3 18.7-45.3H224 160c0 17 6.7 33.3 18.7 45.3s28.3 18.7 45.3 18.7s33.3-6.7 45.3-18.7z" />
-			</svg>
-		</div>
-		<div class="content">
-			<div class="title">Tích hợp sẵn các ứng dụng</div>
-			<ul>
-				<li>
-					<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
-						<path d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z" />
-					</svg>
-					<a href="https://apps.sapo.vn/danh-gia-san-pham-v2" target="_blank" title="Đánh giá sản phẩm">Đánh giá sản phẩm</a>
-				</li>
-				<li>
-					<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
-						<path d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z" />
-					</svg>
-					<a href="https://apps.sapo.vn/mua-x-tang-y-v2" target="_blank" title="Mua X tặng Y">Mua X tặng Y</a>
-				</li>
-
-				<li>
-					<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
-						<path d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z" />
-					</svg>
-					<a href="https://apps.sapo.vn/quan-ly-affiliate-v2" target="_blank" title="Ứng dụng Affiliate">Ứng dụng Affiliate</a>
-				</li>
-
-				<li>
-					<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
-						<path d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z" />
-					</svg>
-					<a href="https://apps.sapo.vn/ae-da-ngon-ngu" target="_blank" title="Đa ngôn ngữ">Đa ngôn ngữ</a>
-				</li>
-
-				<li>
-					<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
-						<path d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z" />
-					</svg>
-					<a href="#" target="_blank" title="Livechat Facebook">Livechat Facebook</a>
-				</li>
-
-
-			</ul>
-			<div class="ghichu">
-				Lưu ý với các ứng dụng trả phí bạn cần cài đặt và mua ứng dụng này trên App store để sử dụng ngay
-			</div>
-			<a title="Đóng" class="close-popup-sapo">
-				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512.001 512.001">
-					<path d="M284.286,256.002L506.143,34.144c7.811-7.811,7.811-20.475,0-28.285c-7.811-7.81-20.475-7.811-28.285,0L256,227.717    L34.143,5.859c-7.811-7.811-20.475-7.811-28.285,0c-7.81,7.811-7.811,20.475,0,28.285l221.857,221.857L5.858,477.859    c-7.811,7.811-7.811,20.475,0,28.285c3.905,3.905,9.024,5.857,14.143,5.857c5.119,0,10.237-1.952,14.143-5.857L256,284.287    l221.857,221.857c3.905,3.905,9.024,5.857,14.143,5.857s10.237-1.952,14.143-5.857c7.811-7.811,7.811-20.475,0-28.285    L284.286,256.002z" />
-				</svg>
-			</a>
-		</div>
-	</div>
-
-	<script>
-		$('.popup-sapo .icon').click(function () {
-			$(".popup-sapo").toggleClass("active");
-		});
-		$('.close-popup-sapo').click(function () {
-			$(".popup-sapo").toggleClass("active");
-		});
-	</script>
-
-
-	<div class="popup-ngonngu">
-		<div class="icon">
-			<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-globe2" viewBox="0 0 16 16">
-				<path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855-.143.268-.276.56-.395.872.705.157 1.472.257 2.282.287V1.077zM4.249 3.539c.142-.384.304-.744.481-1.078a6.7 6.7 0 0 1 .597-.933A7.01 7.01 0 0 0 3.051 3.05c.362.184.763.349 1.198.49zM3.509 7.5c.036-1.07.188-2.087.436-3.008a9.124 9.124 0 0 1-1.565-.667A6.964 6.964 0 0 0 1.018 7.5h2.49zm1.4-2.741a12.344 12.344 0 0 0-.4 2.741H7.5V5.091c-.91-.03-1.783-.145-2.591-.332zM8.5 5.09V7.5h2.99a12.342 12.342 0 0 0-.399-2.741c-.808.187-1.681.301-2.591.332zM4.51 8.5c.035.987.176 1.914.399 2.741A13.612 13.612 0 0 1 7.5 10.91V8.5H4.51zm3.99 0v2.409c.91.03 1.783.145 2.591.332.223-.827.364-1.754.4-2.741H8.5zm-3.282 3.696c.12.312.252.604.395.872.552 1.035 1.218 1.65 1.887 1.855V11.91c-.81.03-1.577.13-2.282.287zm.11 2.276a6.696 6.696 0 0 1-.598-.933 8.853 8.853 0 0 1-.481-1.079 8.38 8.38 0 0 0-1.198.49 7.01 7.01 0 0 0 2.276 1.522zm-1.383-2.964A13.36 13.36 0 0 1 3.508 8.5h-2.49a6.963 6.963 0 0 0 1.362 3.675c.47-.258.995-.482 1.565-.667zm6.728 2.964a7.009 7.009 0 0 0 2.275-1.521 8.376 8.376 0 0 0-1.197-.49 8.853 8.853 0 0 1-.481 1.078 6.688 6.688 0 0 1-.597.933zM8.5 11.909v3.014c.67-.204 1.335-.82 1.887-1.855.143-.268.276-.56.395-.872A12.63 12.63 0 0 0 8.5 11.91zm3.555-.401c.57.185 1.095.409 1.565.667A6.963 6.963 0 0 0 14.982 8.5h-2.49a13.36 13.36 0 0 1-.437 3.008zM14.982 7.5a6.963 6.963 0 0 0-1.362-3.675c-.47.258-.995.482-1.565.667.248.92.4 1.938.437 3.008h2.49zM11.27 2.461c.177.334.339.694.482 1.078a8.368 8.368 0 0 0 1.196-.49 7.01 7.01 0 0 0-2.275-1.52c.218.283.418.597.597.932zm-.488 1.343a7.765 7.765 0 0 0-.395-.872C9.835 1.897 9.17 1.282 8.5 1.077V4.09c.81-.03 1.577-.13 2.282-.287z" />
-			</svg>
-		</div>
-		<ul class="language">
-			<li>
-				<a href="#">
-					<img width="16" height="16" src="~/img/vn.png" alt="Tiếng Việt">
-					<span>Tiếng Việt</span>
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<img width="16" height="16" src="~/img/en.png" alt="Tiếng Anh">
-					<span>English</span>
-				</a>
-			</li>
-		</ul>
-	</div>
-
-
+	});
+</script>
 
 </body>
 </html>
