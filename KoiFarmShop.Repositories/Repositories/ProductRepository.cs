@@ -96,5 +96,31 @@ namespace KoiFarmShop.Repositories.Repositories
 				return false;
 			}
 		}
+		public async Task<List<Product>> FilterProductsAsync(decimal? minPrice, decimal? maxPrice, string? category)
+		{
+			var query = _dbContext.Products.AsQueryable();
+
+			if (minPrice.HasValue)
+			{
+				query = query.Where(p => p.Price >= minPrice.Value);
+			}
+
+			if (maxPrice.HasValue)
+			{
+				query = query.Where(p => p.Price <= maxPrice.Value);
+			}
+
+			if (!string.IsNullOrEmpty(category))
+			{
+				query = query.Where(p => p.Loai == category);
+			}
+
+			return await query.ToListAsync();
+		}
+
+		Task<IEnumerable<object>> IProductRepository.FilterProductsAsync(decimal? minPrice, decimal? maxPrice, string? category)
+		{
+			throw new NotImplementedException();
+		}
 	}
 }

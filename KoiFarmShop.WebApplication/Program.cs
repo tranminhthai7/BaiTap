@@ -10,18 +10,18 @@ using KoiFarmShop.Service.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
-    .AddCookie(options =>
-    {
-        options.LoginPath = "/Accounts/Login"; // Đường dẫn trang đăng nhập khi chưa đăng nhập
-        options.ExpireTimeSpan = TimeSpan.FromMinutes(30); // Thời gian hết hạn của cookie
-        options.SlidingExpiration = true; // Cookie sẽ được gia hạn nếu người dùng còn hoạt động
-    });
+	.AddCookie(options =>
+	{
+		options.LoginPath = "/Accounts/Login"; // Đường dẫn trang đăng nhập khi chưa đăng nhập
+		options.ExpireTimeSpan = TimeSpan.FromMinutes(30); // Thời gian hết hạn của cookie
+		options.SlidingExpiration = true; // Cookie sẽ được gia hạn nếu người dùng còn hoạt động
+	});
 // DI
 builder.Services.AddDbContext<KoiFarmShop2024DbContext>(options =>
 {
-    options.UseSqlServer(builder.Configuration.GetConnectionString("KoiFarmShopDb"));
-    // chọn SqlServer làm cơ sở dữ liệu
-    // lấy chuỗi kết nối từ file cấu hình
+	options.UseSqlServer(builder.Configuration.GetConnectionString("KoiFarmShopDb"));
+	// chọn SqlServer làm cơ sở dữ liệu
+	// lấy chuỗi kết nối từ file cấu hình
 });
 
 // Đăng ký các dịch vụ và repository
@@ -114,9 +114,9 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
-    app.UseExceptionHandler("/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-    app.UseHsts();
+	app.UseExceptionHandler("/Error");
+	// The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+	app.UseHsts();
 }
 
 app.UseHttpsRedirection();
@@ -129,11 +129,16 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapRazorPages();
+app.UseEndpoints(endpoints =>
+{
+	endpoints.MapRazorPages();
+});
 app.MapGet("/", async (HttpContext context) =>
 {
-    context.Response.Redirect("/Home/Index");
+	context.Response.Redirect("/Home/Index");
 });
 
 
 app.UseStatusCodePagesWithReExecute("/Shared/Error", "?statusCode={0}");
 app.Run();
+
