@@ -1,0 +1,2503 @@
+﻿@page
+@model KoiFarmShop.WebApplication.Pages.He_thong_loc_ho_ca_koi.he_thong_loc_ho_ca_koiModel
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "He-thong-loc-ho-ca-koi";
+}
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="theme-color" content="#8d251c" />
+	<meta name='revisit-after' content='2 days' />
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="robots" content="noodp,index,follow" />
+	<meta name="description" content="Hệ thống lọc hồ cá Koi">
+	<title>Hệ thống lọc hồ cá Koi		</title>
+	<meta name="keywords" content="Hệ thống lọc hồ cá Koi, Sản phẩm,  Koi Farm Shop, sudenest.mysapo.net" />
+
+
+	<meta property="og:description" content="Hệ thống lọc hồ cá Koi">
+	<meta property="og:site_name" content="Koi Farm Shop">
+	<link rel="preload" as="script" href="~/js/jquery.js" />
+	<script src="~/js/jquery.js" type="text/javascript"></script>
+	<link rel="preload" as="script" href="~/js/swiper.js" />
+	<script src="~/js/swiper.js" type="text/javascript"></script>
+	<link rel="preload" as="script" href="~/js/lazy.js" />
+	<script src="~/js/lazy.js" type="text/javascript"></script>
+
+
+
+
+	<link rel="preload" as='image' media="screen and (max-width: 480px)" href="./img/slider1.jpg">
+
+
+
+
+
+	<link rel="preload" as='image' media="screen and (max-width: 480px)" href="./img/slider2.jpg">
+
+
+
+
+
+	<link rel="preload" as='image' media="screen and (max-width: 480px)" href="./img/slider3.jpg">
+
+
+
+
+
+
+
+
+
+
+
+	<link rel="preload" as='image' href="//bizweb.dktcdn.net/100/506/650/themes/944598/assets/header_pattent.png?1728460505311">
+
+
+	<link rel="preload" as='image' href="//bizweb.dktcdn.net/100/506/650/themes/944598/assets/footer_pattent.png?1728460505311">
+
+
+	<link rel="preload" as='style' type="text/css" href="~/css/fonts.scss.css">
+	<link rel="preload" as='style' type="text/css" href="~/css/main.scss.css">
+
+
+	<link rel="preload" as='style' type="text/css" href="~/css/bootstrap-4-3-min.css">
+	<link rel="preload" as='style' type="text/css" href="~/css/quickviews_popup_cart.scss.css">
+	<style>
+		:root {
+			--mainColor: #0c0e0d;
+			--subColor: #fdc97d;
+			--textColor: #333333;
+			--hover: #d0a73c;
+			--price: #d31100;
+		}
+	</style>
+	<link href="~/css/fonts.scss.css" rel="stylesheet" type="text/css" media="all" />
+	<link rel="stylesheet" href="~/css/bootstrap-4-3-min.css">
+	<link href="~/css/main.scss.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="~/css/breadcrumb_style.scss.css" rel="stylesheet" type="text/css" media="all" />
+
+
+	<link href="~/css/sidebar_style.scss.css" rel="stylesheet" type="text/css" media="all" />
+
+
+
+
+
+
+
+	<link href="~/css/blog_article_style.scss.css" rel="stylesheet" type="text/css" media="all" />
+
+	<script>
+		var Bizweb = Bizweb || {};
+			Bizweb.store = 'sudes-nest.mysapo.net';
+			Bizweb.id = 506650;
+			Bizweb.theme = { "id": 944598, "name": "Koi Farm Shop", "role": "main" };
+			Bizweb.template = 'page';
+			if (!Bizweb.fbEventId) Bizweb.fbEventId = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+				var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+				return v.toString(16);
+			});</script>
+	<script>
+		(function () {
+				function asyncLoad() {
+					var urls = [];
+					for (var i = 0; i < urls.length; i++) {
+						var s = document.createElement('script');
+						s.type = 'text/javascript';
+						s.async = true;
+						s.src = urls[i];
+						var x = document.getElementsByTagName('script')[0];
+						x.parentNode.insertBefore(s, x);
+					}
+				};
+				window.attachEvent ? window.attachEvent('onload', asyncLoad) : window.addEventListener('load', asyncLoad, false);
+			})();</script>
+
+
+	<script>
+		window.BizwebAnalytics = window.BizwebAnalytics || {};
+			window.BizwebAnalytics.meta = window.BizwebAnalytics.meta || {};
+			window.BizwebAnalytics.meta.currency = 'VND';
+			window.BizwebAnalytics.tracking_url = '/s';
+
+			var meta = {};
+
+
+			for (var attr in meta) {
+				window.BizwebAnalytics.meta[attr] = meta[attr];
+			}</script>
+
+
+	<script src="~/js/stats.min.js"></script>
+
+
+
+
+
+
+
+
+
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			awe_lazyloadImage();
+
+			/*Header promotion*/
+
+			var index = 0,
+				stop = false,
+				num = document.querySelectorAll('.js-promo > li').length,
+				liEls = document.querySelectorAll('.js-promo > li');
+
+			function shippingflipInX() {
+				if (stop) return false;
+				if (index > (num - 2)) {
+					liEls.forEach(function (el) {
+						el.classList.add('see-none');
+						el.classList.remove('animated', 'flipInX', 'see-block');
+					});
+					index = 0;
+					liEls[0].classList.add('animated', 'flipInX', 'see-block');
+					liEls[0].classList.remove('see-none');
+					return;
+				}
+
+				liEls.forEach(function (el) {
+					el.classList.add('see-none');
+					el.classList.remove('animated', 'flipInX', 'see-block');
+				});
+				liEls[index + 1].classList.remove('see-none');
+				liEls[index + 1].classList.add('animated', 'flipInX', 'see-block');
+				index++;
+			}
+
+			var hdtimer = setInterval(function () {
+				shippingflipInX();
+			}, 5000);
+
+			document.querySelector('.js-promo').addEventListener('mouseenter', function () {
+				stop = true;
+			});
+
+			document.querySelector('.js-promo').addEventListener('mouseleave', function () {
+				stop = false;
+			});
+
+
+			function getItemSearch(name, smartjson) {
+				return fetch(`https://${window.location.hostname}/search?q=${name}&view=${smartjson}&type=product`)
+					.then(res => res.json())
+					.catch(err => console.error(err));
+			}
+
+			var searchRecent = document.querySelector('.search-suggest .search-recent');
+			var searchRecentList = localStorage.getItem('search_recent_list');
+			var recentList = searchRecentList ? JSON.parse(searchRecentList) : [];
+
+			if (recentList.length > 0) {
+				searchRecent.classList.remove('d-none');
+				var searchList = searchRecent.querySelector('.search-list');
+				recentList.forEach(function (item) {
+					var link = document.createElement('a');
+					link.href = `/search?query=${encodeURIComponent(item)}&type=product`;
+					link.textContent = item;
+					link.title = `Tìm kiếm ${item}`;
+					link.classList.add('search-item');
+
+					var closeSpan = document.createElement('span');
+					closeSpan.textContent = 'Đóng';
+					closeSpan.title = 'Đóng';
+					closeSpan.classList.add('close');
+
+					closeSpan.addEventListener('click', function (e) {
+						e.preventDefault();
+						e.stopPropagation();
+						var index = recentList.indexOf(item);
+						if (index !== -1) {
+							recentList.splice(index, 1);
+							localStorage.setItem('search_recent_list', JSON.stringify(recentList));
+							searchList.removeChild(link);
+							if (recentList.length == 0) {
+								searchRecent.classList.toggle('d-none');
+							}
+						}
+					});
+
+					link.appendChild(closeSpan);
+					searchList.appendChild(link);
+				});
+			}
+
+			var searchInput = document.querySelectorAll('.header_tim_kiem input[type="text"], .search-mobile input[type="text"]');
+			searchInput.forEach(function (input) {
+				input.addEventListener('keyup', function (e) {
+					let term = this.value.trim();
+					let data = '';
+					var resultbox = '';
+					if (term.length > 1) {
+						searchRecent.classList.add('d-none');
+
+						async function goawaySearch() {
+							data = await getItemSearch(term, 'smartjson');
+							setTimeout(function () {
+								var sizeData = Object.keys(data).length;
+								if (sizeData > 0) {
+									Object.keys(data).forEach(function (key) {
+										if (data[key].compare_price !== 0) {
+											resultbox += `<a class="product-smart" href="${data[key].url}" title="${data[key].name}"><div class="image_thumb"><img width="58" height="58" class="lazyload loaded" src="${data[key].image}" data-src="${data[key].image}" alt="${data[key].name}" data-was-processed="true"></div><div class="product-info"><h3 class="product-name"><span>${data[key].name}</span></h3><div class="price-box"><span class="price">${data[key].price}</span><span class="compare-price">${data[key].compare_price}</span></div></div></a>`;
+										} else {
+											resultbox += `<a class="product-smart" href="${data[key].url}" title="${data[key].name}"><div class="image_thumb"><img width="58" height="58" class="lazyload loaded" src="${data[key].image}" data-src="${data[key].image}" alt="${data[key].name}" data-was-processed="true"></div><div class="product-info"><h3 class="product-name"><span>${data[key].name}</span></h3><div class="price-box"><span class="price">${data[key].price}</span></div></div></a>`;
+										}
+									});
+									resultbox += `<a href="/search?query=${term}&type=product" class="see-all-search" title="Xem tất cả">Xem tất cả kết quả »</a>`;
+									document.querySelector('.list-search').innerHTML = resultbox;
+								} else {
+									document.querySelector('.list-search').innerHTML = '<div class="not-pro">Không có thấy kết quả tìm kiếm</div>';
+								}
+							}, 200);
+						}
+
+						goawaySearch();
+					} else {
+						if (recentList.length > 0) {
+							searchRecent.classList.remove('d-none');
+						}
+						document.querySelector('.list-search').innerHTML = '';
+					}
+				});
+			});
+
+		});
+		function awe_lazyloadImage() {
+			var ll = new LazyLoad({
+				elements_selector: ".lazyload",
+				load_delay: 100,
+				threshold: 0
+			});
+		} window.awe_lazyloadImage=awe_lazyloadImage;
+
+
+	</script>
+</head>
+<body>
+	<div class="opacity_menu"></div>
+
+	<script>
+		const header = document.querySelector('header.header');
+		let headerHeight = header.offsetHeight;
+		let resizeWindow = window.innerWidth;
+		let offsetStickyHeader = header.offsetHeight;
+		let offsetStickyDown = 0;
+		let resizeTimer;
+
+		const tabLinks = document.querySelectorAll('.tab-link');
+		const tabContents = document.querySelectorAll('.tab-content-mb');
+
+		const handleResize = () => {
+			if (resizeTimer) clearTimeout(resizeTimer);
+
+			resizeTimer = setTimeout(() => {
+				const newWidth = window.innerWidth;
+
+				if (resizeWindow !== newWidth) {
+					header.classList.remove('hSticky');
+					header.style.minHeight = '';
+
+					headerHeight = header.offsetHeight;
+					header.style.minHeight = `${headerHeight}px`;
+
+					resizeWindow = newWidth;
+				}
+			}, 200);
+		};
+
+		const handleScroll = () => {
+			const scrollTop = window.scrollY;
+
+			if (scrollTop > offsetStickyHeader && scrollTop > offsetStickyDown) {
+				header.classList.add('hSticky');
+			}
+
+			if (scrollTop <= offsetStickyDown && scrollTop <= offsetStickyHeader) {
+				header.classList.remove('hSticky');
+			}
+
+			offsetStickyDown = scrollTop;
+		};
+
+		const handleTabClick = (tabLink) => {
+			const tabId = tabLink.dataset.tab;
+
+			tabLinks.forEach((link) => link.classList.remove('active'));
+			tabLink.classList.add('active');
+
+			tabContents.forEach((tabContent) => tabContent.classList.remove('active'));
+			document.getElementById(tabId).classList.add('active');
+		};
+
+		const initializeTabs = () => {
+			if (window.innerWidth <= 991) {
+				const tabMenu1 = document.getElementById('tab-menu-1');
+				const tabLinkMenu1 = document.querySelector('.tab-link[data-tab="tab-menu-1"]');
+
+				tabMenu1.classList.add('active');
+				tabLinkMenu1.classList.add('active');
+
+				tabLinks.forEach((tabLink) => {
+					tabLink.addEventListener('click', () => handleTabClick(tabLink));
+				});
+			}
+		};
+
+		window.addEventListener('resize', handleResize);
+		window.addEventListener('scroll', handleScroll);
+
+		tabLinks.forEach((tabLink) => {
+			tabLink.addEventListener('click', () => handleTabClick(tabLink));
+		});
+
+		document.addEventListener('DOMContentLoaded', initializeTabs);
+	</script>
+	<div class="bodywrap">
+		<section class="bread-crumb">
+			<div class="container">
+				<ul class="breadcrumb">
+					<li class="home">
+						<a href="/" title="Trang chủ"><span>Trang chủ</span></a>
+						<span class="mr_lr">&nbsp;<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-chevron-right fa-w-10"><path fill="currentColor" d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z" class=""></path></svg>&nbsp;</span>
+					</li>
+
+					<li>
+						<a href="~/News/kien-thuc" title="Kiến thức"><span>Kiến thức</span></a>
+
+						<span class="mr_lr">&nbsp;<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-chevron-right fa-w-10"><path fill="currentColor" d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z" class=""></path></svg>&nbsp;</span>
+					</li>
+					<li><strong><span>Các bệnh cá koi kèm dấu hiệu và cách phòng, chữa bệnh	</span></strong></li>
+
+				</ul>
+			</div>
+		</section>
+
+
+
+		<section class="blogpage">
+			<div class="container layout-article" itemscope itemtype="https://schema.org/Article">
+				<div class="bg_blog">
+					<meta itemprop="mainEntityOfPage" content="/cac-benh-ca-Koi">
+					<meta itemprop="description" content="">
+					<meta itemprop="author" content="SETEAM">
+					<meta itemprop="headline" content="Các bệnh cá koi kèm dấu hiệu và cách phòng, chữa bệnh">
+					<meta itemprop="image" content="">
+					<meta itemprop="datePublished" content="05-11-2024">
+					<meta itemprop="dateModified" content="05-11-2024">
+					<div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+						<div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+							<img class="d-none" src="//bizweb.dktcdn.net/100/506/650/themes/944598/assets/logo.png?1728460505311" alt="Koi Farm Shop">
+							<meta itemprop="url" content="">
+							<meta itemprop="width" content="400">
+							<meta itemprop="height" content="60">
+						</div>
+						<meta itemprop="name" content="Koi Farm Shop">
+					</div>
+					<article class="article-main">
+						<div class="row">
+							<div class="right-content col-lg-9 col-12">
+								<div class="article-details bg-shadow clearfix">
+									<h1 class="article-title">Hệ Thống Lọc Hồ Cá Koi</h1>
+									<div class="posts">
+										<div class="time-post f">
+
+											<svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="clock" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-clock fa-w-16"><path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm216 248c0 118.7-96.1 216-216 216-118.7 0-216-96.1-216-216 0-118.7 96.1-216 216-216 118.7 0 216 96.1 216 216zm-148.9 88.3l-81.2-59c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h14c6.6 0 12 5.4 12 12v146.3l70.5 51.3c5.4 3.9 6.5 11.4 2.6 16.8l-8.2 11.3c-3.9 5.3-11.4 6.5-16.8 2.6z" class=""></path></svg>
+
+											Thứ Sáu,
+											11/11/2024
+										</div>
+										<div class="time-post">
+											<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="user" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="svg-inline--fa fa-user fa-w-14"><path fill="currentColor" d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4z" class=""></path></svg>
+											<span>SETEAM</span>
+										</div>
+
+										<div class="article-image">
+
+											<img width="840"
+												 height="400"
+												 src="/img/he-thong-loc-ho.jpg"
+												 alt="Hệ Thống Lọc Hồ Cá koi"
+												 loading="lazy"
+												 class="duration-300" />
+										</div>
+									</div>
+									<div class="goto-wrapper ftoc-head">
+										<a class="title-goto-wrapper" href="javascript:;">
+											<span>Nội dung bài viết</span>
+											<span class="icon">
+												<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list-ul" viewBox="0 0 16 16">
+													<path fill-rule="evenodd" d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m-3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2m0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2m0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2" />
+												</svg>
+											</span>
+										</a>
+										<div class="menu-toc"></div>
+									</div>
+
+									<div class="rte article-content-main">
+										<p>Hệ thống lọc là yếu tố quan trọng không thể thiếu đối với hồ cá Koi. Nó không chỉ giúp nước luôn trong sạch mà còn tạo điều kiện lý tưởng để cá Koi phát triển khỏe mạnh, lên màu chuẩn đẹp. Dưới đây là những thông tin chi tiết về hệ thống lọc hồ cá Koi đạt chuẩn Nhật Bản.</p>
+
+										<h2>Hệ Thống Lọc Hồ Cá Koi</h2>
+
+										<h3>1. Tầm Quan Trọng Của Hệ Thống Lọc</h3>
+										<p>Hệ thống lọc được ví như lá phổi sống của hồ cá Koi, giữ cho nước luôn sạch sẽ và ổn định. Nước sạch không chỉ giúp cá khỏe mạnh, tăng sức đề kháng mà còn hạn chế tối đa nguy cơ nhiễm bệnh.</p>
+										<p><strong>Lợi ích của hệ thống lọc:</strong></p>
+										<ul>
+											<li>Thanh lọc chất thải hữu cơ như thức ăn dư thừa, phân cá, rong rêu.</li>
+											<li>Xử lý các độc tố, hóa chất phát sinh trong quá trình nuôi cá.</li>
+											<li>Cung cấp oxy hòa tan, đảm bảo môi trường sống tốt nhất cho cá.</li>
+											<li>Tiết kiệm thời gian và công sức dọn dẹp hồ cá.</li>
+										</ul>
+
+										<h3>2. Cấu Tạo Của Hệ Thống Lọc Đạt Chuẩn</h3>
+										<p>Một hệ thống lọc tiêu chuẩn bao gồm các bộ phận chính:</p>
+										<ul>
+											<li><strong>Hệ thống hút:</strong> Gồm hút đáy và hút mặt để loại bỏ chất thải từ mọi khu vực trong hồ.</li>
+											<li>
+												<strong>Hệ thống lọc:</strong> Bao gồm:
+												<ul>
+													<li><em>Lọc thô:</em> Loại bỏ các chất thải lớn như phân cá, lá cây.</li>
+													<li><em>Lọc tinh:</em> Sử dụng nham thạch, gốm lọc để nuôi vi sinh vật có lợi.</li>
+												</ul>
+											</li>
+											<li><strong>Hệ thống đẩy:</strong> Tạo dòng chảy và cung cấp oxy tự nhiên.</li>
+											<li><strong>Hệ thống xả:</strong> Dễ dàng vệ sinh và loại bỏ cặn bẩn.</li>
+											<li><strong>Hệ thống UV:</strong> Diệt mầm rong rêu, vi sinh gây hại.</li>
+										</ul>
+
+										<h3>3. Nguyên Tắc Vận Hành Hệ Thống Lọc</h3>
+										<p>Hệ thống lọc cần hoạt động nhịp nhàng và đảm bảo các nguyên tắc sau:</p>
+										<ul>
+											<li>Hiệu quả lọc cao, nước luôn trong sạch, không rêu hay mùi tanh.</li>
+											<li>Các bộ phận như hút đáy, hút mặt, lọc thô và lọc tinh hoạt động đồng bộ.</li>
+											<li>Duy trì môi trường vi sinh ổn định, hỗ trợ sự phát triển của vi khuẩn có lợi.</li>
+										</ul>
+
+										<h3>4. Ứng Dụng Men Vi Sinh</h3>
+										<p>Men vi sinh (Probiotic) chứa vi khuẩn có lợi, giúp:</p>
+										<ul>
+											<li>Tiêu hủy chất thải hữu cơ, hạn chế rong rêu.</li>
+											<li>Cải thiện chất lượng nước, tăng oxy hòa tan.</li>
+											<li>Ngăn ngừa bệnh tật và thúc đẩy sự phát triển của cá.</li>
+										</ul>
+										<p><strong>Lưu ý:</strong> Không sử dụng chất khử trùng hoặc thuốc kháng sinh trong thời gian bổ sung men vi sinh.</p>
+
+										<h3>5. Đơn Vị Thi Công Hồ Cá Koi Chuyên Nghiệp</h3>
+										<p>Việt Nhật Koi Farm là đơn vị hàng đầu trong thiết kế và thi công hồ cá Koi đạt chuẩn Nhật Bản. Chúng tôi cam kết:</p>
+										<ul>
+											<li>Thiết kế hồ đạt tiêu chuẩn cao nhất với sự giám sát của chuyên gia Nhật Bản.</li>
+											<li>Cung cấp cá Koi thuần chủng từ các trại nổi tiếng như Dainichi Koi Farm, Hoshikin Koi Farm.</li>
+											<li>Hỗ trợ kỹ thuật chăm sóc cá và xử lý bệnh tận tình.</li>
+										</ul>
+										<p>Liên hệ ngay với chúng tôi để được tư vấn và hỗ trợ:</p>
+										<ul>
+											<li><strong>Địa chỉ:</strong> 70 Tô Ký, Tân Chánh Hiệp, Quận 12, TP.HCM</li>
+											<li><strong>Hotline:</strong> 0876578996</li>
+											<li><strong>Email:</strong> koifarmshop10@gmail.com</li>
+										</ul>
+										<p>Hãy để Koi Farm Shop đồng hành cùng bạn trên hành trình kiến tạo hồ cá Koi hoàn hảo!</p>
+									</div>
+
+
+
+
+
+
+
+
+
+
+
+								</div>
+								<div class="blog_related">
+									<div class="title">Có thể bạn chưa biết?</div>
+									<div class="row">
+										<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+											<div class="item-blog">
+												<div class="wrapper">
+													<a class="block-thumb thumb" href="~/Blogs/dac-diem-va-nguon-goc-cua-ca-Koi" title="Đặc điểm và nguồn gốc của cá Koi?">
+
+														<img width="400"
+															 height="240"
+															 src="~/img/dac-diem-nguon-goc.jpg"
+															 alt="Đặc điểm và nguồn gốc của cá Koi"
+															 loading="lazy"
+															 class="duration-300" />
+													</a>
+
+													<div class="block-content">
+														<h3>
+															<a href="~/Blogs/dac-diem-va-nguon-goc-cua-ca-Koi" title=" Đặc điểm và nguồn gốc của cá Koi?" class="line-clamp-2-new"> Đặc điểm và nguồn gốc của cá Koi?</a>
+														</h3>
+														<div class="article-content">
+
+															<p class="justify line-clamp line-clamp-3">
+																Cá Koi là gì? Và đặc điểm để nhận dạng ra chúng là như thế nào?… là những câu hỏi rất được quan tâm bởi những người muốn tìm hiểu và nuôi cá Koi. Những câu hỏi này sẽ giúp bạn tìm hiểu về loài cá này để có thể nuôi đạt hiệu quả tốt hơn. Cùng Koi Farm Shop tìm hiểu ngay những thông tin trên trong bài viết dưới đây nhé.
+																Có bao nhiêu loại cá Koi&nbsp;1 Đặc điểm và nguồn gốc của cá Koi
+
+																<img src="./img/my.jpeg" alt="Mo ta anh" width="700" height="700">
+
+
+																Cá koi là loài cá cảnh đẹp và có giá trị cao, được nhiều người yêu thích nuôi trong hồ sân vườn. Tuy nhiên, nuôi cá koi không phải là việc đơn giản, mà cần có những kỹ thuật và cách chăm sóc đúng chuẩn, khoa học để cá luôn khỏe mạnh, lên màu chuẩn và mang lại may mắn cho gia chủ.
+																Bài viết này sẽ hướng dẫn bạn cách nuôi cá koi từ A đến Z, bao gồm nguồn gốc, đặc điểm, cách chọn giống, kỹ thuật nuôi và chăm sóc cá koi trong các điều kiện khác nhau.
+
+																Cá koi là loài &nbsp;cá chép cảnh có nguồn gốc từ Nhật Bản, được mệnh danh là quốc ngư của đất nước mặt trời mọc. Theo một số tài liệu khoa học, cá koi xuất hiện từ &nbsp;những năm 1820 tại thị trấn Ojiya, tỉnh Niigata, Nhật Bản.
+																Ban đầu, loại cá này được nuôi để cung cấp thực phẩm.Tuy nhiên, trong quá trình nuôi&nbsp;người nuôi nhận thấy loại cá này có màu sắc rất đẹp và khả năng biến đổi màu sắc trên thân rất độc đáo. Vì thế, người Nhật đã quyết định &nbsp;nhân giống và lai tạo ra nhiều giống cá với các màu sắc khác nhau để nuôi làm cá cảnh trong các bể cá, hồ cá sân vườn…
+																Tên gọi lúc này của chúng là “Nishikigoi”, dịch ra tiếng Việt nghĩa là cá chép nhiều màu sắc.
+
+																Về cơ bản, cá koi có quan hệ &nbsp;họ hàng gần với cá vàng. Hiện nay, cá koi đã được nhân giống với cả trăm loài khác nhau. Tuy nhiên, có khoảng 24 giống được ghi nhận, mỗi loại có những đặc điểm nhận dạng và màu sắc khác nhau. Nhưng về cơ bản, cá koi nói chung sẽ có những đặc điểm sau:
+
+																Tuổi thọ trung bình&nbsp; 25 – 35 năm.
+
+																Cá koi phát triển liên tục và độ tăng trưởng là&nbsp; 50 – 150mm mỗi năm tùy theo giống. Cá trưởng thành có &nbsp;độ dài tối đa đến 1m.
+
+																Phân biệt &nbsp;giới tính của cá koi qua hình dáng thân. &nbsp;Cá koi đực thường có thân mình thon dài, hai vây trước và nắp mang có nhiều nốt sần màu trắng.
+																Còn &nbsp;cá koi cái sẽ có thân hình to tròn, phần bụng nở nang hơn (đặc biệt là khi có chửa).
+
+																Khi đã quen với môi trường sống thì cá koi bắt đầu &nbsp;đẻ trứng sau khoảng 1 năm nuôi. Cá koi cái từ 2-3 năm tuổi có thể đẻ từ &nbsp;150.000 – 200.000 trứng mỗi lứa.
+
+
+
+
+
+															</p>
+
+															<div class="article-info">
+																<p class="time-post">
+																	<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
+																		<path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z" />
+																		<path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0" />
+																	</svg>
+																	<span>
+																		11/11/2024
+																	</span>
+																</p>
+
+																<a href="~/Blogs/dac-diem-va-nguon-goc-cua-ca-Koi" title="Đọc thêm" class="read-more">Đọc thêm »</a>
+
+															</div>
+
+														</div>
+
+													</div>
+												</div>
+
+											</div>
+										</div>
+
+										<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+											<div class="item-blog">
+												<div class="wrapper">
+													<a class="block-thumb thumb" href="~/Blogs/ca-Koi-co-de-nuoi-khong" title="Cá Koi có dễ nuôi không? Cách chọn giống cá Koi khỏe mạnh">
+
+														<img width="400"
+															 height="240"
+															 src="~/img/de-nuoi.jpg"
+															 alt="Cá Koi có dễ nuôi không? Cách chọn giống cá Koi khỏe mạnh"
+															 loading="lazy"
+															 class="duration-300" />
+													</a>
+
+													<div class="block-content">
+														<h3>
+															<a href="~/Blogs/ca-Koi-co-de-nuoi-khong" title="Cá Koi có dễ nuôi không? Cách chọn giống cá Koi khỏe mạnh?" class="line-clamp-2-new">Cá Koi có dễ nuôi không? Cách chọn giống cá Koi khỏe mạnh?</a>
+														</h3>
+														<div class="article-content">
+
+															<p class="justify line-clamp line-clamp-3">
+																Cá koi là loài cá cảnh đẹp nhưng cũng khá khó nuôi. Để nuôi được cá koi, bạn cần có kiến thức về cách chọn &nbsp;giống, &nbsp;cách thiết kế hồ, &nbsp;cách chăm sóc và &nbsp;phòng bệnh cho cá.
+																Nếu không, bạn sẽ gặp nhiều rủi ro như &nbsp;cá bị chết, bị bệnh, không lên màu hay không phát triển được.
+																Để chọn được giống cá koi khỏe mạnh, bạn cần lưu ý những điểm sau:
+
+																<strong>Hình dáng</strong> cân đối, không bị xây xát, không bị dị hình hay bị cong vẹo.
+																<strong>Màu sắc</strong>rõ nét, tươi sáng, không bị phai hay bạc màu.
+																<strong>Vảy </strong>sáng bóng, không bị rụng hay lõm vào.
+																<strong>Mắt sáng</strong> không bị đục hay chảy nước mắt.
+																<strong>Mang</strong>khỏe mạnh, không bị sưng hay viêm.
+																<strong>Vây</strong> đầy đủ, không bị rách hay mọc lại.
+																<strong>Hành vi </strong>hoạt động bình thường, không bị lơ đễnh hay chậm chạp.
+																Ngoài ra, bạn cũng nên chọn cá koi theo <strong>sở thích và túi tiền của mình</strong>. Có rất nhiều giống cá koi với các mức giá khác nhau, từ vài trăm ngàn đến vài trăm triệu đồng một con. Bạn có thể tham khảo các giống cá koi phổ biến như:
+
+																<b>Kohaku</b>: là giống cá koi cổ điển nhất, có màu trắng nền và màu đỏ hoa văn. Giá từ &nbsp;300.000 – 500.000 đồng/con.
+																<b>Taisho Sanke</b>: là giống cá koi có màu trắng nền, màu đỏ hoa văn và màu đen chấm bi. Giá từ &nbsp;500.000 – 800.000 đồng/con.
+																<b>Showa</b>: là giống cá koi có màu đen nền, màu trắng và màu đỏ hoa văn. Giá từ &nbsp;800.000 – 1.500.000 đồng/con.
+																<b>Tancho</b>: là giống cá koi có màu trắng nền và một vết đỏ tròn ở trên đầu. Giá từ&nbsp; 1.500.000 – 3.000.000 đồng/con.
+																<b>Asagi</b>: là giống cá koi có màu xanh nền và màu đỏ hoặc cam ở vây và đuôi. Giá từ &nbsp;3.000.000 – 5.000.000 đồng/con.
+																<b>Ogon</b>: là giống cá koi có một màu duy nhất trên cả thân, thường là vàng, bạc, đồng hay trắng. Giá từ&nbsp; 5.000.000 – 10.000.000 đồng/con.
+																<b>Kujaku</b>: là giống cá koi có màu trắng nền và màu đỏ hoa văn, có vảy bạc tạo hiệu ứng ánh sáng. Giá từ &nbsp;10.000.000 – 20.000.000 đồng/con.
+																<b>Ginrin</b>: là giống cá koi có vảy sáng bóng như kim cương, có thể kết hợp với các giống khác để tạo ra nhiều màu sắc khác nhau. Giá từ&nbsp; 20.000.000 – 50.000.000 đồng/con.
+															</p>
+
+															<div class="article-info">
+																<p class="time-post">
+																	<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
+																		<path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z" />
+																		<path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0" />
+																	</svg>
+																	<span>
+																		11/11/2024
+																	</span>
+																</p>
+
+																<a href="~/Blogs/ca-Koi-co-de-nuoi-khong" title="Đọc thêm" class="read-more">Đọc thêm »</a>
+
+															</div>
+
+														</div>
+
+													</div>
+												</div>
+
+											</div>
+										</div>
+
+										<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+											<div class="item-blog">
+												<div class="wrapper">
+													<a class="block-thumb thumb" href="~/Blogs/ki-thuat-nuoi-ca-Koi" title="Kĩ thuật nuôi cá Koi để cá luôn khỏe mạnh và lên màu chuẩn">
+														<img width="400"
+															 height="240"
+															 src="~/img/ki-thuat-nuoi-koi.jpg"
+															 alt="Kĩ thuật nuôi cá Koi để cá luôn khỏe mạnh và lên màu chuẩn"
+															 loading="lazy"
+															 class="duration-300" />
+
+
+													</a>
+													<div class="block-content">
+														<h3>
+															<a href="~/Blogs/ki-thuat-nuoi-ca-Koi" title="Kĩ thuật nuôi cá Koi để cá luôn khỏe mạnh và lên màu chuẩn" class="line-clamp-2-new">Kĩ thuật nuôi cá Koi để cá luôn khỏe mạnh và lên màu chuẩn</a>
+														</h3>
+														<div class="article-content">
+
+															<p class="justify line-clamp line-clamp-3">
+																Kiểm soát lượng nước
+
+																Chất lượng nước là yếu tố quan trọng nhất trong việc nuôi &nbsp;cá koi, vì nó ảnh hưởng trực tiếp đến &nbsp;sức khỏe và sắc đẹp của cá. Bạn cần kiểm soát các chỉ số sau của nước:
+
+																<b>Độ pH</b>: Đối với cá koi, độ pH lý tưởng là từ<b>7 – 8</b> . Nếu độ pH quá cao hay quá thấp, cá sẽ bị stress, suy nhược và dễ bị bệnh.
+																<b>Nhiệt độ nước</b>: Nhiệt độ nước lý tưởng là từ<b> 18 – 25°C</b>. Nếu nhiệt độ nước quá cao hay quá thấp, cá sẽ bị chậm lớn, kém sinh lực và dễ bị bệnh.
+																<b>Hàm lượng oxy</b>: Hàm lượng oxy lý tưởng là từ <b>6 – 8 mg/l</b>. Nếu hàm lượng oxy quá thấp, cá sẽ bị ngạt thở, yếu sinh lý và dễ bị bệnh.
+																Chủ nuôi cũng cần có các <b> biện pháp điều chỉnh như thay nước</b>, sử dụng <b>thuốc tăng giảm pH</b>, sử dụng <b>máy sưởi hay máy làm mát nước</b>, sử dụng máy bơm oxy… Bạn nên thường xuyên <b>kiểm tra và điều chỉnh các chỉ số</b> này để duy trì chất lượng nước tốt cho cá koi.
+
+																Điều khiện bể nuôi cá Koi
+
+																Đây cũng là yếu tố quan trọng trong việc nuôi cá koi, vì nó ảnh hưởng đến không gian sống và môi trường sinh hoạt của cá. Bạn cần chú ý đến các điều kiện sau của bể nuôi:
+
+																<b>Kích thước hồ</b>: Kích thước hồ lý tưởng là từ 3 x 2 x 1,5 m. Nếu kích thước hồ quá nhỏ, cá sẽ bị &nbsp;chật chội, không có đủ không gian bơi lội và dễ bị stress.
+																<b>Mật độ nuôi cá</b>: Chỉ nên thả từ 10 – 15 con/m3. Nếu mật độ quá cao hay thấp cũng&nbsp; ảnh hưởng đến không gian và tính bơi lội của cá.
+																<b>Mực nước tối thiểu và tối đa</b>: Mực nước tối thiểu là 80 cm và mực nước tối đa là 150 cm. Nếu mực nước quá thấp, cá sẽ bị&nbsp; thiếu oxy và dễ bị nhiễm trùng da. Nếu mực nước quá cao, cá sẽ bị thiếu ánh sáng và dễ bị phân hủy chất thải.
+																<b>Hệ sinh thái hồ cá</b>: Một hệ sinh thái hồ cá lý tưởng là có sự cân bằng giữa các thành phần sau:
+
+																Các loại <b>cây thủy sinh</b> như hoa sen, hoa súng, cỏ lau… để cung cấp oxy cho nước, tạo bóng mát cho cá và làm đẹp cho hồ.
+
+																Các loại <b>vi sinh vật</b> như vi khuẩn nitrosomonas, nitrobacter… để phân hủy chất thải của cá và duy trì độ pH của nước.
+
+																Các loại <b>động vật</b> như ốc sên, tép… để giúp làm sạch nước, loại bỏ rong rêu và cung cấp thức ăn cho cá.
+
+																Các loại <b>thiết bị</b> như máy lọc nước, máy bơm oxy… để giúp duy trì chất lượng nước tốt cho cá
+
+
+															</p>
+
+															<div class="article-info">
+																<p class="time-post">
+																	<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
+																		<path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z" />
+																		<path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0" />
+																	</svg>
+																	<span>
+																		11/11/2024
+																	</span>
+																</p>
+
+																<a href="~/Blogs/ki-thuat-nuoi-ca-Koi" title="Đọc thêm" class="read-more">Đọc thêm »</a>
+
+															</div>
+
+														</div>
+
+													</div>
+												</div>
+
+											</div>
+										</div>
+
+										<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+											<div class="item-blog">
+												<div class="wrapper">
+													<a class="block-thumb thumb" href="~/Blogs/cach-nuoi-ca-Koi-ngoai-troi" title="Cách nuôi cá Koi ngoài trời">
+
+														<img width="400"
+															 height="240"
+															 src="~/img/nuoi-ngoai-troi.jpg"
+															 alt="Cách nuôi cá Koi ngoài trời"
+															 loading="lazy"
+															 class="duration-300" />
+													</a>
+
+													<div class="block-content">
+														<h3>
+															<a href="~/Blogs/cach-nuoi-ca-Koi-ngoai-troi" title="Cách nuôi cá Koi ngoài trời" class="line-clamp-2-new">Cách nuôi cá Koi ngoài trời</a>
+														</h3>
+														<div class="article-content">
+
+															<p class="justify line-clamp line-clamp-3">
+																Nuôi cá koi ngoài trời là một cách nuôi cá koi phổ biến và được nhiều người ưa chuộng. Nuôi cá koi ngoài trời có nhiều ưu điểm như: tận dụng&nbsp; không gian sân vườn, tạo cảnh quan đẹp và phong thủy tốt cho gia đình, tiết kiệm chi phí điện năng và thiết bị…
+																Tuy nhiên, nuôi cá koi ngoài trời cũng có nhiều &nbsp;khó khăn và thách thức như: phải chịu ảnh hưởng của thời tiết biến đổi, phải đối phó với các loại kẻ thù như chim, mèo, chuột… Bạn cần có những kỹ thuật và cách chăm sóc đặc biệt khi nuôi cá koi ngoài trời.
+																Dưới đây là một số kinh nghiệm nuôi cá koi ngoài trời theo từng mùa:
+
+																Nuôi Cá Koi Khi Trời Mưa:
+
+
+																Mưa là một yếu tố không thể tránh khỏi khi nuôi cá koi ngoài trời. Mưa có thể mang lại lợi ích như: làm sạch và làm mát nước hồ, tăng hàm lượng oxy trong nước…
+																Nhưng mưa cũng có thể gây ra những hại như: làm &nbsp;giảm độ pH của nước, mang theo các chất bẩn hay vi sinh vật gây bệnh cho cá… Bạn cần làm những việc sau khi nuôi cá koi khi trời mưa:
+
+																Kiểm tra và điều chỉnh độ pH của nước sau khi mưa bằng cách sử dụng thuốc tăng giảm pH hoặc các loại vật liệu tự nhiên như&nbsp; than hoạt tính, vỏ ốc sên…
+
+																Kiểm tra và loại bỏ các chất bẩn hay rác rưởi trong hồ sau khi mưa bằng cách sử dụng máy hút bụi hoặc lưới vớt rác.
+
+																Kiểm tra và điều trị các con cá bị bệnh sau khi mưa bằng cách sử dụng các loại thuốc kháng sinh, sát trùng hoặc các loại thảo dược tự nhiên như lá trầu không, lá bạc hà…
+
+																Kiểm tra và bảo dưỡng các thiết bị trong hồ sau khi mưa bằng cách sử dụng máy sấy hoặc khăn lau khô các thiết bị bị ướt, kiểm tra và thay thế các phụ tùng bị hỏng hoặc hư hỏng.
+
+																Nuôi Cá Koi Trong Thời Tiết Nóng Bức:
+
+																Nóng bức là một yếu tố khó chịu khi nuôi cá koi ngoài trời. Nóng bức có thể gây ra những hại như: làm tăng&nbsp; nhiệt độ nước, làm giảm hàm lượng oxy trong nước, làm tăng sự sinh sôi của các vi sinh vật gây bệnh cho cá… Bạn cần làm những việc sau khi nuôi cá koi trong thời tiết nóng bức:
+
+																Kiểm tra và điều chỉnh nhiệt độ nước bằng cách sử dụng máy làm mát nước hoặc các loại vật liệu tự nhiên như đá, lá chuối, rơm rạ…
+
+																Kiểm tra và tăng cường hàm lượng oxy trong nước bằng cách sử dụng máy bơm oxy hoặc các loại cây&nbsp; thủy sinh như hoa sen, hoa súng, cỏ lau…
+
+																Kiểm tra và phòng ngừa các con cá bị bệnh bằng cách sử dụng các loại thuốc kháng sinh, sát trùng hoặc các loại thảo dược tự nhiên như lá trầu không, lá bạc hà…
+
+																Kiểm tra và giảm thiểu ánh nắng mặt trời chiếu vào hồ bằng cách sử dụng các loại che chắn như ô, mái che, cây xanh…
+
+																Cách Nuôi Cá Koi Trong Thời Tiết Lạnh:
+
+																Lạnh là một yếu tố khắc nghiệt khi nuôi cá koi ngoài trời. Lạnh có thể gây ra những hại như: làm giảm nhiệt độ nước, làm giảm hoạt động của cá, làm giảm khả năng miễn dịch của cá… Bạn cần làm những việc sau khi nuôi cá koi trong thời tiết lạnh:
+
+																Kiểm tra và điều chỉnh nhiệt độ nước bằng cách sử dụng máy &nbsp;sưởi nước hoặc các loại vật liệu tự nhiên như gỗ, than, rơm rạ…
+
+																Kiểm tra và duy trì hàm lượng oxy trong nước bằng cách sử dụng máy bơm oxy hoặc các loại cây thủy sinh như hoa sen, hoa súng, cỏ lau…
+
+																Kiểm tra và bổ sung&nbsp; thức ăn cho cá bằng cách sử dụng các loại thức ăn giàu protein, vitamin, khoáng chất… để tăng cường sức đề kháng cho cá.
+
+																Kiểm tra và ngăn chặn tình trạng đóng băng của nước hồ bằng cách sử dụng các loại che chắn như ô, mái che, cây xanh… hoặc tạo ra một lỗ thông hơi trên mặt nước.
+
+															</p>
+
+															<div class="article-info">
+																<p class="time-post">
+																	<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
+																		<path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z" />
+																		<path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0" />
+																	</svg>
+																	<span>
+																		11/11/2024
+																	</span>
+																</p>
+
+																<a href="~/Blogs/cach-nuoi-ca-Koi-ngoai-troi" title="Đọc thêm" class="read-more">Đọc thêm »</a>
+
+															</div>
+
+														</div>
+
+													</div>
+												</div>
+
+											</div>
+										</div>
+
+										<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+											<div class="item-blog">
+												<div class="wrapper">
+													<a class="block-thumb thumb" href="~/Blogs/cac-benh-ca-Koi" title="Các bệnh cá koi kèm dấu hiệu và cách phòng, chữa bệnh">
+														<img width="400"
+															 height="240"
+															 src="~/img/cac-benh-koi.jpg"
+															 alt="Các bệnh cá koi kèm dấu hiệu và cách phòng, chữa bệnh"
+															 loading="lazy"
+															 class="duration-300" />
+													</a>
+													<div class="block-content">
+														<h3>
+															<a href="~/Blogs/cac-benh-ca-Koi" title="Các bệnh cá koi kèm dấu hiệu và cách phòng, chữa bệnh" class="line-clamp-2-new">Các bệnh cá koi kèm dấu hiệu và cách phòng, chữa bệnh</a>
+														</h3>
+														<div class="article-content">
+
+															<p class="justify line-clamp line-clamp-3">
+																Koi Farm Shop tổng hợp tất cả các bệnh phổ biến nhất cá Koi thường bị. Cung cấp đầy đủ dấu hiệu nhận biết, điều trị và cách phòng bệnh. Các bạn lưu lại để sử dụng ngay khi cần thiết.
+
+																<strong>1.Cá koi bị trùng mỏ neo</strong>:
+
+																<b>Biểu hiện</b>: Đây là bệnh thường gặp nhất ở Koi Nhật. Do kí sinh&nbsp; Lernea – Anchor Worm gây ra. Bám chătj vào thân, đuôi có thể thấy bằng mắt thường. Còn nhỏ trùng sống trong mang cá, trưởng thành con đực và cái giao phối, con đực rời khỏi mang rồi chết.
+																Trùng cái tiếp tục tồn tại, hút dưỡng chât, sinh nở gây ra các vết thương cho koi. Koi ngứa ngáy, lười ăn, gầy bơi nơi chậm
+																<b>Điều trị</b>: Thuốc Dimilin (dùng đúng theo hướng dẫn của bác sĩ dựa trên số lượng koi nhiễm, thuốc có thành phần thuốc trừ sâu). Nếu hồ có cây thủy sinh không dùng được thuốc (trừ khi cây cao hơn mặt nước 3 cm).
+
+																Đánh thuốc 1gr.m3
+																<b>Hướng dẫn đánh</b>:
+																+ Ngày 1: Liều thuốc phụ thuộc và hồ/bể koi số lượng, tình trạng (theo hướng dẫn bác sĩ)
+
+																+ Ngày 2: Không đánh thuốc .
+
+																+ Ngày 3:  Đánh liều 2 như liều 1, thay 20% nước
+
+																+ Ngày 4,5,6: Không đánh thuốc
+
+																+ Ngày 7: Đánh liều 3, thay 20% nước
+
+																+ Ngày 8: Không đánh thuốc
+
+																+ Ngày 9: Đánh liều 4 thay 20% nước
+
+																+ Ngày 10, 11: Không đánh thuốc
+
+																+ Ngày 12,13, 14: Mỗi ngày thay 20% nước
+
+																<b>Phòng bệnh</b>:
+
+																Vệ sinh hồ nuôi, hệ thống lọc
+																Đảm bảo nước sạch
+																Khử trùng giày dép trước khi vào hồ, dụng cụ hồ nuôi
+
+																<strong>2. Cá Koi bị nấm mang</strong>:
+
+																<b>Biểu hiện bệnh</b>: Thở bất thường, thở nhanh, gấp hoặc ngáp ngáp, khó thở, mang đánh liên tục. Hệ hô hấp bị ảnh hưởng nên thiếu oxy, mang đập mạnh, nhìn mang cá sẽ thấy các vết màu trắng loang lổ.
+																Cá thường chết sau 3 ngày, bệnh lan nhanh sang các con khác, nên cần xử lý kịp thời.
+
+																<b>Điều trị</b>:
+
+																Đánh Cloramin T liều lượng 7.5g/1m3 nhưng phương pháp này chỉ cứu được các con chưa nhiễm bệnh, thiệt hại cả hồ. Sau 2 ngày thyay 50% nước, đánh lại lần 2. 15 – 20mg/1000 lít để tiêu độc, khử trùng toàn bộ mầm bệnh trong hồ KHÔNG CÓ CÁ.
+																Bổ sung vitamin C vào thức ăn tăng sức đề kháng cho Koi
+																Nâng hoặc hạ nhiệt độ nước tùy vào nhiệt độ môi trường, khí hậu để giảm tỉ lệ chết (không diệt được vi rút).
+																<b>Phòng bệnh</b>:
+
+																Vệ sinh hồ cá thường xuyên
+																Đảm bảo hệ thống lọc hoạt động trơn chu, hiệu quả
+																Khử trùng giày dép trước khi thăm hồ
+
+																<strong>3. Cá koi bị tróc vảy (Epistylis – bểnh vảy trắng trên da cá Koi</strong>:
+																<b>Biểu hiện bệnh</b>: Epistylis là&nbsp; sinh vật đơn bào không thấy được bằng mắt thường. Khi mới nhiễm Koi không có biểu hiện bên ngoài. Nếu tinh ý sẽ thấy koi thi thoảng búng mình hoặc treo mình trong nước.
+																Tình trạng trở nặng Koi xuất hiện những mảng trắng nhỏ trên da, kích thước 0.2 – 0.5 mm, lan nhăn khắp cơ thể. Da cá đỏ hơn, làm tróc vảy, dẫn đến nhiễm trùng rồi chết. Bệnh này rất nguy hiểm, dù chưa khỏi nhưng Koi cũng khó phục hồi lại giá trị ban đầu.
+																<b>Điều trị</b>:
+
+																Cải tạo lại chất &nbsp;lượng nước, vệ sinh hồ nuôi để giảm sự lây nhiễm của bệnh
+																Tắm muối với nồng độ 100g/ 4.5 lít/ 10 phút, lặp lại 3 ngày liên tiếp
+																Nếu bệnh chuyển sang nhiễn trùng thứ cấp, nhiễm nấm cần điều trị tại chỗ với keo ong
+																<b>Phòng bệnh</b>
+
+																Vệ sinh hồ nuôi sạch sẽ, đảm bảo chất lượng nước
+																Khử khuẩn giày dép, trước khi bước vào hồ nuôi
+																Theo dõi kĩ tình trạng ăn uống, hoạt động của cá.
+
+																<strong>4. Cá koi bị lồi mắt</strong>:
+																<b>Biểu hiện</b>: Do vi khuẩn Steptococcus gây ra, thường do hệ thống lọc không tốt, nước bị ô nhiễm.
+																Koi mất phương hướng bơi lội, bơi lờ đờ, hay bơi quay tròn, xoay vòng không rõ bơi đi đâu. Mắt cá dần to lên, tổn thương lòng mắt, viêm mắt, mắt lồi ra, xuất hiện những vết lở loét ở quanh mắt, trên da của cá. Gốc vi cá xuất huyết , có đốm mủ dưới da cá, nếu bị vỡ ra thì thành các đốm loét. Cá ăn ít đi, bỏ ăn.
+																<b>Điều trị</b>:
+
+																Giảm lượng thức ăn hàng ngà&nbsp;y của Koi hoặc cắt luôn thức ăn để giữ vệ sinh nước hồ
+																Sử dụng thuốc khangs inh: Norfloxacin (hoặc CIPROFLOXACIN), Erythromycin, Florphenicol, Doxycycline, cafalexin (hoặc Amocicillin, Ampicillin). 15 – 25g/tấn cá/ngày, chia 2 – 3 lần/ngày, liên tục 5 – 7 ngày.
+																Tách riêng những cá koi bị bệnh để ngâm trong thuốc
+																Nhân chia tỷ lệ thuốc với trọng lượng koi nhiễm bệnh tương ứng
+																Mỗi ngày thay 2/3 nước ngâm, sử dụng thuốc đến khi mắt hết sưng lồi thì ngừng.
+																<b>Phòng bệnh</b>:
+
+																Lắp đặt hệ thống lọc đảm bảo tiêu chuẩn
+																Đảm bảo nguồn nước, chất lượng nước sạch
+																Khử khuẩn giày dép trước khi vào hồ Koi.
+
+																<strong>5.Cá koi bị nấm trắng (bệnh trắng da, nấm thủy mi)</strong>:
+																<b>Biểu hiện</b>: Khi mới nhiễm da cá xuất hiện những vùng trắng, có những sợi nấm nhỏ, mềm, vàu ngày sau phát triển thành búi trắng như bông, nhìn thấy bằng mắt thường.
+																Trứng cá bị bệnh màu trắng đục, xung quanh có nhiều sợi nấm làm cho trứng bị ung.
+																<b>Điều trị</b>:
+
+																Ngâm cá trong 1 chậu nước tắm mặn. Hòa bằng muối tinh tự nhiên trong nước sạch, thả cá vào ngâm, nồng độ đậm đặc. Một lần ngâm từ 15 – 30 phút, khoảng 15 – 30g muối/1 lít. Điều trị dài ngày 7g/lít.
+																Hòa Chlorin B hòa tan trong nước, phun đều xuống ao với lượng 1ppm (1 gam/1m khối nước). Phun 2 ngày liên tục.
+																<b>Phòng bệnh</b>:
+
+																Dùng muối ăn tinh khiết tắm cho cá nồng độ 2 – 3 % trong 15 – 30 phút.
+																Nuôi số lượng cá vừa phải, không nuôi quá dầy
+																Đảm bảo vệ sinh hồ nuôi, chất lượng nước
+
+																<strong>6.Cá koi bị ngứa mình (bệnh sán da, sán mang)</strong>
+																<b>Biểu hiện</b>: Cá hay cọ sát mình vào thành hồ, lạng lách cạ mình, &nbsp;nhảy khỏi mặt nước, co giật do ngứa mình, tăng động…
+																Sán hút hết máu cá làm ca suy yếu, thân cá đỏ, ghẻ lở, ăn thủng mang cá, sức đề kháng giảm càng dễ bị nhiễm khuẩn, nấm.
+																<b>Điều trị</b>:
+
+																Ngâm Praziwantel liều 2g/1m3, 2 ngày ngâm 1 lần. Trước khi cho thuốc thay nước 20%.
+																Có thể kết hợp Prazuwantel trộn vào thức ăn liều lượng 6g/30kg thức ăn.
+																<b>Phòng bệnh</b>:
+
+																Vệ sinh hồ nuôi, đảm bảo nước sạch
+																Khử trùng giày dép trước khi vào hồ nuôi
+																Thức ăn sạch
+																<strong>7.Cá koi bị xuất huyết</strong>
+																<b>Biểu hiện</b>: Thân koi chuyển màu tối (có thể lồi 1 mắt hoặc cả 2 mắt. Mang màu nhạt hơn bình thường. Vảy cá phần bụng, phần đuôi, vây cá bị xung huyết chuyển sang màu hồng (có thể xuất huyết thành dạng đốm nhỏ trên da, miệng, mắt, hậu môn, gốc vây cá). Cá nổi lên mặt nước, tụ thành bầy đàn, tốc độ bơi giảm dần, chết.
+																<b>Điều trị</b>:
+
+																Bắt cá bị bệnh cách ly ra tank. Dùng thuốc tím (potassium permanganate). Bắt Koi ra thả vào trong chậu nước đã pha thuốc tím. Tỷ lệ 10g thuốc tím pha 80 – 100 lít nước. Tùy theo cá nặng hay nhẹ. Tiếp theo thả cá vào tank cách ly cho muối  3/1000 + C Sủi 8 – 10 viên/1 m3. Tiếp đến chạy sủi bơm lọc từ 1 – 2h để cá phục hổi khi mới tắm tím nồng độ cao. Sau cùng dùng tetracylin ( 500mg/1viên ) tỷ lệ 10viên/1m3 + refamicin ( 300mg /1viên) 10 viên /1m3. + cloramin T ( 5g/1m3 ở hồ có pH dưới 7 và 7g/1m3 ở hồ có pH 7 hoặc trên 7 .
+																Thay nước mỗi ngày 30%, bổ sung lại thuốc + muối khi đã thay đi, liên tục trong 3 – 5 ngày.
+																Trong thời gian cách ly cá xử lý lại hồ nuôi, hệ thống lọc, chạy nước mới châm vi sinh.
+																<b>Phòng bệnh</b>:
+
+																Hệ thống có bộ lọc đạt chuẩn
+																Cho cá ăn đủ lượng thức ăn
+																Không cho cá ăn liên tục khiến lọc quá tải
+																Thời tiết quá xấu nên cho cá nhịn ăn tạm thời để giữ nước sạch
+																Vệ sinh giày dép, các vật dụng
+
+																<strong>8.Cá Koi bị đốm trắng</strong>
+																<b>Biểu hiện</b>: Mới bị xuất hiện các hạt đốm trắng nhỏ như hạt cây anh túc ở vùng đầu, vây ngực, sau đó lan rộng ra toàn thân, sờ vào giống như hạt cát. Koi thường xuyên cọ xát vào đáy áo, thành hồ, chắn ăn, thích tập trung đầu nguồn nước, ngoi lên mặt nước  hoặc bất động dưới đáy.
+
+																Trở nặng tại vị trí nhiễm nấm tiết ra chất nhầy, vẩn đục, xuất huyết da. Cọ sát càng nhiều càng gây tróc da, lở loét.
+
+																<b>Điều trị</b>:
+
+																Tắm Xanh Methylen lượng 1 – 2g trên 1 tấn nước hoặc 0,1 – 0,2 Xanh Methylen trên 1 tấn nước. Duy trì 3 – 4 ngày.
+																Xanh Mythylen + 30ml Formalin trên 1 tấn nước. T&nbsp;ắm trong 3 – 4 ngày. (tránh để thoát nước trong vài ngày nếu dùng Formalin0.
+																Phun thuốc trên mặt nước bằng Chlorin B. phun đều xuống ao với lượng 1ppm (1 gam/1m khối nước). Phun 2 ngày liên tục.
+
+																<strong>9. Cá koi thối miệng</strong>
+																<b>Biểu hiện</b>: Cá giảm ăn, ăn ít, bỏ ăn. Bơi lờ đờ
+
+																<b>Điều trị</b>: Ngừng cho ăn ngay lập tức, thay nước 30%. Cách &nbsp;ly cá nhiễm bệnh ra Tank. Ngâm muối, loại bỏ các vết thương bằng peroxide hoặc iodine theo hướng dẫn của thuốc.
+
+																<b>Phòng bệnh</b>: vệ sinh hồ nuôi, hệ thống lọc, đảm bảo chất lượng nước. Cho cá vừa đủ, tránh làm ô nhiễm nước.
+
+																<strong>10. Cá Koi bị Kí sinh trùng</strong>
+
+																<b>Biểu hiện</b>
+																Kí sinh trùng Aeromonas gây viêm loét, lở, dùng thuốc Chloranphenicol điều trị 3 – 4 ngày.
+																Vi khuẩn Pseudomonas giống vi khuẩn Aermonas dùng thuốc Baytril theo hướng dẫn bác sĩ thú y.
+																Trùng mỏ neo – cũng là kí sinh trùng có thể thấy bằng mắt thường, nó cắm sâu vào thân cá dùng nhíp gắp và sát trùng.\
+
+																<storng>11.Bệnh trùng bánh xe</storng>
+
+																<b>Biểu hiện</b>: Thân có nhiều nhớt, da trắng đục, chuyển&nbsp; sang màu xám, cá ngứa, khó chịu, nổi đám trên tầng mặt, tách khỏi đàn, bời lờ đờ 1 mình. Cá nặng không xác định được phương hướng, lật bụng, chìm xuống đáy ao và chết
+
+																<b>Điều trị</b>: Dùng phèn xanh Cuso4 sử dụng theo 2 phương pháp: Tắm cho cá ở nộng độ 2 – 5 ppm (2 – 5gr thuốc/m3 nước) thời gian 5 – 15 phút. 2 là hòa thuốc tan trong nước, phun xuống ao với nồng độ 0,5 – 0,7 ppm.
+
+																<b>Phòng bệnh</b>: Áp dụng phương pháp thứ 2 như trên. Vệ sinh ao nuôi, hệ thống lọc.
+
+																<stong>12.Bệnh trùng loa kèn</stong>
+
+																<b>Biểu hiện</b>: Trùng bám trên da, vây, mang thành búi trắng dễ nhầm với &nbsp;bệnh nấm thủy mi. Dấu hiệu như trùng bánh xe.
+
+
+
+																<b>Điều trị & phòng bệnh</b>:  Như trùng bánh xe
+
+																<strong>13.Cá koi bị vẹo cột sống</strong>
+																<b>Biểu hiện</b>: Phần đuôi cá bị cong do thiểu chất ascorbic acid trong thức ăn. Bị rò điện ở máy bơm, nhiễm điện, nhiễm trùng bàng quang.
+
+
+
+																<b>Điều trị</b>: bổ sung thêm thức ăn có acid ascorbic. Kiểm tra máy bơm, đèn trong bể, tiêm kháng khuẩn.
+
+																<strong>14.Cá Koi bị rận cá</strong>
+																<b>Biểu hiện</b>: Rận ký sinh trên vây, thân, da, mang, miệng. Chúng hút máu khiến cá bị tổn thương, sưng  đỏ. Koi ngứa ngáy, khó chịu, thường bơi nhảy lung tung.
+																<b>Điều trị</b>: Koi xuất hiện nhiều rận, dùng nhíp để gắp chúng khỏi thân koi, sau đó dùng dunh dịch diệt khuẩn: thuốc tím, bentadine, iodine… bôi lên các vùng bị tổn thương. Áp dụng 5 – 7 ngày.
+
+																<stong>15.Cá Koi bị xù vảy Dropsy</stong>
+																<b>Biểu hiện</b>: Thân cá sưng lên, mắt lồi, vảy cá nâng lên khiên cá &nbsp;như hoa thông. Koi ăn ít, bơi gần mặt nước. Do bị nhiêm vi khuẩn gây chảy máu bên trong, hoặc ký sinh trùng cá, khối u trong cá.
+
+
+
+																<b>Điều trị</b>: 5 – 6kg muối hòa 1m3 nước, tắm cho cá 5 phút. Áp dụng 3 – 5 ngày.
+
+																<strong>16.Bệnh đầu to</strong>
+																<b>Biểu hiện</b>: Đầu to hơn bất thường so với thân cá. Cà gầy yếu, hình dáng mất cân đối. Bệnh do nhiễm trùng, vi khuẩn gẩ ra ở bề ngoài mang mút. Đầu của Koi sẽ to lên.
+																<b>Điều trị</b>:
+
+																Bổ sung thức ăn có dinh dưỡng cao hơn,&nbsp; giàu protein hơn xem cá có thiếu dinh dưỡng không. Theo dõi lượng thức ăn cá ăn, so sánh với tình trạng cơ thể.
+																Nếu không tiến triển thì bổ sung thêm erythromcylin vào thức ăn của riêng cá nhiếm bệnh để tiêu diệt nhiễm trùng.
+																<b>Phòng bệnh</b>:
+
+																Về sinh hồ nuôi thường xuyên, đảm bảo hệ thống lọc tốt
+																Khử trùng giày dép trước khi thăm hồ
+																Cho cá ăn giàu dinh dưỡng, ăn đủ số lượng
+																Không nuôi quá nhiều khi diện tích hồ nhỏ
+
+																<strong>17.	Bệnh lổ đầu</strong>
+																<b>Biểu hiện</b>: Đầu có các vết nổ, lở, nham nhở, rất mất thẩm mĩ. Cá lừ đừ, lớp da trên đầu tổn thương, đầu bị lổ, màu sắc tối dần.
+																<b>Điều trị</b>:
+																Tách li cá ra các tank hoặc hồ nuôi riêng để chữa bệnh cho các
+																Tăng thêm dinh dưỡng cho cá, bổ sung vitamin V vào thức ăn
+																Dùng Flagy điều trị cho cá trong 10 ngày (dúng theo hướng dẫn của bác sĩ tùy trong lượng, thể trạng bệnh).
+
+																<strong>18.Cá koi bị thối đuôi</strong>
+																<b>Biểu hiện</b>: Đuôi xuất hiện các vết xước đỏ, chảy máu. Càng ngày càng lây lan, đuôi lở loét, ăn dần mòn đuôi cá, thối rữa các đoạn đuôi.
+																<b>Điều trị</b>:
+																Dùng dung dịch Xanh malachite 1% bôi lên các tổn thương trên vây đuôi cá, ngày bôi 1 lần, liên tục trong 5 ngày.
+																Dùng 5 – 8 viên oxytetracyline với 100 lít nước, cho cá vào tank ngâm 30 phút để diệt vi khuẩn.
+																Sát trùng hồ nuôi
+																Thay 30 – 50 % nước trong bổ
+																<b>Phòng bệnh</b>:
+
+																Bệnh do nước bị ô nhiễm, không đảm bảo nên hệ thống lọc, chất lượng nước luôn phải sạch sẽ, không có vi khuẩn, vi rút…
+																Vệ sinh, sát trùng hồ nuôi, giầy dép, dụng cụ nuôi
+																<strong>19.Bệnh đốm đỏ</strong>
+																<b>Biểu hiện</b>: Toàn thân cá xuất hiện các &nbsp;vết huyết đỏ, vây rụng thành từng mảng, cá bỏ ăn, bơi lờ đờ. Bệnh nặng hơn thì các gốc vây, ti&nbsp;a vây rách nát và cụt dần. Vùng da bị bệnh xuất huyết, tấy loét, mưng mủ, xung quanh có nấm ký sinh, mang tái, mắt lồi.
+																<b>Điều trị</b>:
+
+																Nuôi ở ao thì thay nước mới cho ao, bón vôi hòa vào nước, té đều khắp ao với liều 2kg/100m2/ 2 tuần để nâng độ pH trong môi trường nước. (vi khuẩn này thích môi trường kiềm).
+																Hồ nuôi nhỏ đánh muối tetraxilin. 1 khối nước = 1 vỉ tetraxilin + 1kg muối. Đánh liên tục trong 3 ngày.
+																Trên đây, là một số bệnh phổ biến nhất thường gặp ở cá Koi Nhât. Tình trạng bệnh, diễn biến bệnh, mức độ bệnh ở mỗi cá koi khác nhau. Vì vậy khi phát hiện cá có dấu hiệu bỏ ăn, chán ăn, bơi lờ đờ, tăng động, tách đàn… cần quan sát kỹ để theo dõi tình trạng cá.
+
+																Tham khảo ý kiến bác sĩ thú ý trước khi quyết định áp dụng bất kỳ phương pháp điều trị đặc hiệu nào có dùng thuốc, các chất xử lý.
+
+																Koi Farm Shop hỗ trợ tư vấn các bệnh về cá, phương pháp điều trị. Ngoài ra chúng tôi có dịch vụ cung cấp Koi baby, koi mini, koi giống, Koi jumbo tất cả thuần chủng từ Nhật Bản. 90% được chọn lọc từ Dainichi Koi Farm. HOÀN TOÀN CÁ KOI KHỎE MẠNH
+															</p>
+
+
+															<div class="article-info">
+																<p class="time-post">
+																	<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
+																		<path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z" />
+																		<path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0" />
+																	</svg>
+																	<span>
+																		11/11/2024
+																	</span>
+																</p>
+
+																<a href="~/Blogs/cac-benh-ca-Koi" title="Đọc thêm" class="read-more">Đọc thêm »</a>
+
+															</div>
+
+														</div>
+
+													</div>
+												</div>
+
+											</div>
+										</div>
+
+										<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+											<div class="item-blog">
+												<div class="wrapper">
+													<a class="block-thumb thumb" href="~/Blogs/quy-trinh-ve-sinh-ho-ca-Koi" title="Quy trình vệ sinh hồ cá Koi">
+														<img width="400"
+															 height="240"
+															 src="~/img/thiet-bi-kiem-tra.jpg"
+															 alt="Quy trình vệ sinh hồ cá Koi"
+															 loading="lazy"
+															 class="duration-300" />
+													</a>
+													<div class="block-content">
+														<h3>
+															<a href="~/Blogs/quy-trinh-ve-sinh-ho-ca-Koi" title="Quy trình vệ sinh hồ cá koi" class="line-clamp-2-new">Quy trình vệ sinh hồ cá koi chuẩn chỉ</a>
+														</h3>
+														<div class="article-content">
+
+															<p class="justify line-clamp line-clamp-3">
+																Quy trình vệ sinh hồ cá Koi đơn giản tưởng chừng là công việc đơn giản nhưng lại vô cùng cần thiết đối với hồ Koi. Bất kì ai cũng có thể chơi Koi và khiến lối chơi này trở thành thú vui tao nhã, thư giãn tinh thần. Tuy vậy, không phải ai cũng biết cách vệ sinh, chăm sóc những em này.
+
+																Như bạn đã biết, Koi vốn là loài cá ưa sạch sẽ nên hồ nước nếu không được vệ sinh “chuẩn chỉ” sẽ khiến cá lên màu không tốt hoặc làm cho Koi bị bệnh chết. Vậy làm thế nào để vệ sinh hồ Koi đạt tiêu chuẩn nhất, dưới đây, chúng tôi sẽ hướng dẫn đến bạn những kiến thức liên quan đến vấn đề này.
+
+																Vệ sinh hồ cá Koi quan trọng như thế nào?
+
+																Trước tiên, bạn cần phải hiểu rằng, &nbsp;HỒ KOI GIỐNG NHƯ NGÔI NHÀ CỦA CÁ KOI, cũng giống như bạn đang sinh sống trong chính ngôi nhà của bạn vậy. Tuy nhiên, nhà của bạn thường có đầy đủ phòng khách, phòng ngủ, phòng vệ sinh…nhưng hồ Koi thì lại không có những căn phòng này, đặc biệt là phòng vệ sinh. Việc ăn-ngủ-đi vệ sinh của Koi đều xung quanh chiếc hồ này.
+																Chính vì thế, những người chơi Koi lâu năm thường khuyên rằng,&nbsp; HÃY TẠO CHO HỒ KOI KHÔNG GIAN SỐNG THOẢI MÁI GIỐNG NHƯ BẠN ĐANG SỐNG TRONG NGÔI NHÀ CỦA BẠN VẬY. Có nghĩa là, ngoài việc đảm bảo chế độ ăn, giấc ngủ cho Koi thì bạn cũng cần chú ý đến vệ sinh của Koi để sao cho Koi cảm giác như vừa được “chơi trong phòng khách, ngủ trong phòng ngủ và đi vệ sinh trong phòng vệ sinh”.
+
+																Sau khoảng một thời gian sinh sống trong hồ, cá Koi sẽ thường có những hoạt động như ăn uống, thải chất bẩn nên khiến hồ nuôi xảy ra một số tình trạng như rêu tảo, chất bẩn. Cụ thể như sau:
+
+																– Đối với hoạt động ăn và uống: Koi vốn được biết đến là một trong những động vật ăn tạp và thường ăn theo thói quen của người nuôi. Nhiều người thấy chúng ăn tạp, háu ăn, cho bao nhiêu ăn cũng hết nên rất hay cho chúng ăn nhiều, ăn tràn lan, không kiểm soát số lượng thức ăn.
+
+																Tuy nhiên, cũng giống như&nbsp; người, Koi cần phải có thời gian để tiêu hóa các loại thức ăn nên khi cho ăn, chúng không thể ăn hết ngay mà sẽ đọng lại trong hồ, rớt xuống đáy hồ và lâu dần sẽ bị ôi thiu, bốc mùi thối. Đây cũng chính là nguyên nhân khiến nước bị đục, ô nhiễm và bị hôi tanh.
+
+																– Đối với chất thải của cá Koi: Sau khi ăn xong thì Koi cần phải tiêu hóa và thải phân, khi phân rơi xuống đáy hồ và dồn nén lâu ngày cũng sẽ làm &nbsp;ô nhiễm nguồn nước. Chưa kể đến, những loại rác thải như cành cây, xác động vật chết lắng xuống hồ, lâu ngày bị mục, kết hợp cùng thức ăn dư thừa và phân cá lắng xuống đáy hồ sẽ tạo điều kiện để vi khuẩn sinh sôi và nảy nở khiến đàn Koi bị bệnh.
+
+																– Đối với hoạt động hô hấp của Koi: Khi thở, Koi thường sẽ nhả ra một lượng lớn amoniac-vốn được biết đến là hợp chất vô cơ gây mùi rất khó chịu. Ngoài ra, chính hợp chất amoniac này là nguyên nhân khiến vi khuẩn phát triển, lây lan nhanh chóng, vừa làm ô nhiễm nguồn nước vừa khiến Koi bị ảnh hưởng về sức khỏe.
+
+																– Đối với hệ thống lọc nước: Dù rất cẩn thận nhưng cũng không thể tránh được hệ thống lọc nước bị cát bụi bám bẩn lâu ngày làm hỏng hóc. Trong khi đó, bộ phận lọc nước được cho là bộ phận đầu não của hồ Koi, giúp lọc nguồn nước và đào thải những chất cặn bã có trong hồ.
+
+																– Đối với sự hình thành rêu và tảo: Khi hồ Koi không được vệ sinh thường xuyên và bị bám đầy rong rêu, tảo. Khi rêu tảo phát triển quá mạnh cũng chính là nguyên nhân khiến cho nguồn nước của hồ cá bị vẩn đục và cũng có thể chính là nguyên nhân khiến hồ Koi mất đi thẩm mỹ.
+
+																Như vậy, có thể thấy, khi không vệ sinh hồ&nbsp; Koi thường xuyên thì chắc chắn, môi trường sinh sống của Koi sẽ bị ảnh hưởng trầm trọng, ảnh hương trực tiếp đến sự sinh trưởng và phát triển của Koi.
+
+																Những vị trí cần phải vệ sinh hồ Koi
+
+																Quy trình vệ sinh hồ Koi cần phải được thực hiện cả tại đáy, thường thành hồ và những bộ phận nằm trong các máy móc được lắp đặt tại hồ:
+
+																– Vệ sinh đáy hồ Koi: Cần phải được ưu tiên vệ sinh hàng đầu bởi đáy hồ là nơi chứa nhiều chất cặn bã, thức ăn dư thừa nhất, gây lắng đọng, thối rữa tạo điều kiện để vi khuẩn sinh sôi. Ngoài ra, ở đáy hồ còn có rất nhiều rêu mọc và làm đục nước trong hồ.
+
+																– Tường thành của hồ Koi: Những mảng rong rêu và tảo bám lâu ngày tại thành hồ&nbsp; là nguyên nhân khiến nước trong hồ bị đục, làm bẩn hồ và làm rợp hồ, làm ảnh hưởng trực tiếp đến khả năng lên màu của Koi.
+
+																– Hệ thống bộ phận máy móc lắp đặt trong hồ: Đặc biệt là hệ thống lọc nước giữ vai trò cực kỳ quan trọng để giúp đảm bảo nguồn nước trong hồ luôn sạch, cung cấp oxy và lọc thải chất thải ứ đọng trong hồ nên cần được vệ sinh sạch sẽ, tránh làm cho bộ lọc bị bám chặt nhiều bụi bẩn bên trong và làm hỏng bộ lọc.
+
+																Quy trình vệ sinh hồ cá koi chuẩn chỉ
+
+																Thời điểm tốt nhất để vệ sinh hồ Koi là khi thời tiết ấm lên, không nên vệ sinh quá nhiều vào mùa đông sẽ khiến cá bị xáo trộn. Khi thực hiện vệ sinh hồ Koi, chúng ta cần phải thực hiện theo các nguyên tắc lần lượt, cẩn thận, tỉ mỉ và chuẩn xác trong từng khâu:
+																– Đầu tiên là giảm bớt nước trong hồ Koi của bạn
+
+																Giảm bớt nước trong hồ sẽ cho phép làm sạch hồ tốt hơn. Nếu được thực hiện đúng cách, phương pháp này sẽ khiến hồ Koi trông sạch hơn mà không làm tổn thương hệ sinh thái. Để giảm nước trong hồ, bạn hãy sử dụng máy bơm để bơm nước vào một tank ( thùng chứa lớn) rồi từ từ cho từng chú  Koi vào trong thùng đó. Thùng chứa phải rộng và đủ lớn để Koi bơi trong khi bạn làm sạch hồ. Sử dụng lưới skimmer để vớt cá koi ra và đặt chúng nhẹ nhàng vào thùng chứa nước hồ Koi. Khi bạn có tất cả cá koi trong thùng chứa, bạn nên đậy nắp thùng bằng lưới hoặc nắp thoáng khí để cá Koi không nhảy ra ngoài.
+
+																Lưu ý: Việc bảo vệ Koi trong cùng một nguồn nước sẽ tốt hơn cho sức khỏe của chúng.
+
+																Sau đó, dùng lưới dày để có gậy kèm theo (gọi là lưới Skimmer) để vớt những chất bẩn có trên bề mặt hồ. Bạn cũng có thể sử dụng lưới skimmer một cách thường xuyên để duy trì hồ cá koi của bạn và đảm bảo nước sạch
+
+																– Tiếp theo là vệ sinh những chất cặn bã, rác thải tại đáy hồ Koi
+
+																Để giảm thiểu thời gian cho công việc vệ sinh đáy hồ Koi, bạn nên chuẩn bị một thiết bị máy vệ sinh đáy hồ Koi. Những chiếc máy này sẽ hoạt động tương tự giống như một chiếc máy hút bụi bình thường nhưng trong nước. Phần đầu máy sẽ gắn thêm một chổi cọ bể, khi chất bẩn được chổi cọ làm tung ra khỏi đáy hồ thì ngay lập tức, nó sẽ được máy bơm chính hút và đưa ra ngoài dễ dàng.
+
+																Nhìn chung, khi vệ sinh đáy hồ, bạn cần phải có dụng cụ vệ sinh. Hiện nay, những dụng cụ này cũng khá phổ biến và chi phí khá rẻ, tiện lợi phục vụ nhu cầu của người mua. Việc vệ sinh đáy cũng nên định kỳ thường xuyên để đảm bảo nước luôn sạch và tinh khiết.
+
+																– Vệ sinh bể lọc cho hồ Koi
+
+																Bể lọc được cho là hạng mục kỹ thuật quan trọng nhất trong cấu tạo của một Koi. Bể lọc chính là nơi lưu giữ lại những chất thải, chất cặn bẩn được thải ra của hồ Koi. Vì vậy, cần phải được thường xuyên vệ sinh để có thể đảm bảo chúng luôn hoạt động tốt nhất có thể. Thông thường, một bể lọc sẽ có cấu tạo để tự thải những chất cặn bã thông qua bộ phận xả ra ngoài nhưng chúng vẫn chưa đảm bảo đẩy hết được các chất thải ra ngoài 100%.
+
+																Một số vật thể tại phần khoang lọc tinh như nham thạch,&nbsp; than hoạt tính, gốm lọc…khi dùng lâu ngày sẽ bị bào mòn và trung hòa điện tích. Vì thế, cần phải thay thế những vật thể lọc trong quá trình vệ sinh hồ Koi để giúp hồ Koi luôn sạch, tinh khiết nhất.
+
+																– Vệ sinh rêu tảo bám xung quanh tường, thành của hồ Koi: Rêu tảo nếu ở mức độ vừa thì sẽ giúp làm hài hòa cho hệ sinh thái hồ nhưng nếu phát triển quá mạnh thì sẽ gây phản tác dụng làm gây hại đến môi trường sống. Vì thế, cần phải có giải pháp kiếm soát lượng rêu tảo để Koi không bị ăn phải vi khuẩn xâm nhập đe dọa đến sức khỏe Koi.
+
+																Để làm sạch rêu tảo bám trên tường thành hồ thì cần sử dụng loại thuốc diệt rêu, điều chỉnh độ sáng và kiểm soát lượng thức ăn vừa đủ cho koi.
+
+																– Vệ sinh cát và bụi bẩn, cặn bã trong các bộ phận lọc, xả nước: Có thể dùng vòi để xịt các bộ phận lọc, đặc biệt là những tấm lọc. Xịt vòi nước chuyên dụng để cho đến khi nào sạch thì lắp tấm lọc lại như cũ. Đối với những bộ phận máy móc thì lấy khăn lau cho sạch.
+
+																– Thay nước trong hồ: Công việc thay nước trong hồ Koi cũng được xem là các bước &nbsp;vệ sinh quan trọng. Cần phải thay nước định kỳ sau khi tổng vệ sinh hồ. Khi đã vệ sinh hồ Koi cũng như lau sạch các máy móc lắp đặt thì bạn nên thay nước trong hồ bởi nguồn nước cũ có thể bị vẩn đục và ô nhiễm.
+
+																+ Trước khi thay nước, bạn cần phải xả hết toàn bộ nước trong hồ trước đỏ rồ khử bằng clo chứa trong nước (đặc biệt là nước máy) bằng cách phơi hồ dưới trời nắng khoảng 1 ngày. Bạn cũng có thể dùng than hoạt tính khử clo cũng đều rất tốt.
+
+																+ Khi tiến hành thay nước thì không nên thay đổi ngột và cùng lúc vì có thể khiến cá bị sốc và chết. Cần phải tiến hành thay từ từ, đảm bảo làm sao cứ cách khoảng 2 ngày thì lại rút khoảng 1/3 thể tích nước cũ trong hồ cho tới khi nào thay được hết và nước trong hồ đã sạch là được.
+
+																Cho cá Koi làm quen dần với nước thay trong hồ khi đang còn trong thùng chứa. Sau khi cá koi của bạn đã được cung cấp đủ thời gian để làm quen với nước hồ mới trong thùng chứa, hãy sử dụng lưới skimmer để nhẹ nhàng đặt cá koi trở lại trong hồ đã vệ sinh sạch. Nếu bạn không loại bỏ cá koi của bạn ra khỏi hồ trước khi vệ sinh, bạn có thể bỏ qua bước này.
+
+																Tại Koi Farm Shop, chúng tôi làm việc không mệt mỏi để đảm bảo rằng tất cả Koi được bán đều có sức khỏe tốt nhất và chất lượng cao nhất. Sử dụng những nỗ lực tốt nhất của chúng tôi, tất cả những Koi này đều đã trải qua kiểm dịch 3 tuần chuyên sâu trước khi có bất kỳ cuộc đấu giá nào và được vận chuyển nào.
+
+																Quy trình kiểm dịch của Koi Farm Shop:
+
+																Mỗi lô hàng của Koi Farm SHop mới đều được kiểm dịch trong một nhà kính biệt lập tại trang trại ở ngoại thành Thành phố Hồ Chí Minh tối thiểu trong 3 tuần.
+
+																Hồ Koi đã được làm nóng đến ít nhất 72 ° F để cố tình rút ra bất kỳ vi khuẩn, ký sinh trùng, nấm hoặc vi rút nào được xử lý trong môi trường kiểm dịch chứ không phải là ao chính.
+
+																Trong quá trình kiểm dịch, lô hàng mới của Nishikigoi cũng được giữ bằng cá koi miễn phí KHV, bắt được mọi vấn đề như chim hoàng yến đã làm trong các mỏ than cũ.
+
+																Sau khi cách ly 3 tuần, Koi mới được gửi đến phòng thí nghiệm để xem liệu họ có bất kỳ bệnh ẩn hoặc vô hình nào bất kể họ có bị bệnh hay không khi đang cách ly. Không có Koi hoặc bất kỳ từ lô hàng của họ sẽ được bán cho đến khi được xác nhận từ phòng thí nghiệm.
+
+																Mọi thiết bị được sử dụng, như hệ thống lọc và lưới, đều được khử trùng sau mỗi lần sử dụng. Ngoài ra, chúng tôi không chấp nhận những hồ Koi không thuộc chúng tôi thiết kế và thi công.
+
+																Koi Farm Shop hy vọng hướng dẫn vệ sinh hồ cá Koi này đã hữu ích và giúp bạn chuẩn bị cho đợt nuôi Koi sắp tới. Nếu bạn đang tìm kiếm nguồn cung cấp vật tư hồ nuôi hay các loại thức ăn nuôi Koi hãy liên hệ với chúng tôi để được tư vấn chi tiết tại:
+
+
+
+															</p>
+
+															<div class="article-info">
+																<p class="time-post">
+																	<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
+																		<path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z" />
+																		<path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0" />
+																	</svg>
+																	<span>
+																		11/11/2024
+																	</span>
+																</p>
+
+																<a href="~/Blogs/quy-trinh-ve-sinh-ho-ca-Koi" title="Đọc thêm" class="read-more">Đọc thêm »</a>
+
+															</div>
+
+														</div>
+
+													</div>
+												</div>
+
+											</div>
+										</div>
+
+										<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+											<div class="item-blog">
+												<div class="wrapper">
+													<a class="block-thumb thumb" href="~/Blogs/y-nghia-cua-viec-nuoi-ca-Koi" title="Ý nghĩa của việc nuôi cá koi theo chuyên gia phong thủy">
+														<img width="400"
+															 height="240"
+															 src="~/img/ho-ca-koi-phong-thuy.jpg"
+															 alt="Ý nghĩa của việc nuôi cá koi theo chuyên gia phong thủy"
+															 loading="lazy"
+															 class="duration-300" />
+													</a>
+													<div class="block-content">
+														<h3>
+															<a href="~/Blogs/y-nghia-cua-viec-nuoi-ca-Koi" title="Ý nghĩa của việc nuôi cá koi theo chuyên gia phong thủy" class="line-clamp-2-new">Ý nghĩa của việc nuôi cá koi theo chuyên gia phong thủy</a>
+														</h3>
+														<div class="article-content">
+
+															<p class="justify line-clamp line-clamp-3">
+																Từ lâu, trong văn hóa phương Đông. Cá koi đã được xem là biểu tượng của sự ngoan cường, dũng cảm giống như người quân tử. Không những thế, loài cá có nguồn gốc Nhật Bản này còn là biểu trưng cho vinh hoa phú quý, sự hài hòa hạnh phúc. Cũng theo quan niệm này, con cá koi càng có kích thước lớn thì người nuôi lại càng có nhiều may mắn.
+
+																Những ý nghĩa biểu tượng chung của cá koi
+																Không phải ngày nay cá koi mới được ưa chuộng mà ngay từ xa xưa, trong tín ngưỡng của người phương Đông, những chú cá này đã rất được xem trọng. Hầu hết các bức tranh có ở thời vua Minh Mạng dều có sự hiện hữu của những chú cá koi. Thậm chí, người ta còn cho rằng koi chính là loài vật thiêng liên, luôn được tôn sùng với nhiều tầng ý nghĩa đặc biệt.
+
+																Nghị lực, kiên trì, dũng cảm
+																Cá koi hay còn gọi là cá chép Nhật, nó được biết đến như một linh vật của xứ sở hoa anh đào. Theo quan niệm của người Nhật, cá koi là biểu trưng của một ngọn lửa nghị lực, ý chí kiên trì dũng cảm trong cuộc sống. Ý nghĩa này bắt nguồn từ điển tích “Cá chép vượt vũ môn hóa rồng” trong truyền thuyết Trung Hoa.
+
+																Cá koi đại diện cho sự dũng cảm, lòng kiên trì và nghị lực
+
+																Tương truyền rằng, trên đỉnh núi cao nhất có một thác nước chảy xiết gọi là ải Long Môn. Nếu những chú cá sống 100 năm đủ sức mạnh và sự dũng cảm bơi ngược thác nước sông Hoàng Hà mà qua được ải Long Môn sẽ hóa rồng. Điển tích không chỉ nói về sức mạnh thần kỳ của loài cá chép mà còn như gợi nhắc ước mơ chinh phục tự nhiên, những khát khao về một cuộc sống hạnh phúc của con người.
+
+																Thác nước cao với vô vàn khó khăn thử thách không chỉ là sự khắc nghiệt của thiên nhiên mà còn là sự kiên trì của những chú cá. Bao đời, những chú cá luôn nỗ lực để vượt thác nhằm đạt ước mơ “hóa rồng” dù vẫn biết, chưa hề có chú cá nào vượt thác thành công. Điều đó chính là đại diện cho sự dũng cảm, lòng kiên trì, nỗ lực trong cuộc sống.
+
+																Sự giàu sang phú quý
+																Không chỉ là biểu trưng của lòng ngoan cường, dũng cảm, những chú cá chép Nhật còn là đại diện của sự giàu sang phú quý. Trong quan niệm của ngừa xưa, bảy con cá koi vàng giúp mang đến sự thịnh vượng cho gia chủ. Khi kích thước cá càng lớn thì sự may mắn, tài lộc cho gia chủ càng nhiều.
+
+																Cá koi đại diện cho sự hài hòa và hạnh phúc
+																Ngoài lòng can trường, dũng cảm và những may mắn giàu sang, koi còn là biểu trưng cho sự hài hòa và hạnh phúc. Khi âm dương và cá koi hoàn thiện lẫn nhau sẽ mang đến sự cân bằng hoàn hảo, mang tới nguồn năng lượng tích cực, đó chính là sức sống của mọi vật trên trái đất này. Chính vì vậy mà cá koi cũng được coi là biểu tượng của hạnh phúc, của những điều tốt lành.
+
+																Cá koi là biểu tượng của sự hạnh phúc, hài hòa và cân bằng
+
+																Một số ý nghĩa khác
+																Một yếu tố khác không thuộc về phong thủy, các nghiên cứu khoa học còn cho thấy các thuộc tính của cá koi biểu trưng cho những bài học cùng các thử nghiệm cá nhân rất thường gặp trong cuộc sống. Cũng chính vì vậy mà những con cá koi có sức sống mạnh mẽ với khả năng bơi ngược dòng nước và thậm chí luôn di chuyển ngược dòng. Nhờ đặc tính sinh trưởng tự nhiên đó mà cá koi còn là biểu trưng của:
+
+																- Thành công
+																- Phồn thịnh
+																- Trường thọ
+																- Hoài bão
+																- Bền chí
+																- Tham vọng
+																Cá koi là biểu tượng của sự hạnh phúc, hài hòa và cân bằng
+
+																Ý nghĩa theo màu sắc của từng loại cá koi
+																Bên cạnh những ý nghĩa chung theo quan niệm dân gian và điển tích của Trung Quốc, màu sắc của cá koi cũng có những ý nghĩa nhất định. Mỗi màu sắc lại là biểu trưng cho một khía cạnh nhất định trong cuộc sống và chắc rằng, cũng ít người biết được những ý nghĩa này. Dưới đây, hãy cùng điểm qua một số màu sắc của cá koi và cùng nhìn nhận những ý nghĩa mà chúng đang khoác trên mình.
+
+																Ý nghĩa cá Kohaku trắng và đỏ: Đây là loại koi có cơ thể màu trắng cùng những đốm đỏ lạ mắt. Nó là biểu trung cho sự thành công trong sự nghiệp của gia chủ. Nếu là người buôn bán kinh doanh và muốn có được may mắn, tài lộc đường làm ăn thì bạn nên nuôi loại cá này.
+
+																Ý nghĩa cá Koi đen Kumonryu: Loại cá này có hai biến thể chính. Một là loại có thân trắng và điểm lên các đốm đen, loại khác lại có thân màu đen. Koi Kumonryu chính là đại diện cho những thay đổi đầy mới mẻ trong cuộc sống. Nó đồng thời cũng là tương lai, hy vọng và là những biến đổi đầy bất ngờ trong hành trình của mỗi người.
+
+																Biểu tượng Cá Koi bạc Ogon: Loại koi bạc này tượng trưng cho sự thành công trong kinh doanh, những mong muốn về sự giàu có. Đây có lẽ cũng chính là ước vọng, là niềm đam mê mà bất kỳ ai cũng đều mong muốn theo đuổi.
+
+																Cá Koi bạc Ogon là biểu trưng của thành công và ước vọng trong cuộc sống
+
+																Kuchibeni màu trắng và đỏ “Son môi” Ý nghĩa cá Koi: Koi có hoa văn màu trắng và đỏ thường được gọi là “son môi”. Bởi vì màu đỏ xung quanh miệng của cá giống như chúng đang dùng son môi. Cũng chính nhờ đặc điểm này mà những chú cá koi Kuchibeni luôn là đại diện cho tình yêu, các mối quan hệ lâu dài, bền chặt, sự chung thủy,…
+
+																Biểu tượng cá koi vàng Yamabuki: Gi ống như đặc điểm màu sắc, koi này là biểu trưng cho sự giàu có. Vì vậy mà chúng ta thường thấy các gia đình kinh doanh buôn bán luôn có những hồ cá koi với những chú Yamabuki như thể hiện ước vọng làm ăn tiến tới, tài lộc may mắn đến nhà để nhanh chóng trở nên giàu có…
+
+																Ý nghĩa của việc nuôi cá koi trong đời sống là rất lớn. Những chú cá màu sắc không chỉ giúp tạo cảnh quan, khiến gia chủ vui vẻ yêu đời, giải tỏa những căng thẳng trong công việc và cuộc sống mà còn giúp mang đến niềm tin về một cuộc sống hạnh phúc, bền chí bền lòng, kiên trì, dũng cảm, hướng tới một tương lai đầy đủ và trọn vẹn.
+
+
+															</p>
+
+															<div class="article-info">
+																<p class="time-post">
+																	<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
+																		<path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z" />
+																		<path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0" />
+																	</svg>
+																	<span>
+																		11/11/2024
+																	</span>
+																</p>
+
+																<a href="~/Blogs/y-nghia-cua-viec-nuoi-ca-Koi" title="Đọc thêm" class="read-more">Đọc thêm »</a>
+
+															</div>
+
+														</div>
+
+													</div>
+												</div>
+
+											</div>
+										</div>
+
+										<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+											<div class="item-blog">
+												<div class="wrapper">
+													<a class="block-thumb thumb" href="~/Blogs/cac-trai-ca-Koi-Nhat-Ban" title="Các trại cá koi nhật bản(Koi Farm Japan)">
+
+														<img width="400"
+															 height="240"
+															 src="~/img/trai-koi.jpg"
+															 alt="Các trại cá koi nhật bản(Koi Farm Japan)"
+															 loading="lazy"
+															 class="duration-300" />
+													</a>
+
+													<div class="block-content">
+														<h3>
+															<a href="~/Blogs/cac-trai-ca-Koi-Nhat-Ban" title="Các trại cá koi nhật bản(Koi Farm Japan)" class="line-clamp-2-new">Các trại cá koi nhật bản(Koi Farm Japan)</a>
+														</h3>
+														<div class="article-content">
+
+															<p class="justify line-clamp line-clamp-3">
+																Xuất phát từ tính yêu với cá Koi Nhật Bản. Koi Farm Shop là trại nuôi cá tuyển chọn 100% từ các Koi farm lớn của Nhật. Nhiều người mua chép Nhật nghi hoặc nhưng khi tìm đến Koi Farm của chúng tôi bị thuyết phục hoàn toàn và bất ngờ với tình yêu cá Koi của chúng tôi.
+
+																Nguồn gốc cá koi của Koi Farm Shop
+																Bài viết này không nhằm mục đích bán hàng. Bằng tất cả kinh nghiệm của mình, chúng tôi xin tổng hợp và giới thiệu chi tiết các Koi farm lai tạo cá nổi tiêng tại Ojiya, Niigata, Nhật Bản – được ví như thủ đô cá Koi của Nhật.
+
+
+
+																1.      Vì sao chúng tôi chỉ chọn Koi Nhật?
+
+																Trung Quốc cũng được biết đến là nơi có lịch sử lai tạo Cá Koi lâu đời, thậm chí lâu hơn Nhật Bản. Koi do người Trung Quốc lai tạo hoặc nuôi không hề xấu nhưng xét về các phẩm chất, giá trị nghệ thuật đỉnh cao thì chưa bằng Koi Nhật.
+
+																Người Việt Nam có xu hướng chơi Koi Trung Quốc theo đại trà. Chỉ những người chơi Koi chuyên nghiệp mới lựa chọn Koi Nhật Bản thuần chủng. Koi Nhật Bản hội tụ đầy đủ các phẩm chất mà không loại Koi ở quốc gia nào có được:
+
+																Thân hình như chiếc tàu ngầm, bụng không to, không phệ, thon gọn, thân đuôi dầy, phần lưng dầy. Cá nhìn chắc khỏe, vạm vỡ, cấu trúc tốt có tiềm năng phát triển kích thước khủng trong tương lai.
+																Màu sắc rõ ràng, hoa văn rõ nét, đường biên không lem nhem, mảng màu nào ra mảng màu đó. Màu nhìn dầy, màu sang, không lòe loẹt.
+																Koi hòa đồng, tính tình thân thiện, sức đề kháng tốt do được nuôi theo đúng tiêu chuẩn hồ chuyên nghiệp tại Nhật.
+																Nếu là người chơi koi chuyên nghiệp, luôn phải tính đến giá trị trong tương lai. Nuôi koi phục vụ đam mê nhưng phải mang đến kinh tế. Nuôi Koi Nhật chắc chắn càng nuôi càng ra kinh tế. Koi Nhật có nhiều phẩm chất tốt, màu đẹp, cấu trúc body chuẩn nên phát triển kích thước lớn. Nuôi Koi Nhật rất dễ bán, ký gửi, thanh lý, đấu giá. Các dòng koi khác chỉ đẹp 1 năm đầu nhưng càng nuôi càng vỡ màu, lem nhem, cá béo bụng mất giá.
+
+																Những Koi Farm Nhật nào được chúng tôi lựa chọn
+																Nhật Koi Farm hiện là đối tác chính của: dainichi Koi Farm, Otsuka Koi Farm, Maruhiro Koi Farm, Mano Koi Farm, Hoshikin Koi Farm, Hirashin Koi Farm, Lansuke Koi Farm, Oyaji Koi Farm, Fukasawa Koi Farm và Hosokai Koi Far,…
+
+																Mỗi Koi Farm chuyên thế mạnh về 1 dòng Koi. Vì vậy để có nhiều koi đẹp phải tìm kiếm ở nhiều Koi fam khác nhau. Điểm chung duy nhất các koi farm này đều thuộc vùng Ojiya, Nhật Bản – được mệnh danh là Thủ đô cá Koi của Nhật Bản. 80% nhà lai tạo nổi tiếng của Nhật và 90% các giải thưởng lớn về cá Koi đều thuộc về Niigata.
+
+																Koi Nhật khác với Koi Trung Quốc, Koi F1 và Koi Việt Nam như thế nào?
+																Koi Nhật thuần chủng: Được nhân giống từ bố mẹ thuần chủng ở Nhật tại các Koi Farm lớn của Nhật. Phần lớn do các nhà lai tạo tên tuổi thực hiện. Cá bố mẹ là những em cá đẹp nhất, chất lượng nhất, đoạt giải tại nhiều cuộc thi lớn. Vì vậy Koi Nhật thuần chủng đẹp nhất, tốt nhất, càng nuôi càng có giá trị, không loại koi ở đâu vượt qua được. Giá thành của Koi Nhật cũng cao nhất.
+
+																Koi F1, Koi lai: Koi phổ biến tại Việt Nam hiện nay. Là dòng Koi được lại tạo từ bố mẹ Koi Nhật, đã được nuôi dưỡng ở Việt Nam. Quy trình phối giống theo tiêu chuẩn của Nhậ Bản. Phiên bản Koi này kém hơn koi thuần chủng Nhật.
+
+																Koi Việt: Được sinh ra từ bố mẹ cùng dòng Koi. Vd Bố mẹ Koi KohaKu đẻ ra koi Kohaku cùng dòng. Chất lượng kém nhất, hoa văn chưa thực sự sắc sảo, màu sắc chưa rõ nét, nổi bật.
+
+																Koi Trung Quốc: Kích thước lớn, nhiều màu, nhiều chủng loại. Thường cho ăn lên màu nên màu sắc nhiều dòng không sang, có phần lòe loẹt. Tuy nhiên Koi Trung Quốc vẫn được đánh giá khá cao. Trung Quốc cũng là cái nôi thứ 2 của cá Koi.Z
+
+																11 KOI FARM LAI TẠO CÁ KOI NỔI TIẾNG NHẤT NHẬT BẢN(cập nhật)
+																Dainichi Koi Farm
+																Thông tin về Dainichi Koi Farm: Chủ trại cá: Dainichi Koi Farm Tên: Hiroshi Mano Điện thoại: 0258 – 82 – 1128 Địa chỉ: 4144-10, Sambusho, ooaza, Ojiya Niigata 047-0051
+
+																Dainichi Koi Farm
+																Dainichi Koi Farm
+
+																Là 1 Koi Farm nổi tiếng bậc nhất Nhật Bản với hệ thống ao bùn rộng, trong lành. Hệ thống hồ nuôi cá sạch, đúng theo tiêu chuẩn.
+																Cung cấp nhiều dòng Koi khác nhau, từ Koi baby làm giống đến Koi trung bình hoặc Koi Jumbo.
+																Koi của Dainichi Koi Farm được cả thế giới biết đến là dòng Koi đẹp, điều kiện chăm sóc, kỹ thuật lai tạo rất tốt.
+																Otsuka Koi Farm
+																Đại diện: Yoshikazu Otsuka Địa chỉ: Oaza Koguriyama 1702, Ojiya Điện thoại: 0258-59-2835 Di động: 090-4623-1214 Một số loại cá Koi nổi tiếng có ở đây: asagi, gosiki, kiutsuri, otibasugure, kagesỉouthuri, budoukoromo, akamekigoi, ginrintyagoi, syuusui,…
+
+																Dòng nổi tiếng nhất là Asagi, nhiều Koi farm chuyên lai tạo Asagi cũng lấy lại Asagi của anh ấy để nuôi dưỡng.
+																Có nhiều Koi nổi tiếng đoạt các giải lớn. Hiện tại hệ thống ao nuôi của anh ấy không nhiều nên anh ấy đang phải bán bớt lại cho các koi farm khác. Ký thuật lai tạo của anh ấy thì tuyệt vời.
+																Hồ nuôi nằm giữa đồi núi, bao bọc 4 phía là rừng núi nên không khí trong lành, nước sạch từ núi xuống lại đảm bảo theo nguyên tắc nuôi nghiêm ngặt nên cá rất đẹp.
+
+																- Otsuka Koi Farm
+																- Fukasawa Koi Farm
+																Trại Farm Fukasawa Koi Đại diện: Hideaki Ofuchi Địa chỉ: Oaza Iwasawa 6093, Ojiya city Tel : 025862286 / 025862286 Mobile: 09018466235 Các dòng cá nổi bật: Kohaku, Taisho Sanshoku, Showa Sanshoku, Kujaku, Hariwake, Kumonryuu…
+
+																Nguồn nước sạch tự nhiên rất tốt để nuôi cá Koi. Ông Hideaki Ofuchi là chủ trai, tính tình điềm đạm. Trại có 2 khu vực phân chia nuôi cá giống và nuôi cá bán khác nhau.
+																Giống koi thế mạnh của trại là Taisho Sanshoku, Tancho, Kohaku…. ở kích thước 30 – 40cm, Tosai 17 – 20cm.
+																Trại có nhiều Koi đã được giải tại các cuộc thi Koi Farm lớn.
+
+																- Fukasawa Koi Farm
+																- Hosokai Koi Farm
+																Thông tin trại Hosokai Koi farm Chủ trại: Masaru Hosokai Địa chỉ: Oaza Sakuramachi 5118-1, Ojiya city Điện thoại: 0258834353 Mobile: 09043856879 Email: hosokai@khaki.plala.or.jp Các dòng cá nổi bật: Kohaku, Taisho Sanshoku, Showa Sanshoku, gosiki, koromo, asagi, siroutsuri, kinsyouwa, kujaku….
+
+																- Hosokai Koi Farm
+																- Hosokai Koi Farm
+																Nằm xa trung tâm, bao quanh là núi. Chủ Koi farm là ông Masaru Hosokai. Giống koi đầu tiên được ông nhân giống là Kohaku sanke. Dần dần ông nhân giống thêm Ogon và Kujaku. Hiện nay giống koi đặc biết nhất của ông là Asagi.
+																Đây là Koi Farm nhận rất nhiều giiar thưởng về dòng Asagi.
+
+																- Oyaji Koi Koi Farm
+																Thông tin về trại Oyaji Koi farm Chủ trại: ông Tsuyoshi Hoshino Địa chỉ: Oaza Chiya Kou 1111-54, Ojiya city Điện thoại: 0258-83-3870 Mobile: 090-2254-6376 Các dòng cá nổi bật: Kohaku, Taisho Sanshoku, Showa Sanshoku, Ginmatsuba…
+
+																Chủ trại là anh tsuyoshi Hoshino. Đây là Koi Farm nổi tiếng với dòng Kohaku, Taisho Sansoku, Kohaku, Showa Sanshoku.
+																Ngoài ra Oyaji rất nổi tiếng với dòng Gin Matsuba.
+																- Kansuke Koi farm
+																Thông tin trại Kansuke Koi Chủ trại : ông Seiji Tomono Địa chỉ: Asahichou 7-28 Ojiya, city Điện thoại: 0258-82-0889 Mobile: 080-6594-8353 Các dòng cá nổi bật: Kohaku, Taisho Sanshoku, Showa Sanshoku…
+
+																Chủ Koi farm là ông Seiji Tomono, người giành giải chiến thắng koi cuộc thi “Grand Champion All Japan Nishikigoi Show” – giải thưởng danh tiếng nhất cho cá Koi tại Nhật.
+																Hiện ông nổi tiếng với với dòng Kohaku “Kansude Kohaku”.
+																- Maruhiro Koi farm
+																Đại diện: Hironori Hirasawa Địa chỉ: Oaz Sakuramachi 2376-6, Ojiya Điện thoại: 0258-82-7697 Di động: 080-6539-1853
+
+																Một số loại cá Koi nổi tiếng có ở đây: kouhaku, kikusui, ginrintyagoi, midorigoi, kinkiutsuri,…
+																Được thành lập và điều hành bởi Hironori Hirasawa.
+																Những giống cá đẹp của Hironori Hirasawa là Kikushui, Ginrin tyagoi, Midorigoi, Kinki Utsuri, Kohaku, Taicho Sanshoku, Showa sanshoku.
+																- Mano Koi Farm
+																Đại diện: Hitoshi Mano Địa chỉ: Oaza Chiya kou 1111-99, Ojiya Điện thoại: 0258-83-2754 Di động: 090-4936-9903
+
+																Một số loại cá Koi nổi tiếng có ở đây: kouhaku, syuusui, matsubaougon, kinsyouwa,…
+																Đây là Koi Farm nằm biệt lập trên núi, mùa đông tuyết phủ trắng đến mái nhà. Ông chủ Koi Farm là Hitoshi Mano – Phó chủ tịch hiệp hội cá Koi Thành Phố Ojiya. Ông là giám khảo các cuộc thi cá Koi lớn trên thế giới.
+																Koi Nisau Shusui là thế mạnh của Hitoshi Mano. Ngoài ra Kin Matsuba cũng rất ấn tướng với nhiều em Koi lên đến 70Cm, Kohaku 40 cm cũng rất nhiều.
+																- Hoshikin Koi Farm
+																Thông tin trại Hoshikin Koi farm Chủ trại : Katsuyuki Hoshino Địa chỉ: Oaza Sanbushou 4213-3, Ojiya city Điện thoại: 0258-82-0510 Mobile: 090-3083-9561 Email: hoshikinkoi@yahoo.co.jp Giống cá chính: kohaku, Showa Sanshoku
+
+																Nằm ở thung lũng thuộc Thành phố Ojiya với nhiều đầm và ao hồ bao quanh. Đây là Koi farm kế nghiệp truyền thống gia đình với lịch sử hơn 60 năm. Đời hiện tại là đời thứ 3 – ông Katsuyuki Hoshino.
+																Dòng koi thế mạnh là Kohaku, showa Sanshoku diện tích trên 10ha.
+																- Izumiya Koi Farm
+																Thông tin về trại Izumiya Koi Chủ trại: Senichi Mano Địa chỉ: Oaza Minaminigoro 3072-3, Ojiya city Điện thoại: 025-59-2677 Mobile: 090-4950-5360 Facebook: https://www.facebook.com/pages/Izumiya-Koi-Farm/165786063560691
+
+																Chủ Koi Farm là ông senichi Mano – Từng là Chủ tịch của Shinkokai (Hiệp hội các nhà lai tạo và Xúc tiến cá Koi).
+																Thế mạnh của Koi Farm Izumiya là dòng koi Yamabuki Ogon. Toàn nước Nhật khó Koi Farm nào có dòng Yamabuki Ogon vượt trôi như của ông. Kích thước tuyệt với từ 80 Cm đến 1m.
+																Ngoài ra ông có nhiều dòng ấn tượng khác như: Aigoromo, Siro Utsuri, Mukasiougon, Kohaku, taisho Sanshoku, Showa Sanshoku…
+																- Hirashin Koi farm
+																Thông tin trại Hirashin Koi Chủ trại: ông Hiroyuki Hirasawa Địa chỉ: Oaza Minaminigoro 2660-1, Ojiya city Điện thoại: 0258-59-2798 Mobile: 090-8843-4406 Các dòng cá nổi bật: Gosiki, tyagoi, yamabukiougon, doitsu (kohaku, yamatonisiki, kujaku)
+
+																Chủ Koi Farm là ông Hiroyuki Hirasawa thuộc vùng miền núi Matto. Mùa đông tuyết có thể cao đến 2m.
+																Ông có rất nhiều cá giành được các giải thưởng lớn trong các cuộc thi Champion. Dòng cá chính của ông là Kohaku và Taisho Sanshoku.
+																- Dainichi Koi Farm
+																Thông tin về Dainichi Koi Farm: Chủ trại cá: Dainichi Koi Farm Tên: Hiroshi Mano Điện thoại: 0258 – 82 – 1128 Địa chỉ: 4144-10, Sambusho, ooaza, Ojiya Niigata 047-0051
+
+																Là 1 Koi Farm nổi tiếng bậc nhất Nhật Bản với hệ thống ao bùn rộng, trong lành. Hệ thống hồ nuôi cá sạch, đúng theo tiêu chuẩn.
+																Cung cấp nhiều dòng Koi khác nhau, từ Koi baby làm giống đến Koi trung bình hoặc Koi Jumbo.
+																Koi của Dainichi Koi Farm được cả thế giới biết đến là dòng Koi đẹp, điều kiện chăm sóc, kỹ thuật lai tạo rất tốt.
+															</p>
+
+															<div class="article-info">
+																<p class="time-post">
+																	<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
+																		<path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z" />
+																		<path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0" />
+																	</svg>
+																	<span>
+																		11/11/2024
+																	</span>
+																</p>
+
+																<a href="~/Blogs/cac-trai-ca-Koi-Nhat-Ban" title="Đọc thêm" class="read-more">Đọc thêm »</a>
+
+															</div>
+
+														</div>
+
+													</div>
+												</div>
+
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="blog_left_base col-lg-3 col-12">
+								<div class="side-right-stick">
+									<div class="aside-content aside-content-blog">
+
+
+
+										<h2 class="title-head">
+											<span>Danh mục sản phẩm</span>
+										</h2>
+										<nav class="nav-category">
+											<ul class="nav navbar-pills">
+												<li class="nav-item  relative">
+													<a title="Cá Koi" class="nav-link" href="/KoiCollections/ca-koi">Cá koi</a>
+												</li>
+												<li class="nav-item  relative">
+													<a title="Koi Đang Bán" class="nav-link" href="/KoiCollections/koi-dang-ban">Koi Đang Bán</a>
+												</li>
+												<li class="nav-item  relative">
+													<a title="Koi Kí Gửi" class="nav-link" href="/Koi-ki-gui/koi-ki-gui">Koi Kí Gửi</a>
+												</li>
+												<li class="nav-item  relative">
+													<a title="Hệ Thống Lọc Hồ Cá Koi" class="nav-link" href="/He-thong-loc-ho-ca-koi/he-thong-loc-ho-ca-koi">Hệ Thống Lọc Hồ Cá Koi</a>
+												</li>
+											</ul>
+										</nav>
+									</div>
+									<script>
+										$(".aside-content-blog .nav-category .open_mnu").click(function(){
+											$(this).toggleClass('cls_mn').next().slideToggle();
+										});
+									</script>	<div class="blog_noibat">
+										<h2 class="h2_sidebar_blog">
+											<a href="~/News/kien-thuc" title="Tin tức nổi bật">Tin tức nổi bật</a>
+										</h2>
+										<div class="block-content">
+
+											<div class="item clearfix">
+												<div class="post-thumb">
+													<a class="image-blog scale_hover" href="~/Blogs/ca-Koi-co-de-nuoi-khong" title="Cá Koi có dễ nuôi không?Cách chọn giống cá Koi khỏe mạnh?">
+
+														<img width="280"
+															 height="50"
+															 src="~/img/de-nuoi.jpg"
+															 alt="Cá Koi có dễ nuôi không? Cách chọn giống cá Koi khỏe mạnh?"
+															 loading="lazy"
+															 class="duration-300" />
+
+													</a>
+												</div>
+												<div class="contentright">
+													<h3>
+														<a title="Cá Koi có dễ nuôi không?" href="~/Blogs/ca-Koi-co-de-nuoi-khong"> Cá Koi có dễ nuôi không? Cách chọn giống cá Koi khỏe mạnh?</a>
+													</h3>
+													<p class="time-post">
+														<span>
+															11/11/2024
+														</span>
+													</p>
+												</div>
+											</div>
+
+											<div class="item clearfix">
+												<div class="post-thumb">
+													<a class="image-blog scale_hover" href="~/Blogs/ki-thuat-nuoi-ca-Koi" title="Kĩ thuật nuôi cá Koi để cá luôn khỏe mạnh và lên màu chuẩn?">
+														<img width="400"
+															 height="140"
+															 src="~/img/ki-thuat-nuoi-koi.jpg"
+															 alt="Kĩ thuật nuôi cá Koi để cá luôn khỏe mạnh và lên màu chuẩn?"
+															 loading="lazy"
+															 class="duration-300" />
+
+													</a>
+												</div>
+												<div class="contentright">
+													<h3><a title="Kĩ thuật nuôi cá Koi để cá luôn khỏe mạnh và lên màu chuẩn?" href="~/Blogs/ki-thuat-nuoi-ca-Koi"> Kĩ thuật nuôi cá Koi để cá luôn khỏe mạnh và lên màu chuẩn?</a></h3>
+													<p class="time-post">
+														<span>
+															11/11/2024
+														</span>
+													</p>
+												</div>
+											</div>
+											<div class="item clearfix">
+												<div class="post-thumb">
+													<a class="image-blog scale_hover" href="~/Blogs/cach-nuoi-ca-Koi-ngoai-troi" title="Cách nuôi cá Koi ngoài trời? ">
+														<img width="400"
+															 height="140"
+															 src="~/img/nuoi-ngoai-troi.jpg"
+															 alt="Cách nuôi cá Koi ngoài trời"
+															 loading="lazy"
+															 class="duration-300" />
+													</a>
+												</div>
+												<div class="contentright">
+													<h3><a title="Cách nuôi cá Koi ngoài trời?" href="~/Blogs/cach-nuoi-ca-Koi-ngoai-troi"> Cách nuôi cá Koi ngoài trời?</a></h3>
+													<p class="time-post">
+														<span>
+															11/11/2024
+														</span>
+													</p>
+												</div>
+											</div>
+
+										</div>
+									</div>
+
+
+
+								</div>
+							</div>
+						</div>
+					</article>
+				</div>
+			</div>
+		</section>
+
+		<script>
+			var $heading2 = $('.article-content-main h2');
+			$heading2.attr("id", function() {
+				return $(this)
+					.text() // get the h1 text
+					.trim() // remove spaces from start and the end
+					.toLowerCase() // optional
+					.replace(/\s/g, '_'); // convert all spaces to underscores
+			});
+			var $heading3 = $('.article-content-main h3');
+			$heading3.attr("id", function() {
+				return $(this)
+					.text() // get the h1 text
+					.trim() // remove spaces from start and the end
+					.toLowerCase() // optional
+					.replace(/\s/g, '_'); // convert all spaces to underscores
+			});
+
+			$('.title-goto-wrapper').click(function() {
+				$(this).find('.fa').toggleClass('fa-angle-up');
+				$(this).find('.fa').toggleClass('fa-angle-down');
+				$('.menu-toc').toggleClass('hidden');
+			});
+		</script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js" type="text/javascript"></script>
+		<script>
+			$(document).ready(function ($) {
+				tocbot.init({
+					tocSelector: '.menu-toc',
+					contentSelector: '.article-content-main',
+					headingSelector: 'h2,h3',
+				});
+			});
+		</script>
+
+		<div id="js-global-alert" class="alert alert-success" role="alert">
+			<button type="button" class="close"><span aria-hidden="true"><span aria-hidden="true">&times;</span></span></button>
+			<h5 class="alert-heading"></h5>
+			<p class="alert-content"></p>
+		</div>
+
+
+
+
+
+
+	</div>
+
+	<link rel="preload" as="style" href="~/css/ajaxcart.scss.css" type="text/css">
+	<link href="~/css/ajaxcart.scss.css" rel="stylesheet" type="text/css" media="all" />
+	<div class="backdrop__body-backdrop___1rvky"></div>
+	<script id="SideCartTemplate" type="text/template">
+
+		<form action="/cart" method="post" novalidate class="cart ajaxcart">
+			<div class="ajaxcart__inner ajaxcart__inner--has-fixed-footer cart_body items">
+				{{#items}}
+				<div class="ajaxcart__row">
+					<div class="ajaxcart__product cart_product" data-line="{{line}}">
+						<a href="{{url}}" class="ajaxcart__product-image cart_image" title="{{name}}"><img width="80" height="80" src="{{img}}" alt="{{name}}"></a>
+						<div class="grid__item cart_info">
+							<div class="ajaxcart__product-name-wrapper cart_name">
+								<a href="{{url}}" class="ajaxcart__product-name h4" title="{{name}}">{{name}}</a>
+								{{#if variation}}
+								<span class="ajaxcart__product-meta variant-title">{{variation}}</span>
+								{{/if}}
+							</div>
+							<div class="grid">
+								<div class="grid__item one-half cart_select cart_item_name">
+									<label class="cart_quantity">Số lượng</label>
+									<div class="ajaxcart__qty input-group-btn">
+										<button type="button" class="ajaxcart__qty-adjust ajaxcart__qty--minus items-count" data-id="{{key}}" data-qty="{{itemMinus}}" data-line="{{line}}" aria-label="-">
+											-
+										</button>
+										<input type="text" name="updates[]" class="ajaxcart__qty-num number-sidebar" maxlength="3" value="{{itemQty}}" min="0" data-id="{{key}}" data-line="{{line}}" aria-label="quantity" pattern="[0-9]*">
+										<button type="button" class="ajaxcart__qty-adjust ajaxcart__qty--plus items-count" data-id="{{key}}" data-line="{{line}}" data-qty="{{itemAdd}}" aria-label="+">
+											+
+										</button>
+									</div>
+								</div>
+								<div class="grid__item one-half text-right cart_prices">
+									<span class="cart-price">{{price}}</span>
+									<a title="Xóa" class="cart__btn-remove remove-item-cart ajaxifyCart--remove" href="javascript:;" data-line="{{line}}">Xóa</a>
+								</div>
+							</div>
+							{{#if discountsApplied}}
+							<div class="grid grid--table">
+								<div class="grid__item text-right">
+									<ul class="order-discount order-discount--list order-discount--title order-discount--cart order-discount--cart-title" aria-label="Giảm giá">
+										{{#each discounts}}
+										<li class="order-discount__item">
+											<span class="icon icon-saletag" aria-hidden="true"></span>{{ this.discount_application.title }} (-{{{ this.formattedAmount }}})
+										</li>
+										{{/each}}
+									</ul>
+								</div>
+							</div>
+							{{/if}}
+						</div>
+					</div>
+				</div>
+				{{/items}}
+
+
+			</div>
+			<div class="ajaxcart__footer ajaxcart__footer--fixed cart-footer">
+				<div class="ajaxcart__subtotal">
+					{{#if cartDiscountsApplied}}
+					<div class="grid grid--table ajaxcart__discounts">
+						{{#each cartDiscounts}}
+						<div class="grid__item two-thirds">
+							<span class="order-discount order-discount--title order-discount--cart-title">
+								<span class="icon icon-saletag" aria-hidden="true"></span><span class="visually-hidden">%:</span>{{ this.title }}
+							</span>
+						</div>
+						<div class="grid__item one-third text-right">
+							<span class="order-discount">-{{{ this.formattedAmount }}}</span>
+						</div>
+						{{/each}}
+					</div>
+					{{/if}}
+					<div class="cart__subtotal">
+						<div class="cart__col-6">Tổng tiền:</div>
+						<div class="text-right cart__totle"><span class="total-price">{{{totalPrice}}}</span></div>
+					</div>
+				</div>
+				<div class="cart__btn-proceed-checkout-dt">
+					<button onclick="location.href='/checkout'" type="button" class="button btn btn-primary cart__btn-proceed-checkout" id="btn-proceed-checkout" title="Thanh toán">Thanh toán</button>
+				</div>
+			</div>
+		</form>
+
+
+	</script>
+
+	<script id="CartTemplate" type="text/template">
+
+		<form action="/cart" method="post" novalidate class="cart ajaxcart cartpage">
+			<div class="cart-header-info">
+				<div>Thông tin sản phẩm</div>
+				<div>Đơn giá</div>
+				<div>Số lượng</div>
+				<div>Thành tiền</div>
+			</div>
+			<div class="ajaxcart__inner ajaxcart__inner--has-fixed-footer cart_body items">
+				{{#items}}
+				<div class="ajaxcart__row">
+					<div class="ajaxcart__product cart_product" data-line="{{line}}">
+						<a href="{{url}}" class="ajaxcart__product-image cart_image" title="{{name}}">
+							<img src="{{img}}" alt="{{name}}">
+						</a>
+						<div class="grid__item cart_info">
+							<div class="ajaxcart__product-name-wrapper cart_name">
+								<a href="{{url}}" class="ajaxcart__product-name h4 line-clamp line-clamp-2-new" title="{{name}}">{{name}}</a>
+								{{#if variation}}
+								<span class="ajaxcart__product-meta variant-title">{{variation}}</span>
+								{{/if}}
+								<a title="Xóa" class="cart__btn-remove remove-item-cart ajaxifyCart--remove" href="javascript:;" data-line="{{line}}">Xóa</a>
+							</div>
+							<div class="grid">
+								<div class="grid__item one-half text-right cart_prices">
+									<span class="cart-price">{{price}}</span>
+								</div>
+							</div>
+							<div class="grid">
+								<div class="grid__item one-half cart_select">
+									<div class="ajaxcart__qty input-group-btn">
+										<button type="button" class="ajaxcart__qty-adjust ajaxcart__qty--minus items-count" data-id="{{key}}" data-qty="{{itemMinus}}" data-line="{{line}}" aria-label="-"> - </button>
+										<input type="text" name="updates[]" class="ajaxcart__qty-num number-sidebar" maxlength="3" value="{{itemQty}}" min="0" data-id="{{key}}" data-line="{{line}}" aria-label="quantity" pattern="[0-9]*">
+										<button type="button" class="ajaxcart__qty-adjust ajaxcart__qty--plus items-count" data-id="{{key}}" data-line="{{line}}" data-qty="{{itemAdd}}" aria-label="+"> + </button>
+									</div>
+								</div>
+							</div>
+							<div class="grid justify-right">
+								<div class="grid__item one-half text-right cart_prices">
+									<span class="cart-price">{{linePrice}}</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				{{/items}}
+			</div>
+		</form>
+
+	</script>
+	<script id="CartHeaderTemplate" type="text/template">
+
+		<form action="/cart" method="post" novalidate class="cart ajaxcart cartheader">
+			<div class="title_cart_hea" onclick="window.location.href='/cart'">Giỏ hàng</div>
+			<div class="ajaxcart__inner ajaxcart__inner--has-fixed-footer cart_body items">
+				{{#items}}
+				<div class="ajaxcart__row">
+					<div class="ajaxcart__product cart_product" data-line="{{line}}">
+						<a href="{{url}}" class="ajaxcart__product-image cart_image" title="{{name}}"><img width="80" height="80" src="{{img}}" alt="{{name}}"></a>
+						<div class="grid__item cart_info">
+							<div class="ajaxcart__product-name-wrapper cart_name">
+								<a href="{{url}}" class="ajaxcart__product-name h4 line-clamp line-clamp-2-new" title="{{name}}">{{name}}</a>
+								{{#if variation}}
+								<span class="ajaxcart__product-meta variant-title">{{variation}}</span>
+								{{/if}}
+								<a title="Xóa" class="cart__btn-remove remove-item-cart ajaxifyCart--remove" href="javascript:;" data-line="{{line}}"></a>
+
+							</div>
+							<div class="grid">
+								<div class="grid__item one-half cart_select cart_item_name">
+									<div class="ajaxcart__qty input-group-btn">
+										<button type="button" class="ajaxcart__qty-adjust ajaxcart__qty--minus items-count" data-id="{{key}}" data-qty="{{itemMinus}}" data-line="{{line}}" aria-label="-">
+											-
+										</button>
+										<input type="text" name="updates[]" class="ajaxcart__qty-num number-sidebar" maxlength="3" value="{{itemQty}}" min="0" data-id="{{key}}" data-line="{{line}}" aria-label="quantity" pattern="[0-9]*">
+										<button type="button" class="ajaxcart__qty-adjust ajaxcart__qty--plus items-count" data-id="{{key}}" data-line="{{line}}" data-qty="{{itemAdd}}" aria-label="+">
+											+
+										</button>
+									</div>
+								</div>
+								<div class="grid__item one-half text-right cart_prices">
+									<span class="cart-price">{{price}}</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				{{/items}}
+			</div>
+			<div class="ajaxcart__footer ajaxcart__footer--fixed cart-footer">
+				<div class="ajaxcart__subtotal">
+					<div class="cart__subtotal">
+						<div class="cart__col-6">Tổng tiền:</div>
+						<div class="text-right cart__totle"><span class="total-price">{{{totalPrice}}}</span></div>
+					</div>
+				</div>
+				<div class="cart__btn-proceed-checkout-dt ">
+					<button onclick="location.href='/checkout'" type="button" class="button btn btn-primary cart__btn-proceed-checkout" id="btn-proceed-checkout" title="Thanh toán">Thanh toán</button>
+				</div>
+			</div>
+		</form>
+
+
+	</script>
+
+	<script id="CartPopupTemplate" type="text/template">
+
+		<form action="/cart" method="post" novalidate class="cart ajaxcart cartpopup">
+			<div class="cart-header-info">
+				<div>Thông tin sản phẩm</div><div>Đơn giá</div><div>Số lượng</div><div>Thành tiền</div>
+			</div>
+			<div class="ajaxcart__inner ajaxcart__inner--has-fixed-footer cart_body items">
+				{{#items}}
+				<div class="ajaxcart__row">
+					<div class="ajaxcart__product cart_product" data-line="{{line}}">
+						<a href="{{url}}" class="ajaxcart__product-image cart_image" title="{{name}}"><img width="80" height="80" src="{{img}}" alt="{{name}}"></a>
+						<div class="grid__item cart_info">
+							<div class="ajaxcart__product-name-wrapper cart_name">
+								<a href="{{url}}" class="ajaxcart__product-name h4 line-clamp line-clamp-2-new" title="{{name}}">{{name}}</a>
+								{{#if variation}}
+								<span class="ajaxcart__product-meta variant-title">{{variation}}</span>
+								{{/if}}
+								<a title="Xóa" class="cart__btn-remove remove-item-cart ajaxifyCart--remove" href="javascript:;" data-line="{{line}}">Xóa</a>
+
+							</div>
+							<div class="grid">
+								<div class="grid__item one-half text-right cart_prices">
+									<span class="cart-price">{{price}}</span>
+								</div>
+							</div>
+							<div class="grid">
+								<div class="grid__item one-half cart_select">
+									<div class="ajaxcart__qty input-group-btn">
+										<button type="button" class="ajaxcart__qty-adjust ajaxcart__qty--minus items-count" data-id="{{key}}" data-qty="{{itemMinus}}" data-line="{{line}}" aria-label="-">
+											-
+										</button>
+										<input type="text" name="updates[]" class="ajaxcart__qty-num number-sidebar" maxlength="3" value="{{itemQty}}" min="0" data-id="{{key}}" data-line="{{line}}" aria-label="quantity" pattern="[0-9]*">
+										<button type="button" class="ajaxcart__qty-adjust ajaxcart__qty--plus items-count" data-id="{{key}}" data-line="{{line}}" data-qty="{{itemAdd}}" aria-label="+">
+											+
+										</button>
+									</div>
+								</div>
+							</div>
+							<div class="grid">
+								<div class="grid__item one-half text-right cart_prices">
+									<span class="cart-price">{{linePrice}}</span>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				{{/items}}
+			</div>
+			<div class="ajaxcart__footer ajaxcart__footer--fixed cart-footer">
+				<div class="row">
+					<div class="col-lg-4 col-12 offset-md-8 offset-lg-8 offset-xl-8">
+						<div class="ajaxcart__subtotal">
+							<div class="cart__subtotal">
+								<div class="cart__col-6">Tổng tiền:</div>
+								<div class="text-right cart__totle"><span class="total-price">{{{totalPrice}}}</span></div>
+							</div>
+						</div>
+						<div class="cart__btn-proceed-checkout-dt">
+							<button onclick="location.href='/checkout'" type="button" class="button btn btn-primary cart__btn-proceed-checkout" id="btn-proceed-checkout" title="Thanh toán">Thanh toán</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+
+
+	</script>
+
+	<script id="CartMobileTemplate" type="text/template">
+
+		<form action="/cart" method="post" novalidate class="cart ajaxcart cart-mobile">
+			<div class="ajaxcart__inner ajaxcart__inner--has-fixed-footer cart_body">
+				{{#items}}
+				<div class="ajaxcart__row">
+					<div class="ajaxcart__product cart_product" data-line="{{line}}">
+						<a href="{{url}}" class="ajaxcart__product-image cart_image" title="{{name}}">
+							<img width="80" height="80" src="{{img}}" alt="{{name}}">
+						</a>
+						<div class="grid__item cart_info">
+							<div class="ajaxcart__product-name-wrapper cart_name">
+								<a href="{{url}}" class="ajaxcart__product-name h4 line-clamp line-clamp-2-new" title="{{name}}">{{name}}</a>
+								{{#if variation}}
+								<span class="ajaxcart__product-meta variant-title">{{variation}}</span>
+								{{/if}}
+							</div>
+							<div class="grid">
+								<div class="grid__item one-half cart_select cart_item_name">
+									<div class="ajaxcart__qty input-group-btn">
+										<button type="button" class="ajaxcart__qty-adjust ajaxcart__qty--minus items-count" data-id="{{key}}" data-qty="{{itemMinus}}" data-line="{{line}}" aria-label="-"> - </button>
+										<input type="text" name="updates[]" class="ajaxcart__qty-num number-sidebar" maxlength="3" value="{{itemQty}}" min="0" data-id="{{key}}" data-line="{{line}}" aria-label="quantity" pattern="[0-9]*">
+										<button type="button" class="ajaxcart__qty-adjust ajaxcart__qty--plus items-count" data-id="{{key}}" data-line="{{line}}" data-qty="{{itemAdd}}" aria-label="+"> + </button>
+									</div>
+								</div>
+								<div class="grid__item one-half text-right cart_prices">
+									<span class="cart-price">{{price}}</span>
+									<a title="Xóa" class="cart__btn-remove remove-item-cart ajaxifyCart--remove" href="javascript:;" data-line="{{line}}">Xóa</a>
+								</div>
+							</div>
+							{{#if discountsApplied}}
+							<div class="grid grid--table">
+								<div class="grid__item text-right">
+									<ul class="order-discount order-discount--list order-discount--title order-discount--cart order-discount--cart-title" aria-label="Giảm giá">
+										{{#each discounts}}
+										<li class="order-discount__item">
+											<span class="icon icon-saletag" aria-hidden="true"></span>{{ this.discount_application.title }} (-{{{ this.formattedAmount }}})
+										</li>
+										{{/each}}
+									</ul>
+								</div>
+							</div>
+							{{/if}}
+						</div>
+					</div>
+				</div>
+				{{/items}}
+			</div>
+		</form>
+
+
+	</script>
+
+	<script id="FooterCartTemplate" type="text/template">
+
+		<div class="content-items">
+			<div class="item-content-left">Tổng tiền</div>
+			<div class="item-content-right"><span class="total-price">{{{totalPrice}}}</span></div>
+		</div>
+
+	</script>
+
+	<script id="JsQty" type="text/template">
+
+		<div class="js-qty">
+			<button type="button" class="js-qty__adjust js-qty__adjust--minus items-count" data-id="{{key}}" data-qty="{{itemMinus}}" aria-label="-">
+				-
+			</button>
+			<input type="text" class="js-qty__num number-sidebar" maxlength="3" value="{{itemQty}}" min="1" data-id="{{key}}" aria-label="quantity" pattern="[0-9]*" name="{{inputName}}" id="{{inputId}}">
+			<button type="button" class="js-qty__adjust js-qty__adjust--plus items-count" data-id="{{key}}" data-qty="{{itemAdd}}" aria-label="+">
+				+
+			</button>
+		</div>
+
+	</script>
+	<div id="popup-cart-desktop" class="popup-cart">
+		<div class="header-popcart">
+			<div class="top-cart-header">
+				<span>
+					<svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="check-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-check-circle fa-w-16"><path fill="currentColor" d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 464c-118.664 0-216-96.055-216-216 0-118.663 96.055-216 216-216 118.664 0 216 96.055 216 216 0 118.663-96.055 216-216 216zm141.63-274.961L217.15 376.071c-4.705 4.667-12.303 4.637-16.97-.068l-85.878-86.572c-4.667-4.705-4.637-12.303.068-16.97l8.52-8.451c4.705-4.667 12.303-4.637 16.97.068l68.976 69.533 163.441-162.13c4.705-4.667 12.303-4.637 16.97.068l8.451 8.52c4.668 4.705 4.637 12.303-.068 16.97z" class=""></path></svg>
+					Bạn đã thêm [<a class="cart-popup-name" href="#"></a>] vào giỏ hàng
+				</span>
+			</div>
+			<a class="noti-cart-count" href="~/cart.html" title="Giỏ hàng">
+				Giỏ hàng của bạn hiện có <span class="count_item_pr"></span> sản phẩm
+			</a>
+			<a title="Đóng" class="cart_btn-close" href="javascript:;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="512" height="512" x="0" y="0" viewBox="0 0 365.696 365.696" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path xmlns="http://www.w3.org/2000/svg" d="m243.1875 182.859375 113.132812-113.132813c12.5-12.5 12.5-32.765624 0-45.246093l-15.082031-15.082031c-12.503906-12.503907-32.769531-12.503907-45.25 0l-113.128906 113.128906-113.132813-113.152344c-12.5-12.5-32.765624-12.5-45.246093 0l-15.105469 15.082031c-12.5 12.503907-12.5 32.769531 0 45.25l113.152344 113.152344-113.128906 113.128906c-12.503907 12.503907-12.503907 32.769531 0 45.25l15.082031 15.082031c12.5 12.5 32.765625 12.5 45.246093 0l113.132813-113.132812 113.128906 113.132812c12.503907 12.5 32.769531 12.5 45.25 0l15.082031-15.082031c12.5-12.503906 12.5-32.769531 0-45.25zm0 0" fill="#ffffff" data-original="#000000" style="" class="" /></g></svg></a>
+		</div>
+		<div class="cartPopupContainer">
+		</div>
+	</div>
+
+
+
+	<div id="popup-cart-mobile" class="popup-cart-mobile">
+		<div class="header-popcart">
+			<div class="top-cart-header">
+				<span>
+					<svg xmlns="http://www.w3.org/2000/svg" height="682.66669pt" viewBox="-21 -21 682.66669 682.66669" width="682.66669pt"><path d="m322.820312 387.933594 279.949219-307.273438 36.957031 33.671875-314.339843 345.023438-171.363281-162.902344 34.453124-36.238281zm297.492188-178.867188-38.988281 42.929688c5.660156 21.734375 8.675781 44.523437 8.675781 68.003906 0 148.875-121.125 270-270 270s-270-121.125-270-270 121.125-270 270-270c68.96875 0 131.96875 26.007812 179.746094 68.710938l33.707031-37.113282c-58.761719-52.738281-133.886719-81.597656-213.453125-81.597656-85.472656 0-165.835938 33.285156-226.273438 93.726562-60.441406 60.4375-93.726562 140.800782-93.726562 226.273438s33.285156 165.835938 93.726562 226.273438c60.4375 60.441406 140.800782 93.726562 226.273438 93.726562s165.835938-33.285156 226.273438-93.726562c60.441406-60.4375 93.726562-140.800782 93.726562-226.273438 0-38.46875-6.761719-75.890625-19.6875-110.933594zm0 0" /></svg>
+					Mua hàng thành công
+				</span>
+			</div>
+			<div class="media-content bodycart-mobile">
+			</div>
+			<a class="noti-cart-count" href="~/cart" title="Giỏ hàng"> Giỏ hàng của bạn hiện có <span class="count_item_pr"></span> sản phẩm </a>
+			<a title="Đóng" class="cart_btn-close iconclose" href="javascript:;">
+				<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512.001 512.001" style="enable-background:new 0 0 512.001 512.001;" xml:space="preserve"> <g> <g> <path d="M284.286,256.002L506.143,34.144c7.811-7.811,7.811-20.475,0-28.285c-7.811-7.81-20.475-7.811-28.285,0L256,227.717    L34.143,5.859c-7.811-7.811-20.475-7.811-28.285,0c-7.81,7.811-7.811,20.475,0,28.285l221.857,221.857L5.858,477.859    c-7.811,7.811-7.811,20.475,0,28.285c3.905,3.905,9.024,5.857,14.143,5.857c5.119,0,10.237-1.952,14.143-5.857L256,284.287    l221.857,221.857c3.905,3.905,9.024,5.857,14.143,5.857s10.237-1.952,14.143-5.857c7.811-7.811,7.811-20.475,0-28.285    L284.286,256.002z" /> </g> </g> </svg>
+			</a>
+			<div class="bottom-action">
+				<div class="cart_btn-close btn btn-extent">
+					Tiếp tục mua hàng
+				</div>
+				<a href="~/checkout.html" class="checkout btn btn-primary" title="Thanh toán ngay">
+					Thanh toán ngay
+				</a>
+			</div>
+		</div>
+	</div>
+	<link rel="preload" as="script" href="~/js/main.js" />
+	<script src="~/js/main.js" type="text/javascript"></script>
+
+
+	<script>
+		$(document).ready(function ($) {
+			var modalPopup = $('.modal-banner');
+			var close = $('.modalbanner-close');
+			var checkBox = $('#check-close-banner');
+			var banner = $('#modal-banner .banner-promotion');
+
+			function hidePopup() {
+				modalPopup.hide();
+			}
+
+			function isPopupClosed() {
+				// Kiểm tra xem cookie hoặc localStorage có thông tin ngày giống với ngày hiện tại hay không
+				var storedDate = localStorage.getItem('popupClosedDate');
+				if (storedDate) {
+					var currentDate = new Date().toLocaleDateString("en-US", { timeZone: "Asia/Ho_Chi_Minh" });
+					return storedDate === currentDate;
+				}
+				return false;
+			}
+
+			$(document).on('click', '#modal-banner .modalbanner-overlay, .fancybox-overlay', function (e) {
+				hidePopup();
+				if (checkBox.prop('checked')) {
+					// Lưu ngày hiện tại vào localStorage
+					var currentDate = new Date().toLocaleDateString("en-US", { timeZone: "Asia/Ho_Chi_Minh" });
+					localStorage.setItem('popupClosedDate', currentDate);
+				}
+			});
+
+			close.click(function () {
+				hidePopup();
+				if (checkBox.prop('checked')) {
+					// Lưu ngày hiện tại vào localStorage
+					var currentDate = new Date().toLocaleDateString("en-US", { timeZone: "Asia/Ho_Chi_Minh" });
+					localStorage.setItem('popupClosedDate', currentDate);
+				}
+			});
+
+			banner.click(function () {
+				// Lưu ngày hiện tại vào localStorage
+				var currentDate = new Date().toLocaleDateString("en-US", { timeZone: "Asia/Ho_Chi_Minh" });
+				localStorage.setItem('popupClosedDate', currentDate);
+			});
+
+			if (!isPopupClosed()) {
+				var delayTime = $('#modal-banner').data('delay') || 3000;
+				setTimeout(function () {
+					var section = $('#modal-banner .banner-promotion');
+					var template = $('script[data-template="banner_popup"]').html();
+					if (template) {
+						$('.banner-promotion[data-section="banner_popup"]').html(template);
+						var banner = $('#modal-banner .banner-promotion');
+						banner.click(function () {
+							// Lưu ngày hiện tại vào localStorage
+							var currentDate = new Date().toLocaleDateString("en-US", { timeZone: "Asia/Ho_Chi_Minh" });
+							localStorage.setItem('popupClosedDate', currentDate);
+						});
+					}
+					modalPopup.show();
+				}, delayTime);
+			}
+		});
+	</script>
+
+	<div id="list-favorite" class="d-none">
+		<div class="list-favorite-right container" data-type="wishlist">
+			<div class="list-favorite-main">
+				<div class="list-favorite-list row">
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		var favoriSudes = {};
+		favoriSudes.General = {
+			init: function () {
+				favoriSudes.Wishlist.init();
+			},
+		}
+		favoriSudes.Wishlist = {
+			init: function () {
+				this.setWishlistProductLoop();
+				favoriSudes.Wishlist.wishlistProduct();
+			},
+			setWishlistProductLoop: function () {
+				$('body').on('click', '.remove-wishlist', function (e) {
+					favoriSudes.Wishlist.removeWishlist($(this).attr('data-wish'));
+					theme.alert.new('Xóa khỏi danh sách yêu thích', 'Sản phẩm của bạn đã xóa khỏi sách yêu thích thành công.', 3000, 'alert-primary');
+				})
+				$('body').on('click', '.setWishlist', function (e) {
+					e.preventDefault();
+					if ($(this).hasClass('active')) {
+						favoriSudes.Wishlist.removeWishlist($(this).attr('data-wish'));
+						theme.alert.new('Xóa khỏi danh sách yêu thích', 'Sản phẩm của bạn đã xóa khỏi sách yêu thích thành công.', 3000, 'alert-primary');
+					} else {
+						theme.alert.new('Thêm vào danh sách yêu thích', 'Sản phẩm của bạn đã thêm vào danh sách yêu thích thành công.', 3000, 'alert-success');
+						var phand = [];
+						var handle = $(this).attr('data-wish');
+						if (document.cookie.indexOf('sudes_wishlist_products') !== -1) {
+							var las = Cookies.getJSON('sudes_wishlist_products');
+							if ($.inArray(handle, las) === -1) {
+								phand = [handle];
+								for (var i = 0; i < las.length; i++) {
+									phand.push(las[i]);
+									if (phand.length > 100) {
+										break;
+									}
+								}
+								Cookies.set('sudes_wishlist_products', phand, {
+									expires: 15,
+									sameSite: 'None',
+									secure: true
+								});
+							}
+						} else {
+							phand = [handle];
+							Cookies.set('sudes_wishlist_products', phand, {
+								expires: 15,
+								sameSite: 'None',
+								secure: true
+							});
+						}
+						favoriSudes.Wishlist.wishlistProduct();
+					}
+				})
+			},
+			wishlistProduct: function () {
+				if ($('#list-favorite .list-favorite-right[data-type="wishlist"] .list-favorite-list').length > 0) {
+					if (document.cookie.indexOf('sudes_wishlist_products') !== -1) {
+						$('#list-favorite .list-favorite-right[data-type="wishlist"] .list-favorite-list').html('')
+						var last_wishlist_pro_array = Cookies.getJSON('sudes_wishlist_products');
+						favoriSudes.Wishlist.activityWishlist();
+						var recentview_promises = [];
+						for (var i = 0; i < 100; i++) {
+							if (typeof last_wishlist_pro_array[i] == 'string') {
+								var promise = new Promise(function (resolve, reject) {
+									$.ajax({
+										url: '/products/' + last_wishlist_pro_array[i] + '?view=favorite',
+										async: false,
+										success: function (product) {
+											resolve({
+												error: false,
+												data: product
+											});
+										},
+										error: function (err) {
+											if (err.status === 404) {
+												try {
+													var u = ((this.url.split('?'))[0]).replace('/products/', '');
+													resolve({
+														error: true,
+														handle: u
+													});
+												} catch (e) {
+													resolve({
+														error: false,
+														data: ''
+													})
+												}
+											} else {
+												resolve({
+													error: false,
+													data: ''
+												});
+											}
+											favoriSudes.Wishlist.removeWishlist(last_wishlist_pro_array[i])
+										}
+									})
+								});
+								recentview_promises.push(promise);
+							}
+						}
+						Promise.all(recentview_promises).then(function (values) {
+							if (values.length > 0) {
+								var x = [];
+								setTimeout(function () {
+									$('.js-wishlist-count').html(values.length)
+								}, 500)
+								$.each(values, function (i, v) {
+									if (v.error) {
+										x.push(v.handle);
+									} else {
+
+										awe_lazyloadImage();
+									}
+								});
+								if (x.length > 0) {
+									var new_last_viewed_pro_array = [];
+									$.each(last_wishlist_pro_array, function (i, v) {
+										if ($.inArray(v, x) === -1) {
+											new_last_viewed_pro_array.push(v);
+										}
+									})
+									if (new_last_viewed_pro_array.length > 0) {
+										Cookies.set('last_viewed_products', new_last_viewed_pro_array, {
+											expires: 180,
+											sameSite: 'None',
+											secure: true
+										});
+									}
+								}
+							} else {
+								$('.js-wishlist-count').html('0')
+								$('#list-favorite .list-favorite-right[data-type="wishlist"] .list-favorite-list').append('<div class="list-favorite-main-top-error col-lg-12 col-md-12 col-sm-12 col-12"><div class="alert alert-warning">Bạn chưa có sản phẩm yêu thích nào!</div></div>')
+							}
+						});
+					} else {
+						$('#list-favorite .list-favorite-right[data-type="wishlist"] .list-favorite-list').append('<div class="list-favorite-main-top-error col-lg-12 col-md-12 col-sm-12 col-12"><div class="alert alert-warning">Bạn chưa có sản phẩm yêu thích nào! </div></div>')
+					}
+				} else {
+					$('#list-favorite .list-favorite-right[data-type="wishlist"] .list-favorite-list').append('<div class="list-favorite-right-main-top-error col-lg-12 col-md-12 col-sm-12 col-12"><div class="alert alert-warning">Bạn chưa có sản phẩm yêu thích nào! </div></div>')
+				}
+			},
+			activityWishlist: function () {
+				var last_wishlist_pro_array = Cookies.getJSON('sudes_wishlist_products');
+				$.each(last_wishlist_pro_array, function (i, v) {
+					$('.setWishlist[data-wish="' + v + '"]').html('<img class="img-unlike" width="25" height="25" src="https://bizweb.dktcdn.net/100/506/650/files/heartadd-1.png?v=1704084436307" alt="Bỏ yêu thích">Bỏ yêu thích</div>').addClass('active').attr('title', 'Bỏ yêu thích');
+				})
+			},
+			removeWishlist: function (handle) {
+				var phand = [];
+
+				$('a[data-wish="' + handle + '"]').html('<img width="25" height="25" src="https://bizweb.dktcdn.net/100/451/884/themes/857425/assets/heart.png?1650269474235" alt="Thêm vào yêu thích">Thêm vào yêu thích</div>').removeClass('active').attr('title', 'Thêm vào yêu thích');
+				if (document.cookie.indexOf('sudes_wishlist_products') !== -1) {
+					var las = Cookies.getJSON('sudes_wishlist_products');
+					var flagIndex = $.inArray(handle, las);
+					las.splice(flagIndex, 1)
+					Cookies.set('sudes_wishlist_products', las, {
+						expires: 15,
+						sameSite: 'None',
+						secure: true
+					});
+				} else {
+					phand = [handle];
+					Cookies.set('sudes_wishlist_products', phand, {
+						expires: 15,
+						sameSite: 'None',
+						secure: true
+					});
+				}
+				favoriSudes.Wishlist.wishlistProduct(3, 5);
+			}
+		}
+		favoriSudes.Wishlist.init();
+	</script>
+
+	<div class="main-widget">
+		<div class="def-content unsee element">
+			<div class="def-header">
+				Liên hệ với chúng tôi
+				<div class="close-icon" title="Đóng">
+					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+						<path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+					</svg>
+				</div>
+			</div>
+			<div class="item phone">
+				<a href="tel:0876578996">
+					<span class="img">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M493.4 24.6l-104-24c-11.3-2.6-22.9 3.3-27.5 13.9l-48 112c-4.2 9.8-1.4 21.3 6.9 28l60.6 49.6c-36 76.7-98.9 140.5-177.2 177.2l-49.6-60.6c-6.8-8.3-18.2-11.1-28-6.9l-112 48C3.9 366.5-2 378.1.6 389.4l24 104C27.1 504.2 36.7 512 48 512c256.1 0 464-207.5 464-464 0-11.2-7.7-20.9-18.6-23.4z"></path></svg>
+					</span>
+					<div class="detail">
+						<b class="arcu-item-title">
+							Hotline:
+						</b>
+						<span class="arcu-item-subtitle">
+							0876578996
+						</span>
+					</div>
+				</a>
+			</div>
+
+			<div class="item zalo">
+				<a target="_blank" href="https://zalo.me/0876578996">
+					<span class="img">
+						<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 614.501 613.667" xml:space="preserve"><path fill="currentColor" d="M464.721,301.399c-13.984-0.014-23.707,11.478-23.944,28.312c-0.251,17.771,9.168,29.208,24.037,29.202   c14.287-0.007,23.799-11.095,24.01-27.995C489.028,313.536,479.127,301.399,464.721,301.399z"></path><path fill="currentColor" d="M291.83,301.392c-14.473-0.316-24.578,11.603-24.604,29.024c-0.02,16.959,9.294,28.259,23.496,28.502   c15.072,0.251,24.592-10.87,24.539-28.707C315.214,313.318,305.769,301.696,291.83,301.392z"></path><path fill="currentColor" d="M310.518,3.158C143.102,3.158,7.375,138.884,7.375,306.3s135.727,303.142,303.143,303.142   c167.415,0,303.143-135.727,303.143-303.142S477.933,3.158,310.518,3.158z M217.858,391.083   c-33.364,0.818-66.828,1.353-100.133-0.343c-21.326-1.095-27.652-18.647-14.248-36.583c21.55-28.826,43.886-57.065,65.792-85.621   c2.546-3.305,6.214-5.996,7.15-12.705c-16.609,0-32.784,0.04-48.958-0.013c-19.195-0.066-28.278-5.805-28.14-17.652   c0.132-11.768,9.175-17.329,28.397-17.348c25.159-0.026,50.324-0.06,75.476,0.026c9.637,0.033,19.604,0.105,25.304,9.789   c6.22,10.561,0.284,19.512-5.646,27.454c-21.26,28.497-43.015,56.624-64.559,84.902c-2.599,3.41-5.119,6.88-9.453,12.725   c23.424,0,44.123-0.053,64.816,0.026c8.674,0.026,16.662,1.873,19.941,11.267C237.892,379.329,231.368,390.752,217.858,391.083z    M350.854,330.211c0,13.417-0.093,26.841,0.039,40.265c0.073,7.599-2.599,13.647-9.512,17.084   c-7.296,3.642-14.71,3.028-20.304-2.968c-3.997-4.281-6.214-3.213-10.488-0.422c-17.955,11.728-39.908,9.96-56.597-3.866   c-29.928-24.789-30.026-74.803-0.211-99.776c16.194-13.562,39.592-15.462,56.709-4.143c3.951,2.619,6.201,4.815,10.396-0.053   c5.39-6.267,13.055-6.761,20.271-3.357c7.454,3.509,9.935,10.165,9.776,18.265C350.67,304.222,350.86,317.217,350.854,330.211z    M395.617,369.579c-0.118,12.837-6.398,19.783-17.196,19.908c-10.779,0.132-17.593-6.966-17.646-19.512   c-0.179-43.352-0.185-86.696,0.007-130.041c0.059-12.256,7.302-19.921,17.896-19.222c11.425,0.752,16.992,7.448,16.992,18.833   c0,22.104,0,44.216,0,66.327C395.677,327.105,395.828,348.345,395.617,369.579z M463.981,391.868   c-34.399-0.336-59.037-26.444-58.786-62.289c0.251-35.66,25.304-60.713,60.383-60.396c34.631,0.304,59.374,26.306,58.998,61.986   C524.207,366.492,498.534,392.205,463.981,391.868z"></path></svg>
+					</span>
+					<div class="detail">
+						<b class="arcu-item-title">
+							Zalo chat:
+						</b>
+						<span class="arcu-item-subtitle">
+							Tài khoản Zalo: 0876578996
+						</span>
+					</div>
+				</a>
+			</div>
+
+
+			<div class="item mess">
+				<a target="_blank" href="https://m.me/463293720202704">
+					<span class="img">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-messenger" viewBox="0 0 16 16">
+							<path d="M0 7.76C0 3.301 3.493 0 8 0s8 3.301 8 7.76-3.493 7.76-8 7.76c-.81 0-1.586-.107-2.316-.307a.639.639 0 0 0-.427.03l-1.588.702a.64.64 0 0 1-.898-.566l-.044-1.423a.639.639 0 0 0-.215-.456C.956 12.108 0 10.092 0 7.76zm5.546-1.459-2.35 3.728c-.225.358.214.761.551.506l2.525-1.916a.48.48 0 0 1 .578-.002l1.869 1.402a1.2 1.2 0 0 0 1.735-.32l2.35-3.728c.226-.358-.214-.761-.551-.506L9.728 7.381a.48.48 0 0 1-.578.002L7.281 5.98a1.2 1.2 0 0 0-1.735.32z" />
+						</svg>
+					</span>
+					<div class="detail">
+						<b class="arcu-item-title">
+							Messenger:
+						</b>
+						<span class="arcu-item-subtitle">
+							m.me/koifarmshop
+						</span>
+					</div>
+				</a>
+			</div>
+
+
+			<div class="item map">
+				<a target="_blank" href="/Contact/he-thong-cua-hang">
+					<span class="img">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pin-map" viewBox="0 0 16 16">
+							<path fill-rule="evenodd" d="M3.1 11.2a.5.5 0 0 1 .4-.2H6a.5.5 0 0 1 0 1H3.75L1.5 15h13l-2.25-3H10a.5.5 0 0 1 0-1h2.5a.5.5 0 0 1 .4.2l3 4a.5.5 0 0 1-.4.8H.5a.5.5 0 0 1-.4-.8l3-4z" />
+							<path fill-rule="evenodd" d="M8 1a3 3 0 1 0 0 6 3 3 0 0 0 0-6zM4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999z" />
+						</svg>
+					</span>
+					<div class="detail">
+						<b class="arcu-item-title">
+							Hệ thống cửa hàng:
+						</b>
+						<span class="arcu-item-subtitle">
+							Xem địa chỉ cửa hàng
+						</span>
+					</div>
+				</a>
+			</div>
+
+		</div>
+		<div class="out-circle">
+			<div class="pregan element"></div>
+			<div class="pregan element"></div>
+			<div class="main-icon">
+				<svg width="20" height="20" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="translate(-825 -308)"><g><path transform="translate(825 308)" fill="#FFFFFF" d="M 19 4L 17 4L 17 13L 4 13L 4 15C 4 15.55 4.45 16 5 16L 16 16L 20 20L 20 5C 20 4.45 19.55 4 19 4ZM 15 10L 15 1C 15 0.45 14.55 0 14 0L 1 0C 0.45 0 0 0.45 0 1L 0 15L 4 11L 14 11C 14.55 11 15 10.55 15 10Z"></path></g></g></svg>
+				<p>
+					Liên hệ
+				</p>
+			</div>
+			<div class="ser-icon unsee element">
+				<div class="process">
+					<span class="img phone item">
+						<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 512 512"><path fill="currentColor" d="M493.4 24.6l-104-24c-11.3-2.6-22.9 3.3-27.5 13.9l-48 112c-4.2 9.8-1.4 21.3 6.9 28l60.6 49.6c-36 76.7-98.9 140.5-177.2 177.2l-49.6-60.6c-6.8-8.3-18.2-11.1-28-6.9l-112 48C3.9 366.5-2 378.1.6 389.4l24 104C27.1 504.2 36.7 512 48 512c256.1 0 464-207.5 464-464 0-11.2-7.7-20.9-18.6-23.4z"></path></svg>
+					</span>
+
+					<span class="img zalo item">
+						<svg width="25" height="25" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 614.501 613.667" xml:space="preserve"><path fill="currentColor" d="M464.721,301.399c-13.984-0.014-23.707,11.478-23.944,28.312c-0.251,17.771,9.168,29.208,24.037,29.202   c14.287-0.007,23.799-11.095,24.01-27.995C489.028,313.536,479.127,301.399,464.721,301.399z"></path><path fill="currentColor" d="M291.83,301.392c-14.473-0.316-24.578,11.603-24.604,29.024c-0.02,16.959,9.294,28.259,23.496,28.502   c15.072,0.251,24.592-10.87,24.539-28.707C315.214,313.318,305.769,301.696,291.83,301.392z"></path><path fill="currentColor" d="M310.518,3.158C143.102,3.158,7.375,138.884,7.375,306.3s135.727,303.142,303.143,303.142   c167.415,0,303.143-135.727,303.143-303.142S477.933,3.158,310.518,3.158z M217.858,391.083   c-33.364,0.818-66.828,1.353-100.133-0.343c-21.326-1.095-27.652-18.647-14.248-36.583c21.55-28.826,43.886-57.065,65.792-85.621   c2.546-3.305,6.214-5.996,7.15-12.705c-16.609,0-32.784,0.04-48.958-0.013c-19.195-0.066-28.278-5.805-28.14-17.652   c0.132-11.768,9.175-17.329,28.397-17.348c25.159-0.026,50.324-0.06,75.476,0.026c9.637,0.033,19.604,0.105,25.304,9.789   c6.22,10.561,0.284,19.512-5.646,27.454c-21.26,28.497-43.015,56.624-64.559,84.902c-2.599,3.41-5.119,6.88-9.453,12.725   c23.424,0,44.123-0.053,64.816,0.026c8.674,0.026,16.662,1.873,19.941,11.267C237.892,379.329,231.368,390.752,217.858,391.083z    M350.854,330.211c0,13.417-0.093,26.841,0.039,40.265c0.073,7.599-2.599,13.647-9.512,17.084   c-7.296,3.642-14.71,3.028-20.304-2.968c-3.997-4.281-6.214-3.213-10.488-0.422c-17.955,11.728-39.908,9.96-56.597-3.866   c-29.928-24.789-30.026-74.803-0.211-99.776c16.194-13.562,39.592-15.462,56.709-4.143c3.951,2.619,6.201,4.815,10.396-0.053   c5.39-6.267,13.055-6.761,20.271-3.357c7.454,3.509,9.935,10.165,9.776,18.265C350.67,304.222,350.86,317.217,350.854,330.211z    M395.617,369.579c-0.118,12.837-6.398,19.783-17.196,19.908c-10.779,0.132-17.593-6.966-17.646-19.512   c-0.179-43.352-0.185-86.696,0.007-130.041c0.059-12.256,7.302-19.921,17.896-19.222c11.425,0.752,16.992,7.448,16.992,18.833   c0,22.104,0,44.216,0,66.327C395.677,327.105,395.828,348.345,395.617,369.579z M463.981,391.868   c-34.399-0.336-59.037-26.444-58.786-62.289c0.251-35.66,25.304-60.713,60.383-60.396c34.631,0.304,59.374,26.306,58.998,61.986   C524.207,366.492,498.534,392.205,463.981,391.868z"></path></svg>
+					</span>
+
+
+					<span class="img mess item">
+						<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-messenger" viewBox="0 0 16 16">
+							<path d="M0 7.76C0 3.301 3.493 0 8 0s8 3.301 8 7.76-3.493 7.76-8 7.76c-.81 0-1.586-.107-2.316-.307a.639.639 0 0 0-.427.03l-1.588.702a.64.64 0 0 1-.898-.566l-.044-1.423a.639.639 0 0 0-.215-.456C.956 12.108 0 10.092 0 7.76zm5.546-1.459-2.35 3.728c-.225.358.214.761.551.506l2.525-1.916a.48.48 0 0 1 .578-.002l1.869 1.402a1.2 1.2 0 0 0 1.735-.32l2.35-3.728c.226-.358-.214-.761-.551-.506L9.728 7.381a.48.48 0 0 1-.578.002L7.281 5.98a1.2 1.2 0 0 0-1.735.32z" />
+						</svg>
+					</span>
+
+
+					<span class="img map item">
+						<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-pin-map" viewBox="0 0 16 16">
+							<path fill-rule="evenodd" d="M3.1 11.2a.5.5 0 0 1 .4-.2H6a.5.5 0 0 1 0 1H3.75L1.5 15h13l-2.25-3H10a.5.5 0 0 1 0-1h2.5a.5.5 0 0 1 .4.2l3 4a.5.5 0 0 1-.4.8H.5a.5.5 0 0 1-.4-.8l3-4z" />
+							<path fill-rule="evenodd" d="M8 1a3 3 0 1 0 0 6 3 3 0 0 0 0-6zM4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999z" />
+						</svg>
+					</span>
+
+				</div>
+			</div>
+			<div class="close-icon unsee element">
+				<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+					<path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+				</svg>
+			</div>
+		</div>
+	</div>
+	<script>
+		$(function () {
+			var i = 1;
+			var n = $('.ser-icon .process .item').length;
+			var len = $('.ser-icon .process').width() / n;
+			var pos = new WebKitCSSMatrix($('.ser-icon .process').css('transform'));
+			$('.ser-icon').removeClass('unsee');
+			function nextFrame() {
+				if (i < n) {
+					i++;
+					var pos2 = new WebKitCSSMatrix($('.ser-icon .process').css('transform'));
+					$('.ser-icon .process').css('transform', 'translateX(' + (pos2.m41 - len) + 'px)');
+					setTimeout(nextFrame, 800);
+				} else {
+					$('.ser-icon').addClass('unsee');
+					i = 1;
+					$('.ser-icon .process').css('transform', 'translateX(' + (pos.m41) + 'px)');
+					setTimeout(beginFrame, 2000);
+				}
+			};
+			function beginFrame() {
+				$('.ser-icon').removeClass('unsee');
+				setTimeout(nextFrame, 900);
+			};
+			setTimeout(beginFrame, 2000);
+			$('.close-icon').click(function (event) {
+				$('.element').toggleClass('unsee');
+			});
+		});
+	</script>
+	<div id="popupCartModal" class="modal fade" role="dialog">
+	</div>
+
+
+	<div class="popup-sapo">
+		<div class="icon">
+			<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><path d="M224 0c-17.7 0-32 14.3-32 32V51.2C119 66 64 130.6 64 208v18.8c0 47-17.3 92.4-48.5 127.6l-7.4 8.3c-8.4 9.4-10.4 22.9-5.3 34.4S19.4 416 32 416H416c12.6 0 24-7.4 29.2-18.9s3.1-25-5.3-34.4l-7.4-8.3C401.3 319.2 384 273.9 384 226.8V208c0-77.4-55-142-128-156.8V32c0-17.7-14.3-32-32-32zm45.3 493.3c12-12 18.7-28.3 18.7-45.3H224 160c0 17 6.7 33.3 18.7 45.3s28.3 18.7 45.3 18.7s33.3-6.7 45.3-18.7z" /></svg>
+		</div>
+		<div class="content">
+			<div class="title">
+				Các Tin Tức Hữu Ích
+			</div>
+			<ul>
+
+				<li>
+					<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><path d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z" /></svg>
+					<a href="/News/kien-thuc" target="_blank" title="Kiến Thức">Kiến Thức</a>
+				</li>
+
+
+				<li>
+					<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><path d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z" /></svg>
+					<a href="/News/kinh-nghiem" target="_blank" title="Kinh Nghiệm">Kinh Nghiệm</a>
+				</li>
+
+
+				<li>
+					<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><path d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z" /></svg>
+					<a href="https://www.facebook.com/profile.php?id=61568145657284&mibextid=ZbWKwL" target="_blank" title="FanPage Facebook">FanPage Facebook</a>
+				</li>
+
+
+
+			</ul>
+			<div class="ghichu">
+				Cảm ơn các bạn đã ghé thăm Koi Farm Shop!
+				Hãy khám phá thêm các sản phẩm và dịch vụ tuyệt vời từ cửa hàng của chúng tôi.
+			</div>
+			<a title="Đóng" class="close-popup-sapo">
+				<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 512.001 512.001" style="enable-background:new 0 0 512.001 512.001;" xml:space="preserve"> <g> <g> <path d="M284.286,256.002L506.143,34.144c7.811-7.811,7.811-20.475,0-28.285c-7.811-7.81-20.475-7.811-28.285,0L256,227.717    L34.143,5.859c-7.811-7.811-20.475-7.811-28.285,0c-7.81,7.811-7.811,20.475,0,28.285l221.857,221.857L5.858,477.859    c-7.811,7.811-7.811,20.475,0,28.285c3.905,3.905,9.024,5.857,14.143,5.857c5.119,0,10.237-1.952,14.143-5.857L256,284.287    l221.857,221.857c3.905,3.905,9.024,5.857,14.143,5.857s10.237-1.952,14.143-5.857c7.811-7.811,7.811-20.475,0-28.285    L284.286,256.002z"></path> </g> </g> </svg>
+			</a>
+		</div>
+	</div>
+
+	<script>
+		$('.popup-sapo .icon').click(function () {
+			$(".popup-sapo").toggleClass("active");
+		});
+		$('.close-popup-sapo').click(function () {
+			$(".popup-sapo").toggleClass("active");
+		});
+	</script>
+
+
+	<div class="popup-ngonngu">
+		<div class="icon">
+			<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-globe2" viewBox="0 0 16 16">
+				<path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855-.143.268-.276.56-.395.872.705.157 1.472.257 2.282.287V1.077zM4.249 3.539c.142-.384.304-.744.481-1.078a6.7 6.7 0 0 1 .597-.933A7.01 7.01 0 0 0 3.051 3.05c.362.184.763.349 1.198.49zM3.509 7.5c.036-1.07.188-2.087.436-3.008a9.124 9.124 0 0 1-1.565-.667A6.964 6.964 0 0 0 1.018 7.5h2.49zm1.4-2.741a12.344 12.344 0 0 0-.4 2.741H7.5V5.091c-.91-.03-1.783-.145-2.591-.332zM8.5 5.09V7.5h2.99a12.342 12.342 0 0 0-.399-2.741c-.808.187-1.681.301-2.591.332zM4.51 8.5c.035.987.176 1.914.399 2.741A13.612 13.612 0 0 1 7.5 10.91V8.5H4.51zm3.99 0v2.409c.91.03 1.783.145 2.591.332.223-.827.364-1.754.4-2.741H8.5zm-3.282 3.696c.12.312.252.604.395.872.552 1.035 1.218 1.65 1.887 1.855V11.91c-.81.03-1.577.13-2.282.287zm.11 2.276a6.696 6.696 0 0 1-.598-.933 8.853 8.853 0 0 1-.481-1.079 8.38 8.38 0 0 0-1.198.49 7.01 7.01 0 0 0 2.276 1.522zm-1.383-2.964A13.36 13.36 0 0 1 3.508 8.5h-2.49a6.963 6.963 0 0 0 1.362 3.675c.47-.258.995-.482 1.565-.667zm6.728 2.964a7.009 7.009 0 0 0 2.275-1.521 8.376 8.376 0 0 0-1.197-.49 8.853 8.853 0 0 1-.481 1.078 6.688 6.688 0 0 1-.597.933zM8.5 11.909v3.014c.67-.204 1.335-.82 1.887-1.855.143-.268.276-.56.395-.872A12.63 12.63 0 0 0 8.5 11.91zm3.555-.401c.57.185 1.095.409 1.565.667A6.963 6.963 0 0 0 14.982 8.5h-2.49a13.36 13.36 0 0 1-.437 3.008zM14.982 7.5a6.963 6.963 0 0 0-1.362-3.675c-.47.258-.995.482-1.565.667.248.92.4 1.938.437 3.008h2.49zM11.27 2.461c.177.334.339.694.482 1.078a8.368 8.368 0 0 0 1.196-.49 7.01 7.01 0 0 0-2.275-1.52c.218.283.418.597.597.932zm-.488 1.343a7.765 7.765 0 0 0-.395-.872C9.835 1.897 9.17 1.282 8.5 1.077V4.09c.81-.03 1.577-.13 2.282-.287z" />
+			</svg>
+		</div>
+		<ul class="language">
+			<li>
+				<a href="#">
+					<img width="16" height="16" src="~/img/vn.png" alt="Tiếng Việt">
+					<span>Tiếng Việt</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<img width="16" height="16" src="~/img/en.png" alt="Tiếng Anh">
+					<span>English</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+
+
+
+</body>
+</html>
+
+
+
+
+
