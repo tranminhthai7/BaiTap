@@ -8,9 +8,13 @@
 
   <ItemGroup>
     <Compile Remove="Pages\DetailedInformation\**" />
+    <Compile Remove="Pages\Koi-Ki-Gui\**" />
     <Content Remove="Pages\DetailedInformation\**" />
+    <Content Remove="Pages\Koi-Ki-Gui\**" />
     <EmbeddedResource Remove="Pages\DetailedInformation\**" />
+    <EmbeddedResource Remove="Pages\Koi-Ki-Gui\**" />
     <None Remove="Pages\DetailedInformation\**" />
+    <None Remove="Pages\Koi-Ki-Gui\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -23,10 +27,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\KoiFarmShop.Services\KoiFarmShop.Services.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Pages\Koi-Ki-Gui\" />
   </ItemGroup>
 
 </Project>
