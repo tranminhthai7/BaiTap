@@ -48,4 +48,4 @@ Nếu bạn thấy dự án này hữu ích hoặc đã áp dụng nó vào côn
 ---
 
 ## ☕ Hỗ Trợ
-Dự án này có giúp bạn học được điều gì mới? Hay hỗ trợ công việc của bạn? Hãy xem xét hỗ trợ chúng tôi!
+Dự án này có giúp bạn học được điều gì mới? Hay hỗ trợ công việc của bạn? Hãy liên hệ hỗ trợ chúng tôi ngay nhé!
