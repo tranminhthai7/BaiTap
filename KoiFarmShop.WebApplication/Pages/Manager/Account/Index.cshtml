@@ -1,0 +1,166 @@
+﻿@page
+@model KoiFarmShop.Pages.Account.IndexModel
+
+@{
+    ViewData["Title"] = "Quản lý tài khoản";
+}
+
+<h1>Quản lý tài khoản</h1>
+<link href="~/css/account_oder_style.scss.css" rel="stylesheet" type="text/css" media="all" />
+
+<!-- Thông báo xác nhận -->
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        @TempData["SuccessMessage"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        @TempData["ErrorMessage"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+
+<div class="row">
+    <!-- Danh sách tài khoản -->
+    <div class="col-md-12">
+        <h3>Danh sách tài khoản</h3>
+        <table class="table table-bordered text-center">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Tên người dùng</th>
+                    <th>Email</th>
+                    <th>Loại tài khoản</th>
+                    <th>Ngày tạo</th>
+                    <th>Hành động</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model.Users != null && Model.Users.Any())
+                {
+                    @foreach (var user in Model.Users)
+                    {
+                        <tr>
+                            <td>@user.Id</td>
+                            <td>@user.UserName</td>
+                            <td>@user.Email</td>
+                            <td>@(user.Role == "Admin" ? "Admin" : user.Role == "Employee" ? "Nhân viên" : "Người dùng")</td>
+                            <td>@user.CreateDate?.ToString("dd/MM/yyyy")</td>
+                            <td>
+                                <a asp-page-handler="Edit" asp-route-id="@user.Id" class="btn btn-warning btn-sm">Sửa</a>
+                                <form method="post" asp-page-handler="Delete" asp-route-id="@user.Id" class="d-inline">
+                                    <button type="submit" class="btn btn-danger btn-sm">Xóa</button>
+                                </form>
+                            </td>
+                        </tr>
+                    }
+                }
+                else
+                {
+                    <tr>
+                        <td colspan="6">Không có người dùng nào.</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Nút hiển thị form thêm tài khoản -->
+    <div class="col-md-12 text-end mb-3">
+        <button id="btnAddUser" class="btn btn-primary">Thêm tài khoản</button>
+    </div>
+
+    <!-- Form thêm hoặc sửa tài khoản -->
+    <div class="col-md-6" id="form-container" style="display:none;">
+        <h3>@(Model.ActionType == "Edit" ? "Sửa tài khoản" : "Thêm tài khoản")</h3>
+        <form method="post" asp-page-handler="Save" enctype="multipart/form-data">
+            <input type="hidden" asp-for="CurrentUser.Id" />
+
+            <!-- Tên người dùng -->
+            <div class="mb-3">
+                <label class="form-label">Tên người dùng</label>
+                <input asp-for="CurrentUser.UserName" class="form-control" required />
+                <span asp-validation-for="CurrentUser.UserName" class="text-danger"></span>
+            </div>
+
+            <!-- Email -->
+            <div class="mb-3">
+                <label class="form-label">Email</label>
+                <input asp-for="CurrentUser.Email" class="form-control" type="email" required />
+                <span asp-validation-for="CurrentUser.Email" class="text-danger"></span>
+            </div>
+
+            <!-- Mật khẩu -->
+            <div class="mb-3">
+                <label class="form-label">Mật khẩu</label>
+                <input asp-for="CurrentUser.Password" class="form-control" type="password" required />
+                <span asp-validation-for="CurrentUser.Password" class="text-danger"></span>
+            </div>
+
+            <!-- Họ và tên -->
+            <div class="mb-3">
+                <label class="form-label">Họ và tên</label>
+                <input asp-for="CurrentUser.FullName" class="form-control" required />
+                <span asp-validation-for="CurrentUser.FullName" class="text-danger"></span>
+            </div>
+
+            <!-- Số điện thoại -->
+            <div class="mb-3">
+                <label class="form-label">Số điện thoại</label>
+                <input asp-for="CurrentUser.Phone" class="form-control" type="tel" />
+                <span asp-validation-for="CurrentUser.Phone" class="text-danger"></span>
+            </div>
+
+            <!-- Địa chỉ -->
+            <div class="mb-3">
+                <label class="form-label">Địa chỉ</label>
+                <input asp-for="CurrentUser.Address" class="form-control" />
+                <span asp-validation-for="CurrentUser.Address" class="text-danger"></span>
+            </div>
+
+            <!-- Hình ảnh -->
+            <div class="mb-3">
+                <label class="form-label">Hình ảnh đại diện</label>
+                <input asp-for="CurrentUser.Image" class="form-control" type="file" />
+                <span asp-validation-for="CurrentUser.Image" class="text-danger"></span>
+            </div>
+
+            <!-- Loại tài khoản -->
+            <div class="mb-3">
+                <label class="form-label">Loại tài khoản</label>
+                <select asp-for="CurrentUser.Role" class="form-select">
+                    <option value="Admin">Admin</option>
+                    <option value="Employee">Nhân viên</option>
+                    <option value="User">Người dùng</option>
+                </select>
+            </div>
+
+            <!-- Ngày tạo (Chỉ hiển thị khi chỉnh sửa) -->
+            @if (Model.ActionType == "Edit")
+            {
+                <div class="mb-3">
+                    <label class="form-label">Ngày tạo:</label>
+                    <input asp-for="CurrentUser.CreateDate" class="form-control" readonly />
+                </div>
+            }
+
+            <!-- Nút submit -->
+            <button type="submit" class="btn btn-primary">
+                @(Model.ActionType == "Edit" ? "Lưu thay đổi" : "Thêm")
+            </button>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        document.getElementById("btnAddUser").addEventListener("click", function () {
+            document.getElementById("form-container").style.display = "block";
+        });
+    </script>
+}
