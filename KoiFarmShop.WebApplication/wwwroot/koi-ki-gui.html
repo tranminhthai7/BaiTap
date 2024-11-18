@@ -4222,5 +4222,54 @@ $(window).on('load', function() {
 
 		
 
+	<div class="container">
+		<h2>Ký Gửi Koi</h2>
+		<form id="consignmentForm">
+			<div class="form-group">
+				<label for="customerId">ID Khách hàng</label>
+				<input type="number" class="form-control" id="customerId" name="customerId" required>
+			</div>
+			<div class="form-group">
+				<label for="koiId">Loại cá Koi</label>
+				<input type="number" class="form-control" id="koiId" name="koiId" required>
+			</div>
+			<div class="form-group">
+				<label for="consignmentDate">Ngày ký gửi</label>
+				<input type="date" class="form-control" id="consignmentDate" name="consignmentDate" required>
+			</div>
+			<div class="form-group">
+				<label for="status">Trạng thái</label>
+				<select class="form-control" id="status" name="status" required>
+					<option value="Pending">Đang chờ xử lý</option>
+					<option value="Completed">Hoàn thành</option>
+					<option value="Cancelled">Đã hủy</option>
+					<option value="Deleted">Đã xóa</option>
+				</select>
+			</div>
+			<button type="submit" class="btn btn-primary">Gửi Yêu Cầu</button>
+		</form>
+	</div>
+	<script>
+		document.getElementById('consignmentForm').addEventListener('submit', function(event) {
+			event.preventDefault();
+			const formData = new FormData(this);
+			fetch('/api/consignment', {
+				method: 'POST',
+				body: JSON.stringify(Object.fromEntries(formData)),
+				headers: {
+					'Content-Type': 'application/json'
+				}
+			})
+			.then(response => response.json())
+			.then(data => {
+				if (data.success) {
+					alert('Ký gửi thành công!');
+				} else {
+					alert('Có lỗi xảy ra, vui lòng thử lại.');
+				}
+			})
+			.catch(error => console.error('Error:', error));
+		});
+	</script>
 	</body>
 </html>
