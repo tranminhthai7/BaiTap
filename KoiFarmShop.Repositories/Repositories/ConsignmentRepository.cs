@@ -6,29 +6,33 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using KoiFarmShop.Repositories.Entities;
 using KoiFarmShop.Repositories.Interfaces;
+using Microsoft.Extensions.Logging;
 
 namespace KoiFarmShop.Repositories.Repositories
 {
     public class ConsignmentRepository : IConsignmentRepository
     {
         private readonly KoiFarmShop2024DbContext _dbContext;
+        private readonly ILogger<ConsignmentRepository> _logger;
 
-        public ConsignmentRepository(KoiFarmShop2024DbContext dbContext) 
+        public ConsignmentRepository(KoiFarmShop2024DbContext dbContext, ILogger<ConsignmentRepository> logger)
         {
             _dbContext = dbContext;
+            _logger = logger;
         }
 
-        public Task<bool> AddConsignment(Consignment consignment)
+        public async Task<bool> AddConsignment(Consignment consignment)
         {
             try
             {
-                _dbContext.Consignments.AddAsync(consignment);
-                _dbContext.SaveChanges();
-                return Task.FromResult(true);
+                await _dbContext.Consignments.AddAsync(consignment);
+                await _dbContext.SaveChangesAsync();
+                return true;
             }
-            catch (Exception ex) 
+            catch (Exception ex)
             {
-                throw new NotImplementedException(ex.ToString());
+                _logger.LogError(ex, "Error adding consignment.");
+                return false;
             }
         }
 
@@ -47,19 +51,12 @@ namespace KoiFarmShop.Repositories.Repositories
             }
             catch (Exception ex)
             {
-                // Log the exception
+                _logger.LogError(ex, "Error deleting consignment.");
                 return false;
             }
         }
 
-        public Task<List<Consignment>> GetConsignments()
-        {
-            // Implementation of GetConsignments method
-            // For example, fetching consignments from a database
-            return Task.FromResult(new List<Consignment>());
-        }
-
-        public async Task<List<Consignment>> GetAllConsignments()
+        public async Task<List<Consignment>> GetConsignments()
         {
             try
             {
@@ -67,27 +64,38 @@ namespace KoiFarmShop.Repositories.Repositories
             }
             catch (Exception ex)
             {
-                // Log the exception
+                _logger.LogError(ex, "Error fetching consignments.");
                 return new List<Consignment>();
             }
         }
 
-        public Task<bool> RemoveConsignmentAsync(Consignment consignment)
+        public async Task<bool> RemoveConsignmentAsync(Consignment consignment)
         {
-            throw new NotImplementedException();
+            try
+            {
+                _dbContext.Consignments.Remove(consignment);
+                await _dbContext.SaveChangesAsync();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error removing consignment.");
+                return false;
+            }
         }
 
-        public Task<bool> UpdateConsignment(Consignment consignment)
+        public async Task<bool> UpdateConsignment(Consignment consignment)
         {
             try
             {
                 _dbContext.Consignments.Update(consignment);
-                _dbContext.SaveChanges();
-                return Task.FromResult(true);
+                await _dbContext.SaveChangesAsync();
+                return true;
             }
             catch (Exception ex)
             {
-                return Task.FromResult(false);
+                _logger.LogError(ex, "Error updating consignment.");
+                return false;
             }
         }
     }

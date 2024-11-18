@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KoiFarmShop.Repositories", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KoiFarmShop.WebApplication", "KoiFarmShop.WebApplication\KoiFarmShop.WebApplication.csproj", "{011B81B9-C692-4FD5-9D86-86F3073D241D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProject", "TestProject\TestProject.csproj", "{5BA29461-2A6B-442C-851F-8A8992A1C74E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,12 +29,16 @@ Global
 		{011B81B9-C692-4FD5-9D86-86F3073D241D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{011B81B9-C692-4FD5-9D86-86F3073D241D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{011B81B9-C692-4FD5-9D86-86F3073D241D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BA29461-2A6B-442C-851F-8A8992A1C74E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BA29461-2A6B-442C-851F-8A8992A1C74E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BA29461-2A6B-442C-851F-8A8992A1C74E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BA29461-2A6B-442C-851F-8A8992A1C74E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		        SolutionGuid = {55034D79-0D74-45DD-B383-172337529DF3}
 		SolutionGuid = {16AC67D8-E65C-4B07-B9F9-0461D7222D86}
+		        SolutionGuid = {55034D79-0D74-45DD-B383-172337529DF3}
 	EndGlobalSection
 EndGlobal
