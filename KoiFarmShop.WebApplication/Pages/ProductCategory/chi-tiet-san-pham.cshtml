@@ -1,41 +1,41 @@
 ﻿@page
 @model KoiFarmShop.WebApplication.Pages.ProductCategory.chi_tiet_san_phamModel
 @{
-    Layout = "_Layout";
-    ViewData["Title"] = "ProductCategory";
+	Layout = "_Layout";
+	ViewData["Title"] = "ProductCategory";
 }
 
 <!DOCTYPE html>
 <html lang="vi">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="theme-color" content="#8d251c" />
-		<link rel="canonical" href="https://localhost:7197/ProductCategory/chi-tiet-san-pham"/>
-		<meta name='revisit-after' content='2 days' />
-		<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">	
-		<meta name="robots" content="noodp,index,follow" />
-		<meta name="description" content="Tổ yến tinh chế cho bé Baby 2 là tổ yến đã qua công đoạn tinh tế, bao gồm 100% vụn yến thiên nhiên Nha Trang. Tổ yến tươi nguyên chất, không pha tạp và qua kiểm định nghiêm ngặt theo tiêu chuẩn bộ y tế. Tổ yến nguyên thiên nhiên sau khi tinh chế (nhặt lông, loại bỏ tạp chất, …) sẽ sót lại vụn yến. Vụn yến sau đó được l">
-		<title>Cá Koi Ogon		</title>
-		<meta name="keywords" content="Tổ Yến Tinh Chế cho bé BaBy (loại 3), Tổ yến tinh chế, Tổ yến thô, Tổ yến, Sản phẩm nổi bật, Koi Farm Shop, sudes-nest.mysapo.net"/>		
-		
+<head>
+	<meta charset="UTF-8" />
+	<meta name="theme-color" content="#8d251c" />
+	<link rel="canonical" href="https://localhost:7197/ProductCategory/chi-tiet-san-pham" />
+	<meta name='revisit-after' content='2 days' />
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="robots" content="noodp,index,follow" />
+	<meta name="description" content="Tổ yến tinh chế cho bé Baby 2 là tổ yến đã qua công đoạn tinh tế, bao gồm 100% vụn yến thiên nhiên Nha Trang. Tổ yến tươi nguyên chất, không pha tạp và qua kiểm định nghiêm ngặt theo tiêu chuẩn bộ y tế. Tổ yến nguyên thiên nhiên sau khi tinh chế (nhặt lông, loại bỏ tạp chất, …) sẽ sót lại vụn yến. Vụn yến sau đó được l">
+	<title>Cá Koi Ogon		</title>
+	<meta name="keywords" content="Tổ Yến Tinh Chế cho bé BaBy (loại 3), Tổ yến tinh chế, Tổ yến thô, Tổ yến, Sản phẩm nổi bật, Koi Farm Shop, sudes-nest.mysapo.net" />
+
 	<meta property="og:type" content="product">
 	<meta property="og:title" content="Tổ Yến Tinh Chế cho bé BaBy (loại 3)">
-	
-		<meta property="og:image" content="https://bizweb.dktcdn.net/thumb/grande/100/506/650/products/bb2-50gr-0-nap-494df53fb54c4233b0ba3c0a8ab3dfbe-97fc1701b8a14297ac03ee1e64edf1b2-master-d488b4d7-4784-48b2-a54a-c7d6343654fa.jpg?v=1709574876467">
-		<meta property="og:image:secure_url" content="https://bizweb.dktcdn.net/thumb/grande/100/506/650/products/bb2-50gr-0-nap-494df53fb54c4233b0ba3c0a8ab3dfbe-97fc1701b8a14297ac03ee1e64edf1b2-master-d488b4d7-4784-48b2-a54a-c7d6343654fa.jpg?v=1709574876467">
-	
-		<meta property="og:image" content="https://bizweb.dktcdn.net/thumb/grande/100/506/650/products/bb2-50gr-nghieng-b2c0e2b67a504163bdc13d7e87992721-03dab23548054dc982811f6da3464f7f-master-50fb7084-c634-4bd2-b4ff-6b50599a1cf2.jpg?v=1709574876467">
-		<meta property="og:image:secure_url" content="https://bizweb.dktcdn.net/thumb/grande/100/506/650/products/bb2-50gr-nghieng-b2c0e2b67a504163bdc13d7e87992721-03dab23548054dc982811f6da3464f7f-master-50fb7084-c634-4bd2-b4ff-6b50599a1cf2.jpg?v=1709574876467">
-	
-		<meta property="og:image" content="https://bizweb.dktcdn.net/thumb/grande/100/506/650/products/tc1-50gr-tai-yen-1a586a3bd9fc46d0bb02fc389da9c5a5-5bc395eae17543e9a557be3320ed56ab-master-f3a52df2-b976-4659-a0f2-71ffcf1f169e.jpg?v=1709574876467">
-		<meta property="og:image:secure_url" content="https://bizweb.dktcdn.net/thumb/grande/100/506/650/products/tc1-50gr-tai-yen-1a586a3bd9fc46d0bb02fc389da9c5a5-5bc395eae17543e9a557be3320ed56ab-master-f3a52df2-b976-4659-a0f2-71ffcf1f169e.jpg?v=1709574876467">
-	
+
+	<meta property="og:image" content="https://bizweb.dktcdn.net/thumb/grande/100/506/650/products/bb2-50gr-0-nap-494df53fb54c4233b0ba3c0a8ab3dfbe-97fc1701b8a14297ac03ee1e64edf1b2-master-d488b4d7-4784-48b2-a54a-c7d6343654fa.jpg?v=1709574876467">
+	<meta property="og:image:secure_url" content="https://bizweb.dktcdn.net/thumb/grande/100/506/650/products/bb2-50gr-0-nap-494df53fb54c4233b0ba3c0a8ab3dfbe-97fc1701b8a14297ac03ee1e64edf1b2-master-d488b4d7-4784-48b2-a54a-c7d6343654fa.jpg?v=1709574876467">
+
+	<meta property="og:image" content="https://bizweb.dktcdn.net/thumb/grande/100/506/650/products/bb2-50gr-nghieng-b2c0e2b67a504163bdc13d7e87992721-03dab23548054dc982811f6da3464f7f-master-50fb7084-c634-4bd2-b4ff-6b50599a1cf2.jpg?v=1709574876467">
+	<meta property="og:image:secure_url" content="https://bizweb.dktcdn.net/thumb/grande/100/506/650/products/bb2-50gr-nghieng-b2c0e2b67a504163bdc13d7e87992721-03dab23548054dc982811f6da3464f7f-master-50fb7084-c634-4bd2-b4ff-6b50599a1cf2.jpg?v=1709574876467">
+
+	<meta property="og:image" content="https://bizweb.dktcdn.net/thumb/grande/100/506/650/products/tc1-50gr-tai-yen-1a586a3bd9fc46d0bb02fc389da9c5a5-5bc395eae17543e9a557be3320ed56ab-master-f3a52df2-b976-4659-a0f2-71ffcf1f169e.jpg?v=1709574876467">
+	<meta property="og:image:secure_url" content="https://bizweb.dktcdn.net/thumb/grande/100/506/650/products/tc1-50gr-tai-yen-1a586a3bd9fc46d0bb02fc389da9c5a5-5bc395eae17543e9a557be3320ed56ab-master-f3a52df2-b976-4659-a0f2-71ffcf1f169e.jpg?v=1709574876467">
+
 	<meta property="og:price:amount" content="2.900.000">
 	<meta property="og:price:currency" content="VND">
 
-<meta property="og:description" content="Tổ yến tinh chế cho bé Baby 2 là tổ yến đã qua công đoạn tinh tế, bao gồm 100% vụn yến thiên nhiên Nha Trang. Tổ yến tươi nguyên chất, không pha tạp và qua kiểm định nghiêm ngặt theo tiêu chuẩn bộ y tế. Tổ yến nguyên thiên nhiên sau khi tinh chế (nhặt lông, loại bỏ tạp chất, …) sẽ sót lại vụn yến. Vụn yến sau đó được l">
-<meta property="og:url" content="https://localhost:7197/ProductCategory/chi-tiet-san-pham">
-<meta property="og:site_name" content="Koi Farm Shop">
+	<meta property="og:description" content="Tổ yến tinh chế cho bé Baby 2 là tổ yến đã qua công đoạn tinh tế, bao gồm 100% vụn yến thiên nhiên Nha Trang. Tổ yến tươi nguyên chất, không pha tạp và qua kiểm định nghiêm ngặt theo tiêu chuẩn bộ y tế. Tổ yến nguyên thiên nhiên sau khi tinh chế (nhặt lông, loại bỏ tạp chất, …) sẽ sót lại vụn yến. Vụn yến sau đó được l">
+	<meta property="og:url" content="https://localhost:7197/ProductCategory/chi-tiet-san-pham">
+	<meta property="og:site_name" content="Koi Farm Shop">
 	<link rel="preload" as="script" href="~/js/jquery.js" />
 	<script src="~/js/jquery.js" type="text/javascript"></script>
 	<link rel="preload" as="script" href="~/js/swiper.js" />
@@ -104,7 +104,7 @@
 
 
 
-	
+
 	<link href="~/css/product_style.scss.css" rel="stylesheet" type="text/css" media="all" />
 
 	<link href="~/css/quickviews_popup_cart.scss.css" rel="stylesheet" type="text/css" media="all" />
@@ -161,234 +161,231 @@
 
 
 
-		
-		<script>var ProductReviewsAppUtil=ProductReviewsAppUtil || {};ProductReviewsAppUtil.store={name: 'Koi Farm Shop'};</script>
-		
 
-		<script>
-			document.addEventListener('DOMContentLoaded', function () {
-				awe_lazyloadImage();
+	<script>var ProductReviewsAppUtil = ProductReviewsAppUtil || {}; ProductReviewsAppUtil.store = { name: 'Koi Farm Shop' };</script>
 
-				/*Header promotion*/
-				
-				var index = 0,
-					stop = false,
-					num = document.querySelectorAll('.js-promo > li').length,
-					liEls = document.querySelectorAll('.js-promo > li');
 
-				function shippingflipInX() {
-					if (stop) return false;
-					if (index > (num - 2)) {
-						liEls.forEach(function (el) {
-							el.classList.add('see-none');
-							el.classList.remove('animated', 'flipInX', 'see-block');
-						});
-						index = 0;
-						liEls[0].classList.add('animated', 'flipInX', 'see-block');
-						liEls[0].classList.remove('see-none');
-						return;
-					}
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			awe_lazyloadImage();
 
+			/*Header promotion*/
+
+			var index = 0,
+				stop = false,
+				num = document.querySelectorAll('.js-promo > li').length,
+				liEls = document.querySelectorAll('.js-promo > li');
+
+			function shippingflipInX() {
+				if (stop) return false;
+				if (index > (num - 2)) {
 					liEls.forEach(function (el) {
 						el.classList.add('see-none');
 						el.classList.remove('animated', 'flipInX', 'see-block');
 					});
-					liEls[index + 1].classList.remove('see-none');
-					liEls[index + 1].classList.add('animated', 'flipInX', 'see-block');
-					index++;
+					index = 0;
+					liEls[0].classList.add('animated', 'flipInX', 'see-block');
+					liEls[0].classList.remove('see-none');
+					return;
 				}
 
-				var hdtimer = setInterval(function () {
-					shippingflipInX();
-				}, 5000);
-
-				document.querySelector('.js-promo').addEventListener('mouseenter', function () {
-					stop = true;
+				liEls.forEach(function (el) {
+					el.classList.add('see-none');
+					el.classList.remove('animated', 'flipInX', 'see-block');
 				});
+				liEls[index + 1].classList.remove('see-none');
+				liEls[index + 1].classList.add('animated', 'flipInX', 'see-block');
+				index++;
+			}
 
-				document.querySelector('.js-promo').addEventListener('mouseleave', function () {
-					stop = false;
-				});
-				
-				
-				function getItemSearch(name, smartjson) {
-					return fetch(`https://${window.location.hostname}/search?q=${name}&view=${smartjson}&type=product`)
-						.then(res => res.json())
-						.catch(err => console.error(err));
-				}
+			var hdtimer = setInterval(function () {
+				shippingflipInX();
+			}, 5000);
 
-				var searchRecent = document.querySelector('.search-suggest .search-recent');
-				var searchRecentList = localStorage.getItem('search_recent_list');
-				var recentList = searchRecentList ? JSON.parse(searchRecentList) : [];
+			document.querySelector('.js-promo').addEventListener('mouseenter', function () {
+				stop = true;
+			});
 
-				if (recentList.length > 0) {
-					searchRecent.classList.remove('d-none');
-					var searchList = searchRecent.querySelector('.search-list');
-					recentList.forEach(function (item) {
-						var link = document.createElement('a');
-						link.href = `/search?query=${encodeURIComponent(item)}&type=product`;
-						link.textContent = item;
-						link.title = `Tìm kiếm ${item}`;
-						link.classList.add('search-item');
+			document.querySelector('.js-promo').addEventListener('mouseleave', function () {
+				stop = false;
+			});
 
-						var closeSpan = document.createElement('span');
-						closeSpan.textContent = 'Đóng';
-						closeSpan.title = 'Đóng';
-						closeSpan.classList.add('close');
 
-						closeSpan.addEventListener('click', function (e) {
-							e.preventDefault();
-							e.stopPropagation();
-							var index = recentList.indexOf(item);
-							if (index !== -1) {
-								recentList.splice(index, 1);
-								localStorage.setItem('search_recent_list', JSON.stringify(recentList));
-								searchList.removeChild(link);
-								if (recentList.length == 0) {
-									searchRecent.classList.toggle('d-none');
-								}
+			function getItemSearch(name, smartjson) {
+				return fetch(`https://${window.location.hostname}/search?q=${name}&view=${smartjson}&type=product`)
+					.then(res => res.json())
+					.catch(err => console.error(err));
+			}
+
+			var searchRecent = document.querySelector('.search-suggest .search-recent');
+			var searchRecentList = localStorage.getItem('search_recent_list');
+			var recentList = searchRecentList ? JSON.parse(searchRecentList) : [];
+
+			if (recentList.length > 0) {
+				searchRecent.classList.remove('d-none');
+				var searchList = searchRecent.querySelector('.search-list');
+				recentList.forEach(function (item) {
+					var link = document.createElement('a');
+					link.href = `/search?query=${encodeURIComponent(item)}&type=product`;
+					link.textContent = item;
+					link.title = `Tìm kiếm ${item}`;
+					link.classList.add('search-item');
+
+					var closeSpan = document.createElement('span');
+					closeSpan.textContent = 'Đóng';
+					closeSpan.title = 'Đóng';
+					closeSpan.classList.add('close');
+
+					closeSpan.addEventListener('click', function (e) {
+						e.preventDefault();
+						e.stopPropagation();
+						var index = recentList.indexOf(item);
+						if (index !== -1) {
+							recentList.splice(index, 1);
+							localStorage.setItem('search_recent_list', JSON.stringify(recentList));
+							searchList.removeChild(link);
+							if (recentList.length == 0) {
+								searchRecent.classList.toggle('d-none');
 							}
-						});
-
-						link.appendChild(closeSpan);
-						searchList.appendChild(link);
-					});
-				}
-
-				var searchInput = document.querySelectorAll('.header_tim_kiem input[type="text"], .search-mobile input[type="text"]');
-				searchInput.forEach(function (input) {
-					input.addEventListener('keyup', function (e) {
-						let term = this.value.trim();
-						let data = '';
-						var resultbox = '';
-						if (term.length > 1) {
-							searchRecent.classList.add('d-none');
-
-							async function goawaySearch() {
-								data = await getItemSearch(term, 'smartjson');
-								setTimeout(function () {
-									var sizeData = Object.keys(data).length;
-									if (sizeData > 0) {
-										Object.keys(data).forEach(function (key) {
-											if (data[key].compare_price !== 0) {
-												resultbox += `<a class="product-smart" href="${data[key].url}" title="${data[key].name}"><div class="image_thumb"><img width="58" height="58" class="lazyload loaded" src="${data[key].image}" data-src="${data[key].image}" alt="${data[key].name}" data-was-processed="true"></div><div class="product-info"><h3 class="product-name"><span>${data[key].name}</span></h3><div class="price-box"><span class="price">${data[key].price}</span><span class="compare-price">${data[key].compare_price}</span></div></div></a>`;
-											} else {
-												resultbox += `<a class="product-smart" href="${data[key].url}" title="${data[key].name}"><div class="image_thumb"><img width="58" height="58" class="lazyload loaded" src="${data[key].image}" data-src="${data[key].image}" alt="${data[key].name}" data-was-processed="true"></div><div class="product-info"><h3 class="product-name"><span>${data[key].name}</span></h3><div class="price-box"><span class="price">${data[key].price}</span></div></div></a>`;
-											}
-										});
-										resultbox += `<a href="/search?query=${term}&type=product" class="see-all-search" title="Xem tất cả">Xem tất cả kết quả »</a>`;
-										document.querySelector('.list-search').innerHTML = resultbox;
-									} else {
-										document.querySelector('.list-search').innerHTML = '<div class="not-pro">Không có thấy kết quả tìm kiếm</div>';
-									}
-								}, 200);
-							}
-
-							goawaySearch();
-						} else {
-							if (recentList.length > 0) {
-								searchRecent.classList.remove('d-none');
-							}
-							document.querySelector('.list-search').innerHTML = '';
 						}
 					});
+
+					link.appendChild(closeSpan);
+					searchList.appendChild(link);
 				});
-				
-			});
-			function awe_lazyloadImage() {
-				var ll = new LazyLoad({
-					elements_selector: ".lazyload",
-					load_delay: 100,
-					threshold: 0
-				});
-			} window.awe_lazyloadImage=awe_lazyloadImage;
-
-
-		</script>
-	</head>
-	<body>
-		<div class="opacity_menu"></div>
-
-<script>
-	const header = document.querySelector('header.header');
-	let headerHeight = header.offsetHeight;
-	let resizeWindow = window.innerWidth;
-	let offsetStickyHeader = header.offsetHeight;
-	let offsetStickyDown = 0;
-	let resizeTimer;
-
-	const tabLinks = document.querySelectorAll('.tab-link');
-	const tabContents = document.querySelectorAll('.tab-content-mb');
-
-	const handleResize = () => {
-		if (resizeTimer) clearTimeout(resizeTimer);
-
-		resizeTimer = setTimeout(() => {
-			const newWidth = window.innerWidth;
-
-			if (resizeWindow !== newWidth) {
-				header.classList.remove('hSticky');
-				header.style.minHeight = '';
-
-				headerHeight = header.offsetHeight;
-				header.style.minHeight = `${headerHeight}px`;
-
-				resizeWindow = newWidth;
 			}
-		}, 200);
-	};
 
-	const handleScroll = () => {
-		const scrollTop = window.scrollY;
+			var searchInput = document.querySelectorAll('.header_tim_kiem input[type="text"], .search-mobile input[type="text"]');
+			searchInput.forEach(function (input) {
+				input.addEventListener('keyup', function (e) {
+					let term = this.value.trim();
+					let data = '';
+					var resultbox = '';
+					if (term.length > 1) {
+						searchRecent.classList.add('d-none');
 
-		if (scrollTop > offsetStickyHeader && scrollTop > offsetStickyDown) {
-			header.classList.add('hSticky');
-		}
+						async function goawaySearch() {
+							data = await getItemSearch(term, 'smartjson');
+							setTimeout(function () {
+								var sizeData = Object.keys(data).length;
+								if (sizeData > 0) {
+									Object.keys(data).forEach(function (key) {
+										if (data[key].compare_price !== 0) {
+											resultbox += `<a class="product-smart" href="${data[key].url}" title="${data[key].name}"><div class="image_thumb"><img width="58" height="58" class="lazyload loaded" src="${data[key].image}" data-src="${data[key].image}" alt="${data[key].name}" data-was-processed="true"></div><div class="product-info"><h3 class="product-name"><span>${data[key].name}</span></h3><div class="price-box"><span class="price">${data[key].price}</span><span class="compare-price">${data[key].compare_price}</span></div></div></a>`;
+										} else {
+											resultbox += `<a class="product-smart" href="${data[key].url}" title="${data[key].name}"><div class="image_thumb"><img width="58" height="58" class="lazyload loaded" src="${data[key].image}" data-src="${data[key].image}" alt="${data[key].name}" data-was-processed="true"></div><div class="product-info"><h3 class="product-name"><span>${data[key].name}</span></h3><div class="price-box"><span class="price">${data[key].price}</span></div></div></a>`;
+										}
+									});
+									resultbox += `<a href="/search?query=${term}&type=product" class="see-all-search" title="Xem tất cả">Xem tất cả kết quả »</a>`;
+									document.querySelector('.list-search').innerHTML = resultbox;
+								} else {
+									document.querySelector('.list-search').innerHTML = '<div class="not-pro">Không có thấy kết quả tìm kiếm</div>';
+								}
+							}, 200);
+						}
 
-		if (scrollTop <= offsetStickyDown && scrollTop <= offsetStickyHeader) {
-			header.classList.remove('hSticky');
-		}
-
-		offsetStickyDown = scrollTop;
-	};
-
-	const handleTabClick = (tabLink) => {
-		const tabId = tabLink.dataset.tab;
-
-		tabLinks.forEach((link) => link.classList.remove('active'));
-		tabLink.classList.add('active');
-
-		tabContents.forEach((tabContent) => tabContent.classList.remove('active'));
-		document.getElementById(tabId).classList.add('active');
-	};
-
-	const initializeTabs = () => {
-		if (window.innerWidth <= 991) {
-			const tabMenu1 = document.getElementById('tab-menu-1');
-			const tabLinkMenu1 = document.querySelector('.tab-link[data-tab="tab-menu-1"]');
-
-			tabMenu1.classList.add('active');
-			tabLinkMenu1.classList.add('active');
-
-			tabLinks.forEach((tabLink) => {
-				tabLink.addEventListener('click', () => handleTabClick(tabLink));
+						goawaySearch();
+					} else {
+						if (recentList.length > 0) {
+							searchRecent.classList.remove('d-none');
+						}
+						document.querySelector('.list-search').innerHTML = '';
+					}
+				});
 			});
-		}
-	};
 
-	window.addEventListener('resize', handleResize);
-	window.addEventListener('scroll', handleScroll);
-
-	tabLinks.forEach((tabLink) => {
-		tabLink.addEventListener('click', () => handleTabClick(tabLink));
-	});
-
-	document.addEventListener('DOMContentLoaded', initializeTabs);
-</script>
-		<div class="bodywrap">
-			
+		});
+		function awe_lazyloadImage() {
+			var ll = new LazyLoad({
+				elements_selector: ".lazyload",
+				load_delay: 100,
+				threshold: 0
+			});
+		} window.awe_lazyloadImage = awe_lazyloadImage;
 
 
+	</script>
+</head>
+<body>
+	<div class="opacity_menu"></div>
+
+	<script>
+		const header = document.querySelector('header.header');
+		let headerHeight = header.offsetHeight;
+		let resizeWindow = window.innerWidth;
+		let offsetStickyHeader = header.offsetHeight;
+		let offsetStickyDown = 0;
+		let resizeTimer;
+
+		const tabLinks = document.querySelectorAll('.tab-link');
+		const tabContents = document.querySelectorAll('.tab-content-mb');
+
+		const handleResize = () => {
+			if (resizeTimer) clearTimeout(resizeTimer);
+
+			resizeTimer = setTimeout(() => {
+				const newWidth = window.innerWidth;
+
+				if (resizeWindow !== newWidth) {
+					header.classList.remove('hSticky');
+					header.style.minHeight = '';
+
+					headerHeight = header.offsetHeight;
+					header.style.minHeight = `${headerHeight}px`;
+
+					resizeWindow = newWidth;
+				}
+			}, 200);
+		};
+
+		const handleScroll = () => {
+			const scrollTop = window.scrollY;
+
+			if (scrollTop > offsetStickyHeader && scrollTop > offsetStickyDown) {
+				header.classList.add('hSticky');
+			}
+
+			if (scrollTop <= offsetStickyDown && scrollTop <= offsetStickyHeader) {
+				header.classList.remove('hSticky');
+			}
+
+			offsetStickyDown = scrollTop;
+		};
+
+		const handleTabClick = (tabLink) => {
+			const tabId = tabLink.dataset.tab;
+
+			tabLinks.forEach((link) => link.classList.remove('active'));
+			tabLink.classList.add('active');
+
+			tabContents.forEach((tabContent) => tabContent.classList.remove('active'));
+			document.getElementById(tabId).classList.add('active');
+		};
+
+		const initializeTabs = () => {
+			if (window.innerWidth <= 991) {
+				const tabMenu1 = document.getElementById('tab-menu-1');
+				const tabLinkMenu1 = document.querySelector('.tab-link[data-tab="tab-menu-1"]');
+
+				tabMenu1.classList.add('active');
+				tabLinkMenu1.classList.add('active');
+
+				tabLinks.forEach((tabLink) => {
+					tabLink.addEventListener('click', () => handleTabClick(tabLink));
+				});
+			}
+		};
+
+		window.addEventListener('resize', handleResize);
+		window.addEventListener('scroll', handleScroll);
+
+		tabLinks.forEach((tabLink) => {
+			tabLink.addEventListener('click', () => handleTabClick(tabLink));
+		});
+
+		document.addEventListener('DOMContentLoaded', initializeTabs);
+	</script>
+	<div class="bodywrap">
 
 
 
@@ -399,319 +396,310 @@
 
 
 
-<section class="bread-crumb">
-	<div class="container">
-		<ul class="breadcrumb" >					
-			<li class="home">
-				<a  href="/" title="Trang chủ"><span >Trang chủ</span></a>						
-				<span class="mr_lr">&nbsp;<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-chevron-right fa-w-10"><path fill="currentColor" d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z" class=""></path></svg>&nbsp;</span>
-			</li>
-			
-			
-			<li>
-				<a class="changeurl"  href="/to-yen-tinh-che" title="Tổ yến tinh chế"><span >Tổ yến tinh chế</span></a>						
-				<span class="mr_lr">&nbsp;<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-chevron-right fa-w-10"><path fill="currentColor" d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z" class=""></path></svg>&nbsp;</span>
-			</li>
-			
-			<li><strong><span>Tổ Yến Tinh Chế cho bé BaBy (loại 3)</span></strong><li>
-			
-		</ul>
-	</div>
-</section>   
-<section class="product layout-product" itemscope itemtype="https://schema.org/Product">	
-<meta itemprop="category" content="Tổ yến tinh chế">
-<meta itemprop="url" content="//sudes-nest.mysapo.net/copy-of-to-yen-tinh-che-cho-be-baby-loai-3">
-<meta itemprop="name" content="Tổ Yến Tinh Chế cho bé BaBy (loại 3)">
-<meta itemprop="image" content="http://bizweb.dktcdn.net/thumb/grande/100/506/650/products/bb2-50gr-0-nap-494df53fb54c4233b0ba3c0a8ab3dfbe-97fc1701b8a14297ac03ee1e64edf1b2-master-d488b4d7-4784-48b2-a54a-c7d6343654fa.jpg?v=1709574876467">
-<meta itemprop="description" content="
-Tổ yến tinh chế cho bé baby 2 đã được xử lý làm sạch, phồng, trắng nhưng vẫn giữ nguyên được giá trị dinh dưỡng.
-100% yến sào Khánh Hòa nguyên chất
-Tổ yến chữ AB đã qua chọn lọc, nhà yến 6 năm tuổi, chất lượng cao từ hương vị đến dinh dưỡng.
-Được làm từ những yến vụn không có sợi tự nhiên. Tiết kiệm chi phí hơn.
-Tiện lợi để sử dụng ngay, tiết kiệm thời gian và lượng hao hụt trong quá trình xử lý.
-Món quà tặng đầy cao cấp và giá trị các dịp lễ tết.
+
+
+
+		<section class="bread-crumb">
+			<div class="container">
+				<ul class="breadcrumb">
+					<li class="home">
+						<a href="/" title="Trang chủ"><span>Trang chủ</span></a>
+						<span class="mr_lr">&nbsp;<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-chevron-right fa-w-10"><path fill="currentColor" d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z" class=""></path></svg>&nbsp;</span>
+					</li>
+
+
+					<li>
+						<a class="changeurl" href="/KoiCollections" title="Cá Koi"><span>Cá Koi</span></a>
+						<span class="mr_lr">&nbsp;<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-chevron-right fa-w-10"><path fill="currentColor" d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z" class=""></path></svg>&nbsp;</span>
+					</li>
+
+					<li><strong><span>Onkoi Asagi 2 tuổi 60 cm #Asagi_008</span></strong>
+					<li>
+
+				</ul>
+			</div>
+		</section>
+		<section class="product layout-product" itemscope itemtype="https://schema.org/Product">
+			<meta itemprop="category" content="Cá Koi">
+			<meta itemprop="url" content="//sudes-nest.mysapo.net/copy-of-to-yen-tinh-che-cho-be-baby-loai-3">
+			<meta itemprop="name" content="Onkoi Asagi 2 tuổi 60 cm #Asagi_008">
+			<meta itemprop="image" content="http://bizweb.dktcdn.net/thumb/grande/100/506/650/products/bb2-50gr-0-nap-494df53fb54c4233b0ba3c0a8ab3dfbe-97fc1701b8a14297ac03ee1e64edf1b2-master-d488b4d7-4784-48b2-a54a-c7d6343654fa.jpg?v=1709574876467">
+			<meta itemprop="description" content="
+Em Onkoi Asagi 2 tuổi 60 cm này có thể nói là một trong những em koi vô cùng đặc biệt mà bất cứ dân chơi koi nào cũng nên sở hữu trong hồ.
 ">
-<div class="d-none" itemprop="brand" itemtype="https://schema.org/Brand" itemscope>
-	<meta itemprop="name" content="Koi Farm Shop" />
-</div>
-<meta itemprop="model" content="">
-<div class="d-none hidden" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-	<div class="inventory_quantity hidden" itemscope itemtype="http://schema.org/ItemAvailability">
-		<span class="a-stock" itemprop="supersededBy">
-			Còn hàng
-		</span>
-	</div>
-	<link itemprop="availability" href="http://schema.org/InStock">
-	<meta itemprop="priceCurrency" content="VND">
-	<meta itemprop="price" content="2900000">
-	<meta itemprop="url" content="https://localhost:7197/ProductCategory/chi-tiet-san-pham">
-	<span itemprop="UnitPriceSpecification" itemscope itemtype="https://schema.org/Downpayment">
-		<meta itemprop="priceType" content="2900000">
-	</span>
-	<span itemprop="UnitPriceSpecification" itemscope itemtype="https://schema.org/Downpayment">
-		<meta itemprop="priceSpecification" content="3100000">
-	</span>
-	<meta itemprop="priceValidUntil" content="2099-01-01">
-</div>
-<div class="d-none hidden" id="https://sudes-nest.mysapo.net" itemprop="seller" itemtype="http://schema.org/Organization" itemscope>
-	<meta itemprop="name" content="Koi Farm Shop" />
-	<meta itemprop="url" content="https://sudes-nest.mysapo.net" />
-	<meta itemprop="logo" content="./img/logo.png" />
-</div>
-	<div class="container">
-		<div class="details-product">
-			<div class="bg-shadow margin-bottom-20">
-				<div class="row">
-					<div class="col-lg-6 col-md-12 col-12 product-detail-left product-images">
-						<div class="sticky">
-							<div class="product-image-block relative">
-								
-								<div class="swiper-container gallery-top">
-									<div class="swiper-wrapper" id="lightgallery">
-										
-										<a class="swiper-slide" data-hash="0" href="//bizweb.dktcdn.net/thumb/1024x1024/100/506/650/products/bb2-50gr-0-nap-494df53fb54c4233b0ba3c0a8ab3dfbe-97fc1701b8a14297ac03ee1e64edf1b2-master-d488b4d7-4784-48b2-a54a-c7d6343654fa.jpg?v=1709574876467" title="Click để xem">
-											<img height="370" width="480" src="https://bizweb.dktcdn.net/100/506/650/products/bb2-50gr-0-nap-494df53fb54c4233b0ba3c0a8ab3dfbe-97fc1701b8a14297ac03ee1e64edf1b2-master-d488b4d7-4784-48b2-a54a-c7d6343654fa.jpg?v=1709574876467" alt="Tổ Yến Tinh Chế cho b&#233; BaBy (loại 3)" data-image="https://bizweb.dktcdn.net/100/506/650/products/bb2-50gr-0-nap-494df53fb54c4233b0ba3c0a8ab3dfbe-97fc1701b8a14297ac03ee1e64edf1b2-master-d488b4d7-4784-48b2-a54a-c7d6343654fa.jpg?v=1709574876467" class="img-responsive mx-auto d-block swiper-lazy" />
-										</a>
-										
-										<a class="swiper-slide" data-hash="1" href="//bizweb.dktcdn.net/thumb/1024x1024/100/506/650/products/bb2-50gr-nghieng-b2c0e2b67a504163bdc13d7e87992721-03dab23548054dc982811f6da3464f7f-master-50fb7084-c634-4bd2-b4ff-6b50599a1cf2.jpg?v=1709574876467" title="Click để xem">
-											<img height="370" width="480" src="https://bizweb.dktcdn.net/100/506/650/products/bb2-50gr-nghieng-b2c0e2b67a504163bdc13d7e87992721-03dab23548054dc982811f6da3464f7f-master-50fb7084-c634-4bd2-b4ff-6b50599a1cf2.jpg?v=1709574876467" alt="Tổ Yến Tinh Chế cho b&#233; BaBy (loại 3)" data-image="https://bizweb.dktcdn.net/100/506/650/products/bb2-50gr-nghieng-b2c0e2b67a504163bdc13d7e87992721-03dab23548054dc982811f6da3464f7f-master-50fb7084-c634-4bd2-b4ff-6b50599a1cf2.jpg?v=1709574876467" class="img-responsive mx-auto d-block swiper-lazy" />
-										</a>
-										
-										<a class="swiper-slide" data-hash="2" href="//bizweb.dktcdn.net/thumb/1024x1024/100/506/650/products/tc1-50gr-tai-yen-1a586a3bd9fc46d0bb02fc389da9c5a5-5bc395eae17543e9a557be3320ed56ab-master-f3a52df2-b976-4659-a0f2-71ffcf1f169e.jpg?v=1709574876467" title="Click để xem">
-											<img height="370" width="480" src="https://bizweb.dktcdn.net/100/506/650/products/tc1-50gr-tai-yen-1a586a3bd9fc46d0bb02fc389da9c5a5-5bc395eae17543e9a557be3320ed56ab-master-f3a52df2-b976-4659-a0f2-71ffcf1f169e.jpg?v=1709574876467" alt="Tổ Yến Tinh Chế cho b&#233; BaBy (loại 3)" data-image="https://bizweb.dktcdn.net/100/506/650/products/tc1-50gr-tai-yen-1a586a3bd9fc46d0bb02fc389da9c5a5-5bc395eae17543e9a557be3320ed56ab-master-f3a52df2-b976-4659-a0f2-71ffcf1f169e.jpg?v=1709574876467" class="img-responsive mx-auto d-block swiper-lazy" />
-										</a>
-										
-									</div>
-									
-								</div>
-								
-								<div class="swiper-container gallery-thumbs ">
-									<div class="swiper-wrapper">
-										
-										<div class="swiper-slide" data-hash="0">
-											<div class="p-100">
-												<img height="80" width="80" src="//bizweb.dktcdn.net/thumb/medium/100/506/650/products/bb2-50gr-0-nap-494df53fb54c4233b0ba3c0a8ab3dfbe-97fc1701b8a14297ac03ee1e64edf1b2-master-d488b4d7-4784-48b2-a54a-c7d6343654fa.jpg?v=1709574876467" alt="Tổ Yến Tinh Chế cho b&#233; BaBy (loại 3)" data-image="//bizweb.dktcdn.net/thumb/medium/100/506/650/products/bb2-50gr-0-nap-494df53fb54c4233b0ba3c0a8ab3dfbe-97fc1701b8a14297ac03ee1e64edf1b2-master-d488b4d7-4784-48b2-a54a-c7d6343654fa.jpg?v=1709574876467" class="swiper-lazy" />
-											</div>	
-										</div>
-										
-										<div class="swiper-slide" data-hash="1">
-											<div class="p-100">
-												<img height="80" width="80" src="//bizweb.dktcdn.net/thumb/medium/100/506/650/products/bb2-50gr-nghieng-b2c0e2b67a504163bdc13d7e87992721-03dab23548054dc982811f6da3464f7f-master-50fb7084-c634-4bd2-b4ff-6b50599a1cf2.jpg?v=1709574876467" alt="Tổ Yến Tinh Chế cho b&#233; BaBy (loại 3)" data-image="//bizweb.dktcdn.net/thumb/medium/100/506/650/products/bb2-50gr-nghieng-b2c0e2b67a504163bdc13d7e87992721-03dab23548054dc982811f6da3464f7f-master-50fb7084-c634-4bd2-b4ff-6b50599a1cf2.jpg?v=1709574876467" class="swiper-lazy" />
-											</div>	
-										</div>
-										
-										<div class="swiper-slide" data-hash="2">
-											<div class="p-100">
-												<img height="80" width="80" src="//bizweb.dktcdn.net/thumb/medium/100/506/650/products/tc1-50gr-tai-yen-1a586a3bd9fc46d0bb02fc389da9c5a5-5bc395eae17543e9a557be3320ed56ab-master-f3a52df2-b976-4659-a0f2-71ffcf1f169e.jpg?v=1709574876467" alt="Tổ Yến Tinh Chế cho b&#233; BaBy (loại 3)" data-image="//bizweb.dktcdn.net/thumb/medium/100/506/650/products/tc1-50gr-tai-yen-1a586a3bd9fc46d0bb02fc389da9c5a5-5bc395eae17543e9a557be3320ed56ab-master-f3a52df2-b976-4659-a0f2-71ffcf1f169e.jpg?v=1709574876467" class="swiper-lazy" />
-											</div>	
-										</div>
-										
-									</div>
-									<div class="swiper-button-next">
-									</div>
-									<div class="swiper-button-prev">
-									</div>
-								</div>
-								
-								
-							</div>
-						</div>
+			<div class="d-none" itemprop="brand" itemtype="https://schema.org/Brand" itemscope>
+				<meta itemprop="name" content="Koi Farm Shop" />
+			</div>
+			<meta itemprop="model" content="">
+			<div class="d-none hidden" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+				<div class="inventory_quantity hidden" itemscope itemtype="http://schema.org/ItemAvailability">
+					<span class="a-stock" itemprop="supersededBy">
+						Còn hàng
+					</span>
+				</div>
+				<link itemprop="availability" href="http://schema.org/InStock">
+				<meta itemprop="priceCurrency" content="VND">
+				<meta itemprop="price" content="2900000">
+				<meta itemprop="url" content="https://localhost:7197/ProductCategory/chi-tiet-san-pham">
+				<span itemprop="UnitPriceSpecification" itemscope itemtype="https://schema.org/Downpayment">
+					<meta itemprop="priceType" content="2900000">
+				</span>
+				<span itemprop="UnitPriceSpecification" itemscope itemtype="https://schema.org/Downpayment">
+					<meta itemprop="priceSpecification" content="3100000">
+				</span>
+				<meta itemprop="priceValidUntil" content="2099-01-01">
+			</div>
+			<div class="d-none hidden" id="https://sudes-nest.mysapo.net" itemprop="seller" itemtype="http://schema.org/Organization" itemscope>
+				<meta itemprop="name" content="Koi Farm Shop" />
+				<meta itemprop="url" content="https://sudes-nest.mysapo.net" />
+				<meta itemprop="logo" content="./img/logo.png" />
+			</div>
+			<div class="container">
+				<div class="details-product">
+					<div class="bg-shadow margin-bottom-20">
+						<div class="row">
+							<div class="col-lg-6 col-md-12 col-12 product-detail-left product-images">
+								<div class="sticky">
+									<div class="product-image-block relative">
 
-					</div>
-					<div class="col-lg-6 col-md-12 col-12 details-pro">
-						<h1 class="title-product">Tổ Yến Tinh Chế cho b&#233; BaBy (loại 3)</h1>
-						<div class="product-top clearfix">
-							
-							<div class="sku-product clearfix">
-								<span class="d-none" itemprop="brand" itemtype="http://schema.org/Brand" itemscope><meta itemprop="name" content="Koi Farm Shop" />Thương hiệu: <strong>Koi Farm Shop</strong></span>
-								<span class="variant-sku" itemprop="sku" content="Đang cập nhật">Mã: <span class="a-sku">Đang cập nhật</span></span>
-								<br>
-								<span class="d-none"  itemprop="type" itemtype="http://schema.org/Type" itemscope><meta itemprop="name" content="Đang cập nhật" />Chất liệu: <strong>Đang cập nhật</strong></span>
-							</div>
-							
-							<div class="product-review" onclick="scrollToxx();">
-								<div class="sapo-product-reviews-badge " data-id="34775949" >
-								</div> 
-								
-							</div>
-							
-						</div>
-						<div class="inventory_quantity">
-							<span class="mb-break">
-								<span class="stock-brand-title">Thương hiệu:</span>
-								<span class="a-vendor">
-									
-									Koi Farm Shop
-									
-								</span>
-							</span>
-							<span class="line">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
-							<span class="mb-break">
-								<span class="stock-brand-title">Tình trạng:</span>
-								
-								
-								<span class="a-stock">
-									Còn hàng
-								</span>
-								
-								
-							</span>
-						</div>
-						<form enctype="multipart/form-data" data-cart-form id="add-to-cart-form" action="/cart/add" method="post" class="form-inline">
-							
-							<div class="product-summary">
-								<div class="rte">
-									<ul>
-<li><span><b>Tổ yến tinh chế cho bé baby 2</b> đã được xử lý làm sạch, phồng, trắng nhưng vẫn giữ nguyên được giá trị dinh dưỡng.</span></li>
-<li><span><b>100% yến sào Khánh Hòa nguyên chất</b></span></li>
-<li><span>Tổ yến chữ <b>AB</b> đã qua chọn lọc, nhà yến <b>6</b> năm tuổi, chất lượng cao từ hương vị đến dinh dưỡng.</span></li>
-<li><span><b>Được làm từ những yến vụn không có sợi tự nhiên. Tiết kiệm chi phí hơn.</b></span></li>
-<li><span>Tiện lợi để sử dụng ngay, tiết kiệm thời gian và lượng hao hụt trong quá trình xử lý.</span></li>
-<li><span>Món quà tặng đầy cao cấp và giá trị các dịp lễ tết.</span></li>
-</ul>
-								</div>
-							</div>
-							
-							<div class="price-box clearfix">
-								
-								<span class="special-price">
-									<span class="price product-price">2.900.000₫</span>
-									<meta itemprop="price" content="2900000">
-									<meta itemprop="priceCurrency" content="VND">
-								</span> <!-- Giá Khuyến mại -->
-								<span class="old-price" itemprop="priceSpecification" itemscope="" itemtype="http://schema.org/priceSpecification">
-									<del class="price product-price-old">
-										3.100.000₫
-									</del>
-									<meta itemprop="price" content="3100000">
-									<meta itemprop="priceCurrency" content="VND">
-								</span> <!-- Giás gốc -->
+										<div class="swiper-container gallery-top">
+											<div class="swiper-wrapper" id="lightgallery">
 
-								
-								
-								<span class="sale-off">-  
-6% 
-</span>
-								
-							</div>
+												<a class="swiper-slide" data-hash="0" href="~/img/ca-asagi-1.png" title="Click để xem">
+													<img height="500" width="610" src="~/img/ca-asagi-1.png" alt="Onkoi Asagi 2 tuổi 60 cm #Asagi_008" data-image="~/img/ca-asagi-1.png" class="img-responsive mx-auto d-block swiper-lazy" />
+												</a>
 
-							
-							<div class="form-product">
-								
-								<div class="box-variant clearfix  d-none ">
-									
-									<input type="hidden" id="one_variant" name="variantId" value="111118886" />
-									
-								</div>
-								
-								
-								
-								<div class="boz-form ">
-									<div class="flex-quantity">
-										<div class="custom custom-btn-number show">
-											<span>Số lượng: </span>
-											<div class="input_number_product">									
-												<button class="btn_num num_1 button button_qty" onClick="var result = document.getElementById('qtym'); var qtypro = result.value; if( !isNaN( qtypro ) &amp;&amp; qtypro &gt; 1 ) result.value--;return false;" type="button">-</button>
-												<input type="text" id="qtym" name="quantity" value="1" maxlength="3" class="form-control prd_quantity" onkeypress="if ( isNaN(this.value + String.fromCharCode(event.keyCode) )) return false;" onchange="if(this.value == 0)this.value=1;">
-												<button class="btn_num num_2 button button_qty" onClick="var result = document.getElementById('qtym'); var qtypro = result.value; if( !isNaN( qtypro )) result.value++;return false;" type="button"><span>+</span></button>
+												<a class="swiper-slide" data-hash="1" href="~/img/ca-asagi-1.png" title="Click để xem">
+												<img height="500" width="610" src="~/img/ca-asagi-1.png" alt="Onkoi Asagi 2 tuổi 60 cm #Asagi_008" data-image="~/img/ca-asagi-1.png" class="img-responsive mx-auto d-block swiper-lazy" />
+												</a>
+
+												<a class="swiper-slide" data-hash="1" href="~/img/ca-asagi-1.png" title="Click để xem">
+												<img height="500" width="610" src="~/img/ca-asagi-1.png" alt="Onkoi Asagi 2 tuổi 60 cm #Asagi_008" data-image="~/img/ca-asagi-1.png" class="img-responsive mx-auto d-block swiper-lazy" />
+												</a>
+
+											</div>
+
+										</div>
+
+										<div class="swiper-container gallery-thumbs ">
+											<div class="swiper-wrapper">
+
+												<div class="swiper-slide" data-hash="0">
+													<div class="p-100">
+														<img height="80" width="80" src="~/img/ca-asagi-1.png" alt="Onkoi Asagi 2 tuổi 60 cm #Asagi_008" data-image="~/img/ca-asagi-1.png" class="swiper-lazy" />
+													</div>
+												</div>
+
+												<div class="swiper-slide" data-hash="1">
+													<div class="p-100">
+														<img height="80" width="80" src="~/img/ca-asagi-1.png" alt="Onkoi Asagi 2 tuổi 60 cm #Asagi_008" data-image="~/img/ca-asagi-1.png" class="swiper-lazy" />
+													</div>
+												</div>
+
+												<div class="swiper-slide" data-hash="2">
+													<div class="p-100">
+														<img height="80" width="80" src="~/img/ca-asagi-1.png" alt="Onkoi Asagi 2 tuổi 60 cm #Asagi_008" data-image="~/img/ca-asagi-1.png" class="swiper-lazy" />
+													</div>
+												</div>
+
+											</div>
+											<div class="swiper-button-next">
+											</div>
+											<div class="swiper-button-prev">
 											</div>
 										</div>
-										<div class="btn-mua button_actions clearfix">
-												
-											<button class="btn-buyNow btn btn-primary">
-												<span class="txt-main">Mua ngay</span>
-											</button>
-											<button type="submit" class="btn btn_base normal_button btn_add_cart add_to_cart btn-cart btn-extent">
-												<span class="txt-main">Thêm vào giỏ</span>
-											</button>
-											
-										</div>
+
+
 									</div>
 								</div>
+
 							</div>
-						</form>
-						<div class="bottom-product">
-							
-							<ul class="social-media" role="list">
-								<li class="title">
-									<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-share" viewBox="0 0 16 16">
-										<path d="M13.5 1a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5m-8.5 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3m11 5.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3"/>
-									</svg>
-									Chia sẻ
-								</li>
-								<li class="social-media__item social-media__item--facebook">
-									<a title="Chia sẻ lên Facebook" href="https://www.facebook.com/sharer.php?u=https://localhost:7197/ProductCategory/chi-tiet-san-pham" target="_blank" rel="noopener" aria-label="Chia sẻ lên Facebook" >
-										<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-											 viewBox="0 0 155.139 155.139" style="enable-background:new 0 0 155.139 155.139;" xml:space="preserve">
-											<g>
+							<div class="col-lg-6 col-md-12 col-12 details-pro">
+								<h1 class="title-product">Onkoi Asagi 2 tuổi 60 cm #Asagi_008</h1>
+								<div class="product-top clearfix">
+
+									<div class="sku-product clearfix">
+										<span class="d-none" itemprop="brand" itemtype="http://schema.org/Brand" itemscope><meta itemprop="name" content="Koi Farm Shop" />Thương hiệu: <strong>Koi Farm Shop</strong></span>
+										<span class="variant-sku" itemprop="sku" content="Đang cập nhật">Mã: <span class="a-sku">Đang cập nhật</span></span>
+										<br>
+										<span class="d-none" itemprop="type" itemtype="http://schema.org/Type" itemscope><meta itemprop="name" content="Đang cập nhật" />Chất liệu: <strong>Đang cập nhật</strong></span>
+									</div>
+
+									<div class="product-review" onclick="scrollToxx();">
+										<div class="sapo-product-reviews-badge " data-id="34775949">
+										</div>
+
+									</div>
+
+								</div>
+								<div class="inventory_quantity">
+									<span class="mb-break">
+										<span class="stock-brand-title">Thương hiệu:</span>
+										<span class="a-vendor">
+
+											Koi Farm Shop
+
+										</span>
+									</span>
+									<span class="line">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+									<span class="mb-break">
+										<span class="stock-brand-title">Tình trạng:</span>
+
+
+										<span class="a-stock">
+											Còn hàng
+										</span>
+
+
+									</span>
+								</div>
+								<form enctype="multipart/form-data" data-cart-form id="add-to-cart-form" action="/cart/add" method="post" class="form-inline">
+
+									<div class="product-summary">
+										<div class="rte">
+											<ul>
+												<li><span><b>Cá Onkoi Asagi 2 tuổi</b> với kích thước 60 cm, có màu sắc đặc trưng của giống cá Onkoi Asagi, với phần lưng xanh dương mờ và bụng trắng sáng, tạo nên sự tương phản tuyệt đẹp. Đây là một giống cá nổi bật trong các hồ cá cảnh cao cấp.</span></li>
+												<li><span><b>Cá Onkoi Asagi 2 tuổi</b> có sự phát triển ổn định, kích thước lớn, với tỷ lệ cơ thể mạnh mẽ và khỏe mạnh. Đây là thời điểm lý tưởng để quan sát sự trưởng thành của cá.</span></li>
+												<li><span>Với tuổi đời 2 năm, cá Onkoi Asagi này đã đạt đến mức trưởng thành về hình dáng và sức khỏe, phù hợp với những người yêu thích cá cảnh chất lượng cao.</span></li>
+												<li><span>Với kích thước 60 cm, cá Onkoi Asagi 2 tuổi này sẽ trở thành điểm nhấn nổi bật trong bất kỳ hồ cá nào, tạo nên vẻ đẹp tuyệt vời và sự sang trọng cho không gian nuôi dưỡng.</span></li>
+											</ul>
+										</div>
+									</div>
+
+									<div class="price-box clearfix">
+
+										<span class="special-price">
+											<span class="price product-price">2.900.000₫</span>
+											<meta itemprop="price" content="2900000">
+											<meta itemprop="priceCurrency" content="VND">
+										</span> <!-- Giá Khuyến mại -->
+										<span class="old-price" itemprop="priceSpecification" itemscope="" itemtype="http://schema.org/priceSpecification">
+											<del class="price product-price-old">
+												3.100.000₫
+											</del>
+											<meta itemprop="price" content="3100000">
+											<meta itemprop="priceCurrency" content="VND">
+										</span> <!-- Giás gốc -->
+
+
+
+										<span class="sale-off">
+											-
+											6%
+										</span>
+
+									</div>
+
+
+									<div class="form-product">
+
+										<div class="box-variant clearfix  d-none ">
+
+											<input type="hidden" id="one_variant" name="variantId" value="111118886" />
+
+										</div>
+
+
+
+										<div class="boz-form ">
+											<div class="flex-quantity">
+												
+												<div class="btn-mua button_actions clearfix">
+
+													<button class="btn-buyNow btn btn-primary">
+														<span class="txt-main">Mua ngay</span>
+													</button>
+													<button type="submit" class="btn btn_base normal_button btn_add_cart add_to_cart btn-cart btn-extent">
+														<span class="txt-main">Thêm vào giỏ</span>
+													</button>
+
+												</div>
+											</div>
+										</div>
+									</div>
+								</form>
+								<div class="bottom-product">
+
+									<ul class="social-media" role="list">
+										<li class="title">
+											<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-share" viewBox="0 0 16 16">
+												<path d="M13.5 1a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5m-8.5 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3m11 5.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3" />
+											</svg>
+											Chia sẻ
+										</li>
+										<li class="social-media__item social-media__item--facebook">
+											<a title="Chia sẻ lên Facebook" href="https://www.facebook.com/sharer.php?u=https://localhost:7197/ProductCategory/chi-tiet-san-pham" target="_blank" rel="noopener" aria-label="Chia sẻ lên Facebook">
+												<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+													 viewBox="0 0 155.139 155.139" style="enable-background:new 0 0 155.139 155.139;" xml:space="preserve">
+												<g>
 												<path id="f_1_" style="fill:#010002;" d="M89.584,155.139V84.378h23.742l3.562-27.585H89.584V39.184
 																						 c0-7.984,2.208-13.425,13.67-13.425l14.595-0.006V1.08C115.325,0.752,106.661,0,96.577,0C75.52,0,61.104,12.853,61.104,36.452
-																						 v20.341H37.29v27.585h23.814v70.761H89.584z"/>
+																						 v20.341H37.29v27.585h23.814v70.761H89.584z" />
 											</g>
 										</svg>
-									</a>
-								</li>
-								<li class="social-media__item social-media__item--pinterest">
-									<a title="Chia sẻ lên Pinterest" href="https://pinterest.com/pin/create/button/?url=https://localhost:7197/ProductCategory/chi-tiet-san-pham&amp;" target="_blank" rel="noopener" aria-label="Pinterest" >
-										<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-											 viewBox="0 0 511.977 511.977" style="enable-background:new 0 0 511.977 511.977;" xml:space="preserve">
-											<g>
+											</a>
+										</li>
+										<li class="social-media__item social-media__item--pinterest">
+											<a title="Chia sẻ lên Pinterest" href="https://pinterest.com/pin/create/button/?url=https://localhost:7197/ProductCategory/chi-tiet-san-pham&amp;" target="_blank" rel="noopener" aria-label="Pinterest">
+												<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+													 viewBox="0 0 511.977 511.977" style="enable-background:new 0 0 511.977 511.977;" xml:space="preserve">
 												<g>
-													<path d="M262.948,0C122.628,0,48.004,89.92,48.004,187.968c0,45.472,25.408,102.176,66.08,120.16
+												<g>
+												<path d="M262.948,0C122.628,0,48.004,89.92,48.004,187.968c0,45.472,25.408,102.176,66.08,120.16
 															 c6.176,2.784,9.536,1.6,10.912-4.128c1.216-4.352,6.56-25.312,9.152-35.2c0.8-3.168,0.384-5.92-2.176-8.896
 															 c-13.504-15.616-24.224-44.064-24.224-70.752c0-68.384,54.368-134.784,146.88-134.784c80,0,135.968,51.968,135.968,126.304
 															 c0,84-44.448,142.112-102.208,142.112c-31.968,0-55.776-25.088-48.224-56.128c9.12-36.96,27.008-76.704,27.008-103.36
 															 c0-23.904-13.504-43.68-41.088-43.68c-32.544,0-58.944,32.224-58.944,75.488c0,27.488,9.728,46.048,9.728,46.048
 															 S144.676,371.2,138.692,395.488c-10.112,41.12,1.376,107.712,2.368,113.44c0.608,3.168,4.16,4.16,6.144,1.568
 															 c3.168-4.16,42.08-59.68,52.992-99.808c3.968-14.624,20.256-73.92,20.256-73.92c10.72,19.36,41.664,35.584,74.624,35.584
-															 c98.048,0,168.896-86.176,168.896-193.12C463.62,76.704,375.876,0,262.948,0z"/>
+															 c98.048,0,168.896-86.176,168.896-193.12C463.62,76.704,375.876,0,262.948,0z" />
 												</g>
 											</g>
 										</svg>
-									</a>
-								</li>
-								<li class="social-media__item social-media__item--twitter">
-									<a title="Chia sẻ lên Twitter" href="https://twitter.com/share?url=https://localhost:7197/ProductCategory/chi-tiet-san-pham" target="_blank" rel="noopener" aria-label="Tweet on Twitter" >
-										<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-											 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-											<g>
+											</a>
+										</li>
+										<li class="social-media__item social-media__item--twitter">
+											<a title="Chia sẻ lên Twitter" href="https://twitter.com/share?url=https://localhost:7197/ProductCategory/chi-tiet-san-pham" target="_blank" rel="noopener" aria-label="Tweet on Twitter">
+												<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+													 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
 												<g>
-													<path d="M512,97.248c-19.04,8.352-39.328,13.888-60.48,16.576c21.76-12.992,38.368-33.408,46.176-58.016
+												<g>
+												<path d="M512,97.248c-19.04,8.352-39.328,13.888-60.48,16.576c21.76-12.992,38.368-33.408,46.176-58.016
 															 c-20.288,12.096-42.688,20.64-66.56,25.408C411.872,60.704,384.416,48,354.464,48c-58.112,0-104.896,47.168-104.896,104.992
 															 c0,8.32,0.704,16.32,2.432,23.936c-87.264-4.256-164.48-46.08-216.352-109.792c-9.056,15.712-14.368,33.696-14.368,53.056
 															 c0,36.352,18.72,68.576,46.624,87.232c-16.864-0.32-33.408-5.216-47.424-12.928c0,0.32,0,0.736,0,1.152
 															 c0,51.008,36.384,93.376,84.096,103.136c-8.544,2.336-17.856,3.456-27.52,3.456c-6.72,0-13.504-0.384-19.872-1.792
 															 c13.6,41.568,52.192,72.128,98.08,73.12c-35.712,27.936-81.056,44.768-130.144,44.768c-8.608,0-16.864-0.384-25.12-1.44
 															 C46.496,446.88,101.6,464,161.024,464c193.152,0,298.752-160,298.752-298.688c0-4.64-0.16-9.12-0.384-13.568
-															 C480.224,136.96,497.728,118.496,512,97.248z"/>
+															 C480.224,136.96,497.728,118.496,512,97.248z" />
 												</g>
 											</g>
 										</svg>
-									</a>
-								</li>
-							</ul>
-							
-							
-							<div class="line"></div>
-							
-							
-							<div class="product-wish">
-								<a href="javascript:void(0)" class="setWishlist btn-views" data-wish="copy-of-to-yen-tinh-che-cho-be-baby-loai-3" tabindex="0" title="Thêm vào yêu thích">
-									<img width="25" height="25" src="//bizweb.dktcdn.net/100/506/650/themes/944598/assets/heart.png?1728460505311" alt="Thêm vào yêu thích"/> 
-									Thêm vào yêu thích
-								</a>
-							</div>
-							
-						</div>
-					</div> 
+											</a>
+										</li>
+									</ul>
 
-				</div>
-			</div>
-			<div class="row">
-				
-				<div class="col-12 product-coupons margin-bottom-20">
-					<div class="bg-shadow">
-						<div class="title">Khuyến mãi dành cho bạn</div>
+
+									<div class="line"></div>
+
+
+									<div class="product-wish">
+										<a href="javascript:void(0)" class="setWishlist btn-views" data-wish="copy-of-to-yen-tinh-che-cho-be-baby-loai-3" tabindex="0" title="Thêm vào yêu thích">
+											<img width="25" height="25" src="//bizweb.dktcdn.net/100/506/650/themes/944598/assets/heart.png?1728460505311" alt="Thêm vào yêu thích" />
+											Thêm vào yêu thích
+										</a>
+									</div>
+
+								</div>
+							</div>
+
+						</div>
+					</div>
+					<div class="row">
+
+						<div class="col-12 product-coupons margin-bottom-20">
+							<div class="bg-shadow">
+								<div class="title">Khuyến mãi dành cho bạn</div>
 								<div class="swiper_coupons swiper-container">
 									<div class="swiper-wrapper">
 
@@ -837,1074 +825,872 @@ Không đi kèm với chương trình khác">
 										</svg>
 									</div>
 								</div>
-					</div>
-				</div>
-				<div class="popup-coupon">
-					<div class="content">
-						<div class="title">
-							Thông tin voucher
+							</div>
 						</div>
-						<div class="close-popup-coupon" title="Đóng" >
-							<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 512.001 512.001" style="enable-background:new 0 0 512.001 512.001;" xml:space="preserve"> <g> <g> <path d="M284.286,256.002L506.143,34.144c7.811-7.811,7.811-20.475,0-28.285c-7.811-7.81-20.475-7.811-28.285,0L256,227.717    L34.143,5.859c-7.811-7.811-20.475-7.811-28.285,0c-7.81,7.811-7.811,20.475,0,28.285l221.857,221.857L5.858,477.859    c-7.811,7.811-7.811,20.475,0,28.285c3.905,3.905,9.024,5.857,14.143,5.857c5.119,0,10.237-1.952,14.143-5.857L256,284.287    l221.857,221.857c3.905,3.905,9.024,5.857,14.143,5.857s10.237-1.952,14.143-5.857c7.811-7.811,7.811-20.475,0-28.285    L284.286,256.002z"></path> </g> </g> </svg>		
+						<div class="popup-coupon">
+							<div class="content">
+								<div class="title">
+									Thông tin voucher
+								</div>
+								<div class="close-popup-coupon" title="Đóng">
+									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 512.001 512.001" style="enable-background:new 0 0 512.001 512.001;" xml:space="preserve"> <g> <g> <path d="M284.286,256.002L506.143,34.144c7.811-7.811,7.811-20.475,0-28.285c-7.811-7.81-20.475-7.811-28.285,0L256,227.717    L34.143,5.859c-7.811-7.811-20.475-7.811-28.285,0c-7.81,7.811-7.811,20.475,0,28.285l221.857,221.857L5.858,477.859    c-7.811,7.811-7.811,20.475,0,28.285c3.905,3.905,9.024,5.857,14.143,5.857c5.119,0,10.237-1.952,14.143-5.857L256,284.287    l221.857,221.857c3.905,3.905,9.024,5.857,14.143,5.857s10.237-1.952,14.143-5.857c7.811-7.811,7.811-20.475,0-28.285    L284.286,256.002z"></path> </g> </g> </svg>
+								</div>
+								<ul>
+									<li>
+										<span>Mã giảm giá:</span>
+										<span class="code"></span>
+									</li>
+									<li>
+										<span>Ngày hết hạn:</span>
+										<span class="time"></span>
+									</li>
+									<li>
+										<span>Điều kiện:</span>
+										<span class="dieukien">
+										</span>
+									</li>
+								</ul>
+							</div>
 						</div>
-						<ul> 
-							<li>
-								<span>Mã giảm giá:</span>
-								<span class="code"></span>
-							</li>
-							<li>
-								<span>Ngày hết hạn:</span>
-								<span class="time"></span>
-							</li>
-							<li>
-								<span>Điều kiện:</span>
-								<span class="dieukien">
-								</span>
-							</li>
-						</ul>
-					</div>
-				</div>
-				<script>
-					var swiper_coupons = null;
-					function initSwiperCoupons() {
-						swiper_coupons = new Swiper('.swiper_coupons', {
-							slidesPerView: 4,
-							spaceBetween: 16,
-							watchOverflow: true,
-							slidesPerGroup: 1,
-							navigation: {
-								nextEl: '.swiper_coupons .swiper-button-next',
-								prevEl: '.swiper_coupons .swiper-button-prev',
-							},
-							breakpoints: {
-								640: {
-									slidesPerView: 2,
-									spaceBetween: 14
-								},
-								768: {
-									slidesPerView: 2.3,
-									spaceBetween: 14
-								},
-								992: {
-									slidesPerView: 2.3,
-									spaceBetween: 16
-								},
-								1024: {
-									slidesPerView: 3,
-									spaceBetween: 16
-								},
-								1200: {
+						<script>
+							var swiper_coupons = null;
+							function initSwiperCoupons() {
+								swiper_coupons = new Swiper('.swiper_coupons', {
 									slidesPerView: 4,
-									spaceBetween: 16
+									spaceBetween: 16,
+									watchOverflow: true,
+									slidesPerGroup: 1,
+									navigation: {
+										nextEl: '.swiper_coupons .swiper-button-next',
+										prevEl: '.swiper_coupons .swiper-button-prev',
+									},
+									breakpoints: {
+										640: {
+											slidesPerView: 2,
+											spaceBetween: 14
+										},
+										768: {
+											slidesPerView: 2.3,
+											spaceBetween: 14
+										},
+										992: {
+											slidesPerView: 2.3,
+											spaceBetween: 16
+										},
+										1024: {
+											slidesPerView: 3,
+											spaceBetween: 16
+										},
+										1200: {
+											slidesPerView: 4,
+											spaceBetween: 16
+										}
+									}
+								});
+							}
+							function destroySwiperCoupons() {
+								if (swiper_coupons) {
+									swiper_coupons.destroy(true, true);
+									swiper_coupons = null;
 								}
 							}
-						});
-					}
-					function destroySwiperCoupons() {
-						if (swiper_coupons) {
-							swiper_coupons.destroy(true, true);
-							swiper_coupons = null;
-						}
-					}
-					function toggleSwiperCoupons() {
-						if ($(window).width() <= 767 && swiper_coupons) {
-							destroySwiperCoupons();
-						} else if ($(window).width() > 767 && !swiper_coupons) {
-							initSwiperCoupons();
-						}
-					}
-					toggleSwiperCoupons();
-					$(window).on('resize', function() {
-						toggleSwiperCoupons();
-					});
-				</script>
-				
-				<div class="col-12 margin-bottom-20">
-					<div class="bg-shadow">
-						<div class="row">
-							<div class="col-12 product-review-details  col-lg-8">
-								
-<div class="product-tab e-tabs not-dqtab">
-	<ul class="tabs tabs-title clearfix">	
-		
-		<li class="tab-link active" data-tab="#tab-1">
-			<h3>Mô tả sản phẩm</h3>
-		</li>																	
-		
-		
-		<li class="tab-link" data-tab="#tab-2">
-			<h3>Hướng dẫn mua hàng</h3>
-		</li>																	
-		
-		
-		<li class="tab-link" data-tab="#tab-3">
-			<h3>Đánh giá</h3>
-		</li>																	
-		
-	</ul>																									
-	<div class="tab-float">
-		
-		<div id="tab-1" class="tab-content active content_extab">
-			<div class="rte product_getcontent product-review-content">
-				
-				
-				
-				
-				<div class="ba-text-fpt has-height">
-					<p>
-  <em>Tổ yến tinh chế cho bé Baby 2</em> là tổ yến đã qua công đoạn tinh tế, bao gồm 100% vụn yến thiên nhiên Nha Trang. Tổ yến tươi nguyên chất, không pha tạp và qua kiểm định nghiêm ngặt theo tiêu chuẩn bộ y tế. Tổ yến nguyên thiên nhiên sau khi tinh chế (nhặt lông, loại bỏ tạp chất, …) sẽ sót lại vụn yến. Vụn yến sau đó được làm sạch và định hình lại thành hình dạng tổ yến. <br>
-</p>
-<p>Do đó giá thành của tổ yến tinh chế Baby 2 sẽ thấp hơn khá nhiều tổ yến nguyên sợi, phù hợp với điều kiện kinh tế với nhiều khách hàng. Nhưng không vì thế mà tổ yến tinh chế baby mất đi giá trị của mình. Sản phẩm của chúng tôi đảm bảo 100% chất lượng ban đầu, cả dinh dưỡng lẫn hương vị.</p>
-<p>Sản phẩm này phù hợp hơn khi chăm sóc người cao tuổi, trẻ em, bà bầu và người ốm. Bởi vụn yến sẽ tạo cảm giác dễ ăn hơn và dễ dàng được tiêu hóa và hấp thụ dinh dưỡng. Dành cho bạn nào chưa biết thì tổ yến có chứa tới 18 loại Acid Amin quý, có cả những loại cơ thể không thể tự tổng hợp được. Cùng với đó là 31 loại nguyên tố đa – vi lượng thiết yếu cho sự phát triển của cơ thể. <br>
-</p>
-<p>Yến sào từ xưa đến nay luôn là một trong những món ăn quý hiểm,  <b>“Bát Trân”</b> được ưa chuộng bởi các bậc đế vương với công dụng bồi bổ sức khỏe rất lớn.Ngày nay, tổ yến vẫn giữ nguyên được giá trị của mình nhưng đã phù hợp rộng rãi với nhiều khách hàng hơn bởi quy trình khai thác dễ dàng hơn xưa rất nhiều. </p>
-<h2>
-  <b>Đảm bảo chất lượng  <em>tổ yến tinh chế cho bé Baby 3</em>
-  </b>
-</h2>
-<ul>
-  <li>Sản phẩm tổ yến được sấy khô 100%, nói không với cân thiếu, dối trá khách hàng.</li>
-  <li>Nói không với chất tăng trọng, độn tạp chất phụ gia độc hại.</li>
-  <li>Phát hiện yến giả - Bồi đền 500% giá trị sản phẩm cho khách hàng.</li>
-  <li>Hàng cân đủ 100% (thường dư cho khách 1-2gr).</li>
-</ul>
-<h2>
-  <b>Công dụng  <em>Tổ tinh chế cho bé Baby 3</em>
-  </b>
-  <br>
-</h2>
-<ul>
-  <li>Tổ yến là món "bát trân trong bát trân" có nguồn gốc tự nhiên rất quý từ xưa, chỉ được dùng cho vua chúa. Đến nay, sản phẩm <em>
-      <b>tổ yến </b>
-    </em>vẫn không mất đi sự quý giá của nó và được nhiều khách hàng lựa chọn bởi tác dụng bồi bổ rất lớn. </li>
-  <li>Trong tổ yến chưa 50% Protein tự nhiên, 18 loại Acid Amin và hơn 31 nguyên tố vi lượng. Phần lớn trong số này là các chất cơ thể con người không tự tổng hợp được, cần phải nạp từ bên ngoài. Chính vì vậy,  <b>
-      <em>tổ yến </em>
-    </b>có tác dụng rất tốt với cơ thể. </li>
-</ul>
-
-				</div>
-				
-				<div class="show-more hidden-lg hidden-md hidden-sm">
-					<div class="btn btn-primary btn-default btn--view-more duration-300">
-						<span class="more-text">Xem thêm <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
-							<path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
-							</svg></span>
-						<span class="less-text">Thu gọn <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-up-fill" viewBox="0 0 16 16">
-							<path d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
-							</svg></span>
-					</div>
-				</div>
-				
-				
-			</div>
-		</div>
-		
-		
-		<div id="tab-2" class="tab-content content_extab">
-			<div class="rte">
-				
-				<p><strong>Bước 1</strong>: Truy cập website và lựa chọn sản phẩm cần mua để mua hàng</p>
-<p><strong>Bước 2</strong>: Click và sản phẩm muốn mua, màn hình hiển thị ra pop up với các lựa chọn sau</p>
-<p>Nếu bạn muốn tiếp tục mua hàng: Bấm vào phần tiếp tục mua hàng để lựa chọn thêm sản phẩm vào giỏ hàng</p>
-<p>Nếu bạn muốn xem giỏ hàng để cập nhật sản phẩm: Bấm vào xem giỏ hàng</p>
-<p>Nếu bạn muốn đặt hàng và thanh toán cho sản phẩm này vui lòng bấm vào: Đặt hàng và thanh toán</p>
-<p><strong>Bước 3</strong>: Lựa chọn thông tin tài khoản thanh toán</p>
-<p>Nếu bạn đã có tài khoản vui lòng nhập thông tin tên đăng nhập là email và mật khẩu vào mục đã có tài khoản trên hệ thống</p>
-<p>Nếu bạn chưa có tài khoản và muốn đăng ký tài khoản vui lòng điền các thông tin cá nhân để tiếp tục đăng ký tài khoản. Khi có tài khoản bạn sẽ dễ dàng theo dõi được đơn hàng của mình</p>
-<p>Nếu bạn muốn mua hàng mà không cần tài khoản vui lòng nhấp chuột vào mục đặt hàng không cần tài khoản</p>
-<p><strong>Bước 4</strong>: Điền các thông tin của bạn để nhận đơn hàng, lựa chọn hình thức thanh toán và vận chuyển cho đơn hàng của mình</p>
-<p><strong>Bước 5</strong>: Xem lại thông tin đặt hàng, điền chú thích và gửi đơn hàng</p>
-<p>Sau khi nhận được đơn hàng bạn gửi chúng tôi sẽ liên hệ bằng cách gọi điện lại để xác nhận lại đơn hàng và địa chỉ của bạn.</p>
-<p>Trân trọng cảm ơn.</p>	
-				
-			</div>
-		</div>	
-		
-		
-		<div id="tab-3" class="tab-content content_extab">
-			<div class="rte">
-				<div class="alert alert-info alert-dismissible margin-top-15 section" role="alert" style="max-width: 100% !important;">
-					Bạn tiến hàng mua và cài app <a style="color: red" target="_blank" href="https://apps.sapo.vn/danh-gia-san-pham-v2" title="Đánh giá sản phẩm">Đánh giá sản phẩm</a> mới sử dụng được tính năng này! 
-				</div>
-			</div>
-		</div>	
-		
-	</div>	
-</div>
-
-							</div>
-							
-							<div class="col-lg-4 col-12 product-sidebar">
-								<div class="sticky-box">
-									
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="specifications">
-	<div class="title">Thông tin chi tiết</div>
-	
-<table cellspacing="0" class="cke_show_border" style="width: 88.122%; height: 147px;">
-  <tbody>
-    <td>
-      <span>
-        <strong>Nhóm</strong>
-      </span>
-    </td>
-    <td>Tổ Yến</td>
-    </tr>
-    <td>
-      <span>
-        <strong>Loại</strong>
-      </span>
-    </td>
-    <td>
-      <span>Yến Tinh Chế</span>
-    </td>
-    </tr>
-    <td>
-      <span>
-        <strong>Khối lượng</strong>
-      </span>
-    </td>
-    <td>
-      <span>100gr (10-11 tổ/hộp)</span>
-    </td>
-    </tr>
-    <tr>
-      <td>
-        <span>
-          <b>Bộ sản phẩm <br>
-          </b>
-        </span>
-      </td>
-      <td>
-        <ul>
-          <li>
-            <span>100gr Yến </span>
-          </li>
-          <li>
-            <span>1 Hộp đường phèn</span>
-          </li>
-          <li>
-            <span>1 Bộ hộp và túi giấy riêng sang trọng</span>
-          </li>
-          <li>
-            <span>1 Phần quà tặng khuyến mãi tùy chọn (áp dụng khi mua từ 100gr)</span>
-          </li>
-        </ul>
-      </td>
-    </tr>
-  </tbody>
-</table>
-	<div class="text-center specifications-button-show d-none">
-		<button type="button" class="btn duration-300 btn-primary specifications-button" data-toggle="modal" data-target="#specificationsModal" title="Xem chi tiết">Xem chi tiết <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
-			<path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
-			</svg></button>
-	</div>
-</div>
-
-
-
-
-
-									
-									<div class="section-viewed-product recent-page-viewed">
-	<h2>
-		<span>
-			Bạn đã xem
-		</span>
-	</h2>
-	<div class="product-viewed-content"></div>
-</div>
-
-<script>
-	let hasViewItem = false;
-	if(localStorage.last_viewed_products != undefined){
-		jQuery('.recent-page-viewed').removeClass('d-none');
-		hasViewItem = true;
-		var last_viewd_pro_array = JSON.parse(localStorage.last_viewed_products);
-		var recentview_promises = [];
-		var size_pro_review = last_viewd_pro_array.length;
-		if ( size_pro_review >= 6 ) {
-			size_pro_review = 6;
-		} else {
-			size_pro_review = last_viewd_pro_array.length;
-		}
-		if (size_pro_review < 1 ) {
-			jQuery('.recent-page-viewed').addClass('d-none');
-			hasViewItem = false;
-		}else{
-			jQuery('.recent-page-viewed').removeClass('d-none');
-			hasViewItem = true;
-		}
-		if (size_pro_review > 0 ) {
-			for (i = 0; i < size_pro_review; i++){
-				var alias_product = last_viewd_pro_array[i];
-				if (!!alias_product.alias){
-					var promise = new Promise(function(resolve, reject) {
-						$.ajax({
-							url:'/' + alias_product.alias + '?view=viewed',
-							success: function(product){
-								resolve(product);
-							},
-							error: function(err){
-								resolve('');
-							}
-						})
-					});
-					recentview_promises.push(promise);	
-				}
-			}
-			Promise.all(recentview_promises).then(function(values) {
-				$.each(values, function(i, v){
-					$('.recent-page-viewed .product-viewed-content').append(v);
-				});
-				awe_lazyloadImage();
-			});
-		}
-	}else{
-		jQuery('.recent-page-viewed').addClass('d-none');
-		hasViewItem = false;
-	}
-</script>
-									
-								</div>
-							</div>
-							
-						</div>
-					</div>
-				</div>
-
-				<div class="col-12 product-related product-swipers">
-					<div class="bg-shadow">
-						<h2>
-							<a href="/to-yen-tinh-che" title="Sản phẩm liên quan">
-								Sản phẩm liên quan
-							</a>
-						</h2>
-						<div class="swiper_product_related swiper-container">
-							<div class="swiper-wrapper">
-								
-								<div class="swiper-slide">
-									<div class="item_product_main">
-										
-<form action="/cart/add" method="post" class="variants product-action item-product-main duration-300" data-cart-form data-id="product-actions-34775949" enctype="multipart/form-data">
-	<span class="flash-sale">-
-6% 
-</span>
-	
-
-	
-	<div class="product-thumbnail">
-		<a class="image_thumb scale_hover" href="/copy-of-to-yen-tinh-che-cho-be-baby-loai-3" title="Tổ Yến Tinh Chế cho bé BaBy (loại 3)">
-			<img class="lazyload duration-300" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"  data-src="//bizweb.dktcdn.net/thumb/large/100/506/650/products/bb2-50gr-0-nap-494df53fb54c4233b0ba3c0a8ab3dfbe-97fc1701b8a14297ac03ee1e64edf1b2-master-d488b4d7-4784-48b2-a54a-c7d6343654fa.jpg?v=1709574876467" alt="Tổ Yến Tinh Chế cho bé BaBy (loại 3)">
-		</a>
-	</div>
-	<div class="product-info">
-		<div class="name-price">
-			<h3 class="product-name line-clamp-2-new">
-				<a href="/copy-of-to-yen-tinh-che-cho-be-baby-loai-3" title="Tổ Yến Tinh Chế cho bé BaBy (loại 3)">Tổ Yến Tinh Chế cho bé BaBy (loại 3)</a>
-			</h3>
-			<div class="product-price-cart">
-				<span class="compare-price">3.100.000₫</span>
-
-				<span class="price">2.900.000₫</span>
-			</div>
-		</div>
-		<div class="product-button">
-			<input type="hidden" name="variantId" value="111118886" />
-			<button class="btn-cart btn-views add_to_cart btn btn-primary " title="Thêm vào giỏ hàng">
-				<span>Thêm vào giỏ</span>
-				<svg enable-background="new 0 0 32 32" height="512" viewBox="0 0 32 32" width="512" xmlns="http://www.w3.org/2000/svg"><g><g><path d="m23.8 30h-15.6c-3.3 0-6-2.7-6-6v-.2l.6-16c.1-3.3 2.8-5.8 6-5.8h14.4c3.2 0 5.9 2.5 6 5.8l.6 16c.1 1.6-.5 3.1-1.6 4.3s-2.6 1.9-4.2 1.9c0 0-.1 0-.2 0zm-15-26c-2.2 0-3.9 1.7-4 3.8l-.6 16.2c0 2.2 1.8 4 4 4h15.8c1.1 0 2.1-.5 2.8-1.3s1.1-1.8 1.1-2.9l-.6-16c-.1-2.2-1.8-3.8-4-3.8z"/></g><g><path d="m16 14c-3.9 0-7-3.1-7-7 0-.6.4-1 1-1s1 .4 1 1c0 2.8 2.2 5 5 5s5-2.2 5-5c0-.6.4-1 1-1s1 .4 1 1c0 3.9-3.1 7-7 7z"/></g></g></svg>
-			</button>
-			<a href="javascript:void(0)" class="setWishlist btn-views btn-circle" data-wish="copy-of-to-yen-tinh-che-cho-be-baby-loai-3" tabindex="0" title="Thêm vào yêu thích">
-				<img width="25" height="25" src="//bizweb.dktcdn.net/100/506/650/themes/944598/assets/heart.png?1728460505311" alt="Thêm vào yêu thích"/> 
-			</a>
-		</div>
-	</div>
-</form>
-									</div>
-								</div>
-								
-								<div class="swiper-slide">
-									<div class="item_product_main">
-										
-<form action="/cart/add" method="post" class="variants product-action item-product-main duration-300" data-cart-form data-id="product-actions-34621119" enctype="multipart/form-data">
-	
-	
-	<div class="product-thumbnail">
-		<a class="image_thumb scale_hover" href="/saffron-shyam-1gr-nhuy-hoa-nghe-tay-organic" title="Saffron SHYAM 1Gr  Nhụy hoa nghệ tây Organic">
-			<img class="lazyload duration-300" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"  data-src="//bizweb.dktcdn.net/thumb/large/100/506/650/products/shyam-1-gram.png?v=1708656037060" alt="Saffron SHYAM 1Gr  Nhụy hoa nghệ tây Organic">
-		</a>
-	</div>
-	<div class="product-info">
-		<div class="name-price">
-			<h3 class="product-name line-clamp-2-new">
-				<a href="/saffron-shyam-1gr-nhuy-hoa-nghe-tay-organic" title="Saffron SHYAM 1Gr  Nhụy hoa nghệ tây Organic">Saffron SHYAM 1Gr  Nhụy hoa nghệ tây Organic</a>
-			</h3>
-			<div class="product-price-cart">
-				<span class="price">350.000₫</span>
-			</div>
-		</div>
-		<div class="product-button">
-			<input type="hidden" name="variantId" value="110202522" />
-			<button class="btn-cart btn-views add_to_cart btn btn-primary " title="Thêm vào giỏ hàng">
-				<span>Thêm vào giỏ</span>
-				<svg enable-background="new 0 0 32 32" height="512" viewBox="0 0 32 32" width="512" xmlns="http://www.w3.org/2000/svg"><g><g><path d="m23.8 30h-15.6c-3.3 0-6-2.7-6-6v-.2l.6-16c.1-3.3 2.8-5.8 6-5.8h14.4c3.2 0 5.9 2.5 6 5.8l.6 16c.1 1.6-.5 3.1-1.6 4.3s-2.6 1.9-4.2 1.9c0 0-.1 0-.2 0zm-15-26c-2.2 0-3.9 1.7-4 3.8l-.6 16.2c0 2.2 1.8 4 4 4h15.8c1.1 0 2.1-.5 2.8-1.3s1.1-1.8 1.1-2.9l-.6-16c-.1-2.2-1.8-3.8-4-3.8z"/></g><g><path d="m16 14c-3.9 0-7-3.1-7-7 0-.6.4-1 1-1s1 .4 1 1c0 2.8 2.2 5 5 5s5-2.2 5-5c0-.6.4-1 1-1s1 .4 1 1c0 3.9-3.1 7-7 7z"/></g></g></svg>
-			</button>
-			<a href="javascript:void(0)" class="setWishlist btn-views btn-circle" data-wish="saffron-shyam-1gr-nhuy-hoa-nghe-tay-organic" tabindex="0" title="Thêm vào yêu thích">
-				<img width="25" height="25" src="//bizweb.dktcdn.net/100/506/650/themes/944598/assets/heart.png?1728460505311" alt="Thêm vào yêu thích"/> 
-			</a>
-		</div>
-	</div>
-</form>
-									</div>
-								</div>
-								
-								<div class="swiper-slide">
-									<div class="item_product_main">
-										
-<form action="/cart/add" method="post" class="variants product-action item-product-main duration-300" data-cart-form data-id="product-actions-34613180" enctype="multipart/form-data">
-	<span class="flash-sale">-
-9% 
-</span>
-	
-
-	
-	<div class="product-thumbnail">
-		<a class="image_thumb scale_hover" href="/to-yen-tinh-che-cho-be-baby-loai-1" title="Tổ Yến Tinh Chế Cho Bé Baby (Loại 1)">
-			<img class="lazyload duration-300" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"  data-src="//bizweb.dktcdn.net/thumb/large/100/506/650/products/baby-1-1-7810cf8f839c472daf02f0926273c645-master.jpg?v=1708601251787" alt="Tổ Yến Tinh Chế Cho Bé Baby (Loại 1)">
-		</a>
-	</div>
-	<div class="product-info">
-		<div class="name-price">
-			<h3 class="product-name line-clamp-2-new">
-				<a href="/to-yen-tinh-che-cho-be-baby-loai-1" title="Tổ Yến Tinh Chế Cho Bé Baby (Loại 1)">Tổ Yến Tinh Chế Cho Bé Baby (Loại 1)</a>
-			</h3>
-			<div class="product-price-cart">
-				<span class="compare-price">3.500.000₫</span>
-
-				<span class="price">3.200.000₫</span>
-			</div>
-		</div>
-		<div class="product-button">
-			<input type="hidden" name="variantId" value="110189321" />
-			<button class="btn-cart btn-views add_to_cart btn btn-primary " title="Thêm vào giỏ hàng">
-				<span>Thêm vào giỏ</span>
-				<svg enable-background="new 0 0 32 32" height="512" viewBox="0 0 32 32" width="512" xmlns="http://www.w3.org/2000/svg"><g><g><path d="m23.8 30h-15.6c-3.3 0-6-2.7-6-6v-.2l.6-16c.1-3.3 2.8-5.8 6-5.8h14.4c3.2 0 5.9 2.5 6 5.8l.6 16c.1 1.6-.5 3.1-1.6 4.3s-2.6 1.9-4.2 1.9c0 0-.1 0-.2 0zm-15-26c-2.2 0-3.9 1.7-4 3.8l-.6 16.2c0 2.2 1.8 4 4 4h15.8c1.1 0 2.1-.5 2.8-1.3s1.1-1.8 1.1-2.9l-.6-16c-.1-2.2-1.8-3.8-4-3.8z"/></g><g><path d="m16 14c-3.9 0-7-3.1-7-7 0-.6.4-1 1-1s1 .4 1 1c0 2.8 2.2 5 5 5s5-2.2 5-5c0-.6.4-1 1-1s1 .4 1 1c0 3.9-3.1 7-7 7z"/></g></g></svg>
-			</button>
-			<a href="javascript:void(0)" class="setWishlist btn-views btn-circle" data-wish="to-yen-tinh-che-cho-be-baby-loai-1" tabindex="0" title="Thêm vào yêu thích">
-				<img width="25" height="25" src="//bizweb.dktcdn.net/100/506/650/themes/944598/assets/heart.png?1728460505311" alt="Thêm vào yêu thích"/> 
-			</a>
-		</div>
-	</div>
-</form>
-									</div>
-								</div>
-								
-								<div class="swiper-slide">
-									<div class="item_product_main">
-										
-<form action="/cart/add" method="post" class="variants product-action item-product-main duration-300" data-cart-form data-id="product-actions-34613070" enctype="multipart/form-data">
-	<span class="flash-sale">-
-6% 
-</span>
-	
-
-	
-	<div class="product-thumbnail">
-		<a class="image_thumb scale_hover" href="/to-yen-tinh-che-cho-be-baby-loai-2" title="Tổ Yến Tinh Chế cho bé BaBy (loại 2)">
-			<img class="lazyload duration-300" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"  data-src="//bizweb.dktcdn.net/thumb/large/100/506/650/products/bb2-50gr-0-nap-494df53fb54c4233b0ba3c0a8ab3dfbe-97fc1701b8a14297ac03ee1e64edf1b2-master.jpg?v=1708600664020" alt="Tổ Yến Tinh Chế cho bé BaBy (loại 2)">
-		</a>
-	</div>
-	<div class="product-info">
-		<div class="name-price">
-			<h3 class="product-name line-clamp-2-new">
-				<a href="/to-yen-tinh-che-cho-be-baby-loai-2" title="Tổ Yến Tinh Chế cho bé BaBy (loại 2)">Tổ Yến Tinh Chế cho bé BaBy (loại 2)</a>
-			</h3>
-			<div class="product-price-cart">
-				<span class="compare-price">3.100.000₫</span>
-
-				<span class="price">2.900.000₫</span>
-			</div>
-		</div>
-		<div class="product-button">
-			<input type="hidden" name="variantId" value="110189169" />
-			<button class="btn-cart btn-views add_to_cart btn btn-primary " title="Thêm vào giỏ hàng">
-				<span>Thêm vào giỏ</span>
-				<svg enable-background="new 0 0 32 32" height="512" viewBox="0 0 32 32" width="512" xmlns="http://www.w3.org/2000/svg"><g><g><path d="m23.8 30h-15.6c-3.3 0-6-2.7-6-6v-.2l.6-16c.1-3.3 2.8-5.8 6-5.8h14.4c3.2 0 5.9 2.5 6 5.8l.6 16c.1 1.6-.5 3.1-1.6 4.3s-2.6 1.9-4.2 1.9c0 0-.1 0-.2 0zm-15-26c-2.2 0-3.9 1.7-4 3.8l-.6 16.2c0 2.2 1.8 4 4 4h15.8c1.1 0 2.1-.5 2.8-1.3s1.1-1.8 1.1-2.9l-.6-16c-.1-2.2-1.8-3.8-4-3.8z"/></g><g><path d="m16 14c-3.9 0-7-3.1-7-7 0-.6.4-1 1-1s1 .4 1 1c0 2.8 2.2 5 5 5s5-2.2 5-5c0-.6.4-1 1-1s1 .4 1 1c0 3.9-3.1 7-7 7z"/></g></g></svg>
-			</button>
-			<a href="javascript:void(0)" class="setWishlist btn-views btn-circle" data-wish="to-yen-tinh-che-cho-be-baby-loai-2" tabindex="0" title="Thêm vào yêu thích">
-				<img width="25" height="25" src="//bizweb.dktcdn.net/100/506/650/themes/944598/assets/heart.png?1728460505311" alt="Thêm vào yêu thích"/> 
-			</a>
-		</div>
-	</div>
-</form>
-									</div>
-								</div>
-								
-								<div class="swiper-slide">
-									<div class="item_product_main">
-										
-<form action="/cart/add" method="post" class="variants product-action item-product-main duration-300" data-cart-form data-id="product-actions-34613037" enctype="multipart/form-data">
-	<span class="flash-sale">-
-7% 
-</span>
-	
-
-	<div class="product-thumbnail">
-		<a class="image_thumb scale_hover" href="/to-yen-tinh-che-vip-doc-quyen" title="Tổ yến tinh chế VIP độc quyền">
-			<img class="lazyload duration-300" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"  data-src="//bizweb.dktcdn.net/thumb/large/100/506/650/products/yen-tc-vip-doc-quyen-50gr-1-a90e36a2d4d14b1ebb345324a21f1c90-bceab20ce4eb46f88cc901b660a4b0b2-master.jpg?v=1708600168150" alt="Tổ yến tinh chế VIP độc quyền">
-		</a>
-	</div>
-	<div class="product-info">
-		<div class="name-price">
-			<h3 class="product-name line-clamp-2-new">
-				<a href="/to-yen-tinh-che-vip-doc-quyen" title="Tổ yến tinh chế VIP độc quyền">Tổ yến tinh chế VIP độc quyền</a>
-			</h3>
-			<div class="product-price-cart">
-				<span class="compare-price">2.700.000₫</span>
-
-				<span class="price">2.500.000₫</span>
-			</div>
-		</div>
-		<div class="product-button">
-			<input class="hidden" type="hidden" name="variantId" value="110189100" />
-			<button class="btn-cart btn-views quick-view-option btn btn-primary quick-view" title="Tùy chọn" type="button" data-handle="to-yen-tinh-che-vip-doc-quyen"  >
-				<span>Tùy chọn</span>
-				<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-gear" viewBox="0 0 16 16">
-					<path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z"/>
-					<path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115l.094-.319z"/>
-				</svg>
-			</button>
-			<a href="javascript:void(0)" class="setWishlist btn-views btn-circle" data-wish="to-yen-tinh-che-vip-doc-quyen" tabindex="0" title="Thêm vào yêu thích">
-				<img width="25" height="25" src="//bizweb.dktcdn.net/100/506/650/themes/944598/assets/heart.png?1728460505311" alt="Thêm vào yêu thích"/> 
-			</a>
-		</div>
-	</div>
-</form>
-									</div>
-								</div>
-								
-								<div class="swiper-slide">
-									<div class="item_product_main">
-										
-<form action="/cart/add" method="post" class="variants product-action item-product-main duration-300" data-cart-form data-id="product-actions-34571550" enctype="multipart/form-data">
-	<span class="flash-sale">-
-10% 
-</span>
-	
-	
-	<div class="product-thumbnail">
-		<a class="image_thumb scale_hover" href="/to-yen-tinh-che-vip-loai-2" title="Tổ Yến Tinh Chế VIP Loại 2">
-			<img class="lazyload duration-300" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"  data-src="//bizweb.dktcdn.net/thumb/large/100/506/650/products/tinh-che-2-1-5565c813c66f4c63a00aaf83242ae033-master-1.jpg?v=1708395697850" alt="Tổ Yến Tinh Chế VIP Loại 2">
-		</a>
-	</div>
-	<div class="product-info">
-		<div class="name-price">
-			<h3 class="product-name line-clamp-2-new">
-				<a href="/to-yen-tinh-che-vip-loai-2" title="Tổ Yến Tinh Chế VIP Loại 2">Tổ Yến Tinh Chế VIP Loại 2</a>
-			</h3>
-			<div class="product-price-cart">
-				<span class="compare-price">2.100.000₫</span>
-
-				<span class="price">1.900.000₫</span>
-			</div>
-		</div>
-		<div class="product-button">
-			<input class="hidden" type="hidden" name="variantId" value="109916304" />
-			<button class="btn-cart btn-views quick-view-option btn btn-primary quick-view" title="Tùy chọn" type="button" data-handle="to-yen-tinh-che-vip-loai-2"  >
-				<span>Tùy chọn</span>
-				<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-gear" viewBox="0 0 16 16">
-					<path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z"/>
-					<path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115l.094-.319z"/>
-				</svg>
-			</button>
-			<a href="javascript:void(0)" class="setWishlist btn-views btn-circle" data-wish="to-yen-tinh-che-vip-loai-2" tabindex="0" title="Thêm vào yêu thích">
-				<img width="25" height="25" src="//bizweb.dktcdn.net/100/506/650/themes/944598/assets/heart.png?1728460505311" alt="Thêm vào yêu thích"/> 
-			</a>
-		</div>
-	</div>
-</form>
-									</div>
-								</div>
-								
-							</div>
-							<div class="swiper-button-next">
-								<svg width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<rect x="2.13003" y="29" width="38" height="38" transform="rotate(-45 2.13003 29)" stroke="black" fill="#fff" stroke-width="2"/>
-									<rect x="8" y="29.2133" width="30" height="30" transform="rotate(-45 8 29.2133)" fill="black"/>
-									<path d="M18.5 29H39.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-									<path d="M29 18.5L39.5 29L29 39.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-								</svg>
-							</div>
-							<div class="swiper-button-prev">
-								<svg width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<rect x="2.13003" y="29" width="38" height="38" transform="rotate(-45 2.13003 29)" stroke="black" fill="#fff" stroke-width="2"/>
-									<rect x="8" y="29.2133" width="30" height="30" transform="rotate(-45 8 29.2133)" fill="black"/>
-									<path d="M18.5 29H39.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-									<path d="M29 18.5L39.5 29L29 39.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-								</svg>
-							</div>
-						</div>
-					</div>
-				</div>
-				<script>
-					var swiper_related = null;
-					function initSwiperRelated() {
-						swiper_related = new Swiper('.swiper_product_related', {
-							slidesPerView: 4,
-							spaceBetween: 20,
-							slidesPerGroup: 1,
-							navigation: {
-								nextEl: '.swiper_product_related .swiper-button-next',
-								prevEl: '.swiper_product_related .swiper-button-prev',
-							},
-							breakpoints: {
-								768: {
-									slidesPerView: 4,
-									spaceBetween: 20
-								},
-								992: {
-									slidesPerView: 4,
-									spaceBetween: 20
-								},
-								1024: {
-									slidesPerView: 4,
-									spaceBetween: 20
+							function toggleSwiperCoupons() {
+								if ($(window).width() <= 767 && swiper_coupons) {
+									destroySwiperCoupons();
+								} else if ($(window).width() > 767 && !swiper_coupons) {
+									initSwiperCoupons();
 								}
 							}
-						});
-					}
-					function destroySwiperRelated() {
-						if (swiper_related) {
-							swiper_related.destroy(true, true);
-							swiper_related = null;
-						}
-					}
-					function toggleSwiperRelated() {
-						if ($(window).width() <= 767 && swiper_related) {
-							destroySwiperRelated();
-						} else if ($(window).width() > 767 && !swiper_related) {
-							initSwiperRelated();
-						}
-					}
-					toggleSwiperRelated();
-					$(window).resize(toggleSwiperRelated);
-				</script>
-			</div>
-		</div>
-	</div>
-</section>
+							toggleSwiperCoupons();
+							$(window).on('resize', function () {
+								toggleSwiperCoupons();
+							});
+						</script>
 
-<script> 
-	var variantsize = false;
-	var ww = $(window).width();
-	function validate(evt) {
-		var theEvent = evt || window.event;
-		var key = theEvent.keyCode || theEvent.which;
-		key = String.fromCharCode( key );
-		var regex = /[0-9]|\./;
-		if( !regex.test(key) ) {
-			theEvent.returnValue = false;
-			if(theEvent.preventDefault) theEvent.preventDefault();
-		}
-	}
-	var selectCallback = function(variant, selector) {
-		if (variant) {
-			var form = jQuery('#' + selector.domIdPrefix).closest('form');
-			for (var i=0,length=variant.options.length; i<length; i++) {
-				var radioButton = form.find('.swatch[data-option-index="' + i + '"] :radio[value="' + variant.options[i] +'"]');
-				if (radioButton.size()) {
-					radioButton.get(0).checked = true;
+						<div class="col-12 margin-bottom-20">
+							<div class="bg-shadow">
+								<div class="row">
+									<div class="col-12 product-review-details  col-lg-8">
+
+										<div class="product-tab e-tabs not-dqtab">
+											<ul class="tabs tabs-title clearfix">
+
+												<li class="tab-link active" data-tab="#tab-1">
+													<h3>Mô tả sản phẩm</h3>
+												</li>
+
+
+												<li class="tab-link" data-tab="#tab-2">
+													<h3>Hướng dẫn mua hàng</h3>
+												</li>
+
+
+												<li class="tab-link" data-tab="#tab-3">
+													<h3>Đánh giá</h3>
+												</li>
+
+											</ul>
+											<div class="tab-float">
+
+												<div id="tab-1" class="tab-content active content_extab">
+													<div class="rte product_getcontent product-review-content">
+
+
+
+
+														<div class="ba-text-fpt has-height">
+															<p>
+																<em>Onkoi Asagi 2 tuổi 60 cm #Asagi_008</em> có thể nói là một trong những em koi vô cùng đặc biệt mà bất cứ dân chơi koi nào cũng nên sở hữu trong hồ. Có thể nói, Asagi Nhật Bản là giống Koi vô cùng đặc biệt, có những đặc điểm mà hiếm có loài koi nào trên thế giới có được.<br>
+															</p>
+															<p>Trước kia, koi Asagi đã trở thành chủ đề tranh luận của nhiều người với hai phe đối lập. Nhiều người đam mê cá Koi hay thậm chí là những người chuyên nghiệp coi Asagi là một giống cá Koi bình thường, bởi chúng không có nhiều màu sắc sặc sỡ như những chú cá Koi hiện đại khác. Trong khi đó, những người khác cho rằng Asagi là một trong những giống cá “đẹp nhất” trên hành tinh.</p>
+															
+															
+															<h2>
+																<b>
+																	THÔNG TIN  <em>EM KOI ASAGI 2 TUỔI 60 CM</em>
+																</b>
+																<br>
+															</h2>
+															<ul>
+																</p>
+																<ul><li style="text-align: justify;">Tên: OnKoi Asagi</li><li style="text-align: justify;">Tuổi: 2 tuổi.</li><li style="text-align: justify;">Body, hình dáng: Thứ nhất, em Koi này sở hữu body thuôn dài và mảnh mai, nhẹ nhàng, kích thước không quá lớn nhưng cũng đủ để thu hút mọi ánh nhìn mỗi khi em ấy tung tăng bơi lội. Thứ hai là đặc trưng của lớp da bên ngoài body, làn da dịu với màu sáng bóng khiến cho em ấy càng trở nên nổi bật hơn bao giờ hết. Chỉ trong một khoảng thời gian ngắn nữa thôi, em Asagi này sẽ trưởng thành có chất lượng cao sẽ có một lớp vảy đan xen dạng lưới. Lớp vảy này được gọi là  “fukurin” &#8211;  Fukurin có lớp da được phản chiếu và rõ ràng, tạo ra một dạng lưới ánh kim sáng bóng, giống như lớp bạc phủ lên các vảy trên lưng của Asagi khiến cho các em ấy nổi bật hơn hẳn những em koi còn lại trong hồ.</li><li style="text-align: justify;">Màu sắc: Em koi Asagi 2 năm tuổi này thừa hưởng trọn vẹn sự kiêu hãnh của loài Asagi Koi với vẻ đẹp tinh tế nhờ sự kết hợp độc đáo của màu sắc trên nền da và màu Hi dưới bụng cùng màu Hi dưới gò má. Nhìn tổng thể màu sắc, chúng trong veo như bầu trời xanh trong trẻo buổi sớm mai giao thoa với những áng mây rực lửa của đất trời lúc rạng đông.  Các đường biên thân cá Asagi có màu sáng hơn để tạo thành một màu trắng tuyết tuyệt đẹp.</li><li style="text-align: justify;">Sức khỏe: Tuổi thọ của cá koi Asagi thông thường từ 40-60 năm tuổi. Tuy nhiên, cũng giống như nhiều giống koi khác, tuổi thọ của cá Koi phụ thuộc vào rất nhiều yếu tố như chất lượng nước, chất lượng thức ăn, mật độ nuôi cá, oxy trong nước… Nếu tất cả các yếu tố ngoại cảnh đều hoàn hảo cộng thêm sức đề kháng của cá Koi cao thì chúng hoàn toàn có thể đạt được tuổi thọ từ 40 tới 200 năm.</li><li style="text-align: justify;">Chế độ ăn: ăn tạp, dễ nuôi, cách nuôi cá koi asagi Nhật Bản cũng tương tự như các loài cá koi khác. Thức ăn của nó gồm có trùn, thức ăn dạng hạt.</li><li style="text-align: justify;">Dễ thích nghi với môi trường sống ở Việt Nam: Koi Asagi dễ thích nghi với môi trường Việt Nam. Nuôi trong nước có nhiệt dộ từ 18°c – 26°c, nước cứng có tính kiềm yếu.</li><li style="text-align: justify;">Tính cách: hiền hòa, thân thiện với koi trong đàn.</li><li style="text-align: justify;">Nguồn gốc: 90% Koi Asagi của Onkoi được nhập khẩu trực tiếp từ trại Dainichi. Trại cá koi Dainichi (Dainichi Fish Farms) là một trong những trang trại cá koi nổi tiếng nhất tại Nhật Bản và đặc biệt được biết đến với dòng koi của họ.</li></ul>
+																<p style="text-align: justify;">
+															</ul>
+
+														</div>
+
+														<div class="show-more hidden-lg hidden-md hidden-sm">
+															<div class="btn btn-primary btn-default btn--view-more duration-300">
+																<span class="more-text">
+																	Xem thêm
+																	<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+																		<path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+																	</svg>
+																</span>
+																<span class="less-text">
+																	Thu gọn
+																	<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-up-fill" viewBox="0 0 16 16">
+																		<path d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z" />
+																	</svg>
+																</span>
+															</div>
+														</div>
+
+
+													</div>
+												</div>
+
+
+												<div id="tab-2" class="tab-content content_extab">
+													<div class="rte">
+
+														<p><strong>Bước 1</strong>: Truy cập website và lựa chọn sản phẩm cần mua để mua hàng</p>
+														<p><strong>Bước 2</strong>: Click và sản phẩm muốn mua, màn hình hiển thị ra pop up với các lựa chọn sau</p>
+														<p>Nếu bạn muốn tiếp tục mua hàng: Bấm vào phần tiếp tục mua hàng để lựa chọn thêm sản phẩm vào giỏ hàng</p>
+														<p>Nếu bạn muốn xem giỏ hàng để cập nhật sản phẩm: Bấm vào xem giỏ hàng</p>
+														<p>Nếu bạn muốn đặt hàng và thanh toán cho sản phẩm này vui lòng bấm vào: Đặt hàng và thanh toán</p>
+														<p><strong>Bước 3</strong>: Lựa chọn thông tin tài khoản thanh toán</p>
+														<p>Nếu bạn đã có tài khoản vui lòng nhập thông tin tên đăng nhập là email và mật khẩu vào mục đã có tài khoản trên hệ thống</p>
+														<p>Nếu bạn chưa có tài khoản và muốn đăng ký tài khoản vui lòng điền các thông tin cá nhân để tiếp tục đăng ký tài khoản. Khi có tài khoản bạn sẽ dễ dàng theo dõi được đơn hàng của mình</p>
+														<p>Nếu bạn muốn mua hàng mà không cần tài khoản vui lòng nhấp chuột vào mục đặt hàng không cần tài khoản</p>
+														<p><strong>Bước 4</strong>: Điền các thông tin của bạn để nhận đơn hàng, lựa chọn hình thức thanh toán và vận chuyển cho đơn hàng của mình</p>
+														<p><strong>Bước 5</strong>: Xem lại thông tin đặt hàng, điền chú thích và gửi đơn hàng</p>
+														<p>Sau khi nhận được đơn hàng bạn gửi chúng tôi sẽ liên hệ bằng cách gọi điện lại để xác nhận lại đơn hàng và địa chỉ của bạn.</p>
+														<p>Trân trọng cảm ơn.</p>
+
+													</div>
+												</div>
+
+
+												
+
+											</div>
+										</div>
+
+									</div>
+
+									<div class="col-lg-4 col-12 product-sidebar">
+										<div class="sticky-box">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+											<div class="specifications">
+												<div class="title">Thông tin chi tiết</div>
+
+												<table cellspacing="0" class="cke_show_border" style="width: 88.122%; height: 147px;">
+													<body>
+													<td>
+														<span>
+															<strong>Nhóm</strong>
+														</span>
+													</td>
+													<td>Cá Koi</td>
+													</tr>
+													<td>
+														<span>
+															<strong>Loại</strong>
+														</span>
+													</td>
+													<td>
+														<span>Asagi</span>
+													</td>
+													</tr>
+													<td>
+														<span>
+															<strong>Kích Thước</strong>
+														</span>
+													</td>
+													<td>
+														<span>60 cm</span>
+													</td>
+													</tr>
+													<tr>
+														<td>
+															<span>
+																<b>
+																	Bộ sản phẩm <br>
+																</b>
+															</span>
+														</td>
+														<td>
+															<ul>
+																<li>
+																	<span> Asagi 3 tuổi 70cm </span>
+																</li>
+																<li>
+																	<span>Tancho Asagi 1.5 tuổi 55 cm</span>
+																</li>
+																<li>
+																	<span>Asagi 4 tuổi 80 cm</span>
+																</li>
+															
+															</ul>
+														</td>
+													</tr>
+													</body>
+												</table>
+												<div class="text-center specifications-button-show d-none">
+													<button type="button" class="btn duration-300 btn-primary specifications-button" data-toggle="modal" data-target="#specificationsModal" title="Xem chi tiết">
+														Xem chi tiết <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+															<path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+														</svg>
+													</button>
+												</div>
+											</div>
+
+
+
+
+
+
+											<div class="section-viewed-product recent-page-viewed">
+												<h2>
+													<span>
+														Bạn đã xem
+													</span>
+												</h2>
+												<div class="product-viewed-content"></div>
+											</div>
+
+											<script>
+												let hasViewItem = false;
+												if (localStorage.last_viewed_products != undefined) {
+													jQuery('.recent-page-viewed').removeClass('d-none');
+													hasViewItem = true;
+													var last_viewd_pro_array = JSON.parse(localStorage.last_viewed_products);
+													var recentview_promises = [];
+													var size_pro_review = last_viewd_pro_array.length;
+													if (size_pro_review >= 6) {
+														size_pro_review = 6;
+													} else {
+														size_pro_review = last_viewd_pro_array.length;
+													}
+													if (size_pro_review < 1) {
+														jQuery('.recent-page-viewed').addClass('d-none');
+														hasViewItem = false;
+													} else {
+														jQuery('.recent-page-viewed').removeClass('d-none');
+														hasViewItem = true;
+													}
+													if (size_pro_review > 0) {
+														for (i = 0; i < size_pro_review; i++) {
+															var alias_product = last_viewd_pro_array[i];
+															if (!!alias_product.alias) {
+																var promise = new Promise(function (resolve, reject) {
+																	$.ajax({
+																		url: '/' + alias_product.alias + '?view=viewed',
+																		success: function (product) {
+																			resolve(product);
+																		},
+																		error: function (err) {
+																			resolve('');
+																		}
+																	})
+																});
+																recentview_promises.push(promise);
+															}
+														}
+														Promise.all(recentview_promises).then(function (values) {
+															$.each(values, function (i, v) {
+																$('.recent-page-viewed .product-viewed-content').append(v);
+															});
+															awe_lazyloadImage();
+														});
+													}
+												} else {
+													jQuery('.recent-page-viewed').addClass('d-none');
+													hasViewItem = false;
+												}
+											</script>
+
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+
+						<div class="col-12 product-related product-swipers">
+							<div class="bg-shadow">
+								<h2>
+									<a href="/to-yen-tinh-che" title="Sản phẩm liên quan">
+										Sản phẩm liên quan
+									</a>
+								</h2>
+								<div class="swiper_product_related swiper-container">
+									<div class="swiper-wrapper">
+										@foreach (var product in Model.Products)
+										{
+											<div class="swiper-slide">
+												<div class="item_product_main">
+													<form action="/cart/add" method="post" class="variants product-action item-product-main duration-300" enctype="multipart/form-data">
+														<!-- Hiển thị giảm giá (Promotion) nếu có -->
+														@if (product.PromotionPrice > 0)
+														{
+															<span class="flash-sale">-@product.PromotionPrice%</span>
+														}
+
+														<!-- Hiển thị hình ảnh sản phẩm -->
+														<div class="product-thumbnail">
+															<a class="image_thumb scale_hover" href="/product/@product.ProductId" title="@product.Name">
+																<img src="@($"/img/{product.Image}")" alt="@product.Name" onerror="this.src='/images/default.jpg'">
+														
+															</a>
+														</div>
+
+														<!-- Thông tin sản phẩm -->
+														<div class="product-info">
+															<div class="name-price">
+																<h3 class="product-name line-clamp-2-new">
+																	<a href="/product/@product.ProductId" title="@product.Name">@product.Name</a>
+																</h3>
+																<div class="product-price-cart">
+																	<!-- Hiển thị giá gốc nếu có giảm giá -->
+																	@if (product.PromotionPrice > 0)
+																	{
+																		<span class="compare-price">@String.Format("{0:N0}₫", product.Price)</span>
+																	}
+																	<!-- Giá sau khi giảm -->
+																	<span class="price">@String.Format("{0:N0}₫", product.Price - (product.Price * product.PromotionPrice / 100))</span>
+																</div>
+															</div>
+
+															<!-- Nút thêm vào giỏ hàng -->
+															<div class="product-button">
+																<input type="hidden" name="variantId" value="@product.ProductId" />
+																<button class="btn-cart btn-views add_to_cart btn btn-primary" title="Thêm vào giỏ hàng">
+																	<span>Thêm vào giỏ</span>
+																</button>
+																<a href="javascript:void(0)" class="setWishlist btn-views btn-circle" title="Thêm vào yêu thích">
+																	<img width="25" height="25" src="//bizweb.dktcdn.net/100/506/650/themes/944598/assets/heart.png" alt="Thêm vào yêu thích" />
+																</a>
+															</div>
+														</div>
+													</form>
+												</div>
+											</div>
+										}
+									</div>
+								</div>
+
+
+									</div>
+									<div class="swiper-button-next">
+										<svg width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<rect x="2.13003" y="29" width="38" height="38" transform="rotate(-45 2.13003 29)" stroke="black" fill="#fff" stroke-width="2" />
+											<rect x="8" y="29.2133" width="30" height="30" transform="rotate(-45 8 29.2133)" fill="black" />
+											<path d="M18.5 29H39.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+											<path d="M29 18.5L39.5 29L29 39.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+										</svg>
+									</div>
+									<div class="swiper-button-prev">
+										<svg width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<rect x="2.13003" y="29" width="38" height="38" transform="rotate(-45 2.13003 29)" stroke="black" fill="#fff" stroke-width="2" />
+											<rect x="8" y="29.2133" width="30" height="30" transform="rotate(-45 8 29.2133)" fill="black" />
+											<path d="M18.5 29H39.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+											<path d="M29 18.5L39.5 29L29 39.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+										</svg>
+									</div>
+								</div>
+							</div>
+						</div>
+						<script>
+							var swiper_related = null;
+							function initSwiperRelated() {
+								swiper_related = new Swiper('.swiper_product_related', {
+									slidesPerView: 4,
+									spaceBetween: 20,
+									slidesPerGroup: 1,
+									navigation: {
+										nextEl: '.swiper_product_related .swiper-button-next',
+										prevEl: '.swiper_product_related .swiper-button-prev',
+									},
+									breakpoints: {
+										768: {
+											slidesPerView: 4,
+											spaceBetween: 20
+										},
+										992: {
+											slidesPerView: 4,
+											spaceBetween: 20
+										},
+										1024: {
+											slidesPerView: 4,
+											spaceBetween: 20
+										}
+									}
+								});
+							}
+							function destroySwiperRelated() {
+								if (swiper_related) {
+									swiper_related.destroy(true, true);
+									swiper_related = null;
+								}
+							}
+							function toggleSwiperRelated() {
+								if ($(window).width() <= 767 && swiper_related) {
+									destroySwiperRelated();
+								} else if ($(window).width() > 767 && !swiper_related) {
+									initSwiperRelated();
+								}
+							}
+							toggleSwiperRelated();
+							$(window).resize(toggleSwiperRelated);
+						</script>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<script>
+			var variantsize = false;
+			var ww = $(window).width();
+			function validate(evt) {
+				var theEvent = evt || window.event;
+				var key = theEvent.keyCode || theEvent.which;
+				key = String.fromCharCode(key);
+				var regex = /[0-9]|\./;
+				if (!regex.test(key)) {
+					theEvent.returnValue = false;
+					if (theEvent.preventDefault) theEvent.preventDefault();
 				}
 			}
-		}
-		var addToCart = jQuery('.form-product .btn-cart.normal_button'),
-			FastAddToCart = jQuery('.form-product .btn-buyNow'),
-			form = jQuery('.form-product .boz-form'),
-			productPrice = jQuery('.details-pro .special-price .product-price'),
-			qty = jQuery('.inventory_quantity .a-stock'),
-			comparePrice = jQuery('.details-pro .old-price .product-price-old'),
-			comparePriceText = jQuery('.details-pro .old-price'),
-			savePrice = jQuery('.details-pro .save-price .product-price-save'),
-			savePriceText = jQuery('.details-pro .save-price'),
-			qtyBtn = jQuery('.form-product .custom-btn-number'),
-			BtnSold = jQuery('.form-product .form-group .btn-mua'),
-			product_sku = jQuery('.details-product .sku-product .variant-sku');
-		if (variant && variant.sku != "" && variant.sku != null){
-			product_sku.html("Mã: <span class='a-sku'>" + variant.sku + "</span>");
-		} else {
-			product_sku.html('Mã: <span class="a-sku">Đang cập nhật</span>');
-		}
-		FastAddToCart.addClass('d-none');
-		if (variant && variant.available) {
-			if(variant.inventory_management == "bizweb"){
-				if (variant.inventory_quantity != 0) {
-					qty.html('<span class="a-stock">Còn hàng</span>');
-				} else if (variant.inventory_quantity == ''){
-					if (variant.inventory_policy == "continue"){
-						qty.html('<span class="a-stock">Còn hàng</span>');
-					} else {
-						qty.html('<span class="a-stock a-stock-out">Hết hàng</span>');
+			var selectCallback = function (variant, selector) {
+				if (variant) {
+					var form = jQuery('#' + selector.domIdPrefix).closest('form');
+					for (var i = 0, length = variant.options.length; i < length; i++) {
+						var radioButton = form.find('.swatch[data-option-index="' + i + '"] :radio[value="' + variant.options[i] + '"]');
+						if (radioButton.size()) {
+							radioButton.get(0).checked = true;
+						}
 					}
 				}
-			}else{
-				qty.html('<span class="a-stock">Còn hàng</span>');
-			}
-			FastAddToCart.removeClass('d-none');
-			addToCart.html('<span class="txt-main">Thêm vào giỏ</span>').removeAttr('disabled');	
-			BtnSold.removeClass('btnsold');
-			qtyBtn.removeClass('d-none');
-			if(variant.price == 0){
-				productPrice.html('Liên hệ');
-				comparePrice.hide();
-				savePrice.hide();
-				comparePriceText.hide();
-				jQuery('.sale-off').hide();
-				savePriceText.hide();
-				form.addClass('d-none');
-			}else{
-				form.removeClass('d-none');
-				productPrice.html(Bizweb.formatMoney(variant.price, "{{amount_no_decimals_with_comma_separator}}₫"));
-													 if ( variant.compare_at_price > variant.price ) {
-								  comparePrice.html(Bizweb.formatMoney(variant.compare_at_price, "{{amount_no_decimals_with_comma_separator}}₫")).show();
-								  savePrice.html(Bizweb.formatMoney(variant.compare_at_price - variant.price, "{{amount_no_decimals_with_comma_separator}}₫")).show();
-								  comparePriceText.show();
-				jQuery('.sale-off').html("-" + (Math.round(((variant.compare_at_price - variant.price) / variant.compare_at_price) * 100)) + "%").show();
-				savePriceText.show();
-			} else {
-				comparePrice.hide();   
-				savePrice.hide();
-				comparePriceText.hide();
-				savePriceText.hide();
-				jQuery('.sale-off').hide();
-			}       										
-		}
-	} else {	
-		qty.html('<span class="a-stock a-stock-out">Hết hàng</span>');
-		FastAddToCart.addClass('d-none');
-		addToCart.html('<span class="txt-main">Hết hàng</span>').attr('disabled', 'disabled');
-		BtnSold.addClass('btnsold');
-		qtyBtn.addClass('d-none');
-		if(variant){
-			if(variant.price != 0){
-				form.removeClass('d-none');
-				productPrice.html(Bizweb.formatMoney(variant.price, "{{amount_no_decimals_with_comma_separator}}₫"));
-													 if ( variant.compare_at_price > variant.price ) {
-								  FastAddToCart.addClass('d-none');
-				addToCart.html('<span class="txt-main">Hết hàng</span>').attr('disabled', 'disabled');
-				comparePrice.html(Bizweb.formatMoney(variant.compare_at_price, "{{amount_no_decimals_with_comma_separator}}₫")).show();
-													 savePrice.html(Bizweb.formatMoney(variant.compare_at_price - variant.price, "{{amount_no_decimals_with_comma_separator}}₫")).show();
-													 comparePriceText.show();
-								  jQuery('.sale-off').html("-" + (Math.round(((variant.compare_at_price - variant.price) / variant.compare_at_price) * 100)) + "%").show();
-				savePriceText.show();
-			} else {
-				comparePrice.hide();  
-				savePrice.hide();
-				comparePriceText.hide();
-				savePriceText.hide();
+				var addToCart = jQuery('.form-product .btn-cart.normal_button'),
+					FastAddToCart = jQuery('.form-product .btn-buyNow'),
+					form = jQuery('.form-product .boz-form'),
+					productPrice = jQuery('.details-pro .special-price .product-price'),
+					qty = jQuery('.inventory_quantity .a-stock'),
+					comparePrice = jQuery('.details-pro .old-price .product-price-old'),
+					comparePriceText = jQuery('.details-pro .old-price'),
+					savePrice = jQuery('.details-pro .save-price .product-price-save'),
+					savePriceText = jQuery('.details-pro .save-price'),
+					qtyBtn = jQuery('.form-product .custom-btn-number'),
+					BtnSold = jQuery('.form-product .form-group .btn-mua'),
+					product_sku = jQuery('.details-product .sku-product .variant-sku');
+				if (variant && variant.sku != "" && variant.sku != null) {
+					product_sku.html("Mã: <span class='a-sku'>" + variant.sku + "</span>");
+				} else {
+					product_sku.html('Mã: <span class="a-sku">Đang cập nhật</span>');
+				}
 				FastAddToCart.addClass('d-none');
-				addToCart.html('<span class="txt-main">Hết hàng</span>').attr('disabled', 'disabled');
-			}     
-		}else{
-			productPrice.html('Liên hệ');
-			comparePrice.hide();
-			savePrice.hide();
-			comparePriceText.hide();
-			jQuery('.sale-off').hide();
-			savePriceText.hide();
-			form.addClass('d-none');
-		}
-	}else{
-		productPrice.html('Liên hệ');
-		comparePrice.hide();
-		savePrice.hide();
-		comparePriceText.hide();
-		jQuery('.sale-off').hide();
-		savePriceText.hide();
-		form.addClass('d-none');
-	}
-	}
-	/*begin variant image*/
-	if (variant && variant.image) {  
-		var originalImage = jQuery(".gallery-thumbs img");
-		var stickoriginalImage = jQuery(".nd-product-news img");
-		var newImage = variant.image;
-		var element = originalImage[0];
-		Bizweb.Image.switchImage(newImage, element, function (newImageSizedSrc, newImage, element) {
-			$('.gallery-thumbs .swiper-slide').each(function(){
-				var $this = $(this);
-				var imgThis = $this.find('img').attr('data-image');
-				if(newImageSizedSrc.split("?")[0] == imgThis.split("?")[0]){
-					var pst = $this.attr('data-hash');
-					galleryTop.slideTo(pst, 1000,false);
+				if (variant && variant.available) {
+					if (variant.inventory_management == "bizweb") {
+						if (variant.inventory_quantity != 0) {
+							qty.html('<span class="a-stock">Còn hàng</span>');
+						} else if (variant.inventory_quantity == '') {
+							if (variant.inventory_policy == "continue") {
+								qty.html('<span class="a-stock">Còn hàng</span>');
+							} else {
+								qty.html('<span class="a-stock a-stock-out">Hết hàng</span>');
+							}
+						}
+					} else {
+						qty.html('<span class="a-stock">Còn hàng</span>');
+					}
+					FastAddToCart.removeClass('d-none');
+					addToCart.html('<span class="txt-main">Thêm vào giỏ</span>').removeAttr('disabled');
+					BtnSold.removeClass('btnsold');
+					qtyBtn.removeClass('d-none');
+					if (variant.price == 0) {
+						productPrice.html('Liên hệ');
+						comparePrice.hide();
+						savePrice.hide();
+						comparePriceText.hide();
+						jQuery('.sale-off').hide();
+						savePriceText.hide();
+						form.addClass('d-none');
+					} else {
+						form.removeClass('d-none');
+						productPrice.html(Bizweb.formatMoney(variant.price, "{{amount_no_decimals_with_comma_separator}}₫"));
+						if (variant.compare_at_price > variant.price) {
+							comparePrice.html(Bizweb.formatMoney(variant.compare_at_price, "{{amount_no_decimals_with_comma_separator}}₫")).show();
+							savePrice.html(Bizweb.formatMoney(variant.compare_at_price - variant.price, "{{amount_no_decimals_with_comma_separator}}₫")).show();
+							comparePriceText.show();
+							jQuery('.sale-off').html("-" + (Math.round(((variant.compare_at_price - variant.price) / variant.compare_at_price) * 100)) + "%").show();
+							savePriceText.show();
+						} else {
+							comparePrice.hide();
+							savePrice.hide();
+							comparePriceText.hide();
+							savePriceText.hide();
+							jQuery('.sale-off').hide();
+						}
+					}
+				} else {
+					qty.html('<span class="a-stock a-stock-out">Hết hàng</span>');
+					FastAddToCart.addClass('d-none');
+					addToCart.html('<span class="txt-main">Hết hàng</span>').attr('disabled', 'disabled');
+					BtnSold.addClass('btnsold');
+					qtyBtn.addClass('d-none');
+					if (variant) {
+						if (variant.price != 0) {
+							form.removeClass('d-none');
+							productPrice.html(Bizweb.formatMoney(variant.price, "{{amount_no_decimals_with_comma_separator}}₫"));
+							if (variant.compare_at_price > variant.price) {
+								FastAddToCart.addClass('d-none');
+								addToCart.html('<span class="txt-main">Hết hàng</span>').attr('disabled', 'disabled');
+								comparePrice.html(Bizweb.formatMoney(variant.compare_at_price, "{{amount_no_decimals_with_comma_separator}}₫")).show();
+								savePrice.html(Bizweb.formatMoney(variant.compare_at_price - variant.price, "{{amount_no_decimals_with_comma_separator}}₫")).show();
+								comparePriceText.show();
+								jQuery('.sale-off').html("-" + (Math.round(((variant.compare_at_price - variant.price) / variant.compare_at_price) * 100)) + "%").show();
+								savePriceText.show();
+							} else {
+								comparePrice.hide();
+								savePrice.hide();
+								comparePriceText.hide();
+								savePriceText.hide();
+								FastAddToCart.addClass('d-none');
+								addToCart.html('<span class="txt-main">Hết hàng</span>').attr('disabled', 'disabled');
+							}
+						} else {
+							productPrice.html('Liên hệ');
+							comparePrice.hide();
+							savePrice.hide();
+							comparePriceText.hide();
+							jQuery('.sale-off').hide();
+							savePriceText.hide();
+							form.addClass('d-none');
+						}
+					} else {
+						productPrice.html('Liên hệ');
+						comparePrice.hide();
+						savePrice.hide();
+						comparePriceText.hide();
+						jQuery('.sale-off').hide();
+						savePriceText.hide();
+						form.addClass('d-none');
+					}
 				}
-				jQuery(stickoriginalImage).attr('src', newImageSizedSrc);
+				/*begin variant image*/
+				if (variant && variant.image) {
+					var originalImage = jQuery(".gallery-thumbs img");
+					var stickoriginalImage = jQuery(".nd-product-news img");
+					var newImage = variant.image;
+					var element = originalImage[0];
+					Bizweb.Image.switchImage(newImage, element, function (newImageSizedSrc, newImage, element) {
+						$('.gallery-thumbs .swiper-slide').each(function () {
+							var $this = $(this);
+							var imgThis = $this.find('img').attr('data-image');
+							if (newImageSizedSrc.split("?")[0] == imgThis.split("?")[0]) {
+								var pst = $this.attr('data-hash');
+								galleryTop.slideTo(pst, 1000, false);
+							}
+							jQuery(stickoriginalImage).attr('src', newImageSizedSrc);
+						});
+					});
+				}
+				/*end of variant image*/
+			};
+			jQuery(function ($) {
+
+				// Add label if only one product option and it isn't 'Title'. Could be 'Size'.
+
+				// Hide selectors if we only have 1 variant and its title contains 'Default'.
+
+				$('.selector-wrapper').hide();
+
+				$('.selector-wrapper').css({
+					'text-align': 'left',
+					'margin-bottom': '15px'
+				});
 			});
-		});
-	}
-	/*end of variant image*/
-	};
-	jQuery(function($) {
-		
-		// Add label if only one product option and it isn't 'Title'. Could be 'Size'.
-		
-											 // Hide selectors if we only have 1 variant and its title contains 'Default'.
-											 
-											 $('.selector-wrapper').hide();
-		 
-		$('.selector-wrapper').css({
-			'text-align':'left',
-			'margin-bottom':'15px'
-		});
-	});
 
-	jQuery('.swatch :radio').change(function() {
-		var optionIndex = jQuery(this).closest('.swatch').attr('data-option-index');
-		var optionValue = jQuery(this).val();
-		jQuery(this)
-			.closest('form')
-			.find('.single-option-selector')
-			.eq(optionIndex)
-			.val(optionValue)
-			.trigger('change');
-		$(this).closest('.swatch').find('.header .value-roperties').html(optionValue);
-	});
-	setTimeout(function(){
-		$('.swatch .swatch-element').each(function(){
-			$(this).closest('.swatch').find('.header .value-roperties').html($(this).closest('.swatch').find('input:checked').val());
-		});
-	}, 500);
-	$(document).on('click', '.btn-buy-now', function(){
-		var _variantID = $('#product-selectors').val();
-		var _Qty = parseInt($('.input_number_product #qty').text());;
-		if(_variantID == null){
-			_variantID = $('#one_variant').val();
-		}
-		jQuery.ajax({
-			type: "POST",
-			url: "/cart/add.js",
-			data: "quantity=" + _Qty + "&VariantId=" + _variantID,
-			dataType: "json",
-			success: function(e) {
-				window.location = '/checkout';
-			},
-			error: function(e, t) {
-				Bizweb.onError(e, t);
-			}
-		});
-	});
-
-	$('.slider-big-video .slider-for a').each(function() {
-		$(this).attr('rel','lightbox-demo'); 
-	});
-
-</script>
-<script>
-	
-	var getLimit = 6;
-	var alias = 'copy-of-to-yen-tinh-che-cho-be-baby-loai-3';
-	
-	function activeTab(obj){
-		$('.product-tab ul li').removeClass('active');
-		$(obj).addClass('active');
-		var id = $(obj).attr('data-tab');
-		$('.tab-content').removeClass('active');
-		$(id).addClass('active');
-	}
-
-
-	$('.product-tab ul li').click(function(){
-		activeTab(this);
-		return false;
-	});
-	var galleryThumbs = new Swiper('.gallery-thumbs', {
-		spaceBetween: 5,
-		slidesPerView: 10,
-		freeMode: true,
-		lazy: true,
-		watchSlidesVisibility: true,
-		watchSlidesProgress: true,
-		hashNavigation: true,
-		slideToClickedSlide: true,
-		breakpoints: {
-			260: {
-				slidesPerView: 3,
-				spaceBetween: 10,
-			},
-			300: {
-				slidesPerView: 4,
-				spaceBetween: 10,
-			},
-			500: {
-				slidesPerView: 4,
-				spaceBetween: 10,
-			},
-			640: {
-				slidesPerView: 4,
-				spaceBetween: 10,
-			},
-			768: {
-				slidesPerView: 5,
-				spaceBetween: 10,
-				direction: 'vertical'
-			},
-			992: {
-				slidesPerView: 4,
-				spaceBetween: 10,
-				direction: 'vertical'
-			},
-			1024: {
-				slidesPerView: 4,
-				spaceBetween: 10,
-				direction: 'vertical'
-			},
-			1199: {
-				slidesPerView: 4,
-				spaceBetween: 10,
-				direction: 'vertical' 
-			}
-		},
-		navigation: {
-			nextEl: '.gallery-thumbs .swiper-button-next',
-			prevEl: '.gallery-thumbs .swiper-button-prev',
-		},
-	});
-	var galleryTop = new Swiper('.gallery-top', {
-		spaceBetween: 0,
-		lazy: true,
-		hashNavigation: true,
-		thumbs: {
-			swiper: galleryThumbs
-		}
-	});
-	var swiper = new Swiper('.product-relate-swiper', {
-		slidesPerView: 4,
-		loop: false,
-		grabCursor: true,
-		spaceBetween: 30,
-		roundLengths: true,
-		slideToClickedSlide: false,
-		navigation: {
-			nextEl: '.product-relate-swiper .swiper-button-next',
-			prevEl: '.product-relate-swiper .swiper-button-prev',
-		},
-		autoplay: false,
-		breakpoints: {
-			260: {
-				slidesPerView: 'auto',
-				spaceBetween: 15
-			},
-			500: {
-				slidesPerView: 2,
-				spaceBetween: 15
-			},
-			640: {
-				slidesPerView: 3,
-				spaceBetween: 15
-			},
-			768: {
-				slidesPerView: 3,
-				spaceBetween: 30
-			},
-			991: {
-				slidesPerView: 4,
-				spaceBetween: 30
-			},
-			1200: {
-				slidesPerView: 4,
-				spaceBetween: 30
-			}
-		}
-	});
-	$(document).ready(function() {
-		$("#lightgallery").lightGallery({
-			thumbnail: false
-		}); 
-		$("#videolary").lightGallery({
-			thumbnail: false
-		}); 
-	});
-	$('.btn-buyNow').on('click', function(event) {
-		$.ajax({
-			url:'/cart/add.js',
-			type: "post",
-			data: $("#add-to-cart-form").serialize(),
-			datatype: "json",
-			success: function(data){
-				window.location.href = "/checkout";
-			},
-			error: function(){
-			}
-		});
-		event.preventDefault();
-	});
-	$('.btn--view-more').on('click', function(e){
-		e.preventDefault();
-		var $this = $(this);
-		if( $('.product-review-details .product-review-content').hasClass('expanded')) {
-			$('html, body').animate({ scrollTop: $('.product-review-details').offset().top - 110 }, 'slow');
-		}
-		$this.parents('.product-review-details').find('.product-review-content').toggleClass('expanded');
-		$(this).toggleClass('active');
-		return false;
-	});
-	
-	$(document).ready(function ($){
-		var product = {"id":34775949,"name":"Tổ Yến Tinh Chế cho bé BaBy (loại 3)","alias":"copy-of-to-yen-tinh-che-cho-be-baby-loai-3","vendor":"Koi Farm Shop","type":"","content":"<p>\n  <em>Tổ yến tinh chế cho bé Baby 2</em>\u00A0là tổ yến đã qua công đoạn tinh tế, bao gồm 100% vụn yến thiên nhiên Nha Trang. Tổ yến tươi nguyên chất, không pha tạp và qua kiểm định nghiêm ngặt theo tiêu chuẩn bộ y tế. Tổ yến nguyên thiên nhiên sau khi tinh chế (nhặt lông, loại bỏ tạp chất, …) sẽ sót lại vụn yến. Vụn yến sau đó được làm sạch và định hình lại thành hình dạng tổ yến. <br>\n</p>\n<p>Do đó giá thành của tổ yến tinh chế Baby 2\u00A0sẽ thấp hơn khá nhiều tổ yến nguyên sợi, phù hợp với điều kiện kinh tế với nhiều khách hàng. Nhưng không vì thế mà tổ yến tinh chế baby mất đi giá trị của mình. Sản phẩm của chúng tôi\u00A0đảm bảo 100% chất lượng ban đầu, cả dinh dưỡng lẫn hương vị.</p>\n<p>Sản phẩm này phù hợp hơn khi chăm sóc người cao tuổi, trẻ em, bà bầu\u00A0và người ốm. Bởi vụn yến sẽ tạo cảm giác dễ ăn hơn và dễ dàng được tiêu hóa và hấp thụ dinh dưỡng. Dành cho bạn nào chưa biết thì tổ yến có chứa tới 18 loại Acid Amin quý, có cả những loại cơ thể không thể tự tổng hợp được. Cùng với đó là 31 loại nguyên tố đa – vi lượng thiết yếu cho sự phát triển của cơ thể. <br>\n</p>\n<p>Yến sào từ xưa đến nay luôn là một trong những món ăn quý hiểm,\u00A0 <b>“Bát Trân”</b>\u00A0được ưa chuộng bởi các bậc đế vương với công dụng bồi bổ sức khỏe rất lớn.Ngày nay, tổ yến vẫn giữ nguyên được giá trị của mình nhưng đã phù hợp rộng rãi với nhiều khách hàng hơn bởi quy trình khai thác dễ dàng hơn xưa rất nhiều. </p>\n<h2>\n  <b>Đảm bảo\u00A0chất lượng\u00A0 <em>tổ yến tinh chế cho bé Baby 3</em>\n  </b>\n</h2>\n<ul>\n  <li>Sản phẩm tổ yến được sấy khô 100%, nói không với cân thiếu, dối trá khách hàng.</li>\n  <li>Nói không với chất tăng trọng, độn tạp chất phụ gia độc hại.</li>\n  <li>Phát hiện yến giả - Bồi đền\u00A0500% giá trị sản phẩm cho khách hàng.</li>\n  <li>Hàng cân đủ 100% (thường dư cho khách 1-2gr).</li>\n</ul>\n<h2>\n  <b>Công dụng\u00A0 <em>Tổ tinh chế cho bé Baby 3</em>\n  </b>\n  <br>\n</h2>\n<ul>\n  <li>Tổ\u00A0yến là món \"bát trân trong bát trân\"\u00A0có nguồn gốc tự nhiên rất quý từ xưa, chỉ được dùng cho vua chúa. Đến nay, sản phẩm <em>\n      <b>tổ yến\u00A0</b>\n    </em>vẫn không mất đi sự quý giá của nó và được nhiều khách hàng lựa chọn bởi tác dụng bồi bổ rất lớn. </li>\n  <li>Trong tổ yến chưa 50% Protein tự nhiên, 18 loại Acid Amin và hơn 31 nguyên tố vi lượng. Phần lớn trong số này là các chất cơ thể con người không tự tổng hợp được, cần phải nạp từ bên ngoài. Chính vì vậy,\u00A0 <b>\n      <em>tổ yến\u00A0</em>\n    </b>có tác dụng rất tốt với cơ thể. </li>\n</ul>\n<h5>Quà tặng tổng quan</h5>\n<p>\n  <span style=\"letter-spacing: -0.2px;\">- Tặng 1 túi giấy xách đi kèm <br>- 1 Hộp đường phèn </span>\n</p>\n<h5>Quà tặng chi tiết</h5>\n<ul>\n  <li>Tặng 1 túi giấy xách đi kèm.</li>\n  <li>\n    <span style=\"letter-spacing: -0.2px;\">1 Hộp đường phèn</span>\n  </li>\n  <li>Tặng bao lì xì Giáp Thìn 2024.</li>\n</ul>\n<h6>Thành phần</h6>\n<table cellspacing=\"0\" class=\"cke_show_border\" style=\"width: 88.122%; height: 147px;\">\n  <tbody>\n    <td>\n      <span>\n        <strong>Nhóm</strong>\n      </span>\n    </td>\n    <td>Tổ Yến</td>\n    </tr>\n    <td>\n      <span>\n        <strong>Loại</strong>\n      </span>\n    </td>\n    <td>\n      <span>Yến Tinh Chế</span>\n    </td>\n    </tr>\n    <td>\n      <span>\n        <strong>Khối lượng</strong>\n      </span>\n    </td>\n    <td>\n      <span>100gr (10-11 tổ/hộp)</span>\n    </td>\n    </tr>\n    <tr>\n      <td>\n        <span>\n          <b>Bộ sản phẩm <br>\n          </b>\n        </span>\n      </td>\n      <td>\n        <ul>\n          <li>\n            <span>100gr Yến\u00A0</span>\n          </li>\n          <li>\n            <span>1 Hộp đường phèn</span>\n          </li>\n          <li>\n            <span>1 Bộ hộp và túi giấy riêng sang trọng</span>\n          </li>\n          <li>\n            <span>1 Phần quà tặng khuyến mãi tùy chọn (áp dụng khi mua từ 100gr)</span>\n          </li>\n        </ul>\n      </td>\n    </tr>\n  </tbody>\n</table>","summary":"<ul>\n<li><span><b>Tổ yến tinh chế cho bé baby 2</b>\u00A0đã được xử lý làm\u00A0sạch, phồng, trắng nhưng vẫn giữ nguyên được giá trị dinh dưỡng.</span></li>\n<li><span><b>100% yến sào Khánh Hòa nguyên chất</b></span></li>\n<li><span>Tổ yến chữ\u00A0<b>AB</b>\u00A0đã qua chọn lọc, nhà\u00A0yến\u00A0<b>6</b>\u00A0năm tuổi, chất lượng cao từ hương vị đến dinh dưỡng.</span></li>\n<li><span><b>Được làm từ những yến vụn không có sợi tự nhiên. Tiết kiệm chi phí hơn.</b></span></li>\n<li><span>Tiện lợi để sử dụng ngay, tiết kiệm thời gian và lượng hao hụt trong quá trình xử lý.</span></li>\n<li><span>Món quà tặng đầy cao cấp và giá trị các dịp lễ tết.</span></li>\n</ul>","template_layout":"product","available":true,"tags":[],"price":2900000.0000,"price_min":2900000.0000,"price_max":2900000.0000,"price_varies":false,"compare_at_price":3100000.0000,"compare_at_price_min":3100000.0000,"compare_at_price_max":3100000.0000,"compare_at_price_varies":false,"variants":[{"id":111118886,"barcode":null,"sku":null,"title":"Default Title","options":["Default Title"],"option1":"Default Title","option2":null,"option3":null,"available":true,"taxable":false,"price":2900000.0000,"compare_at_price":3100000.0000,"inventory_management":"","inventory_policy":"deny","inventory_quantity":0,"weight_unit":"g","weight":0,"requires_shipping":true,"image":{"src":"https://bizweb.dktcdn.net/100/506/650/products/bb2-50gr-0-nap-494df53fb54c4233b0ba3c0a8ab3dfbe-97fc1701b8a14297ac03ee1e64edf1b2-master-d488b4d7-4784-48b2-a54a-c7d6343654fa.jpg?v=1709574876467"}}],"featured_image":{"src":"https://bizweb.dktcdn.net/100/506/650/products/bb2-50gr-0-nap-494df53fb54c4233b0ba3c0a8ab3dfbe-97fc1701b8a14297ac03ee1e64edf1b2-master-d488b4d7-4784-48b2-a54a-c7d6343654fa.jpg?v=1709574876467"},"images":[{"src":"https://bizweb.dktcdn.net/100/506/650/products/bb2-50gr-0-nap-494df53fb54c4233b0ba3c0a8ab3dfbe-97fc1701b8a14297ac03ee1e64edf1b2-master-d488b4d7-4784-48b2-a54a-c7d6343654fa.jpg?v=1709574876467"},{"src":"https://bizweb.dktcdn.net/100/506/650/products/bb2-50gr-nghieng-b2c0e2b67a504163bdc13d7e87992721-03dab23548054dc982811f6da3464f7f-master-50fb7084-c634-4bd2-b4ff-6b50599a1cf2.jpg?v=1709574876467"},{"src":"https://bizweb.dktcdn.net/100/506/650/products/tc1-50gr-tai-yen-1a586a3bd9fc46d0bb02fc389da9c5a5-5bc395eae17543e9a557be3320ed56ab-master-f3a52df2-b976-4659-a0f2-71ffcf1f169e.jpg?v=1709574876467"}],"options":["Title"],"created_on":"2024-03-05T00:54:36","modified_on":"2024-04-22T14:22:43","published_on":"2024-02-22T18:17:44"};
-		var alias_pro = 'copy-of-to-yen-tinh-che-cho-be-baby-loai-3';
-		var array_list = [product];
-		var list_viewed_pro_old = localStorage.getItem('last_viewed_products');
-		var last_viewed_pro_new = "";
-		if(list_viewed_pro_old == null || list_viewed_pro_old == '')
-			last_viewed_pro_new = array_list;
-		else{
-			var list_viewed_pro_old = JSON.parse(localStorage.last_viewed_products);
-			list_viewed_pro_old.splice(5, 1);
-			for (i = 0; i < list_viewed_pro_old.length; i++) {
-				if ( list_viewed_pro_old[i].alias == alias_pro ) {
-					list_viewed_pro_old.splice(i,1);
-					break;
+			jQuery('.swatch :radio').change(function () {
+				var optionIndex = jQuery(this).closest('.swatch').attr('data-option-index');
+				var optionValue = jQuery(this).val();
+				jQuery(this)
+					.closest('form')
+					.find('.single-option-selector')
+					.eq(optionIndex)
+					.val(optionValue)
+					.trigger('change');
+				$(this).closest('.swatch').find('.header .value-roperties').html(optionValue);
+			});
+			setTimeout(function () {
+				$('.swatch .swatch-element').each(function () {
+					$(this).closest('.swatch').find('.header .value-roperties').html($(this).closest('.swatch').find('input:checked').val());
+				});
+			}, 500);
+			$(document).on('click', '.btn-buy-now', function () {
+				var _variantID = $('#product-selectors').val();
+				var _Qty = parseInt($('.input_number_product #qty').text());;
+				if (_variantID == null) {
+					_variantID = $('#one_variant').val();
 				}
-			}
-			list_viewed_pro_old.unshift(array_list[0]);
-			last_viewed_pro_new = list_viewed_pro_old;
-		}
-		localStorage.setItem('last_viewed_products',JSON.stringify(last_viewed_pro_new));
-	});
-	
+				jQuery.ajax({
+					type: "POST",
+					url: "/cart/add.js",
+					data: "quantity=" + _Qty + "&VariantId=" + _variantID,
+					dataType: "json",
+					success: function (e) {
+						window.location = '/checkout';
+					},
+					error: function (e, t) {
+						Bizweb.onError(e, t);
+					}
+				});
+			});
 
-	// Check if either specificationsDiv or viewContentDiv is absent or empty.
-	// If true, hide the productBarDiv by adding the 'hidden' class.
-	$(document).ready(function() {
-		var productBarDiv = $('.product-sidebar');
-		var productDetailsDiv = $('.product-review-details');
-		var hasSpecifications = true;
-		if (hasSpecifications == false && hasViewItem == false) {
-			productBarDiv.addClass('hidden');
-			productDetailsDiv.removeClass('col-lg-8').addClass('col-lg-12');
-		}
-	});
-</script>
-			<div id="js-global-alert" class="alert alert-success" role="alert">
-				<button type="button" class="close"><span aria-hidden="true"><span aria-hidden="true">&times;</span></span></button>
-				<h5 class="alert-heading"></h5>
-				<p class="alert-content"></p>
-			</div>
-			
-			<link href="//bizweb.dktcdn.net/100/506/650/themes/944598/assets/bpr-products-module.css?1728460505311" rel="stylesheet" type="text/css" media="all" />
-<div class="sapo-product-reviews-module"></div>
+			$('.slider-big-video .slider-for a').each(function () {
+				$(this).attr('rel', 'lightbox-demo');
+			});
+
+		</script>
+		<script>
+
+			var getLimit = 6;
+			var alias = 'copy-of-to-yen-tinh-che-cho-be-baby-loai-3';
+
+			function activeTab(obj) {
+				$('.product-tab ul li').removeClass('active');
+				$(obj).addClass('active');
+				var id = $(obj).attr('data-tab');
+				$('.tab-content').removeClass('active');
+				$(id).addClass('active');
+			}
+
+
+			$('.product-tab ul li').click(function () {
+				activeTab(this);
+				return false;
+			});
+			var galleryThumbs = new Swiper('.gallery-thumbs', {
+				spaceBetween: 5,
+				slidesPerView: 10,
+				freeMode: true,
+				lazy: true,
+				watchSlidesVisibility: true,
+				watchSlidesProgress: true,
+				hashNavigation: true,
+				slideToClickedSlide: true,
+				breakpoints: {
+					260: {
+						slidesPerView: 3,
+						spaceBetween: 10,
+					},
+					300: {
+						slidesPerView: 4,
+						spaceBetween: 10,
+					},
+					500: {
+						slidesPerView: 4,
+						spaceBetween: 10,
+					},
+					640: {
+						slidesPerView: 4,
+						spaceBetween: 10,
+					},
+					768: {
+						slidesPerView: 5,
+						spaceBetween: 10,
+						direction: 'vertical'
+					},
+					992: {
+						slidesPerView: 4,
+						spaceBetween: 10,
+						direction: 'vertical'
+					},
+					1024: {
+						slidesPerView: 4,
+						spaceBetween: 10,
+						direction: 'vertical'
+					},
+					1199: {
+						slidesPerView: 4,
+						spaceBetween: 10,
+						direction: 'vertical'
+					}
+				},
+				navigation: {
+					nextEl: '.gallery-thumbs .swiper-button-next',
+					prevEl: '.gallery-thumbs .swiper-button-prev',
+				},
+			});
+			var galleryTop = new Swiper('.gallery-top', {
+				spaceBetween: 0,
+				lazy: true,
+				hashNavigation: true,
+				thumbs: {
+					swiper: galleryThumbs
+				}
+			});
+			var swiper = new Swiper('.product-relate-swiper', {
+				slidesPerView: 4,
+				loop: false,
+				grabCursor: true,
+				spaceBetween: 30,
+				roundLengths: true,
+				slideToClickedSlide: false,
+				navigation: {
+					nextEl: '.product-relate-swiper .swiper-button-next',
+					prevEl: '.product-relate-swiper .swiper-button-prev',
+				},
+				autoplay: false,
+				breakpoints: {
+					260: {
+						slidesPerView: 'auto',
+						spaceBetween: 15
+					},
+					500: {
+						slidesPerView: 2,
+						spaceBetween: 15
+					},
+					640: {
+						slidesPerView: 3,
+						spaceBetween: 15
+					},
+					768: {
+						slidesPerView: 3,
+						spaceBetween: 30
+					},
+					991: {
+						slidesPerView: 4,
+						spaceBetween: 30
+					},
+					1200: {
+						slidesPerView: 4,
+						spaceBetween: 30
+					}
+				}
+			});
+			$(document).ready(function () {
+				$("#lightgallery").lightGallery({
+					thumbnail: false
+				});
+				$("#videolary").lightGallery({
+					thumbnail: false
+				});
+			});
+			$('.btn-buyNow').on('click', function (event) {
+				$.ajax({
+					url: '/cart/add.js',
+					type: "post",
+					data: $("#add-to-cart-form").serialize(),
+					datatype: "json",
+					success: function (data) {
+						window.location.href = "/checkout";
+					},
+					error: function () {
+					}
+				});
+				event.preventDefault();
+			});
+			$('.btn--view-more').on('click', function (e) {
+				e.preventDefault();
+				var $this = $(this);
+				if ($('.product-review-details .product-review-content').hasClass('expanded')) {
+					$('html, body').animate({ scrollTop: $('.product-review-details').offset().top - 110 }, 'slow');
+				}
+				$this.parents('.product-review-details').find('.product-review-content').toggleClass('expanded');
+				$(this).toggleClass('active');
+				return false;
+			});
+
+			$(document).ready(function ($) {
+				var product = { "id": 34775949, "name": "Tổ Yến Tinh Chế cho bé BaBy (loại 3)", "alias": "copy-of-to-yen-tinh-che-cho-be-baby-loai-3", "vendor": "Koi Farm Shop", "type": "", "content": "<p>\n  <em>Tổ yến tinh chế cho bé Baby 2</em>\u00A0là tổ yến đã qua công đoạn tinh tế, bao gồm 100% vụn yến thiên nhiên Nha Trang. Tổ yến tươi nguyên chất, không pha tạp và qua kiểm định nghiêm ngặt theo tiêu chuẩn bộ y tế. Tổ yến nguyên thiên nhiên sau khi tinh chế (nhặt lông, loại bỏ tạp chất, …) sẽ sót lại vụn yến. Vụn yến sau đó được làm sạch và định hình lại thành hình dạng tổ yến. <br>\n</p>\n<p>Do đó giá thành của tổ yến tinh chế Baby 2\u00A0sẽ thấp hơn khá nhiều tổ yến nguyên sợi, phù hợp với điều kiện kinh tế với nhiều khách hàng. Nhưng không vì thế mà tổ yến tinh chế baby mất đi giá trị của mình. Sản phẩm của chúng tôi\u00A0đảm bảo 100% chất lượng ban đầu, cả dinh dưỡng lẫn hương vị.</p>\n<p>Sản phẩm này phù hợp hơn khi chăm sóc người cao tuổi, trẻ em, bà bầu\u00A0và người ốm. Bởi vụn yến sẽ tạo cảm giác dễ ăn hơn và dễ dàng được tiêu hóa và hấp thụ dinh dưỡng. Dành cho bạn nào chưa biết thì tổ yến có chứa tới 18 loại Acid Amin quý, có cả những loại cơ thể không thể tự tổng hợp được. Cùng với đó là 31 loại nguyên tố đa – vi lượng thiết yếu cho sự phát triển của cơ thể. <br>\n</p>\n<p>Yến sào từ xưa đến nay luôn là một trong những món ăn quý hiểm,\u00A0 <b>“Bát Trân”</b>\u00A0được ưa chuộng bởi các bậc đế vương với công dụng bồi bổ sức khỏe rất lớn.Ngày nay, tổ yến vẫn giữ nguyên được giá trị của mình nhưng đã phù hợp rộng rãi với nhiều khách hàng hơn bởi quy trình khai thác dễ dàng hơn xưa rất nhiều. </p>\n<h2>\n  <b>Đảm bảo\u00A0chất lượng\u00A0 <em>tổ yến tinh chế cho bé Baby 3</em>\n  </b>\n</h2>\n<ul>\n  <li>Sản phẩm tổ yến được sấy khô 100%, nói không với cân thiếu, dối trá khách hàng.</li>\n  <li>Nói không với chất tăng trọng, độn tạp chất phụ gia độc hại.</li>\n  <li>Phát hiện yến giả - Bồi đền\u00A0500% giá trị sản phẩm cho khách hàng.</li>\n  <li>Hàng cân đủ 100% (thường dư cho khách 1-2gr).</li>\n</ul>\n<h2>\n  <b>Công dụng\u00A0 <em>Tổ tinh chế cho bé Baby 3</em>\n  </b>\n  <br>\n</h2>\n<ul>\n  <li>Tổ\u00A0yến là món \"bát trân trong bát trân\"\u00A0có nguồn gốc tự nhiên rất quý từ xưa, chỉ được dùng cho vua chúa. Đến nay, sản phẩm <em>\n      <b>tổ yến\u00A0</b>\n    </em>vẫn không mất đi sự quý giá của nó và được nhiều khách hàng lựa chọn bởi tác dụng bồi bổ rất lớn. </li>\n  <li>Trong tổ yến chưa 50% Protein tự nhiên, 18 loại Acid Amin và hơn 31 nguyên tố vi lượng. Phần lớn trong số này là các chất cơ thể con người không tự tổng hợp được, cần phải nạp từ bên ngoài. Chính vì vậy,\u00A0 <b>\n      <em>tổ yến\u00A0</em>\n    </b>có tác dụng rất tốt với cơ thể. </li>\n</ul>\n<h5>Quà tặng tổng quan</h5>\n<p>\n  <span style=\"letter-spacing: -0.2px;\">- Tặng 1 túi giấy xách đi kèm <br>- 1 Hộp đường phèn </span>\n</p>\n<h5>Quà tặng chi tiết</h5>\n<ul>\n  <li>Tặng 1 túi giấy xách đi kèm.</li>\n  <li>\n    <span style=\"letter-spacing: -0.2px;\">1 Hộp đường phèn</span>\n  </li>\n  <li>Tặng bao lì xì Giáp Thìn 2024.</li>\n</ul>\n<h6>Thành phần</h6>\n<table cellspacing=\"0\" class=\"cke_show_border\" style=\"width: 88.122%; height: 147px;\">\n  <tbody>\n    <td>\n      <span>\n        <strong>Nhóm</strong>\n      </span>\n    </td>\n    <td>Tổ Yến</td>\n    </tr>\n    <td>\n      <span>\n        <strong>Loại</strong>\n      </span>\n    </td>\n    <td>\n      <span>Yến Tinh Chế</span>\n    </td>\n    </tr>\n    <td>\n      <span>\n        <strong>Khối lượng</strong>\n      </span>\n    </td>\n    <td>\n      <span>100gr (10-11 tổ/hộp)</span>\n    </td>\n    </tr>\n    <tr>\n      <td>\n        <span>\n          <b>Bộ sản phẩm <br>\n          </b>\n        </span>\n      </td>\n      <td>\n        <ul>\n          <li>\n            <span>100gr Yến\u00A0</span>\n          </li>\n          <li>\n            <span>1 Hộp đường phèn</span>\n          </li>\n          <li>\n            <span>1 Bộ hộp và túi giấy riêng sang trọng</span>\n          </li>\n          <li>\n            <span>1 Phần quà tặng khuyến mãi tùy chọn (áp dụng khi mua từ 100gr)</span>\n          </li>\n        </ul>\n      </td>\n    </tr>\n  </tbody>\n</table>", "summary": "<ul>\n<li><span><b>Tổ yến tinh chế cho bé baby 2</b>\u00A0đã được xử lý làm\u00A0sạch, phồng, trắng nhưng vẫn giữ nguyên được giá trị dinh dưỡng.</span></li>\n<li><span><b>100% yến sào Khánh Hòa nguyên chất</b></span></li>\n<li><span>Tổ yến chữ\u00A0<b>AB</b>\u00A0đã qua chọn lọc, nhà\u00A0yến\u00A0<b>6</b>\u00A0năm tuổi, chất lượng cao từ hương vị đến dinh dưỡng.</span></li>\n<li><span><b>Được làm từ những yến vụn không có sợi tự nhiên. Tiết kiệm chi phí hơn.</b></span></li>\n<li><span>Tiện lợi để sử dụng ngay, tiết kiệm thời gian và lượng hao hụt trong quá trình xử lý.</span></li>\n<li><span>Món quà tặng đầy cao cấp và giá trị các dịp lễ tết.</span></li>\n</ul>", "template_layout": "product", "available": true, "tags": [], "price": 2900000.0000, "price_min": 2900000.0000, "price_max": 2900000.0000, "price_varies": false, "compare_at_price": 3100000.0000, "compare_at_price_min": 3100000.0000, "compare_at_price_max": 3100000.0000, "compare_at_price_varies": false, "variants": [{ "id": 111118886, "barcode": null, "sku": null, "title": "Default Title", "options": ["Default Title"], "option1": "Default Title", "option2": null, "option3": null, "available": true, "taxable": false, "price": 2900000.0000, "compare_at_price": 3100000.0000, "inventory_management": "", "inventory_policy": "deny", "inventory_quantity": 0, "weight_unit": "g", "weight": 0, "requires_shipping": true, "image": { "src": "https://bizweb.dktcdn.net/100/506/650/products/bb2-50gr-0-nap-494df53fb54c4233b0ba3c0a8ab3dfbe-97fc1701b8a14297ac03ee1e64edf1b2-master-d488b4d7-4784-48b2-a54a-c7d6343654fa.jpg?v=1709574876467" } }], "featured_image": { "src": "https://bizweb.dktcdn.net/100/506/650/products/bb2-50gr-0-nap-494df53fb54c4233b0ba3c0a8ab3dfbe-97fc1701b8a14297ac03ee1e64edf1b2-master-d488b4d7-4784-48b2-a54a-c7d6343654fa.jpg?v=1709574876467" }, "images": [{ "src": "https://bizweb.dktcdn.net/100/506/650/products/bb2-50gr-0-nap-494df53fb54c4233b0ba3c0a8ab3dfbe-97fc1701b8a14297ac03ee1e64edf1b2-master-d488b4d7-4784-48b2-a54a-c7d6343654fa.jpg?v=1709574876467" }, { "src": "https://bizweb.dktcdn.net/100/506/650/products/bb2-50gr-nghieng-b2c0e2b67a504163bdc13d7e87992721-03dab23548054dc982811f6da3464f7f-master-50fb7084-c634-4bd2-b4ff-6b50599a1cf2.jpg?v=1709574876467" }, { "src": "https://bizweb.dktcdn.net/100/506/650/products/tc1-50gr-tai-yen-1a586a3bd9fc46d0bb02fc389da9c5a5-5bc395eae17543e9a557be3320ed56ab-master-f3a52df2-b976-4659-a0f2-71ffcf1f169e.jpg?v=1709574876467" }], "options": ["Title"], "created_on": "2024-03-05T00:54:36", "modified_on": "2024-04-22T14:22:43", "published_on": "2024-02-22T18:17:44" };
+				var alias_pro = 'copy-of-to-yen-tinh-che-cho-be-baby-loai-3';
+				var array_list = [product];
+				var list_viewed_pro_old = localStorage.getItem('last_viewed_products');
+				var last_viewed_pro_new = "";
+				if (list_viewed_pro_old == null || list_viewed_pro_old == '')
+					last_viewed_pro_new = array_list;
+				else {
+					var list_viewed_pro_old = JSON.parse(localStorage.last_viewed_products);
+					list_viewed_pro_old.splice(5, 1);
+					for (i = 0; i < list_viewed_pro_old.length; i++) {
+						if (list_viewed_pro_old[i].alias == alias_pro) {
+							list_viewed_pro_old.splice(i, 1);
+							break;
+						}
+					}
+					list_viewed_pro_old.unshift(array_list[0]);
+					last_viewed_pro_new = list_viewed_pro_old;
+				}
+				localStorage.setItem('last_viewed_products', JSON.stringify(last_viewed_pro_new));
+			});
+
+
+			// Check if either specificationsDiv or viewContentDiv is absent or empty.
+			// If true, hide the productBarDiv by adding the 'hidden' class.
+			$(document).ready(function () {
+				var productBarDiv = $('.product-sidebar');
+				var productDetailsDiv = $('.product-review-details');
+				var hasSpecifications = true;
+				if (hasSpecifications == false && hasViewItem == false) {
+					productBarDiv.addClass('hidden');
+					productDetailsDiv.removeClass('col-lg-8').addClass('col-lg-12');
+				}
+			});
+		</script>
+		<div id="js-global-alert" class="alert alert-success" role="alert">
+			<button type="button" class="close"><span aria-hidden="true"><span aria-hidden="true">&times;</span></span></button>
+			<h5 class="alert-heading"></h5>
+			<p class="alert-content"></p>
+		</div>
+
+		<link href="//bizweb.dktcdn.net/100/506/650/themes/944598/assets/bpr-products-module.css?1728460505311" rel="stylesheet" type="text/css" media="all" />
+		<div class="sapo-product-reviews-module"></div>
 
 
 
